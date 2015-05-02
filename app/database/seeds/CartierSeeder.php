@@ -7,20 +7,9 @@ class CartierSeeder extends Seeder {
 
 	public function run()
 	{
-		/*DB::table('cartier')->delete();
-
-		DB::table('cartier')->insert([
-			 ['denumire' => 'Aleea Retezat'],
-			 ['denumire' => 'Andrei Muresanu'],
-			 ['denumire' => 'Apahida'],
-			 ['denumire' => 'B-dul Muncii'],
-			 ['denumire' => 'Baciu'],
-			 ['denumire' => 'Baisoara'],
-			 ['denumire' => 'Bogota'],
-			 ['denumire' => 'Borhanci'],
-			 ['denumire' => 'Bulgaria'],
-			 ['denumire' => 'Buna Ziua'],
-		]);*/
+		DB::table('cartier')->where('id','<','70')->update([
+			'localitate_id' => '5350'
+		]); 
 	}
 
 }
