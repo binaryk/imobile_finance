@@ -53,17 +53,21 @@
 					</tr>
 					</thead>
 					<tbody>
-						<tr>
-							 <td></td>
-							 <td></td>
-							 <td></td>
-							 <td></td>
-							 <td></td>
-							 <td></td>
-							 <td></td>
-							 <td></td>
-							 <td></td>
-						</tr>
+						@if(isset($imobils))
+							@foreach($imobils as $imobil)
+								<tr>
+									 <td>{{ $imobil->id }}</td>
+									 <td>{{ $imobil->cartier->denumire }}</td>
+									 <td>{{ $imobil->nrcam->nr_camere }}</td>
+									 <td></td>
+									 <td></td>
+									 <td></td>
+									 <td></td>
+									 <td></td>
+									 <td></td>
+								</tr>
+							@endforeach
+						@endif
 					</tbody>
 				</table>
 			</div>

@@ -11,5 +11,4 @@ class CartierSeeder extends Seeder {
 			'localitate_id' => '5350'
 		]); 
 	}
-
 }

@@ -5,23 +5,12 @@
 @section('content')
 <div class="row">
 	<div class="col-md-12">
+		{{ Notification::showAll(); }}
 		<div class="tabbable tabbable-custom boxless tabbable-reversed">
 			<ul class="nav nav-tabs">
 				<li class="active">
 					<a href="#tab_0" data-toggle="tab">
 					Date generale </a>
-				</li>
-				<li>
-					<a href="#tab_1" data-toggle="tab">
-					Caracterisitici apartament </a>
-				</li>
-				<li>
-					<a href="#tab_2" data-toggle="tab">
-					Finisaje si dotari</a>
-				</li>
-				<li>
-					<a href="#tab_3" data-toggle="tab">
-					Dependinte</a>
 				</li>
 			</ul>
 			<div class="tab-content">
@@ -48,10 +37,10 @@
 								<div class="form-body">
 									<div class="row">
 										<div class="col-md-3">
-											{{ Form::selectField('Denumire Judet','judet_id', $judete) }}
+											{{ Form::selectField('Denumire Judet','judet_id', $judete, 12, array('readonly' => 'readonly')) }}
 										</div>
 										<div class="col-md-3">
-											{{ Form::selectField('Denumire Localitate','localitate_id', $localitati) }}
+											{{ Form::selectField('Denumire Localitate','localitate_id', $localitati, 5350, array('readonly' => 'readonly')) }}
 										</div>
 
 										<div class="col-md-3">
@@ -87,13 +76,13 @@
 											</div>
 										</div>
 										<div class="col-md-3">
-											{{ Form::textField('Data Aparitiei Anuntului','data_aparitie_anunt') }}
+											{{ Form::textField('Data Aparitiei Anuntului','data_aparitie_anunt', NULL, array('class' => 'date-picker form-control', 'readonly' => '')) }}
 										</div>
 										<!-- <div class="col-md-3">
 											{{ Form::textField('Pret Negociabil','judet') }}
 										</div> -->
 										<div class="col-md-3">
-											{{ Form::textField('Data Ultimei Actualizari','data_ultimei_actualizari') }}
+											{{ Form::textField('Data Ultimei Actualizari','data_ultimei_actualizari', NULL, array('class' => 'date-picker form-control', 'readonly' => '')) }}
 										</div>
 
 										<div class="col-md-3">
@@ -135,231 +124,37 @@
 						</div>
 					</div>
 				</div>
-				<div class="tab-pane " id="tab_1">
-					<div class="portlet box green">
-						<div class="portlet-title">
-							<div class="caption">
-								<i class="fa fa-gift"></i>Caracteristici apartament
-							</div>
-							<div class="tools">
-								<a href="javascript:;" class="collapse">
-								</a>
-								<a href="#portlet-config" data-toggle="modal" class="config">
-								</a>
-								<a href="javascript:;" class="reload">
-								</a>
-								<a href="javascript:;" class="remove">
-								</a>
-							</div>
-						</div>
-						<div class="portlet-body form">
-							<!-- BEGIN FORM-->
-							{{ Form::model($imobil = NULL) }}
-								<div class="form-body">
-									<div class="row">
-										<div class="col-md-3">
-											<div class="margin-bottom-20">
-												<label for="option1">Acceptare Credit Prima casa</label><br />
-												<input id="option1" type="radio" name="credit_prima_casa" value="1" class="make-switch switch-radio1">
-											</div>
-										</div>
-										<div class="col-md-3">
-											{{ Form::selectField('Etaj Apartament','etaj_apartament', $tip_etaje) }}
-										</div>
-										<div class="col-md-3">
-											{{ Form::selectField('Compartimentare Apartament','compartiment_apartament', $tip_compartiment) }}
-										</div>
-										<div class="col-md-3">
-											{{ Form::textField('Suprafata Apartament In Mp','suprafata_apartament') }}
-										</div>
-										<div class="col-md-12">
-											{{ Form::textareaField('Observatii Caracterisitici Apartament','observatii_apartament') }}
-										</div>
-									</div>
-									
-									<div class="form-actions right">
-										<button type="button" class="btn default">Anuleaza</button>
-										<button type="submit" class="btn blue"><i class="fa fa-check"></i>Salveaza</button>
-									</div>
-								</div>
-							{{ Form::close() }}
-							<!-- END FORM-->
-						</div>
-					</div>
-				</div>
-				<div class="tab-pane " id="tab_2">
-					<div class="portlet box green">
-						<div class="portlet-title">
-							<div class="caption">
-								<i class="fa fa-gift"></i>Finisaje si dotari
-							</div>
-							<div class="tools">
-								<a href="javascript:;" class="collapse">
-								</a>
-								<a href="#portlet-config" data-toggle="modal" class="config">
-								</a>
-								<a href="javascript:;" class="reload">
-								</a>
-								<a href="javascript:;" class="remove">
-								</a>
-							</div>
-						</div>
-						<div class="portlet-body form">
-							<!-- BEGIN FORM-->
-							{{ Form::model($imobil = NULL) }}
-								<div class="form-body">
-									<div class="row">
-										<div class="col-md-3">
-											{{ Form::selectField('Finisaje Exterioare','finisaje_exterioare', $finisaje_exterioare) }}
-										</div>
-										<div class="col-md-3">
-											{{ Form::selectField('Finisaje Interioare','finisaje_interioare', $finisaje_exterioare) }}
-										</div>
-										<div class="col-md-3">
-											<div class="margin-bottom-20">
-												<label for="option1">Gresie Noua</label><br />
-												<input type="checkbox" class="make-switch switch-large" data-label-icon="fa fa-fullscreen" data-on-text="<i class='fa fa-check'></i>" data-off-text="<i class='fa fa-times'></i>" name="gresie_noua" > 
-											</div>
-										</div>
-										<div class="col-md-3">
-											<div class="margin-bottom-20">
-												<label for="option1">Faianta Noua</label><br />
-												<input type="checkbox" class="make-switch switch-large" data-label-icon="fa fa-fullscreen" data-on-text="<i class='fa fa-check'></i>" data-off-text="<i class='fa fa-times'></i>" name="faianta_noua" > 
-											</div>
-										</div>
-										<div class="col-md-3">
-											<div class="margin-bottom-20">
-												<label for="option1">Parchet Nou</label><br />
-												<input type="checkbox" class="make-switch switch-large" data-label-icon="fa fa-fullscreen" data-on-text="<i class='fa fa-check'></i>" data-off-text="<i class='fa fa-times'></i>" name="parchet_nou" > 
-											</div>
-										</div>
-										<div class="col-md-3">
-											<div class="margin-bottom-20">
-												<label for="option1">Zugravit Lavabil Recent</label><br />
-												<input type="checkbox" class="make-switch switch-large" data-label-icon="fa fa-fullscreen" data-on-text="<i class='fa fa-check'></i>" data-off-text="<i class='fa fa-times'></i>" name="zugravit_recent" > 
-											</div>
-										</div>
-
-										<div class="col-md-3">
-											<div class="margin-bottom-20">
-												<label for="option1">Dotari</label><br />
-												<input type="checkbox" class="make-switch switch-large" data-label-icon="fa fa-fullscreen" data-on-text="<i class='fa fa-check'></i>" data-off-text="<i class='fa fa-times'></i>" name="dotari" > 
-											</div>
-										</div>
-
-										<div class="col-md-3">
-											<div class="margin-bottom-20">
-												<label for="option1">Usa Metalica</label><br />
-												<input type="checkbox" class="make-switch switch-large" data-label-icon="fa fa-fullscreen" data-on-text="<i class='fa fa-check'></i>" data-off-text="<i class='fa fa-times'></i>" name="usa_metalica" > 
-											</div>
-										</div>
-
-										<div class="col-md-3">
-											<div class="margin-bottom-20">
-												<label for="option1">Centrala Termica</label><br />
-												<input type="checkbox" class="make-switch switch-large" data-label-icon="fa fa-fullscreen" data-on-text="<i class='fa fa-check'></i>" data-off-text="<i class='fa fa-times'></i>" name="centrala_termica" > 
-											</div>
-										</div>
-
-										<div class="col-md-3">
-											<div class="margin-bottom-20">
-												<label for="option1">Ferestre Termopan</label><br />
-												<input type="checkbox" class="make-switch switch-large" data-label-icon="fa fa-fullscreen" data-on-text="<i class='fa fa-check'></i>" data-off-text="<i class='fa fa-times'></i>" name="ferestre_termopan" > 
-											</div>
-										</div>
-
-										<div class="col-md-3">
-											<div class="margin-bottom-20">
-												<label for="option1">Electrocasnice</label><br />
-												<input type="checkbox" class="make-switch switch-large" data-label-icon="fa fa-fullscreen" data-on-text="<i class='fa fa-check'></i>" data-off-text="<i class='fa fa-times'></i>" name="electrocasnice" > 
-											</div>
-										</div>
-										<div class="col-md-3">
-											{{ Form::selectField('Mobilare','mobilare', $tip_mobilare) }}
-											<div class="margin-bottom-20">
-												<label for="option1">Mobilare</label>
-												<input id="option1" type="radio" name="radio1" value="option1" class="make-switch switch-radio1">
-											</div>
-										</div>
-
-										<div class="col-md-3">
-											{{ Form::textareaField('Observatii Finisaje Si Dotari','observatii_finisaje_dotari') }}
-										</div>
-									</div>
-									
-									<div class="form-actions right">
-										<button type="button" class="btn default">Anuleaza</button>
-										<button type="submit" class="btn blue"><i class="fa fa-check"></i>Salveaza</button>
-									</div>
-								</div>
-							{{ Form::close() }}
-							<!-- END FORM-->
-						</div>
-					</div>
-				</div>
-				<div class="tab-pane" id="tab_3">
-					<div class="portlet box green">
-						<div class="portlet-title">
-							<div class="caption">
-								<i class="fa fa-gift"></i>Caracteristici apartament
-							</div>
-							<div class="tools">
-								<a href="javascript:;" class="collapse">
-								</a>
-								<a href="#portlet-config" data-toggle="modal" class="config">
-								</a>
-								<a href="javascript:;" class="reload">
-								</a>
-								<a href="javascript:;" class="remove">
-								</a>
-							</div>
-						</div>
-						<div class="portlet-body form">
-							<!-- BEGIN FORM-->
-							{{ Form::model($imobil = NULL) }}
-								<div class="form-body">
-									<div class="row">
-										<div class="col-md-3">
-											<div class="margin-bottom-20">
-												<label for="option1">Loc Parcare</label><br />
-												<input type="checkbox" class="make-switch switch-large" data-label-icon="fa fa-fullscreen" data-on-text="<i class='fa fa-check'></i>" data-off-text="<i class='fa fa-times'></i>" name="loc_parcare" > 
-											</div>
-										</div>
-										<div class="col-md-3">
-											<div class="margin-bottom-20">
-												<label for="option1">Beci</label><br />
-												<input type="checkbox" class="make-switch switch-large" data-label-icon="fa fa-fullscreen" data-on-text="<i class='fa fa-check'></i>" data-off-text="<i class='fa fa-times'></i>" name="beci" > 
-											</div>
-										</div>
-										<div class="col-md-3">
-											<div class="margin-bottom-20">
-												<label for="option1">Terasa</label><br />
-												<input type="checkbox" class="make-switch switch-large" data-label-icon="fa fa-fullscreen" data-on-text="<i class='fa fa-check'></i>" data-off-text="<i class='fa fa-times'></i>" name="terasa" > 
-											</div>
-										</div>
-										<div class="col-md-3">
-											<div class="margin-bottom-20">
-												<label for="option1">Existenta Balcon</label><br />
-												<input type="checkbox" class="make-switch switch-large" data-label-icon="fa fa-fullscreen" data-on-text="<i class='fa fa-check'></i>" data-off-text="<i class='fa fa-times'></i>" name="existenta_balcon" > 
-											</div>
-										</div>
-										<div class="col-md-12">
-											{{ Form::textareaField('Observatii Dotari','observatii_dotari') }}
-										</div>
-									</div>
-									
-									<div class="form-actions right">
-										<button type="button" class="btn default">Anuleaza</button>
-										<button type="submit" class="btn blue"><i class="fa fa-check"></i>Salveaza</button>
-									</div>
-								</div>
-							{{ Form::close() }}
-							<!-- END FORM-->
-						</div>
-					</div>
-				</div>
 			</div>
 		</div>
 	</div>
 </div>
+{{ HTML::script('js/jquery/add_imobil.js') }}
+@endsection
+
+@section('custom-scripts')
+{{ HTML::style('assets/global/plugins/clockface/css/clockface.css') }}
+{{ HTML::style('assets/global/plugins/bootstrap-datepicker/css/datepicker3.css') }}
+{{ HTML::style('assets/global/plugins/bootstrap-timepicker/css/bootstrap-timepicker.min.css') }}
+{{ HTML::style('assets/global/plugins/bootstrap-colorpicker/css/colorpicker.css') }}
+{{ HTML::style('assets/global/plugins/bootstrap-daterangepicker/daterangepicker-bs3.css') }}
+{{ HTML::style('assets/global/plugins/bootstrap-datetimepicker/css/bootstrap-datetimepicker.min.css') }}
+
+
+{{ HTML::script('assets/global/plugins/bootstrap-datepicker/js/bootstrap-datepicker.js') }}
+{{ HTML::script('assets/global/plugins/bootstrap-timepicker/js/bootstrap-timepicker.min.js') }}
+{{ HTML::script('assets/global/plugins/clockface/js/clockface.js') }}
+{{ HTML::script('assets/global/plugins/bootstrap-daterangepicker/moment.min.js') }}
+{{ HTML::script('assets/global/plugins/bootstrap-daterangepicker/daterangepicker.js') }}
+{{ HTML::script('assets/global/plugins/bootstrap-colorpicker/js/bootstrap-colorpicker.js') }}
+{{ HTML::script('assets/global/plugins/bootstrap-datetimepicker/js/bootstrap-datetimepicker.min.js') }}
+
+
+{{ HTML::script('./assets/admin/pages/scripts/components-pickers.js') }}
+
+<script>
+	jQuery(document).ready(function() {       
+       ComponentsPickers.init();
+    });  
+</script>
+
 @endsection
