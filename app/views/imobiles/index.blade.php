@@ -1,7 +1,4 @@
-@extends('template.layout')
-@section('title-h1')
-	Lista de imobiliare
-@endsection
+@extends('template.layout') 
 @section('content')
 <br>
 <div class="row">

@@ -10,9 +10,7 @@
 {{ HTML::script("assets/global/plugins/bootstrap-switch/js/bootstrap-switch.min.js") }}
 <!-- END CORE PLUGINS -->
 <!-- IMPORTANT! fullcalendar depends on jquery-ui.min.js for drag & drop support -->
-{{ HTML::script("assets/global/plugins/fullcalendar/fullcalendar.min.js") }}
-{{ HTML::script("assets/global/plugins/jquery-easypiechart/jquery.easypiechart.min.js") }}
-{{ HTML::script("assets/global/plugins/jquery.sparkline.min.js") }}
+
 <!-- END PAGE LEVEL PLUGINS -->
 <!-- BEGIN PAGE LEVEL SCRIPTS -->
 {{ HTML::script("assets/global/scripts/metronic.js") }}

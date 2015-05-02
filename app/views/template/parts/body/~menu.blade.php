@@ -38,9 +38,9 @@
 				Lista de imobile</a>
 			</li>
 			<li>
-				<a href="index_2.html">
+				<a href="{{ URL::route('cautare-date') }}">
 				<i class="icon-bulb"></i>
-				New Dashboard #1</a>
+				Cautare date</a>
 			</li>
 			<li>
 				<a href="index_3.html">
