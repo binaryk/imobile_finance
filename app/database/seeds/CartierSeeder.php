@@ -7,11 +7,20 @@ class CartierSeeder extends Seeder {
 
 	public function run()
 	{
-		$faker = Faker::create();
- 
-			Cartier::create([
-				 
-			]);
+		/*DB::table('cartier')->delete();
+
+		DB::table('cartier')->insert([
+			 ['denumire' => 'Aleea Retezat'],
+			 ['denumire' => 'Andrei Muresanu'],
+			 ['denumire' => 'Apahida'],
+			 ['denumire' => 'B-dul Muncii'],
+			 ['denumire' => 'Baciu'],
+			 ['denumire' => 'Baisoara'],
+			 ['denumire' => 'Bogota'],
+			 ['denumire' => 'Borhanci'],
+			 ['denumire' => 'Bulgaria'],
+			 ['denumire' => 'Buna Ziua'],
+		]);*/
 	}
 
 }

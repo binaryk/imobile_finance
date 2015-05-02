@@ -19,6 +19,9 @@
 {{ HTML::script("assets/admin/layout/scripts/demo.js") }}
 {{ HTML::script("assets/admin/pages/scripts/index.js") }}
 {{ HTML::script("assets/admin/pages/scripts/tasks.js") }}
+
+
+
 <script>
 jQuery(document).ready(function() {    
    Metronic.init(); // init metronic core componets
@@ -33,5 +36,6 @@ Demo.init(); // init demo features
    Index.initChat();
    Index.initMiniCharts();
    Tasks.initDashboardWidget();
+
 });
 </script>
