@@ -32,7 +32,7 @@
 								<div class="form-group"> 
 									<label class="control-label col-md-3">Denumire Cartier</label>
 									<div class="col-md-4"> 
-										<select class="form-control input-circle select2me" data-placeholder="Select...">
+										<select class="form-control input-circle select2me" data-placeholder="Select..." name="cartier_id">
 											<option value=""></option>
 											@foreach($cartiere as $key => $cartier)
 											<option value = "{{ $cartier['id'] }}">{{$cartier['denumire']}}</option>
@@ -64,17 +64,17 @@
 								<div class="form-group"> 
 									<label class="col-md-3 control-label">Pret de vanzare in euro</label>
 									<div class="col-md-2">
-										<input type="text" class="form-control input-circle" placeholder="Pret minim" name="strada_cladire" name="pret_vanzare_min">
+										<input type="text" class="form-control input-circle" placeholder="Pret minim" name="pret_vanzare_min">
 									</div>
 									<div class="col-md-2">
-										<input type="text" class="form-control input-circle" placeholder="Pret maxim" name="strada_cladire" name="pret_vanzare_max">
+										<input type="text" class="form-control input-circle" placeholder="Pret maxim" name="pret_vanzare_max">
 									</div>
 								</div>
 
 								<div class="form-group"> 
 									<label class="control-label col-md-3">Tip cladire</label>
 									<div class="col-md-4"> 
-										<select class="form-control input-circle select2me" data-placeholder="Select...">
+										<select class="form-control input-circle select2me" data-placeholder="Select..." name="tip_cladire">
 											<option value=""></option>
 											@foreach($tip_cladiri as $key => $tip_cladire)
 											<option value = "{{ $tip_cladire['id'] }}">{{$tip_cladire['denumire']}}</option>
@@ -86,7 +86,7 @@
 									<label class="control-label col-md-3">Data ultimei actualizari</label>
 									<div class="col-md-4">
 										<div class="input-group" id="defaultrange">
-											<input type="text" class="form-control" readonly="">
+											<input type="text" class="form-control" readonly="" name="data_ultimei_actualizari">
 											<span class="input-group-btn">
 											<button class="btn default date-range-toggle" type="button"><i class="fa fa-calendar"></i></button>
 											</span>
@@ -96,13 +96,13 @@
 								<div class="form-group">
 									<label class="control-label col-md-3">Numai Agentiile Imobiliare ?</label>
 									<div class="col-md-9">
-										<input type="checkbox" class="make-switch" name="valabilitate_oferta" data-on-text="<i class='fa fa-check'></i>" data-off-text="<i class='fa fa-times'></i>" ng-model = 'valabilitate_oferta' ng-change="show()"> 
+										<input type="checkbox" class="make-switch" name="agentie" data-on-text="<i class='fa fa-check'></i>" data-off-text="<i class='fa fa-times'></i>"> 
 									</div>
 								</div>
 								<div class="form-group">
 									<label class="control-label col-md-3">Numai Dezvoltatori Imobiliari ?</label>
 									<div class="col-md-9">
-										<input type="checkbox" class="make-switch" name="valabilitate_oferta" data-on-text="<i class='fa fa-check'></i>" data-off-text="<i class='fa fa-times'></i>" ng-model = 'valabilitate_oferta' ng-change="show()"> 
+										<input type="checkbox" class="make-switch" name="dezvoltatori" data-on-text="<i class='fa fa-check'></i>" data-off-text="<i class='fa fa-times'></i>"> 
 									</div>
 								</div>
 						</div>
@@ -110,19 +110,19 @@
 							<div class="form-group"> 
 								<label class="col-md-3 control-label">Telefon De Contact Principal</label>
 								<div class="col-md-4">
-									<input type="text" class="form-control input-circle" placeholder="Ex: 0756633767" name="strada_cladire" name="pret_vanzare_min">
+									<input type="text" class="form-control input-circle" placeholder="Ex: 0756633767" name="strada_cladire" name="telefon_1">
 								</div> 
 							</div>
 							<div class="form-group"> 
 								<label class="col-md-3 control-label">Telefon De Contact Secundar 1</label>
 								<div class="col-md-4">
-									<input type="text" class="form-control input-circle" placeholder="Ex: 0756633767" name="strada_cladire" name="pret_vanzare_min">
+									<input type="text" class="form-control input-circle" placeholder="Ex: 0756633767" name="strada_cladire" name="telefon_1">
 								</div> 
 							</div>
 							<div class="form-group"> 
 								<label class="col-md-3 control-label">Telefon De Contact Secundar 2</label>
 								<div class="col-md-4">
-									<input type="text" class="form-control input-circle" placeholder="Ex: 0756633767" name="strada_cladire" name="pret_vanzare_min">
+									<input type="text" class="form-control input-circle" placeholder="Ex: 0756633767" name="strada_cladire" name="telefon_2">
 								</div> 
 							</div>
 							<div class="form-group">
@@ -136,8 +136,30 @@
 								<div class="col-md-4"> 
 									<select class="form-control input-circle select2me" data-placeholder="Select...">
 										<option value=""></option>
-										@foreach($tip_cladiri as $key => $tip_cladire)
-										<option value = "{{ $tip_cladire['id'] }}">{{$tip_cladire['denumire']}}</option>
+										@foreach($etaje as $key => $etaj)
+										<option value = "{{ $etaj['id'] }}">{{$etaj['denumire']}}</option>
+										@endforeach 
+									</select>
+								</div>
+							</div>
+							<div class="form-group"> 
+								<label class="control-label col-md-3">Compartimentare Apartament</label>
+								<div class="col-md-4"> 
+									<select class="form-control input-circle select2me" data-placeholder="Select...">
+										<option value=""></option>
+										@foreach($tip_compartimente as $key => $tip_compartiment)
+										<option value = "{{ $tip_compartiment['id'] }}">{{$tip_compartiment['denumire']}}</option>
+										@endforeach 
+									</select>
+								</div>
+							</div>
+							<div class="form-group"> 
+								<label class="control-label col-md-3">Finisaje Interioare</label>
+								<div class="col-md-4"> 
+									<select class="form-control input-circle select2me" data-placeholder="Select...">
+										<option value=""></option>
+										@foreach($finisaje_interioare as $key => $finisaj_interior)
+										<option value = "{{ $finisaj_interior['id'] }}">{{$finisaj_interior['denumire']}}</option>
 										@endforeach 
 									</select>
 								</div>

@@ -12,9 +12,12 @@ class CautaController extends \BaseController {
 	{
 		$cartiere    = Cartier::all()->toArray();
 		$tip_cladiri = TipCladire::all()->toArray();
-		$etaj        = TipEtaj::all()->toArray();
+		$etaje        = TipEtaj::all()->toArray();
+		$tip_compartimente = TipCompartiment::all()->toArray();
+		$finisaje_interioare = TipFinisajeInterne::all()->toArray();
 
-		return View::make('cauta.index')->with(compact('cartiere','tip_cladiri','etaj'));
+
+		return View::make('cauta.index')->with(compact('cartiere','tip_cladiri','etaje','tip_compartimente','finisaje_interioare'));
 	}
 
 	/**
