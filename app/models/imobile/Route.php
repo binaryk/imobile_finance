@@ -23,7 +23,8 @@ class Route
 		->add('get', 'imobile-edit', 'imobile-edit/{id}', 'ImobileController@edit', '') 
 		->add('post', 'imobile-edit', 'imobile-edit/{id}', 'ImobileController@update', '') 
 
-		->add('get', 'cautare-date', 'cauta', 'CautaController@index', '') 
+		->add('get', 'cautare-date', 'cautare-date', 'CautaController@index', '') 
+		->add('post', 'cautare-date', 'cautare-date', 'CautaController@show', '') 
 		/**
 		GALI. Elementele mele din dashboard 
 		**/

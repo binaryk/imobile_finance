@@ -11,7 +11,7 @@ class DatabaseSeeder extends Seeder {
 	{
 		Eloquent::unguard();
 		$this->call('FinisajeExterioareSeeder');
-		$this->call('FinisajeInterioareSeeder');
+		$this->call('NrEtajeSeeder');
 	}
 
 }
