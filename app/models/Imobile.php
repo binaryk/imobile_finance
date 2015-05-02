@@ -67,6 +67,21 @@ class Imobile extends \Eloquent {
     return $this->belongsTo('TipNrCamere', 'nr_camere');
   }
 
+  public function etajapartament()
+  {
+    return $this->belongsTo('TipEtaj', 'etaj_apartament');
+  }
+
+  public function compartiment()
+  {
+    return $this->belongsTo('TipCompartiment', 'compartiment_apartament');
+  }
+
+  public function finint()
+  {
+    return $this->belongsTo('TipFinisajeInterne', 'finisaje_interioare');
+  }
+
 
 	public static function getRecord( $id )
  	{

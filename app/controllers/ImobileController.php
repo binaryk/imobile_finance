@@ -10,7 +10,14 @@ class ImobileController extends \BaseController {
 	 */
 	public function index()
 	{
-		$imobils = Imobile::with('localitate', 'judet', 'cartier', 'nrcam')->get();
+		$imobils = Imobile::with(
+				'localitate', 
+				'judet', 
+				'cartier', 
+				'nrcam', 
+				'etajapartament', 
+				'compartiment',
+				'finint')->get();
 		return View::make('imobiles.index')->with(compact('imobils'));
 	}
 
@@ -76,6 +83,7 @@ class ImobileController extends \BaseController {
 				'data_ultimei_actualizari' => Input::get('data_ultimei_actualizari'),
 				'valabilitate_oferta' => (Input::get('valabilitate_oferta') ? '1' : '0'),
 				'nume_vanzator' => Input::get('nume_vanzator'),
+				'telefon_principal' => Input::get('telefon_principal'),
 				'telefon_1' => Input::get('telefon_1'),
 				'telefon_2' => Input::get('telefon_2'),
 				'extras_cf' => (Input::get('extras_cf') ? '1' : '0'),
@@ -107,7 +115,43 @@ class ImobileController extends \BaseController {
 	 */
 	public function edit($id)
 	{
-		return 'test';
+		$localitati = Localitati::where('id_judet', 12)->lists('denumire','id'); 
+		$cartiere    = Cartier::where('localitate_id', '5350')->lists('denumire', 'id');
+		$camere     = TipNrCamere::lists('nr_camere', 'id');
+		$tip_cladire= TipCladire::lists('denumire', 'id');
+		$tip_nr_etaje  = TipNrEtaje::lists('nr_etaje', 'id');
+		$judete = Judet::lists('denumire', 'id');
+		$finisaje_exterioare = TipFinisajeExterne::lists('denumire', 'id');
+		$finisaje_interioare = TipFinisajeInterne::lists('denumire', 'id');
+		$tip_mobilare = TipMobilare::lists('denumire', 'id');
+		$tip_etaje = TipEtaj::lists('denumire', 'id');
+		$tip_compartiment = TipCompartiment::lists('denumire', 'id');
+
+		$imobil = Imobile::with(
+				'localitate', 
+				'judet', 
+				'cartier', 
+				'nrcam', 
+				'etajapartament', 
+				'compartiment',
+				'finint')->where('id', $id)->first();
+
+		return View::make('imobiles.edit')->with(
+			compact(
+					'localitati',
+					'cartiere',
+					'camere',
+					'tip_cladire', 
+					'tip_nr_etaje', 
+					'judete', 
+					'finisaje_exterioare', 
+					'finisaje_interioare',
+					'tip_mobilare',
+					'tip_etaje',
+					'tip_compartiment',
+					'imobil'
+				)
+			);
 		//
 	}
 
@@ -120,7 +164,7 @@ class ImobileController extends \BaseController {
 	 */
 	public function update($id)
 	{
-		//
+		return Input::all();
 	}
 
 	/**

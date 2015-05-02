@@ -95,13 +95,13 @@
 											{{ Form::textField('Nume vanzator','nume_vanzator') }}
 										</div>
 										<div class="col-md-3">
-											{{ Form::textField('Telefon De Contact Principal','telefon_1') }}
+											{{ Form::textField('Telefon De Contact Principal','telefon_principal') }}
 										</div>
 										<div class="col-md-3">
-											{{ Form::textField('Telefon De Contact Secundar 1','telefon_2') }}
+											{{ Form::textField('Telefon De Contact Secundar 1','telefon_1') }}
 										</div>
 										<div class="col-md-3">
-											{{ Form::textField('Telefon De Contact Secundar 2','extras_cf') }}
+											{{ Form::textField('Telefon De Contact Secundar 2','telefon_2') }}
 										</div>
 										<div class="col-md-3">
 											<div class="margin-bottom-20">
@@ -109,7 +109,7 @@
 												<input type="checkbox" class="make-switch switch-large" data-label-icon="fa fa-fullscreen" data-on-text="<i class='fa fa-check'></i>" data-off-text="<i class='fa fa-times'></i>" name="extras_cf" > 
 											</div>
 										</div>
-										<div class="col-md-3">
+										<div class="col-md-12">
 											{{ Form::textareaField('Observatii Generale','observatii_generale') }}
 										</div>
 									</div>

@@ -16,9 +16,12 @@ class Route
 		**/ 
 		/* Database general operations */
 		->add('get', 'imobile-index', 'imobile', 'ImobileController@index', '') 
+
 		->add('get', 'imobile-add', 'imobile-adauga', 'ImobileController@create', '') 
 		->add('post', 'imobile-add', 'imobile-adauga', 'ImobileController@store', '') 
-		->add('get', 'imobile-edit', 'imobile-edit', 'ImobileController@edit', '') 
+
+		->add('get', 'imobile-edit', 'imobile-edit/{id}', 'ImobileController@edit', '') 
+		->add('post', 'imobile-edit', 'imobile-edit/{id}', 'ImobileController@update', '') 
 
 		->add('get', 'cautare-date', 'cauta', 'CautaController@index', '') 
 		/**

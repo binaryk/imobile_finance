@@ -44,9 +44,10 @@
 						</div>
 						<div class="portlet-body form">
 							<!-- BEGIN FORM-->
-							{{ Form::model($imobil = NULL) }}
+							{{ Form::model($imobil) }}
 								<div class="form-body">
 									<div class="row">
+										<input type="hidden" name="tab" value="1">
 										<div class="col-md-3">
 											{{ Form::selectField('Denumire Judet','judet_id', $judete, 12, array('disabled' => 'disabled')) }}
 										</div>
@@ -83,7 +84,9 @@
 										<div class="col-md-3">
 											<div class="margin-bottom-20">
 												<label for="option1">Pret Negociabil</label><br />
-												<input type="checkbox" class="make-switch switch-large" data-label-icon="fa fa-fullscreen" data-on-text="<i class='fa fa-check'></i>" data-off-text="<i class='fa fa-times'></i>" name="pret_negociabil" > 
+												<input type="checkbox"  class="make-switch switch-large" data-label-icon="fa fa-fullscreen" data-on-text="<i class='fa fa-check'></i>" data-off-text="<i class='fa fa-times'></i>" name="pret_negociabil"
+												{{ ($imobil->pret_negociabil == 1) ? 'checked' : '' }}
+												> 
 											</div>
 										</div>
 										<div class="col-md-3">
@@ -99,7 +102,9 @@
 										<div class="col-md-3">
 											<div class="margin-bottom-20">
 												<label for="option1">Valabilitatea Ofertei</label><br />
-												<input type="checkbox" class="make-switch switch-large" data-label-icon="fa fa-fullscreen" data-on-text="<i class='fa fa-check'></i>" data-off-text="<i class='fa fa-times'></i>" name="valabilitate_oferta" > 
+												<input type="checkbox" class="make-switch switch-large" data-label-icon="fa fa-fullscreen" data-on-text="<i class='fa fa-check'></i>" data-off-text="<i class='fa fa-times'></i>" name="valabilitate_oferta" 
+												{{ ($imobil->valabilitate_oferta == 1) ? 'checked' : '' }}
+												> 
 											</div>
 										</div>
 										<div class="col-md-3">
@@ -117,10 +122,12 @@
 										<div class="col-md-3">
 											<div class="margin-bottom-20">
 												<label for="option1">Extras C.F.</label><br />
-												<input type="checkbox" class="make-switch switch-large" data-label-icon="fa fa-fullscreen" data-on-text="<i class='fa fa-check'></i>" data-off-text="<i class='fa fa-times'></i>" name="extras_cf" > 
+												<input type="checkbox" class="make-switch switch-large" data-label-icon="fa fa-fullscreen" data-on-text="<i class='fa fa-check'></i>" data-off-text="<i class='fa fa-times'></i>" name="extras_cf" 
+												{{ ($imobil->extras_cf == 1) ? 'checked' : '' }}
+												> 
 											</div>
 										</div>
-										<div class="col-md-3">
+										<div class="col-md-12">
 											{{ Form::textareaField('Observatii Generale','observatii_generale') }}
 										</div>
 									</div>
@@ -154,13 +161,14 @@
 						</div>
 						<div class="portlet-body form">
 							<!-- BEGIN FORM-->
-							{{ Form::model($imobil = NULL) }}
+							{{ Form::model($imobil) }}
 								<div class="form-body">
 									<div class="row">
+										<input type="hidden" name="tab" value="2">
 										<div class="col-md-3">
 											<div class="margin-bottom-20">
 												<label for="option1">Acceptare Credit Prima casa</label><br />
-												<input id="option1" type="radio" name="credit_prima_casa" value="1" class="make-switch switch-radio1">
+												<input type="checkbox" class="make-switch switch-large" data-label-icon="fa fa-fullscreen" data-on-text="<i class='fa fa-check'></i>" data-off-text="<i class='fa fa-times'></i>" name="credit_prima_casa" {{ ($imobil->credit_prima_casa == 1) ? 'checked' : '' }}> 
 											</div>
 										</div>
 										<div class="col-md-3">
@@ -206,83 +214,98 @@
 						</div>
 						<div class="portlet-body form">
 							<!-- BEGIN FORM-->
-							{{ Form::model($imobil = NULL) }}
+							{{ Form::model($imobil) }}
 								<div class="form-body">
 									<div class="row">
+										<input type="hidden" name="tab" value="3">
 										<div class="col-md-3">
 											{{ Form::selectField('Finisaje Exterioare','finisaje_exterioare', $finisaje_exterioare) }}
 										</div>
 										<div class="col-md-3">
-											{{ Form::selectField('Finisaje Interioare','finisaje_interioare', $finisaje_exterioare) }}
+											{{ Form::selectField('Finisaje Interioare','finisaje_interioare', $finisaje_interioare) }}
 										</div>
 										<div class="col-md-3">
 											<div class="margin-bottom-20">
 												<label for="option1">Gresie Noua</label><br />
-												<input type="checkbox" class="make-switch switch-large" data-label-icon="fa fa-fullscreen" data-on-text="<i class='fa fa-check'></i>" data-off-text="<i class='fa fa-times'></i>" name="gresie_noua" > 
+												<input type="checkbox" class="make-switch switch-large" data-label-icon="fa fa-fullscreen" data-on-text="<i class='fa fa-check'></i>" data-off-text="<i class='fa fa-times'></i>" name="gresie_noua" 
+												{{ ($imobil->gresie_noua == 1) ? 'checked' : '' }}
+												> 
 											</div>
 										</div>
 										<div class="col-md-3">
 											<div class="margin-bottom-20">
 												<label for="option1">Faianta Noua</label><br />
-												<input type="checkbox" class="make-switch switch-large" data-label-icon="fa fa-fullscreen" data-on-text="<i class='fa fa-check'></i>" data-off-text="<i class='fa fa-times'></i>" name="faianta_noua" > 
+												<input type="checkbox" class="make-switch switch-large" data-label-icon="fa fa-fullscreen" data-on-text="<i class='fa fa-check'></i>" data-off-text="<i class='fa fa-times'></i>" name="faianta_noua" 
+												{{ ($imobil->faianta_noua == 1) ? 'checked' : '' }}
+												> 
 											</div>
 										</div>
 										<div class="col-md-3">
 											<div class="margin-bottom-20">
 												<label for="option1">Parchet Nou</label><br />
-												<input type="checkbox" class="make-switch switch-large" data-label-icon="fa fa-fullscreen" data-on-text="<i class='fa fa-check'></i>" data-off-text="<i class='fa fa-times'></i>" name="parchet_nou" > 
+												<input type="checkbox" class="make-switch switch-large" data-label-icon="fa fa-fullscreen" data-on-text="<i class='fa fa-check'></i>" data-off-text="<i class='fa fa-times'></i>" name="parchet_nou" 
+												{{ ($imobil->parchet_nou == 1) ? 'checked' : '' }}
+												> 
 											</div>
 										</div>
 										<div class="col-md-3">
 											<div class="margin-bottom-20">
 												<label for="option1">Zugravit Lavabil Recent</label><br />
-												<input type="checkbox" class="make-switch switch-large" data-label-icon="fa fa-fullscreen" data-on-text="<i class='fa fa-check'></i>" data-off-text="<i class='fa fa-times'></i>" name="zugravit_recent" > 
+												<input type="checkbox" class="make-switch switch-large" data-label-icon="fa fa-fullscreen" data-on-text="<i class='fa fa-check'></i>" data-off-text="<i class='fa fa-times'></i>" name="zugravit_recent" 
+												{{ ($imobil->zugravit_recent == 1) ? 'checked' : '' }}
+												>
+
 											</div>
 										</div>
 
 										<div class="col-md-3">
 											<div class="margin-bottom-20">
 												<label for="option1">Dotari</label><br />
-												<input type="checkbox" class="make-switch switch-large" data-label-icon="fa fa-fullscreen" data-on-text="<i class='fa fa-check'></i>" data-off-text="<i class='fa fa-times'></i>" name="dotari" > 
+												<input type="checkbox" class="make-switch switch-large" data-label-icon="fa fa-fullscreen" data-on-text="<i class='fa fa-check'></i>" data-off-text="<i class='fa fa-times'></i>" name="dotari" 
+												{{ ($imobil->dotari == 1) ? 'checked' : '' }}
+												> 
 											</div>
 										</div>
 
 										<div class="col-md-3">
 											<div class="margin-bottom-20">
 												<label for="option1">Usa Metalica</label><br />
-												<input type="checkbox" class="make-switch switch-large" data-label-icon="fa fa-fullscreen" data-on-text="<i class='fa fa-check'></i>" data-off-text="<i class='fa fa-times'></i>" name="usa_metalica" > 
+												<input type="checkbox" class="make-switch switch-large" data-label-icon="fa fa-fullscreen" data-on-text="<i class='fa fa-check'></i>" data-off-text="<i class='fa fa-times'></i>" name="usa_metalica" 
+												{{ ($imobil->usa_metalica == 1) ? 'checked' : '' }}
+												> 
 											</div>
 										</div>
 
 										<div class="col-md-3">
 											<div class="margin-bottom-20">
 												<label for="option1">Centrala Termica</label><br />
-												<input type="checkbox" class="make-switch switch-large" data-label-icon="fa fa-fullscreen" data-on-text="<i class='fa fa-check'></i>" data-off-text="<i class='fa fa-times'></i>" name="centrala_termica" > 
+												<input type="checkbox" class="make-switch switch-large" data-label-icon="fa fa-fullscreen" data-on-text="<i class='fa fa-check'></i>" data-off-text="<i class='fa fa-times'></i>" name="centrala_termica"
+												{{ ($imobil->centrala_termica == 1) ? 'checked' : '' }}
+												> 
 											</div>
 										</div>
 
 										<div class="col-md-3">
 											<div class="margin-bottom-20">
 												<label for="option1">Ferestre Termopan</label><br />
-												<input type="checkbox" class="make-switch switch-large" data-label-icon="fa fa-fullscreen" data-on-text="<i class='fa fa-check'></i>" data-off-text="<i class='fa fa-times'></i>" name="ferestre_termopan" > 
+												<input type="checkbox" class="make-switch switch-large" data-label-icon="fa fa-fullscreen" data-on-text="<i class='fa fa-check'></i>" data-off-text="<i class='fa fa-times'></i>" name="ferestre_termopan" {{ ($imobil->ferestre_termopan == 1) ? 'checked' : '' }}> 
 											</div>
 										</div>
 
 										<div class="col-md-3">
 											<div class="margin-bottom-20">
 												<label for="option1">Electrocasnice</label><br />
-												<input type="checkbox" class="make-switch switch-large" data-label-icon="fa fa-fullscreen" data-on-text="<i class='fa fa-check'></i>" data-off-text="<i class='fa fa-times'></i>" name="electrocasnice" > 
+												<input type="checkbox" class="make-switch switch-large" data-label-icon="fa fa-fullscreen" data-on-text="<i class='fa fa-check'></i>" data-off-text="<i class='fa fa-times'></i>" name="electrocasnice" 
+												{{ ($imobil->electrocasnice == 1) ? 'checked' : '' }}
+
+												> 
 											</div>
 										</div>
 										<div class="col-md-3">
 											{{ Form::selectField('Mobilare','mobilare', $tip_mobilare) }}
-											<div class="margin-bottom-20">
-												<label for="option1">Mobilare</label>
-												<input id="option1" type="radio" name="radio1" value="option1" class="make-switch switch-radio1">
-											</div>
 										</div>
 
-										<div class="col-md-3">
+										<div class="col-md-12">
 											{{ Form::textareaField('Observatii Finisaje Si Dotari','observatii_finisaje_dotari') }}
 										</div>
 									</div>
@@ -316,31 +339,39 @@
 						</div>
 						<div class="portlet-body form">
 							<!-- BEGIN FORM-->
-							{{ Form::model($imobil = NULL) }}
+							{{ Form::model($imobil) }}
 								<div class="form-body">
 									<div class="row">
+										<input type="hidden" name="tab" value="4">
 										<div class="col-md-3">
 											<div class="margin-bottom-20">
 												<label for="option1">Loc Parcare</label><br />
-												<input type="checkbox" class="make-switch switch-large" data-label-icon="fa fa-fullscreen" data-on-text="<i class='fa fa-check'></i>" data-off-text="<i class='fa fa-times'></i>" name="loc_parcare" > 
+												<input type="checkbox" class="make-switch switch-large" data-label-icon="fa fa-fullscreen" data-on-text="<i class='fa fa-check'></i>" data-off-text="<i class='fa fa-times'></i>" name="loc_parcare" 
+												{{ ($imobil->loc_parcare == 1) ? 'checked' : '' }}
+												> 
 											</div>
 										</div>
 										<div class="col-md-3">
 											<div class="margin-bottom-20">
 												<label for="option1">Beci</label><br />
-												<input type="checkbox" class="make-switch switch-large" data-label-icon="fa fa-fullscreen" data-on-text="<i class='fa fa-check'></i>" data-off-text="<i class='fa fa-times'></i>" name="beci" > 
+												<input type="checkbox" class="make-switch switch-large" data-label-icon="fa fa-fullscreen" data-on-text="<i class='fa fa-check'></i>" data-off-text="<i class='fa fa-times'></i>" name="beci" 
+												{{ ($imobil->beci == 1) ? 'checked' : '' }}
+												> 
 											</div>
 										</div>
 										<div class="col-md-3">
 											<div class="margin-bottom-20">
 												<label for="option1">Terasa</label><br />
-												<input type="checkbox" class="make-switch switch-large" data-label-icon="fa fa-fullscreen" data-on-text="<i class='fa fa-check'></i>" data-off-text="<i class='fa fa-times'></i>" name="terasa" > 
+												<input type="checkbox" class="make-switch switch-large" data-label-icon="fa fa-fullscreen" data-on-text="<i class='fa fa-check'></i>" data-off-text="<i class='fa fa-times'></i>" name="terasa" 
+												{{ ($imobil->terasa == 1) ? 'checked' : '' }}
+												> 
 											</div>
 										</div>
 										<div class="col-md-3">
 											<div class="margin-bottom-20">
 												<label for="option1">Existenta Balcon</label><br />
-												<input type="checkbox" class="make-switch switch-large" data-label-icon="fa fa-fullscreen" data-on-text="<i class='fa fa-check'></i>" data-off-text="<i class='fa fa-times'></i>" name="existenta_balcon" > 
+												<input type="checkbox" class="make-switch switch-large" data-label-icon="fa fa-fullscreen" data-on-text="<i class='fa fa-check'></i>" data-off-text="<i class='fa fa-times'></i>" name="existenta_balcon"
+												{{ ($imobil->existenta_balcon == 1) ? 'checked' : '' }} > 
 											</div>
 										</div>
 										<div class="col-md-12">
