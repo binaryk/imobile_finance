@@ -10,7 +10,8 @@ class ImobileController extends \BaseController {
 	 */
 	public function index()
 	{
-		return View::make('imobiles.index');
+		$imobils = Imobile::with('localitate', 'judet', 'cartier', 'nrcam')->get();
+		return View::make('imobiles.index')->with(compact('imobils'));
 	}
 
 	/**
@@ -21,8 +22,8 @@ class ImobileController extends \BaseController {
 	 */
 	public function create()
 	{
-		$localitati = Localitati::lists('denumire','id'); 
-		$cartiere    = Cartier::lists('denumire', 'id');
+		$localitati = Localitati::where('id_judet', 12)->lists('denumire','id'); 
+		$cartiere    = Cartier::where('localitate_id', '5350')->lists('denumire', 'id');
 		$camere     = TipNrCamere::lists('nr_camere', 'id');
 		$tip_cladire= TipCladire::lists('denumire', 'id');
 		$tip_nr_etaje  = TipNrEtaje::lists('nr_etaje', 'id');
@@ -32,7 +33,7 @@ class ImobileController extends \BaseController {
 		$tip_mobilare = TipMobilare::lists('denumire', 'id');
 		$tip_etaje = TipEtaj::lists('denumire', 'id');
 		$tip_compartiment = TipCompartiment::lists('denumire', 'id');
-
+		
 		return View::make('imobiles.create')->with(
 			compact(
 					'localitati',
@@ -58,7 +59,31 @@ class ImobileController extends \BaseController {
 	 */
 	public function store()
 	{
-		//
+		$create = Imobile::create(
+			array(
+				'judet_id' => Input::get('judet_id'),
+				'localitate_id' => Input::get('localitate_id'),
+				'cartier_id' => Input::get('cartier_id'),
+				'nr_camere' => Input::get('nr_camere'),
+				'strada_cladire' => Input::get('strada_cladire'),
+				'nr_cladire' => Input::get('nr_cladire'),
+				'tip_cladire' => Input::get('tip_cladire'),
+				'nr_apartament' => Input::get('nr_apartament'),
+				'nr_etaje_cladire' => Input::get('nr_etaje_cladire'),
+				'pret_vanzare_euro' => Input::get('pret_vanzare_euro'),
+				'pret_negociabil' => (Input::get('pret_negociabil') ? '1' : '0'),
+				'data_aparitie_anunt' => Input::get('data_aparitie_anunt'),
+				'data_ultimei_actualizari' => Input::get('data_ultimei_actualizari'),
+				'valabilitate_oferta' => (Input::get('valabilitate_oferta') ? '1' : '0'),
+				'nume_vanzator' => Input::get('nume_vanzator'),
+				'telefon_1' => Input::get('telefon_1'),
+				'telefon_2' => Input::get('telefon_2'),
+				'extras_cf' => (Input::get('extras_cf') ? '1' : '0'),
+				'observatii_generale' => Input::get('observatii_generale'),
+			)
+		);
+		Notification::success('Ati adaugat cu succes.');
+		return Redirect::back();
 	}
 
 	/**
@@ -82,6 +107,7 @@ class ImobileController extends \BaseController {
 	 */
 	public function edit($id)
 	{
+		return 'test';
 		//
 	}
 

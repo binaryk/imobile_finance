@@ -28,5 +28,6 @@
 {{HTML::style("assets/admin/layout/css/themes/darkblue.css") }}
 {{HTML::style("assets/admin/layout/css/custom.css") }}
 <link rel="shortcut icon" href="favicon.ico"/>
+
 </head>
 
