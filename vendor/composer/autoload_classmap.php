@@ -6,7 +6,7 @@ $vendorDir = dirname(dirname(__FILE__));
 $baseDir = dirname($vendorDir);
 
 return array(
-    'AlterTableLocalitati' => $baseDir . '/app/database/migrations/2015_05_02_145053_alter_table_localitati.php',
+    'AlterTableCartiere' => $baseDir . '/app/database/migrations/2015_05_02_200013_alter_table_cartiere.php',
     'Barryvdh\\Debugbar\\Console\\ClearCommand' => $vendorDir . '/barryvdh/laravel-debugbar/src/Console/ClearCommand.php',
     'Barryvdh\\Debugbar\\Console\\PublishCommand' => $vendorDir . '/barryvdh/laravel-debugbar/src/Console/PublishCommand.php',
     'Barryvdh\\Debugbar\\Controllers\\AssetController' => $vendorDir . '/barryvdh/laravel-debugbar/src/Controllers/AssetController.php',
@@ -55,9 +55,11 @@ return array(
     'Boris\\Inspector' => $vendorDir . '/d11wtq/boris/lib/Boris/Inspector.php',
     'Boris\\ReadlineClient' => $vendorDir . '/d11wtq/boris/lib/Boris/ReadlineClient.php',
     'Boris\\ShallowParser' => $vendorDir . '/d11wtq/boris/lib/Boris/ShallowParser.php',
+    'CamereSeeder' => $baseDir . '/app/database/seeds/CamereSeeder.php',
     'Carbon\\Carbon' => $vendorDir . '/nesbot/carbon/src/Carbon/Carbon.php',
     'Cartier' => $baseDir . '/app/models/Cartier.php',
     'CartierSeeder' => $baseDir . '/app/database/seeds/CartierSeeder.php',
+    'CautaController' => $baseDir . '/app/controllers/CautaController.php',
     'ClassPreloader\\Application' => $vendorDir . '/classpreloader/classpreloader/src/ClassPreloader/Application.php',
     'ClassPreloader\\ClassList' => $vendorDir . '/classpreloader/classpreloader/src/ClassPreloader/ClassList.php',
     'ClassPreloader\\ClassLoader' => $vendorDir . '/classpreloader/classpreloader/src/ClassPreloader/ClassLoader.php',

@@ -1,7 +1,7 @@
 <!DOCTYPE html> 
 <html lang="en" class="no-js"> 
 @include('template.parts.~head')
-<body class="page-header-fixed page-quick-sidebar-over-content page-sidebar-closed-hide-logo page-container-bg-solid">
+<body class="page-header-fixed page-quick-sidebar-over-content page-sidebar-closed-hide-logo page-container-bg-solid" ng-app="app">
 
     @include('template.parts.body.~header')
     @include('template.parts.body.~page') 

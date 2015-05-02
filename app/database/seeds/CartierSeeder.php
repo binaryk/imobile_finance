@@ -7,11 +7,9 @@ class CartierSeeder extends Seeder {
 
 	public function run()
 	{
-		$faker = Faker::create();
- 
-			Cartier::create([
-				 
-			]);
+		DB::table('cartier')->where('id','<','70')->update([
+			'localitate_id' => '5350'
+		]); 
 	}
 
 }
