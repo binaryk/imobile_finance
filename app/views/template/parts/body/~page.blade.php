@@ -1,16 +1,18 @@
-<!-- BEGIN PAGE CONTAINER -->
+<!-- BEGIN CONTAINER -->
 <div class="page-container">
-	<!-- BEGIN PAGE HEAD -->
-	<div class="page-head">
-		<div class="container-fluid">
-			@include('template.parts.body.~title')
-			<!-- BEGIN PAGE TOOLBAR -->
-				
+	<!-- BEGIN SIDEBAR -->
+	@include('template.parts.body.~sidebar')
+	<!-- END SIDEBAR -->
+	<!-- BEGIN CONTENT -->
+	<div class="page-content-wrapper">
+		<div class="page-content">
+			@yield('content')
 		</div>
 	</div>
-	<div class="page-content">
-		@yield('content')
-	</div>
-	<!-- END PAGE CONTENT -->
+	<!-- END CONTENT -->
+	<!-- BEGIN QUICK SIDEBAR -->
+	@include('template.parts.body.~quick-sidebar')
+	<!-- END QUICK SIDEBAR -->
 </div>
-<!-- END PAGE CONTAINER -->
+<!-- END CONTAINER -->
+

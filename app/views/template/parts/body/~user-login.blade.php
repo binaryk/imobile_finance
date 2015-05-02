@@ -1,7 +1,10 @@
-<li class="dropdown dropdown-user dropdown-dark">
+<!-- DOC: Apply "dropdown-dark" class after below "dropdown-extended" to change the dropdown styte -->
+<li class="dropdown dropdown-user">
 	<a href="javascript:;" class="dropdown-toggle" data-toggle="dropdown" data-hover="dropdown" data-close-others="true">
-	<img alt="" class="img-circle" src="../../assets/admin/layout3/img/avatar9.jpg">
-	<span class="username username-hide-mobile">Nick</span>
+	{{HTML::image("assets/admin/layout/img/avatar3_small.jpg") }}
+	<span class="username username-hide-on-mobile">
+	Nick </span>
+	<i class="fa fa-angle-down"></i>
 	</a>
 	<ul class="dropdown-menu dropdown-menu-default">
 		<li>
@@ -19,7 +22,7 @@
 			</a>
 		</li>
 		<li>
-			<a href="javascript:;">
+			<a href="page_todo.html">
 			<i class="icon-rocket"></i> My Tasks <span class="badge badge-success">
 			7 </span>
 			</a>
