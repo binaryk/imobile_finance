@@ -22,13 +22,32 @@ class ImobileController extends \BaseController {
 	public function create()
 	{
 		$localitati = Localitati::lists('denumire','id'); 
-		$cartier    = Cartier::all();
-		$camere     = TipNrCamere::all();
-		$tip_cladire= TipCladire::all();
-		$tip_nr_etaje = TipNrEtaje::all();
+		$cartiere    = Cartier::lists('denumire', 'id');
+		$camere     = TipNrCamere::lists('nr_camere', 'id');
+		$tip_cladire= TipCladire::lists('denumire', 'id');
+		$tip_nr_etaje  = TipNrEtaje::lists('nr_etaje', 'id');
+		$judete = Judet::lists('denumire', 'id');
+		$finisaje_exterioare = TipFinisajeExterne::lists('denumire', 'id');
+		$finisaje_interioare = TipFinisajeInterne::lists('denumire', 'id');
+		$tip_mobilare = TipMobilare::lists('denumire', 'id');
+		$tip_etaje = TipEtaj::lists('denumire', 'id');
+		$tip_compartiment = TipCompartiment::lists('denumire', 'id');
 
 		return View::make('imobiles.create')->with(
-			compact('localitati','cartier','camere','tip_cladire'));
+			compact(
+					'localitati',
+					'cartiere',
+					'camere',
+					'tip_cladire', 
+					'tip_nr_etaje', 
+					'judete', 
+					'finisaje_exterioare', 
+					'finisaje_interioare',
+					'tip_mobilare',
+					'tip_etaje',
+					'tip_compartiment'
+				)
+			);
 	}
 
 	/**
