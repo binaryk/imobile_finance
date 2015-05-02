@@ -11,7 +11,10 @@ class CautaController extends \BaseController {
 	public function index()
 	{
 		$cartiere    = Cartier::all()->toArray();
-		return View::make('cauta.index')->with(compact('cartiere'));
+		$tip_cladiri = TipCladire::all()->toArray();
+		$etaj        = TipEtaj::all()->toArray();
+
+		return View::make('cauta.index')->with(compact('cartiere','tip_cladiri','etaj'));
 	}
 
 	/**
