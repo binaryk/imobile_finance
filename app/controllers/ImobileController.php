@@ -21,8 +21,14 @@ class ImobileController extends \BaseController {
 	 */
 	public function create()
 	{
-		//
-		return View::make('imobiles.create');
+		$localitati = Localitati::lists('denumire','id'); 
+		$cartier    = Cartier::all();
+		$camere     = TipNrCamere::all();
+		$tip_cladire= TipCladire::all();
+		$tip_nr_etaje = TipNrEtaje::all();
+
+		return View::make('imobiles.create')->with(
+			compact('localitati','cartier','camere','tip_cladire'));
 	}
 
 	/**
