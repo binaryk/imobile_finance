@@ -111,13 +111,13 @@
 											{{ Form::textField('Nume vanzator','nume_vanzator') }}
 										</div>
 										<div class="col-md-3">
-											{{ Form::textField('Telefon De Contact Principal','telefon_1') }}
+											{{ Form::textField('Telefon De Contact Principal','telefon_principal') }}
 										</div>
 										<div class="col-md-3">
-											{{ Form::textField('Telefon De Contact Secundar 1','telefon_2') }}
+											{{ Form::textField('Telefon De Contact Secundar 1','telefon_1') }}
 										</div>
 										<div class="col-md-3">
-											{{ Form::textField('Telefon De Contact Secundar 2','extras_cf') }}
+											{{ Form::textField('Telefon De Contact Secundar 2','telefon_1') }}
 										</div>
 										<div class="col-md-3">
 											<div class="margin-bottom-20">
@@ -393,5 +393,33 @@
 		</div>
 	</div>
 </div>
+@endsection
+
+@section('custom-scripts')
 {{ HTML::script('js/jquery/add_imobil.js') }}
+{{ HTML::style('assets/global/plugins/clockface/css/clockface.css') }}
+{{ HTML::style('assets/global/plugins/bootstrap-datepicker/css/datepicker3.css') }}
+{{ HTML::style('assets/global/plugins/bootstrap-timepicker/css/bootstrap-timepicker.min.css') }}
+{{ HTML::style('assets/global/plugins/bootstrap-colorpicker/css/colorpicker.css') }}
+{{ HTML::style('assets/global/plugins/bootstrap-daterangepicker/daterangepicker-bs3.css') }}
+{{ HTML::style('assets/global/plugins/bootstrap-datetimepicker/css/bootstrap-datetimepicker.min.css') }}
+
+
+{{ HTML::script('assets/global/plugins/bootstrap-datepicker/js/bootstrap-datepicker.js') }}
+{{ HTML::script('assets/global/plugins/bootstrap-timepicker/js/bootstrap-timepicker.min.js') }}
+{{ HTML::script('assets/global/plugins/clockface/js/clockface.js') }}
+{{ HTML::script('assets/global/plugins/bootstrap-daterangepicker/moment.min.js') }}
+{{ HTML::script('assets/global/plugins/bootstrap-daterangepicker/daterangepicker.js') }}
+{{ HTML::script('assets/global/plugins/bootstrap-colorpicker/js/bootstrap-colorpicker.js') }}
+{{ HTML::script('assets/global/plugins/bootstrap-datetimepicker/js/bootstrap-datetimepicker.min.js') }}
+
+
+{{ HTML::script('./assets/admin/pages/scripts/components-pickers.js') }}
+
+<script>
+	jQuery(document).ready(function() {       
+       ComponentsPickers.init();
+    });  
+</script>
+
 @endsection

@@ -128,10 +128,10 @@
 		</div>
 	</div>
 </div>
-{{ HTML::script('js/jquery/add_imobil.js') }}
 @endsection
 
 @section('custom-scripts')
+{{ HTML::script('js/jquery/add_imobil.js') }}
 {{ HTML::style('assets/global/plugins/clockface/css/clockface.css') }}
 {{ HTML::style('assets/global/plugins/bootstrap-datepicker/css/datepicker3.css') }}
 {{ HTML::style('assets/global/plugins/bootstrap-timepicker/css/bootstrap-timepicker.min.css') }}
