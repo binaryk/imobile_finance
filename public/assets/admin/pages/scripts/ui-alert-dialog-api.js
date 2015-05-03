@@ -15,6 +15,8 @@ var UIAlertDialogApi = function () {
             //end #demo_2
         
             $('#demo_3').click(function(){
+                console.log('test');
+                alert('test');
                 bootbox.confirm("Are you sure?", function(result) {
                    alert("Confirm result: "+result);
                 }); 
