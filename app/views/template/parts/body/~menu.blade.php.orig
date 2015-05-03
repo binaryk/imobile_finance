@@ -43,11 +43,16 @@
 				Cautare date</a>
 			</li>
 			<li>
+<<<<<<< HEAD
 				<a href="{{ URL::route('verificare-presa') }}">
+=======
+				<a href="{{ URL::route('agentii-index') }}">
 				<i class="icon-bulb"></i>
 				Agentii</a>
 			</li>
 			<li>
+				<a href="index_3.html">
+>>>>>>> origin/master
 				<i class="icon-graph"></i>
 				Verificare presa</a>
 			</li>
