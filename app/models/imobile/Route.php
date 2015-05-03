@@ -25,7 +25,8 @@ class Route
 		END IMOBILE
 		**/ 
 
-		->add('get', 'cautare-date', 'cauta', 'CautaController@index', '') 
+		->add('get', 'cautare-date', 'cautare-date', 'CautaController@index', '') 
+		->add('post', 'cautare-date', 'cautare-date', 'CautaController@show', '') 
 		/**
 		GALI. Elementele mele din dashboard 
 		**/
