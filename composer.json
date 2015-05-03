@@ -16,7 +16,7 @@
 		"zizaco/entrust": "1.2.*@dev",
 		"goodby/csv"                  : "1.2.0",
 		"tecnick.com/tcpdf"           : "6.0.*",
-		"edvinaskrucas/notification"  : "3.*"
+		"edvinaskrucas/notification"  : "3.*" 
 	},
 	"autoload": {
 		"classmap": [

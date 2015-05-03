@@ -1,6 +1,6 @@
 @extends('template.layout') 
 @section('content')
-	<div class="tab-pane active" id="tab_0">
+	<div class="tab-pane active" id="tab_0" ng-controller="CautaController">
 		<div class="portlet box green">
 			<div class="portlet-title">
 				<div class="caption">
@@ -19,23 +19,28 @@
 			</div>
 			<div class="portlet-body form">
 				<!-- BEGIN FORM-->
-				<form action="{{URL::route('cautare-date')}}" method="POST" class="form-horizontal form_input" ng-controller="CautaController">
+				<form action="{{URL::route('cautare-date')}}" method="POST" class="form-horizontal form_input" >
 					<div class="form-body">
 						<div class="row">
 							<div class="col-md-6">
 								<div class="form-group">
-									<label class="control-label col-md-3">Valabilitatea Ofertei</label>
-									<div class="col-md-9">
-										<input type="checkbox" class="make-switch" name="valabilitate_oferta" data-on-text="<i class='fa fa-check'></i>" data-off-text="<i class='fa fa-times'></i>" ng-model = 'valabilitate_oferta' ng-change="show()"> 
+									<label class="control-label col-md-3" for="checkbox1" style="cursor: pointer; margin-right: 20px;">Valabilitatea Ofertei</label>
+									<div class="md-checkbox col-md-4">
+									<input type="checkbox" id="checkbox1" class="md-check" checked='checked' name="valabilitate_oferta" ng-init="valabilitate_oferta = true" ng-model = "valabilitate_oferta"  ng-change="changeValabilitate()">
+									<label for="checkbox1">
+									<span></span>
+									<span class="check"></span>
+									<span class="box"></span>
+									 </label>
 									</div>
 								</div>
 								<div class="form-group"> 
 									<label class="control-label col-md-3">Denumire Cartier</label>
 									<div class="col-md-4"> 
-										<select class="form-control input-circle select2me" data-placeholder="Select..." name="cartier_id">
+										<select class="form-control input-circle select2me" data-placeholder="Select..." name="cartier_id" ng-model = 'denumire_cartier'>
 											<option value=""></option>
 											@foreach($cartiere as $key => $cartier)
-											<option value = "{{ $cartier['id'] }}">{{$cartier['denumire']}}</option>
+											<option value = "{{ $cartier['denumire'] }}">{{$cartier['denumire']}}</option>
 											@endforeach 
 										</select>
 									</div>
@@ -43,13 +48,13 @@
 								<div class="form-group"> 
 									<label class="col-md-3 control-label">Strada Cladire</label>
 									<div class="col-md-4">
-										<input type="text" class="form-control input-circle" placeholder="Strada..." name="strada_cladire">
+										<input type="text" class="form-control input-circle" placeholder="Strada..." name="strada_cladire" ng-model = "strada_cladire" >
 									</div>
 								</div>
 								<div class="form-group">
 									<label class="control-label col-md-3">Numar camere</label>
 									<div class="col-md-4">
-										<select class="form-control input-circle" data-placeholder="Select..." name="nr_camere">
+										<select class="form-control input-circle" data-placeholder="Select..." name="nr_camere" ng-model = "nr_camere">
 											<option value=""></option>
 											<option value="1">1 camere</option>
 											<option value="2">2 camere</option>
@@ -66,20 +71,20 @@
 								<div class="form-group"> 
 									<label class="col-md-3 control-label">Pret de vanzare in euro</label>
 									<div class="col-md-2">
-										<input type="text" class="form-control input-circle" placeholder="Pret minim" name="pret_vanzare_min">
+										<input type="text" class="form-control input-circle" placeholder="Pret minim" name="pret_vanzare_min" ng-model="pret_vanzare_min">
 									</div>
 									<div class="col-md-2">
-										<input type="text" class="form-control input-circle" placeholder="Pret maxim" name="pret_vanzare_max">
+										<input type="text" class="form-control input-circle" placeholder="Pret maxim" name="pret_vanzare_max" ng-model="pret_vanzare_max">
 									</div>
 								</div>
 
 								<div class="form-group"> 
 									<label class="control-label col-md-3">Tip cladire</label>
 									<div class="col-md-4"> 
-										<select class="form-control input-circle select2me" data-placeholder="Select..." name="tip_cladire">
+										<select class="form-control input-circle select2me" data-placeholder="Select..." name="tip_cladire" ng-model = "tip_cladire">
 											<option value=""></option>
 											@foreach($tip_cladiri as $key => $tip_cladire)
-											<option value = "{{ $tip_cladire['id'] }}">{{$tip_cladire['denumire']}}</option>
+											<option value = "{{ $tip_cladire['denumire'] }}">{{$tip_cladire['denumire']}}</option>
 											@endforeach 
 										</select>
 									</div>
@@ -88,10 +93,10 @@
 									<label class="control-label col-md-3">Data ultimei actualizari</label>
 									<div class="col-md-4">
 										<div class="input-group input-large date-picker input-daterange" data-date="10/11/2012" data-date-format="dd.mm.yyyy">
-											<input type="text" class="form-control" name="data_ultimei_actualizari_in">
+											<input type="text" class="form-control" name="data_ultimei_actualizari_in" ng-model = "data_ultimei_actualizari_in">
 											<span class="input-group-addon">
 											to </span>
-											<input type="text" class="form-control" name="data_ultimei_actualizari_out">
+											<input type="text" class="form-control" name="data_ultimei_actualizari_out" ng-model = "data_ultimei_actualizari_out">
 										</div>
 										<!-- /input-group -->
 										<span class="help-block">
@@ -100,50 +105,65 @@
 								</div>
 
 								<div class="form-group">
-									<label class="control-label col-md-3">Numai Agentiile Imobiliare ?</label>
-									<div class="col-md-9">
-										<input type="checkbox" class="make-switch" name="agentie" data-on-text="<i class='fa fa-check'></i>" data-off-text="<i class='fa fa-times'></i>"> 
+									<label class="control-label col-md-3" for="checkbox2" style="cursor: pointer; margin-right: 20px;">Numai Agentiile Imobiliare ?</label>
+									<div class="md-checkbox col-md-4">
+									<input type="checkbox" id="checkbox2" class="md-check" name="agentie" ng-model = 'agentie' ng-model = "agentie" ng-change="changeAgentie()">
+									<label for="checkbox2">
+									<span></span>
+									<span class="check"></span>
+									<span class="box"></span>
+									 </label>
 									</div>
-								</div>
+								</div> 
 								<div class="form-group">
-									<label class="control-label col-md-3">Numai Dezvoltatori Imobiliari ?</label>
-									<div class="col-md-9">
-										<input type="checkbox" class="make-switch" name="dezvoltatori" data-on-text="<i class='fa fa-check'></i>" data-off-text="<i class='fa fa-times'></i>"> 
+									<label class="control-label col-md-3" for="checkbox3" style="cursor: pointer; margin-right: 20px;">Numai Dezvoltatori Imobiliari ?</label>
+									<div class="md-checkbox col-md-4">
+									<input type="checkbox" id="checkbox3" class="md-check" name="dezvoltatori" ng-model = 'dezvoltatori' ng-change="changeDezvoltator()">
+									<label for="checkbox3">
+									<span></span>
+									<span class="check"></span>
+									<span class="box"></span>
+									 </label>
 									</div>
-								</div>
+								</div>  
 						</div>
 						<div class="col-md-6">
 							<div class="form-group"> 
 								<label class="col-md-3 control-label">Telefon De Contact Principal</label>
 								<div class="col-md-4">
-									<input type="text" class="form-control input-circle" placeholder="Ex: 0756633767" name="telefon_principal">
+									<input type="text" class="form-control input-circle" placeholder="Ex: 0756633767" name="telefon_principal" ng-model = "telefon_principal">
 								</div> 
 							</div>
 							<div class="form-group"> 
 								<label class="col-md-3 control-label">Telefon De Contact Secundar 1</label>
 								<div class="col-md-4">
-									<input type="text" class="form-control input-circle" placeholder="Ex: 0756633767" name="telefon_1">
+									<input type="text" class="form-control input-circle" placeholder="Ex: 0756633767" name="telefon_1" ng-model = "telefon_1">
 								</div> 
 							</div>
 							<div class="form-group"> 
 								<label class="col-md-3 control-label">Telefon De Contact Secundar 2</label>
 								<div class="col-md-4">
-									<input type="text" class="form-control input-circle" placeholder="Ex: 0756633767" name="telefon_2">
+									<input type="text" class="form-control input-circle" placeholder="Ex: 0756633767" name="telefon_2" ng-model = "telefon_2">
 								</div> 
 							</div>
 							<div class="form-group">
-								<label class="control-label col-md-3">Acceptare Credit Prima Casa</label>
-								<div class="col-md-9">
-									<input type="checkbox" class="make-switch" name="credit_prima_casa" data-on-text="<i class='fa fa-check'></i>" data-off-text="<i class='fa fa-times'></i>"> 
+								<label class="control-label col-md-3" for="checkbox4" style="cursor: pointer; margin-right: 20px;">Acceptare Credit Prima Casa</label>
+								<div class="md-checkbox col-md-4">
+								<input type="checkbox" id="checkbox4" class="md-check" name="credit_prima_casa" ng-model = 'credit_prima_casa' ng-change="changeCredit()">
+								<label for="checkbox4">
+								<span></span>
+								<span class="check"></span>
+								<span class="box"></span>
+								 </label>
 								</div>
-							</div>
+							</div>  
 							<div class="form-group"> 
 								<label class="control-label col-md-3">Etaj Apartament</label>
 								<div class="col-md-4"> 
-									<select class="form-control input-circle select2me" data-placeholder="Select..." name="etaj_apartament">
+									<select class="form-control input-circle select2me" data-placeholder="Select..." name="etaj_apartament" ng-model = "etaj_apartament">
 										<option value=""></option>
 										@foreach($etaje as $key => $etaj)
-										<option value = "{{ $etaj['id'] }}">{{$etaj['denumire']}}</option>
+										<option value = "{{ $etaj['denumire'] }}">{{$etaj['denumire']}}</option>
 										@endforeach 
 									</select>
 								</div>
@@ -151,10 +171,10 @@
 							<div class="form-group"> 
 								<label class="control-label col-md-3">Compartimentare Apartament</label>
 								<div class="col-md-4"> 
-									<select class="form-control input-circle select2me" data-placeholder="Select..." name="compartiment_apartament">
+									<select class="form-control input-circle select2me" data-placeholder="Select..." name="compartiment_apartament" ng-model = "compartiment_apartament">
 										<option value=""></option>
 										@foreach($tip_compartimente as $key => $tip_compartiment)
-										<option value = "{{ $tip_compartiment['id'] }}">{{$tip_compartiment['denumire']}}</option>
+										<option value = "{{ $tip_compartiment['denumire'] }}">{{$tip_compartiment['denumire']}}</option>
 										@endforeach 
 									</select>
 								</div>
@@ -162,29 +182,30 @@
 							<div class="form-group"> 
 								<label class="control-label col-md-3">Finisaje Interioare</label>
 								<div class="col-md-4"> 
-									<select class="form-control input-circle select2me" data-placeholder="Select..." name="finisaje_interioare">
+									<select class="form-control input-circle select2me" data-placeholder="Select..." name="finisaje_interioare" ng-model = "finisaje_interioare">
 										<option value=""></option>
 										@foreach($finisaje_interioare as $key => $finisaj_interior)
-										<option value = "{{ $finisaj_interior['id'] }}">{{$finisaj_interior['denumire']}}</option>
+										<option value = "{{ $finisaj_interior['denumire'] }}">{{$finisaj_interior['denumire']}}</option>
 										@endforeach 
 									</select>
 								</div>
 							</div> 
 						</div>
 					</div>
-
-
-						<div class="form-actions">
-							<div class="row">
-								<div class="col-md-offset-3 col-md-9">
-									<button type="submit" class="btn btn-circle blue btn_search">Cauta</button>
-									<button type="button" class="btn btn-circle default">Cancel</button>
-								</div>
+					<div class="form-actions">
+						<div class="row">
+							<div class="col-md-offset-3 col-md-9">
+								<button type="reset" class="btn btn-circle default pull-right">Reseteaza</button>
 							</div>
 						</div>
+					</div>
+					</div>
 				</form>
+			</div>
+		</div>
 				<!-- END FORM-->
-				<div class="row">
+				{[ nr_camere ]}
+				<div class="row" ng-init="imobile = {{{ json_encode($imobils) }}}">
 					<div class="col-md-12">
 						<!-- BEGIN EXAMPLE TABLE PORTLET-->
 						<div class="portlet box blue-hoki">
@@ -203,7 +224,7 @@
 											 Id
 										</th>
 										<th>
-											 Denumrie cartier
+											 Denumire cartier
 										</th>
 										<th>
 											 Numar de camere
@@ -226,37 +247,66 @@
 									</tr>
 									</thead>
 									<tbody>
-									@foreach($imobils as $key => $imobil)
-										<tr>
-											<td>{{ $imobil->id }}</td>
-											<td>{{ $imobil->cartier->denumire }}</td>
-											<td>{{ $imobil->nrcam->nr_camere }}</td>
-											<td>{{ $imobil->pret_vanzare_euro }}</td>
-											<td>{{ ($imobil->valabilitate_oferta == 1) ? 'Da' : 'Nu' }}</td>
-											<td>
-											 {{ ($imobil->etaj_apartament > 0) ? 
-											 	 $imobil->etajapartament->denumire :
-											 	 '' 
-											 }}
-											</td>
-											<td>
-											 {{ ($imobil->compartiment_apartament > 0) ? 
-											 	 $imobil->compartimet->denumire :
-											 	 '' 
-											 }}
-											</td>
-											<td>
-											 {{ ($imobil->finisaje_interioare > 0) ? 
-											 	 $imobil->finint->denumire :
-											 	 '' 
-											 }}
-											</td> 
-										</tr>
-									@endforeach
+									 <tr ng-repeat="imobil in imobile | filter:{cartier:{denumire:denumire_cartier} , strada_cladire: strada_cladire, nrcam: { nr_camere: nr_camere }, tip_cladire: {denumire: tip_cladire}, valabilitate_oferta: valabilitate, agentie: is_agentie, dezvoltator_imobiliari: is_dezvoltator, credit_prima_casa: is_credit, telefon_principal: telefon_principal, telefon_1:telefon_1, telefon_2:telefon_2, etajapartament: {denumire: etaj_apartament }, compartiment: {denumire: compartiment_apartament}, finint:{ denumire: finisaje_interioare } } | pretFilter : pret_vanzare_min:pret_vanzare_max | dateFilter:data_ultimei_actualizari_in:data_ultimei_actualizari_out">
+									 	<td>
+									 		{[ imobil.id ]}
+									 	</td>
+									 	<td>
+									 		{[ imobil.cartier.denumire ]}
+									 	</td>
+									 	<td>
+									 		{[ imobil.nrcam.nr_camere ]}
+									 	</td>
+									 	<td>
+									 		{[ imobil.pret_vanzare_euro ]}
+									 	</td>
+									 	<td>
+									 		{[ imobil.valabilitate_oferta == 1 ? 'Valabila' : 'Nevalabila' ]}
+									 	</td>
+									 	<td>
+									 		{[ imobil.etajapartament.denumire ]}
+									 	</td>
+									 	<td>
+									 		{[ imobil.compartiment.denumire ]}
+									 	</td>
+									 	<td>
+									 		{[ imobil.finint.denumire ]}
+									 	</td>
+									 	<td ng-show="false">
+									 		{[ imobil.strada_cladire ]}
+									 	</td>
+									 	<td ng-show="false">
+									 		{[ imobil.tip_cladire.denumire ]}
+									 	</td>
+									 	<td ng-show="false">
+									 		{[ imobil.data_ultimei_actualizari |date:'dd.MM.yyyy' ]}
+									 	</td>
+									 	<td ng-show="false">
+									 		{[ imobil.agentie ]}
+									 	</td>
+										<td ng-show="false">
+									 		{[ imobil.dezvoltator_imobiliari ]}
+									 	</td>
+										<td ng-show="false">
+									 		{[ imobil.credit_prima_casa ]}
+									 	</td>
+									 	<td ng-show="false">
+									 		{[ imobil.telefon_principal ]}
+									 	</td>
+									 	<td ng-show="false">
+									 		{[ imobil.telefon_1 ]}
+									 	</td>
+									 	<td ng-show="false">
+									 		{[ imobil.telefon_2 ]}
+									 	</td> 
+
+									 </tr>
 									</tbody>
 								</table>
 							</div>
-			</div>
+						</div>
+					</div>
+				</div>
 		</div>
 @endsection
 
@@ -270,7 +320,7 @@
 
 {{ HTML::script("js/angular/angular.js") }}
 {{ HTML::script("js/angular/app.js") }}
-{{ HTML::script("js/angular/cautare/cauta.js") }} 
+{{ HTML::script("js/angular/cautare/CautaController.js") }} 
 
 {{ HTML::script("assets/global/plugins/bootstrap-datepicker/js/bootstrap-datepicker.js") }}
 {{ HTML::script("assets/global/plugins/bootstrap-timepicker/js/bootstrap-timepicker.min.js") }}
@@ -301,7 +351,8 @@
 {{HTML::script("assets/admin/pages/scripts/table-advanced.js") }}
 
 	<script>
-	        jQuery(document).ready(function() {       
+	        jQuery(document).ready(function() {    ;
+
 	            Metronic.init(); // init metronic core components
 				Layout.init(); // init current layout
 				QuickSidebar.init(); // init quick sidebar

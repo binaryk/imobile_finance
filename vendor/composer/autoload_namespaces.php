@@ -38,6 +38,7 @@ return array(
     'Net' => array($vendorDir . '/phpseclib/phpseclib/phpseclib'),
     'Math' => array($vendorDir . '/phpseclib/phpseclib/phpseclib'),
     'LaravelBook\\Ardent' => array($vendorDir . '/laravelbook/ardent/src'),
+    'Laracasts\\Utilities' => array($vendorDir . '/laracasts/utilities/src'),
     'Krucas\\Notification' => array($vendorDir . '/edvinaskrucas/notification/src'),
     'Jeremeamia\\SuperClosure' => array($vendorDir . '/jeremeamia/SuperClosure/src'),
     'Illuminate' => array($vendorDir . '/laravel/framework/src'),

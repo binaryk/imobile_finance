@@ -14,7 +14,7 @@ class CautaController extends \BaseController {
 		$tip_cladiri = TipCladire::all()->toArray();
 		$etaje        = TipEtaj::all()->toArray();
 		$tip_compartimente = TipCompartiment::all()->toArray();
-		$finisaje_interioare = TipFinisajeInterne::all()->toArray();
+		$finisaje_interioare = TipFinisajeInterne::all()->toArray(); 
 		$imobils = Imobile::with(
 				'localitate', 
 				'judet', 
@@ -22,7 +22,10 @@ class CautaController extends \BaseController {
 				'nrcam', 
 				'etajapartament', 
 				'compartiment',
-				'finint')->get();
+				'finint',
+				'tip_cladire'
+				)->get();
+		Debugbar::info($imobils->toArray());
 		return View::make('cauta.index')->with(compact('cartiere','tip_cladiri','etaje','tip_compartimente','finisaje_interioare','imobils'));
 	}
 

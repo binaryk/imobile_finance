@@ -44,6 +44,7 @@ class Imobile extends \Eloquent {
       'terasa',
       'existenta_balcon',
       'observatii_dotari',
+      'agentie'
     ];
 	protected $table    = 'imobile';
 
@@ -80,6 +81,11 @@ class Imobile extends \Eloquent {
   public function finint()
   {
     return $this->belongsTo('TipFinisajeInterne', 'finisaje_interioare');
+  }
+
+  public function tip_cladire()
+  {
+    return $this->belongsTo('TipCladire', 'tip_cladire');
   }
 
 

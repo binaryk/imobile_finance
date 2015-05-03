@@ -42,7 +42,7 @@ return [
 		'Way\Generators\GeneratorsServiceProvider',
 		'Zizaco\Entrust\EntrustServiceProvider',
 		'Barryvdh\LaravelIdeHelper\IdeHelperServiceProvider',  
-		'Krucas\Notification\NotificationServiceProvider'
+		'Krucas\Notification\NotificationServiceProvider',
 	],
 	'manifest' => storage_path() . '/meta',
 	'aliases' => [
