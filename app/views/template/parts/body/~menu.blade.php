@@ -43,9 +43,9 @@
 				Cautare date</a>
 			</li>
 			<li>
-				<a href="index_3.html">
+				<a href="{{ URL::route('verificare-presa') }}">
 				<i class="icon-graph"></i>
-				New Dashboard #2</a>
+				Verificare presa</a>
 			</li>
 		</ul>
 	</li>

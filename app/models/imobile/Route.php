@@ -28,8 +28,9 @@ class Route
 		->add('get', 'cautare-date', 'cautare-date', 'CautaController@index', '') 
 		->add('post', 'cautare-date', 'cautare-date', 'CautaController@show', '') 
 		/**
-		GALI. Elementele mele din dashboard 
+		Imobile. verificare presa 
 		**/
+		->add('get', 'verificare-presa', 'verificare-presa', 'PresaController@index', '') 
  
 		;
 	}
