@@ -27,6 +27,11 @@ class Route
 
 		->add('get', 'cautare-date', 'cautare-date', 'CautaController@index', '') 
 		->add('post', 'cautare-date', 'cautare-date', 'CautaController@show', '') 
+
+		/**
+		Agentii
+		**/
+		->add('get', 'agentii-index', 'agentii-index', 'AgentiiController@index', '') 
 		/**
 		GALI. Elementele mele din dashboard 
 		**/

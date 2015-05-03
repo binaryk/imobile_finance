@@ -6,6 +6,8 @@ $vendorDir = dirname(dirname(__FILE__));
 $baseDir = dirname($vendorDir);
 
 return array(
+    'Agentii' => $baseDir . '/app/models/Agentii.php',
+    'AgentiiTableSeeder' => $baseDir . '/app/database/seeds/AgentiiTableSeeder.php',
     'AlterTableCartiere' => $baseDir . '/app/database/migrations/2015_05_02_200013_alter_table_cartiere.php',
     'AlterTableImobileAddAgentie' => $baseDir . '/app/database/migrations/2015_05_03_200311_alter_table_imobile_add_agentie.php',
     'AlterTableImobileAddTelefon' => $baseDir . '/app/database/migrations/2015_05_02_225625_alter_table_imobile_add_telefon.php',
@@ -1099,11 +1101,6 @@ return array(
     'Krucas\\Notification\\NotificationServiceProvider' => $vendorDir . '/edvinaskrucas/notification/src/Krucas/Notification/NotificationServiceProvider.php',
     'Krucas\\Notification\\NotificationsBag' => $vendorDir . '/edvinaskrucas/notification/src/Krucas/Notification/NotificationsBag.php',
     'Krucas\\Notification\\Subscriber' => $vendorDir . '/edvinaskrucas/notification/src/Krucas/Notification/Subscriber.php',
-    'Laracasts\\Utilities\\JavaScript\\Facades\\JavaScript' => $vendorDir . '/laracasts/utilities/src/Laracasts/Utilities/JavaScript/Facades/JavaScript.php',
-    'Laracasts\\Utilities\\JavaScript\\LaravelViewBinder' => $vendorDir . '/laracasts/utilities/src/Laracasts/Utilities/JavaScript/LaravelViewBinder.php',
-    'Laracasts\\Utilities\\JavaScript\\PHPToJavaScriptTransformer' => $vendorDir . '/laracasts/utilities/src/Laracasts/Utilities/JavaScript/PHPToJavaScriptTransformer.php',
-    'Laracasts\\Utilities\\JavaScript\\ViewBinder' => $vendorDir . '/laracasts/utilities/src/Laracasts/Utilities/JavaScript/ViewBinder.php',
-    'Laracasts\\Utilities\\UtilitiesServiceProvider' => $vendorDir . '/laracasts/utilities/src/Laracasts/Utilities/UtilitiesServiceProvider.php',
     'LaravelBook\\Ardent\\Ardent' => $vendorDir . '/laravelbook/ardent/src/LaravelBook/Ardent/Ardent.php',
     'LaravelBook\\Ardent\\Builder' => $vendorDir . '/laravelbook/ardent/src/LaravelBook/Ardent/Builder.php',
     'LaravelBook\\Ardent\\Facades\\Ardent' => $vendorDir . '/laravelbook/ardent/src/LaravelBook/Ardent/Facades/Ardent.php',

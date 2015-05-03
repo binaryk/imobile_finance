@@ -1,0 +1,1 @@
+C:\xampp\htdocs\imob\app/views/imobiles/show.blade.php
