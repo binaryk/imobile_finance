@@ -14,10 +14,33 @@ class HomeController extends BaseController {
 	|	Route::get('/', 'HomeController@showWelcome');
 	|
 	*/
+	protected $title = 'Bine ati venit pe aplicatia Imobiliare';
+	protected $small = 'aici veti putea gestiona afacerea dvs';
 
 	public function showWelcome()
-	{
-		return View::make('hello');
+	{ 
+		$links = [
+			'my-profile' => [
+					'bg' => 'blue-madison',
+					'header'=> 'Profil',
+					'title'	=> 'Profilul meu',
+					'icon'  => 'fa-user',
+					'url'	=> URL::route('profil')
+				],
+			'my-imobils' => [
+					'bg' => 'red-intense',
+					'header'=> 'Imobile',
+					'title'	=> 'Imobilele mele',
+					'icon'  => 'fa-home',
+					'url'	=> URL::route('imobile-index')
+				]
+		];
+
+		return View::make('hello')->with([
+			'title'       => $this->title,
+			'small_title' => $this->small,
+			'links'       => $links 
+			]);
 	}
 
 }

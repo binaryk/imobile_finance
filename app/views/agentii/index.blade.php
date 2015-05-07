@@ -1,14 +1,7 @@
 @extends('template.layout') 
 @section('content')
 <br>
-<div class="row">
-	<div class="col-md-6">
-		<div class="btn-group">
-			<a id="sample_editable_1_new" class="btn green" href="{{URL::route('imobile-add')}}">
-			Adauga<i class="fa fa-plus"></i>
-			</a>
-		</div>
-	</div>
+<div class="row"> 
 	<div class="col-md-12">
 		<!-- BEGIN EXAMPLE TABLE PORTLET-->
 		<div class="portlet box blue-hoki">

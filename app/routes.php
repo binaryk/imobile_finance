@@ -12,10 +12,5 @@
 */
 
 
-Route::get('/', function()
-{
-	return View::make('hello');
-});
-
 include 'macros.php';
 Imobile\Route::make()->define();

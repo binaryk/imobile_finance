@@ -1,8 +1,8 @@
 <?php
 
 class Cartier extends \Eloquent {
-    protected $fillable = ['denumire'];
-    protected $table    = 'cartier';
+    protected $fillable = ['nume'];
+    protected $table    = 'cartiere';
 
     public static function getRecord( $id )
     {

@@ -10,6 +10,7 @@ class ImobileController extends \BaseController {
 	 */
 	public function index()
 	{
+		return $this->routes;
 		$imobils = Imobile::with(
 				'localitate', 
 				'judet', 

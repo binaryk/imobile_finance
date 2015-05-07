@@ -1,11 +1,25 @@
 @extends('template.layout')
-
+	
 @section('content')
-	Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-	tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-	quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-	consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
-	cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
-	proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-
+	 <div class="row">  
+	 	@foreach($links as $i => $link)
+			<div class="col-lg-3 col-md-3 col-sm-6 col-xs-12">
+				<div class="dashboard-stat blue-madison {{ $link['bg'] }}">
+					<div class="visual">
+						<i class="fa {{ $link['icon'] }}"></i>
+					</div>
+					<div class="details">
+						<div class="number"></div>
+						<div class="desc">
+							 {{ $link['header'] }}
+						</div>
+					</div>
+					<a class="more" href="{{ $link['url'] }}">
+						{{ $link['title'] }} 
+					<i class="m-icon-swapright m-icon-white"></i>
+					</a>
+				</div>
+			</div>
+	 	@endforeach
+	 </div>
 @endsection
