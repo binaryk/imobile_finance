@@ -1,1 +1,0 @@
-C:\xampp\htdocs\imob\app/views/cautas/create.blade.php
