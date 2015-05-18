@@ -20,6 +20,7 @@ class CreateApartamentsTable extends Migration {
 			$table->integer('id_imobil')->unsigned()->nullable();
 			$table->integer('id_cartier')->unsigned()->nullable();
 			$table->integer('id_organizatie')->unsigned()->nullable();
+			$table->integer('id_proprietar_pf')->unsigned()->nullable();
 			$table->double('suprafata_min');
 			$table->double('suprafata_max');
 
