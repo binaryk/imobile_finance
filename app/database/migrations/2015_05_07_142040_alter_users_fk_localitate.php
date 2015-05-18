@@ -12,14 +12,14 @@ class AlterUsersFkLocalitate extends Migration {
 	 */
 	public function up()
 	{
-		Schema::table('users',function(Blueprint $t){ 
+		/*Schema::table('users',function(Blueprint $t){ 
 			$t
 			->foreign('id_localitate')
 			->references('id')
 			->on('localitati')
 			->onDelete('restrict')
 			->onUpdate('cascade');
-		});
+		});*/
 	}
 
 	/**
@@ -29,9 +29,9 @@ class AlterUsersFkLocalitate extends Migration {
 	 */
 	public function down()
 	{
-		Schema::table('users', function (Blueprint $t) {
+		/*Schema::table('users', function (Blueprint $t) {
 			$t->dropForeign('users_id_localitate_foreign');
-        }); 
+        }); */
 	}
 
 }

@@ -1,6 +1,6 @@
 <?php
 
-namespace Imobile;
+namespace Imobile; 
 
 class Route
 {
@@ -11,34 +11,25 @@ class Route
 	public function __construct()
 	{
 		$this
+		/* Database general operations */
+		->add('get', 'home', '/', 'HomeController@showWelcome', '')
 		/**
 		IMOBILE
 		**/ 
-		/* Database general operations */
-		->add('get', 'home', '/', 'HomeController@showWelcome', '')
+		->add('get', 'imobile-index', 'aaa/{id}', 'ImobileController@index', '\Imobiliare\Datatable') 
+		->add('get', 'imobile-index-row-source', 'aaa/row-source/{id}', 'ImobileController@rows', '\Imobiliare\Datatable')
 
-		->add('get', 'profil', 'profil', 'ImobileController@index', '') 
-		->add('get', 'imobile-index', 'imobile', 'ImobileController@index', '') 
-		->add('get', 'imobile-add', 'imobile-adauga', 'ImobileController@create', '') 
-		->add('post', 'imobile-add', 'imobile-adauga', 'ImobileController@store', '') 
-		->add('get', 'imobile-edit', 'imobile-edit/{id}', 'ImobileController@edit', '') 
-		->add('post', 'imobile-edit', 'imobile-edit/{id}', 'ImobileController@update', '') 
-		->add('get', 'imobile-delete', 'imobile-delete/{id}', 'ImobileController@destroy', '') 
+
+		->add('get', 'datatable-index', 'nomenclatoare/{id}', 'DatatableController@index', 'Imobiliare\Datatable')
+		->add('get', 'datatable-row-source', 'nomenclatoare/row-source/{id}', 'DatatableController@rows', 'Imobiliare\Datatable')
+		->add('post', 'datatable-load-form', 'nomenclatoare/load-dt-form/{id}', 'DatatableController@loadForm', 'Imobiliare\Datatable')
+		->add('post', 'datatable-do-action', 'nomenclatoare/dt-do-action/{id}', 'DatatableController@doAction', 'Imobiliare\Datatable')
+
+		 
 		/**
 		END IMOBILE
 		**/ 
 
-		->add('get', 'cautare-date', 'cautare-date', 'CautaController@index', '') 
-		->add('post', 'cautare-date', 'cautare-date', 'CautaController@show', '') 
-
-		/**
-		Agentii
-		**/
-		->add('get', 'agentii-index', 'agentii-index', 'AgentiiController@index', '') 
-		/**
-		Imobile. verificare presa 
-		**/
-		->add('get', 'verificare-presa', 'verificare-presa', 'PresaController@index', '') 
  
 		;
 	}

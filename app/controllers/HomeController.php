@@ -25,14 +25,14 @@ class HomeController extends BaseController {
 					'header'=> 'Profil',
 					'title'	=> 'Profilul meu',
 					'icon'  => 'fa-user',
-					'url'	=> URL::route('profil')
+					'url'	=> URL::route('home')
 				],
 			'my-imobils' => [
 					'bg' => 'red-intense',
 					'header'=> 'Imobile',
 					'title'	=> 'Imobilele mele',
 					'icon'  => 'fa-home',
-					'url'	=> URL::route('imobile-index')
+					'url'	=> URL::route('home')
 				]
 		];
 

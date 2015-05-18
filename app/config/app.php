@@ -38,11 +38,11 @@ return [
 		'Illuminate\View\ViewServiceProvider',
 		'Illuminate\Workbench\WorkbenchServiceProvider',
 
-		'Thujohn\Pdf\PdfServiceProvider',
 		'Way\Generators\GeneratorsServiceProvider',
-		'Zizaco\Entrust\EntrustServiceProvider',
-		'Barryvdh\LaravelIdeHelper\IdeHelperServiceProvider',  
 		'Krucas\Notification\NotificationServiceProvider',
+		'Cartalyst\Sentry\SentryServiceProvider',
+		'Laracasts\Validation\ValidationServiceProvider',
+		'basicAuth\Repo\BackendServiceProvider',
 	],
 	'manifest' => storage_path() . '/meta',
 	'aliases' => [
@@ -85,11 +85,10 @@ return [
 		'Validator'         => 'Illuminate\Support\Facades\Validator',
 		'View'              => 'Illuminate\Support\Facades\View',
 
-		'Entrust'    		=> 'Zizaco\Entrust\EntrustFacade',
-		'PDF' 				=> 'Thujohn\Pdf\PdfFacade',
 		'Notification'      => 'Krucas\Notification\Facades\Notification',
 		'Debugbar'          => 'Barryvdh\Debugbar\Facade',
 		'Twig'              => 'TwigBridge\Facade\Twig',
+		'Sentry' => 'Cartalyst\Sentry\Facades\Laravel\Sentry',
 	],
 
 ];

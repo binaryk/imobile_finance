@@ -1,10 +1,10 @@
 {
     "_readme": [
         "This file locks the dependencies of your project to a known state",
-        "Read more about it at http://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
+        "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "hash": "aa38b7a53ebebfcea7e3d850b32113e0",
+    "hash": "f9a676a563940b619ebb485d17d35cea",
     "packages": [
         {
             "name": "barryvdh/laravel-debugbar",
@@ -61,67 +61,104 @@
             "time": "2015-02-04 09:52:12"
         },
         {
-            "name": "barryvdh/laravel-ide-helper",
-            "version": "v1.11.6",
+            "name": "cartalyst/sentry",
+            "version": "v2.1.5",
             "source": {
                 "type": "git",
-                "url": "https://github.com/barryvdh/laravel-ide-helper.git",
-                "reference": "692b223e94139428427ab2b4d2370b8bc6b2fdbe"
+                "url": "https://github.com/cartalyst/sentry.git",
+                "reference": "0ae4158353e41cc4061631c86c1cddd67c1f23be"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/barryvdh/laravel-ide-helper/zipball/692b223e94139428427ab2b4d2370b8bc6b2fdbe",
-                "reference": "692b223e94139428427ab2b4d2370b8bc6b2fdbe",
+                "url": "https://api.github.com/repos/cartalyst/sentry/zipball/0ae4158353e41cc4061631c86c1cddd67c1f23be",
+                "reference": "0ae4158353e41cc4061631c86c1cddd67c1f23be",
                 "shasum": ""
             },
             "require": {
-                "illuminate/console": "4.x",
-                "illuminate/filesystem": "4.x",
-                "illuminate/support": "4.x",
-                "php": ">=5.3.0",
-                "phpdocumentor/reflection-docblock": "2.0.x",
-                "symfony/class-loader": "~2.3"
+                "php": ">=5.3.3"
             },
             "require-dev": {
-                "doctrine/dbal": "~2.3"
+                "illuminate/cookie": ">=4.0.9,<4.2",
+                "illuminate/database": ">=4.0.9,<4.2",
+                "illuminate/http": ">=4.0.9,<4.2",
+                "illuminate/session": ">=4.0.9,<4.2",
+                "ircmaxell/password-compat": "1.0.*",
+                "mockery/mockery": "0.9.*"
             },
             "suggest": {
-                "doctrine/dbal": "Load information from the database about models for phpdocs (~2.3)"
+                "happydemon/txt": "Required Text helpers when using the Kohana implementation",
+                "illuminate/database": "Default sentry user, group and throttling implementations.",
+                "ircmaxell/password-compat": "Default hashing uses PHP 5.5 password_* functions, with forward-compatible support."
             },
             "type": "library",
             "extra": {
+                "component": "package",
+                "frameworks": [
+                    "Laravel 3",
+                    "Laravel 4",
+                    "CodeIgniter 3",
+                    "FuelPHP 1",
+                    "Kohana"
+                ],
+                "versions": {
+                    "1": "1.1/master",
+                    "2": "master"
+                },
                 "branch-alias": {
-                    "dev-master": "1.11-dev"
+                    "dev-master": "2.0-dev"
                 }
             },
             "autoload": {
-                "psr-4": {
-                    "Barryvdh\\LaravelIdeHelper\\": "src"
+                "classmap": [
+                    "src/Cartalyst/Sentry/Groups/Exceptions.php",
+                    "src/Cartalyst/Sentry/Throttling/Exceptions.php",
+                    "src/Cartalyst/Sentry/Users/Exceptions.php",
+                    "src/migrations"
+                ],
+                "psr-0": {
+                    "Cartalyst\\Sentry": "src/"
                 }
             },
             "notification-url": "https://packagist.org/downloads/",
             "license": [
-                "MIT"
+                "BSD-3-Clause"
             ],
             "authors": [
                 {
-                    "name": "Barry vd. Heuvel",
-                    "email": "barryvdh@gmail.com"
+                    "name": "Ben Corlett",
+                    "email": "ben.corlett@cartalyst.com",
+                    "role": "Developer"
+                },
+                {
+                    "name": "Cartalyst LLC",
+                    "email": "help@cartalyst.com"
+                },
+                {
+                    "name": "Bruno Gaspar",
+                    "email": "bruno.gaspar@cartalyst.com",
+                    "role": "Developer"
+                },
+                {
+                    "name": "Dan Syme",
+                    "email": "dan.syme@cartalyst.com",
+                    "role": "Creator & Designer"
+                },
+                {
+                    "name": "Daniel Petrie",
+                    "email": "dan.petrie@cartalyst.com",
+                    "role": "Developer"
                 }
             ],
-            "description": "Laravel IDE Helper, generates correct PHPDocs for all Facade classes, to improve auto-completion.",
+            "description": "PHP 5.3+ Fully-featured Authentication & Authorization System",
             "keywords": [
-                "autocomplete",
-                "codeintel",
-                "helper",
-                "ide",
+                "auth",
+                "codeigniter",
+                "fuelphp",
+                "kohana",
                 "laravel",
-                "netbeans",
-                "phpdoc",
-                "phpstorm",
-                "sublime"
+                "security"
             ],
-            "time": "2015-03-16 17:22:03"
+            "time": "2015-03-06 03:17:20"
         },
         {
             "name": "classpreloader/classpreloader",
@@ -169,56 +206,6 @@
                 "preload"
             ],
             "time": "2014-03-12 00:05:31"
-        },
-        {
-            "name": "creitive/breadcrumbs",
-            "version": "v2.0.0",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/creitive/breadcrumbs.git",
-                "reference": "c85a23b54c3fb85a607dfcf6970046170413708e"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/creitive/breadcrumbs/zipball/c85a23b54c3fb85a607dfcf6970046170413708e",
-                "reference": "c85a23b54c3fb85a607dfcf6970046170413708e",
-                "shasum": ""
-            },
-            "require": {
-                "php": ">=5.3.0"
-            },
-            "require-dev": {
-                "phpunit/phpunit": "~4.4",
-                "symfony/css-selector": "~2.0",
-                "symfony/dom-crawler": "~2.0",
-                "way/laravel-test-helpers": "dev-master"
-            },
-            "type": "library",
-            "autoload": {
-                "psr-0": {
-                    "Creitive\\Breadcrumbs\\": "src"
-                }
-            },
-            "notification-url": "https://packagist.org/downloads/",
-            "license": [
-                "MIT License"
-            ],
-            "authors": [
-                {
-                    "name": "Luka Macun",
-                    "email": "luka.macun@creitive.rs"
-                },
-                {
-                    "name": "Miloš Levačić",
-                    "email": "milos.levacic@creitive.rs"
-                }
-            ],
-            "description": "Simple breadcrumbs class",
-            "homepage": "https://github.com/creitive/breadcrumbs",
-            "keywords": [
-                "breadcrumbs"
-            ],
-            "time": "2015-03-07 18:16:10"
         },
         {
             "name": "d11wtq/boris",
@@ -1025,17 +1012,17 @@
             "time": "2015-01-10 01:09:28"
         },
         {
-            "name": "laracasts/utilities",
-            "version": "1.0.1",
+            "name": "laracasts/validation",
+            "version": "1.2.2",
             "source": {
                 "type": "git",
-                "url": "https://github.com/laracasts/PHP-Vars-To-Js-Transformer.git",
-                "reference": "cdcee80cdbe5673f61f59df30979546e4f7fadd6"
+                "url": "https://github.com/laracasts/Validation.git",
+                "reference": "2323c9064199039141dedf61c0f6ace33a9cc29f"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/laracasts/PHP-Vars-To-Js-Transformer/zipball/cdcee80cdbe5673f61f59df30979546e4f7fadd6",
-                "reference": "cdcee80cdbe5673f61f59df30979546e4f7fadd6",
+                "url": "https://api.github.com/repos/laracasts/Validation/zipball/2323c9064199039141dedf61c0f6ace33a9cc29f",
+                "reference": "2323c9064199039141dedf61c0f6ace33a9cc29f",
                 "shasum": ""
             },
             "require": {
@@ -1043,12 +1030,12 @@
                 "php": ">=5.4.0"
             },
             "require-dev": {
-                "phpspec/phpspec": "~2.0"
+                "phpspec/phpspec": "2.0.*@dev"
             },
             "type": "library",
             "autoload": {
                 "psr-0": {
-                    "Laracasts\\Utilities": "src/"
+                    "Laracasts\\Validation": "src/"
                 }
             },
             "notification-url": "https://packagist.org/downloads/",
@@ -1061,12 +1048,8 @@
                     "email": "jeffrey@laracasts.com"
                 }
             ],
-            "description": "Transform your PHP to JavaScript",
-            "keywords": [
-                "javascript",
-                "laravel"
-            ],
-            "time": "2014-04-24 21:43:55"
+            "description": "Easy validation for Laravel applications.",
+            "time": "2014-07-25 20:20:38"
         },
         {
             "name": "laravel/framework",
@@ -1182,65 +1165,6 @@
                 "laravel"
             ],
             "time": "2015-02-11 20:37:15"
-        },
-        {
-            "name": "laravelbook/ardent",
-            "version": "v2.4.2",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/laravelbook/ardent.git",
-                "reference": "0a0238b8040abc1c71401ce27a8edf2619fa5bed"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/laravelbook/ardent/zipball/0a0238b8040abc1c71401ce27a8edf2619fa5bed",
-                "reference": "0a0238b8040abc1c71401ce27a8edf2619fa5bed",
-                "shasum": ""
-            },
-            "require": {
-                "illuminate/database": "~4.1",
-                "illuminate/support": "~4.1",
-                "illuminate/validation": "~4.1",
-                "php": ">=5.3.0"
-            },
-            "type": "library",
-            "autoload": {
-                "psr-0": {
-                    "LaravelBook\\Ardent": "src/"
-                }
-            },
-            "notification-url": "https://packagist.org/downloads/",
-            "license": [
-                "BSD-3-Clause"
-            ],
-            "authors": [
-                {
-                    "name": "Max Ehsan",
-                    "email": "contact@laravelbook.com",
-                    "homepage": "http://laravelbook.com/",
-                    "role": "Maintainer"
-                },
-                {
-                    "name": "Igor Santos",
-                    "email": "igorsantos07+dev@gmail.com",
-                    "homepage": "http://www.igorsantos.com.br",
-                    "role": "Developer"
-                }
-            ],
-            "description": "Self-validating smart models for Laravel 4's Eloquent O/RM",
-            "homepage": "http://laravelbook.com/",
-            "keywords": [
-                "Active Record",
-                "activerecord",
-                "database",
-                "eloquent",
-                "framework",
-                "laravel",
-                "orm",
-                "sql",
-                "validation"
-            ],
-            "time": "2014-02-25 20:39:04"
         },
         {
             "name": "maximebf/debugbar",
@@ -1520,55 +1444,6 @@
             "time": "2015-04-26 09:51:43"
         },
         {
-            "name": "phpdocumentor/reflection-docblock",
-            "version": "2.0.4",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/phpDocumentor/ReflectionDocBlock.git",
-                "reference": "d68dbdc53dc358a816f00b300704702b2eaff7b8"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/phpDocumentor/ReflectionDocBlock/zipball/d68dbdc53dc358a816f00b300704702b2eaff7b8",
-                "reference": "d68dbdc53dc358a816f00b300704702b2eaff7b8",
-                "shasum": ""
-            },
-            "require": {
-                "php": ">=5.3.3"
-            },
-            "require-dev": {
-                "phpunit/phpunit": "~4.0"
-            },
-            "suggest": {
-                "dflydev/markdown": "~1.0",
-                "erusev/parsedown": "~1.0"
-            },
-            "type": "library",
-            "extra": {
-                "branch-alias": {
-                    "dev-master": "2.0.x-dev"
-                }
-            },
-            "autoload": {
-                "psr-0": {
-                    "phpDocumentor": [
-                        "src/"
-                    ]
-                }
-            },
-            "notification-url": "https://packagist.org/downloads/",
-            "license": [
-                "MIT"
-            ],
-            "authors": [
-                {
-                    "name": "Mike van Riel",
-                    "email": "mike.vanriel@naenius.com"
-                }
-            ],
-            "time": "2015-02-03 12:10:50"
-        },
-        {
             "name": "phpseclib/phpseclib",
             "version": "0.3.10",
             "source": {
@@ -1818,54 +1693,6 @@
             "time": "2014-08-22 12:45:37"
         },
         {
-            "name": "sleeping-owl/with-join",
-            "version": "1.0.10",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/sleeping-owl/with-join.git",
-                "reference": "7fe4e4499d9e00fa056108fc06ede3129daf9d57"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/sleeping-owl/with-join/zipball/7fe4e4499d9e00fa056108fc06ede3129daf9d57",
-                "reference": "7fe4e4499d9e00fa056108fc06ede3129daf9d57",
-                "shasum": ""
-            },
-            "require": {
-                "illuminate/support": ">=4.1",
-                "laravel/framework": "<5.0.6",
-                "php": ">=5.4.0"
-            },
-            "require-dev": {
-                "illuminate/database": ">=4.1"
-            },
-            "type": "library",
-            "autoload": {
-                "psr-0": {
-                    "SleepingOwl\\WithJoin": "src/"
-                }
-            },
-            "notification-url": "https://packagist.org/downloads/",
-            "license": [
-                "MIT"
-            ],
-            "authors": [
-                {
-                    "name": "Sleeping Owl",
-                    "email": "owl.sleeping@yahoo.com"
-                }
-            ],
-            "description": "Package to convert Eloquent BelongsTo subqueries into one query with left join.",
-            "keywords": [
-                "activerecord",
-                "eloquent",
-                "join",
-                "laravel",
-                "with"
-            ],
-            "time": "2015-02-21 13:35:11"
-        },
-        {
             "name": "stack/builder",
             "version": "v1.0.3",
             "source": {
@@ -2020,57 +1847,6 @@
             "description": "Symfony BrowserKit Component",
             "homepage": "http://symfony.com",
             "time": "2015-01-03 08:01:13"
-        },
-        {
-            "name": "symfony/class-loader",
-            "version": "v2.6.6",
-            "target-dir": "Symfony/Component/ClassLoader",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/symfony/ClassLoader.git",
-                "reference": "861765b3e5f32979de5bd19ad2577cbb830a29d5"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/symfony/ClassLoader/zipball/861765b3e5f32979de5bd19ad2577cbb830a29d5",
-                "reference": "861765b3e5f32979de5bd19ad2577cbb830a29d5",
-                "shasum": ""
-            },
-            "require": {
-                "php": ">=5.3.3"
-            },
-            "require-dev": {
-                "symfony/finder": "~2.0,>=2.0.5",
-                "symfony/phpunit-bridge": "~2.7"
-            },
-            "type": "library",
-            "extra": {
-                "branch-alias": {
-                    "dev-master": "2.6-dev"
-                }
-            },
-            "autoload": {
-                "psr-0": {
-                    "Symfony\\Component\\ClassLoader\\": ""
-                }
-            },
-            "notification-url": "https://packagist.org/downloads/",
-            "license": [
-                "MIT"
-            ],
-            "authors": [
-                {
-                    "name": "Symfony Community",
-                    "homepage": "http://symfony.com/contributors"
-                },
-                {
-                    "name": "Fabien Potencier",
-                    "email": "fabien@symfony.com"
-                }
-            ],
-            "description": "Symfony ClassLoader Component",
-            "homepage": "http://symfony.com",
-            "time": "2015-03-27 10:19:51"
         },
         {
             "name": "symfony/console",
@@ -2292,17 +2068,17 @@
         },
         {
             "name": "symfony/event-dispatcher",
-            "version": "v2.6.6",
+            "version": "v2.6.7",
             "target-dir": "Symfony/Component/EventDispatcher",
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/EventDispatcher.git",
-                "reference": "70f7c8478739ad21e3deef0d977b38c77f1fb284"
+                "reference": "672593bc4b0043a0acf91903bb75a1c82d8f2e02"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/symfony/EventDispatcher/zipball/70f7c8478739ad21e3deef0d977b38c77f1fb284",
-                "reference": "70f7c8478739ad21e3deef0d977b38c77f1fb284",
+                "url": "https://api.github.com/repos/symfony/EventDispatcher/zipball/672593bc4b0043a0acf91903bb75a1c82d8f2e02",
+                "reference": "672593bc4b0043a0acf91903bb75a1c82d8f2e02",
                 "shasum": ""
             },
             "require": {
@@ -2337,31 +2113,31 @@
             ],
             "authors": [
                 {
-                    "name": "Symfony Community",
-                    "homepage": "http://symfony.com/contributors"
-                },
-                {
                     "name": "Fabien Potencier",
                     "email": "fabien@symfony.com"
+                },
+                {
+                    "name": "Symfony Community",
+                    "homepage": "https://symfony.com/contributors"
                 }
             ],
             "description": "Symfony EventDispatcher Component",
-            "homepage": "http://symfony.com",
-            "time": "2015-03-13 17:37:22"
+            "homepage": "https://symfony.com",
+            "time": "2015-05-02 15:18:45"
         },
         {
             "name": "symfony/filesystem",
-            "version": "v2.6.6",
+            "version": "v2.6.7",
             "target-dir": "Symfony/Component/Filesystem",
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/Filesystem.git",
-                "reference": "4983964b3693e4f13449cb3800c64a9112c301b4"
+                "reference": "f73904bd2dae525c42ea1f0340c7c98480ecacde"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/symfony/Filesystem/zipball/4983964b3693e4f13449cb3800c64a9112c301b4",
-                "reference": "4983964b3693e4f13449cb3800c64a9112c301b4",
+                "url": "https://api.github.com/repos/symfony/Filesystem/zipball/f73904bd2dae525c42ea1f0340c7c98480ecacde",
+                "reference": "f73904bd2dae525c42ea1f0340c7c98480ecacde",
                 "shasum": ""
             },
             "require": {
@@ -2387,17 +2163,17 @@
             ],
             "authors": [
                 {
-                    "name": "Symfony Community",
-                    "homepage": "http://symfony.com/contributors"
-                },
-                {
                     "name": "Fabien Potencier",
                     "email": "fabien@symfony.com"
+                },
+                {
+                    "name": "Symfony Community",
+                    "homepage": "https://symfony.com/contributors"
                 }
             ],
             "description": "Symfony Filesystem Component",
-            "homepage": "http://symfony.com",
-            "time": "2015-03-22 16:55:57"
+            "homepage": "https://symfony.com",
+            "time": "2015-05-08 00:09:07"
         },
         {
             "name": "symfony/finder",
@@ -2809,17 +2585,17 @@
         },
         {
             "name": "symfony/var-dumper",
-            "version": "v2.6.6",
+            "version": "v2.6.7",
             "target-dir": "Symfony/Component/VarDumper",
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/var-dumper.git",
-                "reference": "aafae00236e147568832de3c65ccb94cfc836278"
+                "reference": "89eec96645fb44af4a454a26c74c72ba6311f5bc"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/symfony/var-dumper/zipball/aafae00236e147568832de3c65ccb94cfc836278",
-                "reference": "aafae00236e147568832de3c65ccb94cfc836278",
+                "url": "https://api.github.com/repos/symfony/var-dumper/zipball/89eec96645fb44af4a454a26c74c72ba6311f5bc",
+                "reference": "89eec96645fb44af4a454a26c74c72ba6311f5bc",
                 "shasum": ""
             },
             "require": {
@@ -2851,127 +2627,21 @@
             ],
             "authors": [
                 {
-                    "name": "Symfony Community",
-                    "homepage": "http://symfony.com/contributors"
-                },
-                {
                     "name": "Nicolas Grekas",
                     "email": "p@tchwork.com"
+                },
+                {
+                    "name": "Symfony Community",
+                    "homepage": "https://symfony.com/contributors"
                 }
             ],
             "description": "Symfony mechanism for exploring and dumping PHP variables",
-            "homepage": "http://symfony.com",
+            "homepage": "https://symfony.com",
             "keywords": [
                 "debug",
                 "dump"
             ],
-            "time": "2015-03-31 08:12:29"
-        },
-        {
-            "name": "tecnick.com/tcpdf",
-            "version": "6.0.099",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/tecnickcom/TCPDF.git",
-                "reference": "75e7ad39458e060d0cae6fcb7d50a2c9f3af1b01"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/tecnickcom/TCPDF/zipball/75e7ad39458e060d0cae6fcb7d50a2c9f3af1b01",
-                "reference": "75e7ad39458e060d0cae6fcb7d50a2c9f3af1b01",
-                "shasum": ""
-            },
-            "require": {
-                "php": ">=5.3.0"
-            },
-            "type": "library",
-            "autoload": {
-                "classmap": [
-                    "fonts",
-                    "config",
-                    "include",
-                    "tcpdf.php",
-                    "tcpdf_parser.php",
-                    "tcpdf_import.php",
-                    "tcpdf_barcodes_1d.php",
-                    "tcpdf_barcodes_2d.php",
-                    "include/tcpdf_colors.php",
-                    "include/tcpdf_filters.php",
-                    "include/tcpdf_font_data.php",
-                    "include/tcpdf_fonts.php",
-                    "include/tcpdf_images.php",
-                    "include/tcpdf_static.php",
-                    "include/barcodes/datamatrix.php",
-                    "include/barcodes/pdf417.php",
-                    "include/barcodes/qrcode.php"
-                ]
-            },
-            "notification-url": "https://packagist.org/downloads/",
-            "license": [
-                "LGPLv3"
-            ],
-            "authors": [
-                {
-                    "name": "Nicola Asuni",
-                    "email": "info@tecnick.com",
-                    "homepage": "http://nicolaasuni.tecnick.com"
-                }
-            ],
-            "description": "TCPDF is a PHP class for generating PDF documents and barcodes.",
-            "homepage": "http://www.tcpdf.org/",
-            "keywords": [
-                "PDFD32000-2008",
-                "TCPDF",
-                "barcodes",
-                "datamatrix",
-                "pdf",
-                "pdf417",
-                "qrcode"
-            ],
-            "time": "2014-11-15 12:35:49"
-        },
-        {
-            "name": "thujohn/pdf",
-            "version": "1.0.6",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/thujohn/pdf-l4.git",
-                "reference": "8e3a35a1ec54b38cff9ccef5069b628749c1b28b"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/thujohn/pdf-l4/zipball/8e3a35a1ec54b38cff9ccef5069b628749c1b28b",
-                "reference": "8e3a35a1ec54b38cff9ccef5069b628749c1b28b",
-                "shasum": ""
-            },
-            "require": {
-                "illuminate/support": "4.*|5.*",
-                "php": ">=5.3.0"
-            },
-            "type": "library",
-            "autoload": {
-                "psr-0": {
-                    "Thujohn\\Pdf": "src/"
-                }
-            },
-            "notification-url": "https://packagist.org/downloads/",
-            "license": [
-                "MIT"
-            ],
-            "authors": [
-                {
-                    "name": "thujohn",
-                    "email": "jonathan.thuau@gmail.com"
-                }
-            ],
-            "description": "dompdf for Laravel 4",
-            "keywords": [
-                "dompdf",
-                "laravel",
-                "laravel4",
-                "pdf"
-            ],
-            "time": "2014-12-02 17:45:22"
+            "time": "2015-05-01 14:14:24"
         },
         {
             "name": "twig/twig",
@@ -3077,79 +2747,12 @@
             ],
             "description": "Rapidly generate resources, migrations, models, and much more.",
             "time": "2014-05-27 14:21:26"
-        },
-        {
-            "name": "zizaco/entrust",
-            "version": "1.2.5",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/Zizaco/entrust.git",
-                "reference": "e3145e2435bbc095f8af85218b78d5fc5d5faf0f"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/Zizaco/entrust/zipball/e3145e2435bbc095f8af85218b78d5fc5d5faf0f",
-                "reference": "e3145e2435bbc095f8af85218b78d5fc5d5faf0f",
-                "shasum": ""
-            },
-            "require": {
-                "illuminate/support": "~4.0|~5.0",
-                "laravelbook/ardent": "~2.4",
-                "php": ">=5.4.0"
-            },
-            "require-dev": {
-                "illuminate/database": "~4.0",
-                "mockery/mockery": "~0.9",
-                "phpunit/phpunit": "~4.0",
-                "symfony/process": "~2.3"
-            },
-            "suggest": {
-                "zizaco/confide": "Confide is an authentication solution for Laravel 4 that couples very well with Entrust"
-            },
-            "type": "library",
-            "extra": {
-                "branch-alias": {
-                    "dev-master": "1.2-dev"
-                }
-            },
-            "autoload": {
-                "classmap": [
-                    "src/commands"
-                ],
-                "psr-4": {
-                    "Zizaco\\Entrust\\": "src/Entrust/"
-                }
-            },
-            "notification-url": "https://packagist.org/downloads/",
-            "license": [
-                "MIT"
-            ],
-            "authors": [
-                {
-                    "name": "Andrew Elkins",
-                    "homepage": "http://www.andrewelkins.com"
-                },
-                {
-                    "name": "Zizaco Zizuini",
-                    "email": "zizaco@gmail.com"
-                }
-            ],
-            "description": "This package provides a flexible way to add Role-based Permissions to Laravel 4",
-            "keywords": [
-                "auth",
-                "illuminate",
-                "laravel",
-                "roles"
-            ],
-            "time": "2014-09-24 02:20:26"
         }
     ],
     "packages-dev": [],
     "aliases": [],
     "minimum-stability": "stable",
-    "stability-flags": {
-        "zizaco/entrust": 20
-    },
+    "stability-flags": [],
     "prefer-stable": false,
     "prefer-lowest": false,
     "platform": [],

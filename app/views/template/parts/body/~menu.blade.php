@@ -23,22 +23,22 @@
 		</a>
 		<ul class="sub-menu">
 			<li>
-				<a href="{{URL::route('imobile-index')}}">
+				<a href="{{URL::route('imobile-index',['id' => 'imobile'])}}">
 				<i class="icon-bar-chart"></i>
 				Lista de imobile</a>
 			</li>
 			<li>
-				<a href="{{ URL::route('cautare-date') }}">
+				<a href="#">
 				<i class="icon-bulb"></i>
 				Cautare date</a>
 			</li>
 			<li>
-				<a href="{{ URL::route('agentii-index') }}">
+				<a href="#">
 				<i class="icon-bulb"></i>
 				Agentii</a>
 			</li>
 			<li>
-				<a href="{{ URL::route('verificare-presa') }}">
+				<a href="#">
 				<i class="icon-graph"></i>
 				Verificare presa</a>
 			</li>

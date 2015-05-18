@@ -7,7 +7,7 @@ class UsersTableSeeder extends Seeder {
 
 	public function run()
 	{
-		User::truncate();
+		/*User::truncate();
 		$faker = Faker::create();
 		$faker->seed(1);
 		$organizatii = Organizatie::all()->lists('id');
@@ -22,7 +22,7 @@ class UsersTableSeeder extends Seeder {
 				'telefon' => $faker->phoneNumber(),
 				'password'=>'secret'
 			]);
-		}
+		}*/
 	}
 
 }

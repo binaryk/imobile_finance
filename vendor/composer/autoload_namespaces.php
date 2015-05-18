@@ -6,11 +6,9 @@ $vendorDir = dirname(dirname(__FILE__));
 $baseDir = dirname($vendorDir);
 
 return array(
-    'phpDocumentor' => array($vendorDir . '/phpdocumentor/reflection-docblock/src'),
     'Whoops' => array($vendorDir . '/filp/whoops/src'),
     'Way\\Generators' => array($vendorDir . '/way/generators/src'),
     'Twig_' => array($vendorDir . '/twig/twig/lib'),
-    'Thujohn\\Pdf' => array($vendorDir . '/thujohn/pdf/src'),
     'System' => array($vendorDir . '/phpseclib/phpseclib/phpseclib'),
     'Symfony\\Component\\VarDumper\\' => array($vendorDir . '/symfony/var-dumper'),
     'Symfony\\Component\\Translation\\' => array($vendorDir . '/symfony/translation'),
@@ -26,10 +24,8 @@ return array(
     'Symfony\\Component\\Debug\\' => array($vendorDir . '/symfony/debug'),
     'Symfony\\Component\\CssSelector\\' => array($vendorDir . '/symfony/css-selector'),
     'Symfony\\Component\\Console\\' => array($vendorDir . '/symfony/console'),
-    'Symfony\\Component\\ClassLoader\\' => array($vendorDir . '/symfony/class-loader'),
     'Symfony\\Component\\BrowserKit\\' => array($vendorDir . '/symfony/browser-kit'),
     'Stack' => array($vendorDir . '/stack/builder/src'),
-    'SleepingOwl\\WithJoin' => array($vendorDir . '/sleeping-owl/with-join/src'),
     'Psr\\Log\\' => array($vendorDir . '/psr/log'),
     'Predis' => array($vendorDir . '/predis/predis/lib'),
     'Patchwork' => array($vendorDir . '/patchwork/utf8/class'),
@@ -37,8 +33,7 @@ return array(
     'Normalizer' => array($vendorDir . '/patchwork/utf8/class'),
     'Net' => array($vendorDir . '/phpseclib/phpseclib/phpseclib'),
     'Math' => array($vendorDir . '/phpseclib/phpseclib/phpseclib'),
-    'LaravelBook\\Ardent' => array($vendorDir . '/laravelbook/ardent/src'),
-    'Laracasts\\Utilities' => array($vendorDir . '/laracasts/utilities/src'),
+    'Laracasts\\Validation' => array($vendorDir . '/laracasts/validation/src'),
     'Krucas\\Notification' => array($vendorDir . '/edvinaskrucas/notification/src'),
     'Jeremeamia\\SuperClosure' => array($vendorDir . '/jeremeamia/SuperClosure/src'),
     'Illuminate' => array($vendorDir . '/laravel/framework/src'),
@@ -55,8 +50,8 @@ return array(
     'Doctrine\\Common\\' => array($vendorDir . '/doctrine/common/lib'),
     'DebugBar' => array($vendorDir . '/maximebf/debugbar/src'),
     'Crypt' => array($vendorDir . '/phpseclib/phpseclib/phpseclib'),
-    'Creitive\\Breadcrumbs\\' => array($vendorDir . '/creitive/breadcrumbs/src'),
     'ClassPreloader' => array($vendorDir . '/classpreloader/classpreloader/src'),
+    'Cartalyst\\Sentry' => array($vendorDir . '/cartalyst/sentry/src'),
     'Carbon' => array($vendorDir . '/nesbot/carbon/src'),
     'Boris' => array($vendorDir . '/d11wtq/boris/lib'),
 );

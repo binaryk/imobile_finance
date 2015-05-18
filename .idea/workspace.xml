@@ -1,0 +1,527 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="26c9510f-5f92-4c73-b7fa-d4737bffee45" name="Default" comment="">
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/assets/global.less" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/controllers/testemmet.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/watcherTasks.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/symfony/class-loader/Symfony/Component/ClassLoader/.gitignore" afterPath="$PROJECT_DIR$/vendor/symfony/class-loader/Symfony/Component/ClassLoader/.gitignore" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/symfony/event-dispatcher/Symfony/Component/EventDispatcher/.gitignore" afterPath="$PROJECT_DIR$/vendor/symfony/event-dispatcher/Symfony/Component/EventDispatcher/.gitignore" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/symfony/filesystem/Symfony/Component/Filesystem/.gitignore" afterPath="$PROJECT_DIR$/vendor/symfony/filesystem/Symfony/Component/Filesystem/.gitignore" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/symfony/var-dumper/Symfony/Component/VarDumper/.gitignore" afterPath="$PROJECT_DIR$/vendor/symfony/var-dumper/Symfony/Component/VarDumper/.gitignore" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/database/migrations/2015_05_07_020812_create_imobils_table.php" afterPath="$PROJECT_DIR$/app/database/migrations/2015_05_07_020812_create_imobils_table.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/symfony/class-loader/Symfony/Component/ClassLoader/Tests/Fixtures/ClassesWithParents/A.php" afterPath="$PROJECT_DIR$/vendor/symfony/class-loader/Symfony/Component/ClassLoader/Tests/Fixtures/ClassesWithParents/A.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/symfony/class-loader/Symfony/Component/ClassLoader/Tests/Fixtures/ClassesWithParents/ATrait.php" afterPath="$PROJECT_DIR$/vendor/symfony/class-loader/Symfony/Component/ClassLoader/Tests/Fixtures/ClassesWithParents/ATrait.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/symfony/var-dumper/Symfony/Component/VarDumper/Cloner/AbstractCloner.php" afterPath="$PROJECT_DIR$/vendor/symfony/var-dumper/Symfony/Component/VarDumper/Cloner/AbstractCloner.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/symfony/var-dumper/Symfony/Component/VarDumper/Dumper/AbstractDumper.php" afterPath="$PROJECT_DIR$/vendor/symfony/var-dumper/Symfony/Component/VarDumper/Dumper/AbstractDumper.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/symfony/event-dispatcher/Symfony/Component/EventDispatcher/Tests/AbstractEventDispatcherTest.php" afterPath="$PROJECT_DIR$/vendor/symfony/event-dispatcher/Symfony/Component/EventDispatcher/Tests/AbstractEventDispatcherTest.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/symfony/class-loader/Symfony/Component/ClassLoader/ApcClassLoader.php" afterPath="$PROJECT_DIR$/vendor/symfony/class-loader/Symfony/Component/ClassLoader/ApcClassLoader.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/symfony/class-loader/Symfony/Component/ClassLoader/ApcUniversalClassLoader.php" afterPath="$PROJECT_DIR$/vendor/symfony/class-loader/Symfony/Component/ClassLoader/ApcUniversalClassLoader.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/symfony/class-loader/Symfony/Component/ClassLoader/Tests/Fixtures/ClassesWithParents/B.php" afterPath="$PROJECT_DIR$/vendor/symfony/class-loader/Symfony/Component/ClassLoader/Tests/Fixtures/ClassesWithParents/B.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/symfony/class-loader/Symfony/Component/ClassLoader/Tests/Fixtures/ClassesWithParents/BTrait.php" afterPath="$PROJECT_DIR$/vendor/symfony/class-loader/Symfony/Component/ClassLoader/Tests/Fixtures/ClassesWithParents/BTrait.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/symfony/class-loader/Symfony/Component/ClassLoader/Tests/Fixtures/Apc/Namespaced/Bar.php" afterPath="$PROJECT_DIR$/vendor/symfony/class-loader/Symfony/Component/ClassLoader/Tests/Fixtures/Apc/Namespaced/Bar.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/symfony/class-loader/Symfony/Component/ClassLoader/Tests/Fixtures/Apc/Pearlike/Bar.php" afterPath="$PROJECT_DIR$/vendor/symfony/class-loader/Symfony/Component/ClassLoader/Tests/Fixtures/Apc/Pearlike/Bar.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/symfony/class-loader/Symfony/Component/ClassLoader/Tests/Fixtures/Apc/alpha/Apc/ApcPrefixCollision/A/Bar.php" afterPath="$PROJECT_DIR$/vendor/symfony/class-loader/Symfony/Component/ClassLoader/Tests/Fixtures/Apc/alpha/Apc/ApcPrefixCollision/A/Bar.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/symfony/class-loader/Symfony/Component/ClassLoader/Tests/Fixtures/Apc/alpha/Apc/NamespaceCollision/A/Bar.php" afterPath="$PROJECT_DIR$/vendor/symfony/class-loader/Symfony/Component/ClassLoader/Tests/Fixtures/Apc/alpha/Apc/NamespaceCollision/A/Bar.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/symfony/class-loader/Symfony/Component/ClassLoader/Tests/Fixtures/Apc/beta/Apc/ApcPrefixCollision/A/B/Bar.php" afterPath="$PROJECT_DIR$/vendor/symfony/class-loader/Symfony/Component/ClassLoader/Tests/Fixtures/Apc/beta/Apc/ApcPrefixCollision/A/B/Bar.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/symfony/class-loader/Symfony/Component/ClassLoader/Tests/Fixtures/Apc/beta/Apc/NamespaceCollision/A/B/Bar.php" afterPath="$PROJECT_DIR$/vendor/symfony/class-loader/Symfony/Component/ClassLoader/Tests/Fixtures/Apc/beta/Apc/NamespaceCollision/A/B/Bar.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/symfony/class-loader/Symfony/Component/ClassLoader/Tests/Fixtures/Namespaced/Bar.php" afterPath="$PROJECT_DIR$/vendor/symfony/class-loader/Symfony/Component/ClassLoader/Tests/Fixtures/Namespaced/Bar.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/symfony/class-loader/Symfony/Component/ClassLoader/Tests/Fixtures/Namespaced2/Bar.php" afterPath="$PROJECT_DIR$/vendor/symfony/class-loader/Symfony/Component/ClassLoader/Tests/Fixtures/Namespaced2/Bar.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/symfony/class-loader/Symfony/Component/ClassLoader/Tests/Fixtures/Pearlike/Bar.php" afterPath="$PROJECT_DIR$/vendor/symfony/class-loader/Symfony/Component/ClassLoader/Tests/Fixtures/Pearlike/Bar.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/symfony/class-loader/Symfony/Component/ClassLoader/Tests/Fixtures/Pearlike2/Bar.php" afterPath="$PROJECT_DIR$/vendor/symfony/class-loader/Symfony/Component/ClassLoader/Tests/Fixtures/Pearlike2/Bar.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/symfony/class-loader/Symfony/Component/ClassLoader/Tests/Fixtures/alpha/NamespaceCollision/A/Bar.php" afterPath="$PROJECT_DIR$/vendor/symfony/class-loader/Symfony/Component/ClassLoader/Tests/Fixtures/alpha/NamespaceCollision/A/Bar.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/symfony/class-loader/Symfony/Component/ClassLoader/Tests/Fixtures/alpha/NamespaceCollision/C/Bar.php" afterPath="$PROJECT_DIR$/vendor/symfony/class-loader/Symfony/Component/ClassLoader/Tests/Fixtures/alpha/NamespaceCollision/C/Bar.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/symfony/class-loader/Symfony/Component/ClassLoader/Tests/Fixtures/alpha/PrefixCollision/A/Bar.php" afterPath="$PROJECT_DIR$/vendor/symfony/class-loader/Symfony/Component/ClassLoader/Tests/Fixtures/alpha/PrefixCollision/A/Bar.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/symfony/class-loader/Symfony/Component/ClassLoader/Tests/Fixtures/alpha/PrefixCollision/C/Bar.php" afterPath="$PROJECT_DIR$/vendor/symfony/class-loader/Symfony/Component/ClassLoader/Tests/Fixtures/alpha/PrefixCollision/C/Bar.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/symfony/class-loader/Symfony/Component/ClassLoader/Tests/Fixtures/beta/NamespaceCollision/A/B/Bar.php" afterPath="$PROJECT_DIR$/vendor/symfony/class-loader/Symfony/Component/ClassLoader/Tests/Fixtures/beta/NamespaceCollision/A/B/Bar.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/symfony/class-loader/Symfony/Component/ClassLoader/Tests/Fixtures/beta/NamespaceCollision/C/B/Bar.php" afterPath="$PROJECT_DIR$/vendor/symfony/class-loader/Symfony/Component/ClassLoader/Tests/Fixtures/beta/NamespaceCollision/C/B/Bar.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/symfony/class-loader/Symfony/Component/ClassLoader/Tests/Fixtures/beta/PrefixCollision/A/B/Bar.php" afterPath="$PROJECT_DIR$/vendor/symfony/class-loader/Symfony/Component/ClassLoader/Tests/Fixtures/beta/PrefixCollision/A/B/Bar.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/symfony/class-loader/Symfony/Component/ClassLoader/Tests/Fixtures/beta/PrefixCollision/C/B/Bar.php" afterPath="$PROJECT_DIR$/vendor/symfony/class-loader/Symfony/Component/ClassLoader/Tests/Fixtures/beta/PrefixCollision/C/B/Bar.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/controllers/BaseController.php" afterPath="$PROJECT_DIR$/app/controllers/BaseController.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/symfony/class-loader/Symfony/Component/ClassLoader/Tests/Fixtures/Apc/Namespaced/Baz.php" afterPath="$PROJECT_DIR$/vendor/symfony/class-loader/Symfony/Component/ClassLoader/Tests/Fixtures/Apc/Namespaced/Baz.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/symfony/class-loader/Symfony/Component/ClassLoader/Tests/Fixtures/Apc/Pearlike/Baz.php" afterPath="$PROJECT_DIR$/vendor/symfony/class-loader/Symfony/Component/ClassLoader/Tests/Fixtures/Apc/Pearlike/Baz.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/symfony/class-loader/Symfony/Component/ClassLoader/Tests/Fixtures/Namespaced/Baz.php" afterPath="$PROJECT_DIR$/vendor/symfony/class-loader/Symfony/Component/ClassLoader/Tests/Fixtures/Namespaced/Baz.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/symfony/class-loader/Symfony/Component/ClassLoader/Tests/Fixtures/Namespaced2/Baz.php" afterPath="$PROJECT_DIR$/vendor/symfony/class-loader/Symfony/Component/ClassLoader/Tests/Fixtures/Namespaced2/Baz.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/symfony/class-loader/Symfony/Component/ClassLoader/Tests/Fixtures/Pearlike/Baz.php" afterPath="$PROJECT_DIR$/vendor/symfony/class-loader/Symfony/Component/ClassLoader/Tests/Fixtures/Pearlike/Baz.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/symfony/class-loader/Symfony/Component/ClassLoader/Tests/Fixtures/Pearlike2/Baz.php" afterPath="$PROJECT_DIR$/vendor/symfony/class-loader/Symfony/Component/ClassLoader/Tests/Fixtures/Pearlike2/Baz.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/symfony/class-loader/Symfony/Component/ClassLoader/CHANGELOG.md" afterPath="$PROJECT_DIR$/vendor/symfony/class-loader/Symfony/Component/ClassLoader/CHANGELOG.md" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/symfony/event-dispatcher/Symfony/Component/EventDispatcher/CHANGELOG.md" afterPath="$PROJECT_DIR$/vendor/symfony/event-dispatcher/Symfony/Component/EventDispatcher/CHANGELOG.md" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/symfony/filesystem/Symfony/Component/Filesystem/CHANGELOG.md" afterPath="$PROJECT_DIR$/vendor/symfony/filesystem/Symfony/Component/Filesystem/CHANGELOG.md" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/symfony/class-loader/Symfony/Component/ClassLoader/Tests/Fixtures/ClassesWithParents/CInterface.php" afterPath="$PROJECT_DIR$/vendor/symfony/class-loader/Symfony/Component/ClassLoader/Tests/Fixtures/ClassesWithParents/CInterface.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/symfony/class-loader/Symfony/Component/ClassLoader/Tests/Fixtures/ClassesWithParents/CTrait.php" afterPath="$PROJECT_DIR$/vendor/symfony/class-loader/Symfony/Component/ClassLoader/Tests/Fixtures/ClassesWithParents/CTrait.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/symfony/class-loader/Symfony/Component/ClassLoader/ClassCollectionLoader.php" afterPath="$PROJECT_DIR$/vendor/symfony/class-loader/Symfony/Component/ClassLoader/ClassCollectionLoader.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/symfony/class-loader/Symfony/Component/ClassLoader/Tests/ClassCollectionLoaderTest.php" afterPath="$PROJECT_DIR$/vendor/symfony/class-loader/Symfony/Component/ClassLoader/Tests/ClassCollectionLoaderTest.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/composer/ClassLoader.php" afterPath="$PROJECT_DIR$/vendor/composer/ClassLoader.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/symfony/class-loader/Symfony/Component/ClassLoader/ClassLoader.php" afterPath="$PROJECT_DIR$/vendor/symfony/class-loader/Symfony/Component/ClassLoader/ClassLoader.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/symfony/class-loader/Symfony/Component/ClassLoader/Tests/ClassLoaderTest.php" afterPath="$PROJECT_DIR$/vendor/symfony/class-loader/Symfony/Component/ClassLoader/Tests/ClassLoaderTest.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/symfony/class-loader/Symfony/Component/ClassLoader/ClassMapGenerator.php" afterPath="$PROJECT_DIR$/vendor/symfony/class-loader/Symfony/Component/ClassLoader/ClassMapGenerator.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/symfony/class-loader/Symfony/Component/ClassLoader/Tests/ClassMapGeneratorTest.php" afterPath="$PROJECT_DIR$/vendor/symfony/class-loader/Symfony/Component/ClassLoader/Tests/ClassMapGeneratorTest.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/symfony/class-loader/Symfony/Component/ClassLoader/Tests/Fixtures/psr-4/Class_With_Underscores.php" afterPath="$PROJECT_DIR$/vendor/symfony/class-loader/Symfony/Component/ClassLoader/Tests/Fixtures/psr-4/Class_With_Underscores.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/symfony/class-loader/Symfony/Component/ClassLoader/Tests/Fixtures/psr-4/Lets/Go/Deeper/Class_With_Underscores.php" afterPath="$PROJECT_DIR$/vendor/symfony/class-loader/Symfony/Component/ClassLoader/Tests/Fixtures/psr-4/Lets/Go/Deeper/Class_With_Underscores.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/symfony/var-dumper/Symfony/Component/VarDumper/Dumper/CliDumper.php" afterPath="$PROJECT_DIR$/vendor/symfony/var-dumper/Symfony/Component/VarDumper/Dumper/CliDumper.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/symfony/var-dumper/Symfony/Component/VarDumper/Tests/CliDumperTest.php" afterPath="$PROJECT_DIR$/vendor/symfony/var-dumper/Symfony/Component/VarDumper/Tests/CliDumperTest.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/symfony/var-dumper/Symfony/Component/VarDumper/Cloner/ClonerInterface.php" afterPath="$PROJECT_DIR$/vendor/symfony/var-dumper/Symfony/Component/VarDumper/Cloner/ClonerInterface.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/symfony/var-dumper/Symfony/Component/VarDumper/Caster/ConstStub.php" afterPath="$PROJECT_DIR$/vendor/symfony/var-dumper/Symfony/Component/VarDumper/Caster/ConstStub.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/symfony/event-dispatcher/Symfony/Component/EventDispatcher/ContainerAwareEventDispatcher.php" afterPath="$PROJECT_DIR$/vendor/symfony/event-dispatcher/Symfony/Component/EventDispatcher/ContainerAwareEventDispatcher.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/symfony/event-dispatcher/Symfony/Component/EventDispatcher/Tests/ContainerAwareEventDispatcherTest.php" afterPath="$PROJECT_DIR$/vendor/symfony/event-dispatcher/Symfony/Component/EventDispatcher/Tests/ContainerAwareEventDispatcherTest.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/symfony/var-dumper/Symfony/Component/VarDumper/Cloner/Cursor.php" afterPath="$PROJECT_DIR$/vendor/symfony/var-dumper/Symfony/Component/VarDumper/Cloner/Cursor.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/symfony/var-dumper/Symfony/Component/VarDumper/Caster/CutStub.php" afterPath="$PROJECT_DIR$/vendor/symfony/var-dumper/Symfony/Component/VarDumper/Caster/CutStub.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/symfony/class-loader/Symfony/Component/ClassLoader/Tests/Fixtures/ClassesWithParents/D.php" afterPath="$PROJECT_DIR$/vendor/symfony/class-loader/Symfony/Component/ClassLoader/Tests/Fixtures/ClassesWithParents/D.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/symfony/var-dumper/Symfony/Component/VarDumper/Caster/DOMCaster.php" afterPath="$PROJECT_DIR$/vendor/symfony/var-dumper/Symfony/Component/VarDumper/Caster/DOMCaster.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/symfony/var-dumper/Symfony/Component/VarDumper/Cloner/Data.php" afterPath="$PROJECT_DIR$/vendor/symfony/var-dumper/Symfony/Component/VarDumper/Cloner/Data.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/symfony/var-dumper/Symfony/Component/VarDumper/Dumper/DataDumperInterface.php" afterPath="$PROJECT_DIR$/vendor/symfony/var-dumper/Symfony/Component/VarDumper/Dumper/DataDumperInterface.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/symfony/class-loader/Symfony/Component/ClassLoader/DebugClassLoader.php" afterPath="$PROJECT_DIR$/vendor/symfony/class-loader/Symfony/Component/ClassLoader/DebugClassLoader.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/symfony/class-loader/Symfony/Component/ClassLoader/DebugUniversalClassLoader.php" afterPath="$PROJECT_DIR$/vendor/symfony/class-loader/Symfony/Component/ClassLoader/DebugUniversalClassLoader.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/symfony/var-dumper/Symfony/Component/VarDumper/Caster/DoctrineCaster.php" afterPath="$PROJECT_DIR$/vendor/symfony/var-dumper/Symfony/Component/VarDumper/Caster/DoctrineCaster.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/symfony/var-dumper/Symfony/Component/VarDumper/Cloner/DumperInterface.php" afterPath="$PROJECT_DIR$/vendor/symfony/var-dumper/Symfony/Component/VarDumper/Cloner/DumperInterface.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/symfony/class-loader/Symfony/Component/ClassLoader/Tests/Fixtures/ClassesWithParents/E.php" afterPath="$PROJECT_DIR$/vendor/symfony/class-loader/Symfony/Component/ClassLoader/Tests/Fixtures/ClassesWithParents/E.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/symfony/event-dispatcher/Symfony/Component/EventDispatcher/Event.php" afterPath="$PROJECT_DIR$/vendor/symfony/event-dispatcher/Symfony/Component/EventDispatcher/Event.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/symfony/event-dispatcher/Symfony/Component/EventDispatcher/EventDispatcher.php" afterPath="$PROJECT_DIR$/vendor/symfony/event-dispatcher/Symfony/Component/EventDispatcher/EventDispatcher.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/symfony/event-dispatcher/Symfony/Component/EventDispatcher/EventDispatcherInterface.php" afterPath="$PROJECT_DIR$/vendor/symfony/event-dispatcher/Symfony/Component/EventDispatcher/EventDispatcherInterface.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/symfony/event-dispatcher/Symfony/Component/EventDispatcher/Tests/EventDispatcherTest.php" afterPath="$PROJECT_DIR$/vendor/symfony/event-dispatcher/Symfony/Component/EventDispatcher/Tests/EventDispatcherTest.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/symfony/event-dispatcher/Symfony/Component/EventDispatcher/EventSubscriberInterface.php" afterPath="$PROJECT_DIR$/vendor/symfony/event-dispatcher/Symfony/Component/EventDispatcher/EventSubscriberInterface.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/symfony/event-dispatcher/Symfony/Component/EventDispatcher/Tests/EventTest.php" afterPath="$PROJECT_DIR$/vendor/symfony/event-dispatcher/Symfony/Component/EventDispatcher/Tests/EventTest.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/symfony/var-dumper/Symfony/Component/VarDumper/Caster/ExceptionCaster.php" afterPath="$PROJECT_DIR$/vendor/symfony/var-dumper/Symfony/Component/VarDumper/Caster/ExceptionCaster.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/symfony/filesystem/Symfony/Component/Filesystem/Exception/ExceptionInterface.php" afterPath="$PROJECT_DIR$/vendor/symfony/filesystem/Symfony/Component/Filesystem/Exception/ExceptionInterface.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/symfony/filesystem/Symfony/Component/Filesystem/Tests/ExceptionTest.php" afterPath="$PROJECT_DIR$/vendor/symfony/filesystem/Symfony/Component/Filesystem/Tests/ExceptionTest.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/symfony/class-loader/Symfony/Component/ClassLoader/Tests/Fixtures/ClassesWithParents/F.php" afterPath="$PROJECT_DIR$/vendor/symfony/class-loader/Symfony/Component/ClassLoader/Tests/Fixtures/ClassesWithParents/F.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/symfony/filesystem/Symfony/Component/Filesystem/Exception/FileNotFoundException.php" afterPath="$PROJECT_DIR$/vendor/symfony/filesystem/Symfony/Component/Filesystem/Exception/FileNotFoundException.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/symfony/filesystem/Symfony/Component/Filesystem/Filesystem.php" afterPath="$PROJECT_DIR$/vendor/symfony/filesystem/Symfony/Component/Filesystem/Filesystem.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/symfony/filesystem/Symfony/Component/Filesystem/Tests/FilesystemTest.php" afterPath="$PROJECT_DIR$/vendor/symfony/filesystem/Symfony/Component/Filesystem/Tests/FilesystemTest.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/symfony/filesystem/Symfony/Component/Filesystem/Tests/FilesystemTestCase.php" afterPath="$PROJECT_DIR$/vendor/symfony/filesystem/Symfony/Component/Filesystem/Tests/FilesystemTestCase.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/symfony/class-loader/Symfony/Component/ClassLoader/Tests/Fixtures/Apc/Namespaced/Foo.php" afterPath="$PROJECT_DIR$/vendor/symfony/class-loader/Symfony/Component/ClassLoader/Tests/Fixtures/Apc/Namespaced/Foo.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/symfony/class-loader/Symfony/Component/ClassLoader/Tests/Fixtures/Apc/Pearlike/Foo.php" afterPath="$PROJECT_DIR$/vendor/symfony/class-loader/Symfony/Component/ClassLoader/Tests/Fixtures/Apc/Pearlike/Foo.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/symfony/class-loader/Symfony/Component/ClassLoader/Tests/Fixtures/Apc/alpha/Apc/ApcPrefixCollision/A/Foo.php" afterPath="$PROJECT_DIR$/vendor/symfony/class-loader/Symfony/Component/ClassLoader/Tests/Fixtures/Apc/alpha/Apc/ApcPrefixCollision/A/Foo.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/symfony/class-loader/Symfony/Component/ClassLoader/Tests/Fixtures/Apc/alpha/Apc/NamespaceCollision/A/Foo.php" afterPath="$PROJECT_DIR$/vendor/symfony/class-loader/Symfony/Component/ClassLoader/Tests/Fixtures/Apc/alpha/Apc/NamespaceCollision/A/Foo.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/symfony/class-loader/Symfony/Component/ClassLoader/Tests/Fixtures/Apc/beta/Apc/ApcPrefixCollision/A/B/Foo.php" afterPath="$PROJECT_DIR$/vendor/symfony/class-loader/Symfony/Component/ClassLoader/Tests/Fixtures/Apc/beta/Apc/ApcPrefixCollision/A/B/Foo.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/symfony/class-loader/Symfony/Component/ClassLoader/Tests/Fixtures/Apc/beta/Apc/NamespaceCollision/A/B/Foo.php" afterPath="$PROJECT_DIR$/vendor/symfony/class-loader/Symfony/Component/ClassLoader/Tests/Fixtures/Apc/beta/Apc/NamespaceCollision/A/B/Foo.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/symfony/class-loader/Symfony/Component/ClassLoader/Tests/Fixtures/Namespaced/Foo.php" afterPath="$PROJECT_DIR$/vendor/symfony/class-loader/Symfony/Component/ClassLoader/Tests/Fixtures/Namespaced/Foo.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/symfony/class-loader/Symfony/Component/ClassLoader/Tests/Fixtures/Namespaced2/Foo.php" afterPath="$PROJECT_DIR$/vendor/symfony/class-loader/Symfony/Component/ClassLoader/Tests/Fixtures/Namespaced2/Foo.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/symfony/class-loader/Symfony/Component/ClassLoader/Tests/Fixtures/Pearlike/Foo.php" afterPath="$PROJECT_DIR$/vendor/symfony/class-loader/Symfony/Component/ClassLoader/Tests/Fixtures/Pearlike/Foo.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/symfony/class-loader/Symfony/Component/ClassLoader/Tests/Fixtures/Pearlike2/Foo.php" afterPath="$PROJECT_DIR$/vendor/symfony/class-loader/Symfony/Component/ClassLoader/Tests/Fixtures/Pearlike2/Foo.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/symfony/class-loader/Symfony/Component/ClassLoader/Tests/Fixtures/alpha/NamespaceCollision/A/Foo.php" afterPath="$PROJECT_DIR$/vendor/symfony/class-loader/Symfony/Component/ClassLoader/Tests/Fixtures/alpha/NamespaceCollision/A/Foo.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/symfony/class-loader/Symfony/Component/ClassLoader/Tests/Fixtures/alpha/NamespaceCollision/C/Foo.php" afterPath="$PROJECT_DIR$/vendor/symfony/class-loader/Symfony/Component/ClassLoader/Tests/Fixtures/alpha/NamespaceCollision/C/Foo.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/symfony/class-loader/Symfony/Component/ClassLoader/Tests/Fixtures/alpha/PrefixCollision/A/Foo.php" afterPath="$PROJECT_DIR$/vendor/symfony/class-loader/Symfony/Component/ClassLoader/Tests/Fixtures/alpha/PrefixCollision/A/Foo.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/symfony/class-loader/Symfony/Component/ClassLoader/Tests/Fixtures/alpha/PrefixCollision/C/Foo.php" afterPath="$PROJECT_DIR$/vendor/symfony/class-loader/Symfony/Component/ClassLoader/Tests/Fixtures/alpha/PrefixCollision/C/Foo.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/symfony/class-loader/Symfony/Component/ClassLoader/Tests/Fixtures/beta/NamespaceCollision/A/B/Foo.php" afterPath="$PROJECT_DIR$/vendor/symfony/class-loader/Symfony/Component/ClassLoader/Tests/Fixtures/beta/NamespaceCollision/A/B/Foo.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/symfony/class-loader/Symfony/Component/ClassLoader/Tests/Fixtures/beta/NamespaceCollision/C/B/Foo.php" afterPath="$PROJECT_DIR$/vendor/symfony/class-loader/Symfony/Component/ClassLoader/Tests/Fixtures/beta/NamespaceCollision/C/B/Foo.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/symfony/class-loader/Symfony/Component/ClassLoader/Tests/Fixtures/beta/PrefixCollision/A/B/Foo.php" afterPath="$PROJECT_DIR$/vendor/symfony/class-loader/Symfony/Component/ClassLoader/Tests/Fixtures/beta/PrefixCollision/A/B/Foo.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/symfony/class-loader/Symfony/Component/ClassLoader/Tests/Fixtures/beta/PrefixCollision/C/B/Foo.php" afterPath="$PROJECT_DIR$/vendor/symfony/class-loader/Symfony/Component/ClassLoader/Tests/Fixtures/beta/PrefixCollision/C/B/Foo.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/symfony/class-loader/Symfony/Component/ClassLoader/Tests/Fixtures/includepath/Foo.php" afterPath="$PROJECT_DIR$/vendor/symfony/class-loader/Symfony/Component/ClassLoader/Tests/Fixtures/includepath/Foo.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/symfony/class-loader/Symfony/Component/ClassLoader/Tests/Fixtures/psr-4/Foo.php" afterPath="$PROJECT_DIR$/vendor/symfony/class-loader/Symfony/Component/ClassLoader/Tests/Fixtures/psr-4/Foo.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/symfony/class-loader/Symfony/Component/ClassLoader/Tests/Fixtures/psr-4/Lets/Go/Deeper/Foo.php" afterPath="$PROJECT_DIR$/vendor/symfony/class-loader/Symfony/Component/ClassLoader/Tests/Fixtures/psr-4/Lets/Go/Deeper/Foo.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/symfony/class-loader/Symfony/Component/ClassLoader/Tests/Fixtures/Apc/Namespaced/FooBar.php" afterPath="$PROJECT_DIR$/vendor/symfony/class-loader/Symfony/Component/ClassLoader/Tests/Fixtures/Apc/Namespaced/FooBar.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/symfony/class-loader/Symfony/Component/ClassLoader/Tests/Fixtures/Apc/fallback/Apc/Pearlike/FooBar.php" afterPath="$PROJECT_DIR$/vendor/symfony/class-loader/Symfony/Component/ClassLoader/Tests/Fixtures/Apc/fallback/Apc/Pearlike/FooBar.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/symfony/class-loader/Symfony/Component/ClassLoader/Tests/Fixtures/Apc/fallback/Namespaced/FooBar.php" afterPath="$PROJECT_DIR$/vendor/symfony/class-loader/Symfony/Component/ClassLoader/Tests/Fixtures/Apc/fallback/Namespaced/FooBar.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/symfony/class-loader/Symfony/Component/ClassLoader/Tests/Fixtures/fallback/Namespaced/FooBar.php" afterPath="$PROJECT_DIR$/vendor/symfony/class-loader/Symfony/Component/ClassLoader/Tests/Fixtures/fallback/Namespaced/FooBar.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/symfony/class-loader/Symfony/Component/ClassLoader/Tests/Fixtures/fallback/Namespaced2/FooBar.php" afterPath="$PROJECT_DIR$/vendor/symfony/class-loader/Symfony/Component/ClassLoader/Tests/Fixtures/fallback/Namespaced2/FooBar.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/symfony/class-loader/Symfony/Component/ClassLoader/Tests/Fixtures/fallback/Pearlike/FooBar.php" afterPath="$PROJECT_DIR$/vendor/symfony/class-loader/Symfony/Component/ClassLoader/Tests/Fixtures/fallback/Pearlike/FooBar.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/symfony/class-loader/Symfony/Component/ClassLoader/Tests/Fixtures/fallback/Pearlike2/FooBar.php" afterPath="$PROJECT_DIR$/vendor/symfony/class-loader/Symfony/Component/ClassLoader/Tests/Fixtures/fallback/Pearlike2/FooBar.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/symfony/class-loader/Symfony/Component/ClassLoader/Tests/Fixtures/ClassesWithParents/G.php" afterPath="$PROJECT_DIR$/vendor/symfony/class-loader/Symfony/Component/ClassLoader/Tests/Fixtures/ClassesWithParents/G.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/symfony/class-loader/Symfony/Component/ClassLoader/Tests/Fixtures/ClassesWithParents/GInterface.php" afterPath="$PROJECT_DIR$/vendor/symfony/class-loader/Symfony/Component/ClassLoader/Tests/Fixtures/ClassesWithParents/GInterface.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/symfony/event-dispatcher/Symfony/Component/EventDispatcher/GenericEvent.php" afterPath="$PROJECT_DIR$/vendor/symfony/event-dispatcher/Symfony/Component/EventDispatcher/GenericEvent.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/symfony/event-dispatcher/Symfony/Component/EventDispatcher/Tests/GenericEventTest.php" afterPath="$PROJECT_DIR$/vendor/symfony/event-dispatcher/Symfony/Component/EventDispatcher/Tests/GenericEventTest.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/controllers/HomeController.php" afterPath="$PROJECT_DIR$/app/controllers/HomeController.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/symfony/var-dumper/Symfony/Component/VarDumper/Dumper/HtmlDumper.php" afterPath="$PROJECT_DIR$/vendor/symfony/var-dumper/Symfony/Component/VarDumper/Dumper/HtmlDumper.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/symfony/var-dumper/Symfony/Component/VarDumper/Tests/HtmlDumperTest.php" afterPath="$PROJECT_DIR$/vendor/symfony/var-dumper/Symfony/Component/VarDumper/Tests/HtmlDumperTest.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/symfony/filesystem/Symfony/Component/Filesystem/Exception/IOException.php" afterPath="$PROJECT_DIR$/vendor/symfony/filesystem/Symfony/Component/Filesystem/Exception/IOException.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/symfony/filesystem/Symfony/Component/Filesystem/Exception/IOExceptionInterface.php" afterPath="$PROJECT_DIR$/vendor/symfony/filesystem/Symfony/Component/Filesystem/Exception/IOExceptionInterface.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/symfony/event-dispatcher/Symfony/Component/EventDispatcher/ImmutableEventDispatcher.php" afterPath="$PROJECT_DIR$/vendor/symfony/event-dispatcher/Symfony/Component/EventDispatcher/ImmutableEventDispatcher.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/symfony/event-dispatcher/Symfony/Component/EventDispatcher/Tests/ImmutableEventDispatcherTest.php" afterPath="$PROJECT_DIR$/vendor/symfony/event-dispatcher/Symfony/Component/EventDispatcher/Tests/ImmutableEventDispatcherTest.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/models/Imobil.php" afterPath="$PROJECT_DIR$/app/models/Imobil.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/controllers/ImobileController.php" afterPath="$PROJECT_DIR$/app/controllers/ImobileController.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/database/seeds/ImobilsTableSeeder.php" afterPath="$PROJECT_DIR$/app/database/seeds/ImobilsTableSeeder.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/symfony/class-loader/Symfony/Component/ClassLoader/LICENSE" afterPath="$PROJECT_DIR$/vendor/symfony/class-loader/Symfony/Component/ClassLoader/LICENSE" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/symfony/event-dispatcher/Symfony/Component/EventDispatcher/LICENSE" afterPath="$PROJECT_DIR$/vendor/symfony/event-dispatcher/Symfony/Component/EventDispatcher/LICENSE" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/symfony/filesystem/Symfony/Component/Filesystem/LICENSE" afterPath="$PROJECT_DIR$/vendor/symfony/filesystem/Symfony/Component/Filesystem/LICENSE" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/symfony/var-dumper/Symfony/Component/VarDumper/LICENSE" afterPath="$PROJECT_DIR$/vendor/symfony/var-dumper/Symfony/Component/VarDumper/LICENSE" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/symfony/class-loader/Symfony/Component/ClassLoader/Tests/LegacyApcUniversalClassLoaderTest.php" afterPath="$PROJECT_DIR$/vendor/symfony/class-loader/Symfony/Component/ClassLoader/Tests/LegacyApcUniversalClassLoaderTest.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/symfony/class-loader/Symfony/Component/ClassLoader/Tests/LegacyUniversalClassLoaderTest.php" afterPath="$PROJECT_DIR$/vendor/symfony/class-loader/Symfony/Component/ClassLoader/Tests/LegacyUniversalClassLoaderTest.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/symfony/filesystem/Symfony/Component/Filesystem/LockHandler.php" afterPath="$PROJECT_DIR$/vendor/symfony/filesystem/Symfony/Component/Filesystem/LockHandler.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/symfony/filesystem/Symfony/Component/Filesystem/Tests/LockHandlerTest.php" afterPath="$PROJECT_DIR$/vendor/symfony/filesystem/Symfony/Component/Filesystem/Tests/LockHandlerTest.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/symfony/class-loader/Symfony/Component/ClassLoader/MapClassLoader.php" afterPath="$PROJECT_DIR$/vendor/symfony/class-loader/Symfony/Component/ClassLoader/MapClassLoader.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/symfony/var-dumper/Symfony/Component/VarDumper/Caster/PdoCaster.php" afterPath="$PROJECT_DIR$/vendor/symfony/var-dumper/Symfony/Component/VarDumper/Caster/PdoCaster.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/symfony/var-dumper/Symfony/Component/VarDumper/Tests/Caster/PdoCasterTest.php" afterPath="$PROJECT_DIR$/vendor/symfony/var-dumper/Symfony/Component/VarDumper/Tests/Caster/PdoCasterTest.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/controllers/PresaController.php" afterPath="$PROJECT_DIR$/app/controllers/PresaController.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/symfony/class-loader/Symfony/Component/ClassLoader/Psr4ClassLoader.php" afterPath="$PROJECT_DIR$/vendor/symfony/class-loader/Symfony/Component/ClassLoader/Psr4ClassLoader.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/symfony/class-loader/Symfony/Component/ClassLoader/Tests/Psr4ClassLoaderTest.php" afterPath="$PROJECT_DIR$/vendor/symfony/class-loader/Symfony/Component/ClassLoader/Tests/Psr4ClassLoaderTest.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/symfony/class-loader/Symfony/Component/ClassLoader/README.md" afterPath="$PROJECT_DIR$/vendor/symfony/class-loader/Symfony/Component/ClassLoader/README.md" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/symfony/event-dispatcher/Symfony/Component/EventDispatcher/README.md" afterPath="$PROJECT_DIR$/vendor/symfony/event-dispatcher/Symfony/Component/EventDispatcher/README.md" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/symfony/filesystem/Symfony/Component/Filesystem/README.md" afterPath="$PROJECT_DIR$/vendor/symfony/filesystem/Symfony/Component/Filesystem/README.md" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/symfony/var-dumper/Symfony/Component/VarDumper/README.md" afterPath="$PROJECT_DIR$/vendor/symfony/var-dumper/Symfony/Component/VarDumper/README.md" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/symfony/var-dumper/Symfony/Component/VarDumper/Caster/ReflectionCaster.php" afterPath="$PROJECT_DIR$/vendor/symfony/var-dumper/Symfony/Component/VarDumper/Caster/ReflectionCaster.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/symfony/event-dispatcher/Symfony/Component/EventDispatcher/DependencyInjection/RegisterListenersPass.php" afterPath="$PROJECT_DIR$/vendor/symfony/event-dispatcher/Symfony/Component/EventDispatcher/DependencyInjection/RegisterListenersPass.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/symfony/event-dispatcher/Symfony/Component/EventDispatcher/Tests/DependencyInjection/RegisterListenersPassTest.php" afterPath="$PROJECT_DIR$/vendor/symfony/event-dispatcher/Symfony/Component/EventDispatcher/Tests/DependencyInjection/RegisterListenersPassTest.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/symfony/var-dumper/Symfony/Component/VarDumper/Caster/ResourceCaster.php" afterPath="$PROJECT_DIR$/vendor/symfony/var-dumper/Symfony/Component/VarDumper/Caster/ResourceCaster.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/models/sys/Route.php" afterPath="$PROJECT_DIR$/app/models/sys/Route.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/symfony/class-loader/Symfony/Component/ClassLoader/Tests/Fixtures/classmap/SomeClass.php" afterPath="$PROJECT_DIR$/vendor/symfony/class-loader/Symfony/Component/ClassLoader/Tests/Fixtures/classmap/SomeClass.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/symfony/class-loader/Symfony/Component/ClassLoader/Tests/Fixtures/classmap/SomeInterface.php" afterPath="$PROJECT_DIR$/vendor/symfony/class-loader/Symfony/Component/ClassLoader/Tests/Fixtures/classmap/SomeInterface.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/symfony/class-loader/Symfony/Component/ClassLoader/Tests/Fixtures/classmap/SomeParent.php" afterPath="$PROJECT_DIR$/vendor/symfony/class-loader/Symfony/Component/ClassLoader/Tests/Fixtures/classmap/SomeParent.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/symfony/var-dumper/Symfony/Component/VarDumper/Caster/SplCaster.php" afterPath="$PROJECT_DIR$/vendor/symfony/var-dumper/Symfony/Component/VarDumper/Caster/SplCaster.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/symfony/var-dumper/Symfony/Component/VarDumper/Cloner/Stub.php" afterPath="$PROJECT_DIR$/vendor/symfony/var-dumper/Symfony/Component/VarDumper/Cloner/Stub.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/symfony/var-dumper/Symfony/Component/VarDumper/Caster/StubCaster.php" afterPath="$PROJECT_DIR$/vendor/symfony/var-dumper/Symfony/Component/VarDumper/Caster/StubCaster.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/symfony/var-dumper/Symfony/Component/VarDumper/Exception/ThrowingCasterException.php" afterPath="$PROJECT_DIR$/vendor/symfony/var-dumper/Symfony/Component/VarDumper/Exception/ThrowingCasterException.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/symfony/event-dispatcher/Symfony/Component/EventDispatcher/Debug/TraceableEventDispatcher.php" afterPath="$PROJECT_DIR$/vendor/symfony/event-dispatcher/Symfony/Component/EventDispatcher/Debug/TraceableEventDispatcher.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/symfony/event-dispatcher/Symfony/Component/EventDispatcher/Debug/TraceableEventDispatcherInterface.php" afterPath="$PROJECT_DIR$/vendor/symfony/event-dispatcher/Symfony/Component/EventDispatcher/Debug/TraceableEventDispatcherInterface.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/symfony/event-dispatcher/Symfony/Component/EventDispatcher/Tests/Debug/TraceableEventDispatcherTest.php" afterPath="$PROJECT_DIR$/vendor/symfony/event-dispatcher/Symfony/Component/EventDispatcher/Tests/Debug/TraceableEventDispatcherTest.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/symfony/class-loader/Symfony/Component/ClassLoader/UniversalClassLoader.php" afterPath="$PROJECT_DIR$/vendor/symfony/class-loader/Symfony/Component/ClassLoader/UniversalClassLoader.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/symfony/var-dumper/Symfony/Component/VarDumper/Cloner/VarCloner.php" afterPath="$PROJECT_DIR$/vendor/symfony/var-dumper/Symfony/Component/VarDumper/Cloner/VarCloner.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/symfony/var-dumper/Symfony/Component/VarDumper/Tests/VarClonerTest.php" afterPath="$PROJECT_DIR$/vendor/symfony/var-dumper/Symfony/Component/VarDumper/Tests/VarClonerTest.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/symfony/var-dumper/Symfony/Component/VarDumper/VarDumper.php" afterPath="$PROJECT_DIR$/vendor/symfony/var-dumper/Symfony/Component/VarDumper/VarDumper.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/symfony/class-loader/Symfony/Component/ClassLoader/WinCacheClassLoader.php" afterPath="$PROJECT_DIR$/vendor/symfony/class-loader/Symfony/Component/ClassLoader/WinCacheClassLoader.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/symfony/class-loader/Symfony/Component/ClassLoader/Tests/Fixtures/Namespaced/WithComments.php" afterPath="$PROJECT_DIR$/vendor/symfony/class-loader/Symfony/Component/ClassLoader/Tests/Fixtures/Namespaced/WithComments.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/symfony/class-loader/Symfony/Component/ClassLoader/Tests/Fixtures/Pearlike/WithComments.php" afterPath="$PROJECT_DIR$/vendor/symfony/class-loader/Symfony/Component/ClassLoader/Tests/Fixtures/Pearlike/WithComments.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/symfony/event-dispatcher/Symfony/Component/EventDispatcher/Debug/WrappedListener.php" afterPath="$PROJECT_DIR$/vendor/symfony/event-dispatcher/Symfony/Component/EventDispatcher/Debug/WrappedListener.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/symfony/class-loader/Symfony/Component/ClassLoader/XcacheClassLoader.php" afterPath="$PROJECT_DIR$/vendor/symfony/class-loader/Symfony/Component/ClassLoader/XcacheClassLoader.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/autoload.php" afterPath="$PROJECT_DIR$/vendor/autoload.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/composer/autoload_classmap.php" afterPath="$PROJECT_DIR$/vendor/composer/autoload_classmap.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/composer/autoload_files.php" afterPath="$PROJECT_DIR$/vendor/composer/autoload_files.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/composer/autoload_namespaces.php" afterPath="$PROJECT_DIR$/vendor/composer/autoload_namespaces.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/composer/autoload_psr4.php" afterPath="$PROJECT_DIR$/vendor/composer/autoload_psr4.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/composer/autoload_real.php" afterPath="$PROJECT_DIR$/vendor/composer/autoload_real.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/composer.json" afterPath="$PROJECT_DIR$/composer.json" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/symfony/class-loader/Symfony/Component/ClassLoader/composer.json" afterPath="$PROJECT_DIR$/vendor/symfony/class-loader/Symfony/Component/ClassLoader/composer.json" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/symfony/event-dispatcher/Symfony/Component/EventDispatcher/composer.json" afterPath="$PROJECT_DIR$/vendor/symfony/event-dispatcher/Symfony/Component/EventDispatcher/composer.json" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/symfony/filesystem/Symfony/Component/Filesystem/composer.json" afterPath="$PROJECT_DIR$/vendor/symfony/filesystem/Symfony/Component/Filesystem/composer.json" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/symfony/var-dumper/Symfony/Component/VarDumper/composer.json" afterPath="$PROJECT_DIR$/vendor/symfony/var-dumper/Symfony/Component/VarDumper/composer.json" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/composer.lock" afterPath="$PROJECT_DIR$/composer.lock" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/symfony/var-dumper/Symfony/Component/VarDumper/Tests/Fixtures/dumb-var.php" afterPath="$PROJECT_DIR$/vendor/symfony/var-dumper/Symfony/Component/VarDumper/Tests/Fixtures/dumb-var.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/symfony/var-dumper/Symfony/Component/VarDumper/Resources/functions/dump.php" afterPath="$PROJECT_DIR$/vendor/symfony/var-dumper/Symfony/Component/VarDumper/Resources/functions/dump.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/composer/include_paths.php" afterPath="$PROJECT_DIR$/vendor/composer/include_paths.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/imobiles/index.blade.php" afterPath="$PROJECT_DIR$/app/views/imobiles/index.blade.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/composer/installed.json" afterPath="$PROJECT_DIR$/vendor/composer/installed.json" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/symfony/class-loader/Symfony/Component/ClassLoader/Tests/Fixtures/classmap/multipleNs.php" afterPath="$PROJECT_DIR$/vendor/symfony/class-loader/Symfony/Component/ClassLoader/Tests/Fixtures/classmap/multipleNs.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/symfony/class-loader/Symfony/Component/ClassLoader/Tests/Fixtures/classmap/notAClass.php" afterPath="$PROJECT_DIR$/vendor/symfony/class-loader/Symfony/Component/ClassLoader/Tests/Fixtures/classmap/notAClass.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/symfony/class-loader/Symfony/Component/ClassLoader/Tests/Fixtures/classmap/notPhpFile.md" afterPath="$PROJECT_DIR$/vendor/symfony/class-loader/Symfony/Component/ClassLoader/Tests/Fixtures/classmap/notPhpFile.md" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/symfony/class-loader/Symfony/Component/ClassLoader/phpunit.xml.dist" afterPath="$PROJECT_DIR$/vendor/symfony/class-loader/Symfony/Component/ClassLoader/phpunit.xml.dist" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/symfony/event-dispatcher/Symfony/Component/EventDispatcher/phpunit.xml.dist" afterPath="$PROJECT_DIR$/vendor/symfony/event-dispatcher/Symfony/Component/EventDispatcher/phpunit.xml.dist" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/symfony/filesystem/Symfony/Component/Filesystem/phpunit.xml.dist" afterPath="$PROJECT_DIR$/vendor/symfony/filesystem/Symfony/Component/Filesystem/phpunit.xml.dist" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/symfony/var-dumper/Symfony/Component/VarDumper/phpunit.xml.dist" afterPath="$PROJECT_DIR$/vendor/symfony/var-dumper/Symfony/Component/VarDumper/phpunit.xml.dist" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/symfony/class-loader/Symfony/Component/ClassLoader/Tests/Fixtures/classmap/sameNsMultipleClasses.php" afterPath="$PROJECT_DIR$/vendor/symfony/class-loader/Symfony/Component/ClassLoader/Tests/Fixtures/classmap/sameNsMultipleClasses.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/symfony/class-loader/Symfony/Component/ClassLoader/Tests/Fixtures/deps/traits.php" afterPath="$PROJECT_DIR$/vendor/symfony/class-loader/Symfony/Component/ClassLoader/Tests/Fixtures/deps/traits.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/symfony/class-loader/Symfony/Component/ClassLoader/Tests/Fixtures/php5.4/traits.php" afterPath="$PROJECT_DIR$/vendor/symfony/class-loader/Symfony/Component/ClassLoader/Tests/Fixtures/php5.4/traits.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/template/parts/body/~menu.blade.php" afterPath="$PROJECT_DIR$/app/views/template/parts/body/~menu.blade.php" />
+    </list>
+    <ignored path="imobile.iws" />
+    <ignored path=".idea/workspace.xml" />
+    <ignored path=".idea/dataSources.local.xml" />
+    <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
+    <option name="TRACKING_ENABLED" value="true" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="ChangesViewManager" flattened_view="true" show_ignored="false" />
+  <component name="CreatePatchCommitExecutor">
+    <option name="PATCH_PATH" value="" />
+  </component>
+  <component name="DaemonCodeAnalyzer">
+    <disable_hints />
+  </component>
+  <component name="ExecutionTargetManager" SELECTED_TARGET="default_target" />
+  <component name="FavoritesManager">
+    <favorites_list name="imobile" />
+  </component>
+  <component name="FileEditorManager">
+    <leaf>
+      <file leaf-file-name="testemmet.html" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/controllers/testemmet.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="-0.0" vertical-offset="0" max-vertical-offset="102">
+              <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="PresaController.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/controllers/PresaController.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="-8.5" vertical-offset="0" max-vertical-offset="1581">
+              <caret line="13" column="0" selection-start-line="13" selection-start-column="0" selection-end-line="13" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="add_imobil.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/public/js/jquery/add_imobil.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="102">
+              <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="global.less" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/public/assets/global.less">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.04187192" vertical-offset="0" max-vertical-offset="812">
+              <caret line="2" column="15" selection-start-line="2" selection-start-column="15" selection-end-line="2" selection-end-column="15" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+    </leaf>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="IdeDocumentHistory">
+    <option name="CHANGED_PATHS">
+      <list>
+        <option value="$PROJECT_DIR$/app/controllers/testemmet.html" />
+        <option value="$PROJECT_DIR$/app/controllers/PresaController.php" />
+        <option value="$PROJECT_DIR$/public/js/jquery/add_imobil.js" />
+        <option value="$PROJECT_DIR$/public/assets/global.less" />
+      </list>
+    </option>
+  </component>
+  <component name="JsGulpfileManager">
+    <detection-done>true</detection-done>
+  </component>
+  <component name="PhpWorkspaceProjectConfiguration" backward_compatibility_performed="true" />
+  <component name="ProjectFrameBounds">
+    <option name="x" value="260" />
+    <option name="y" value="20" />
+    <option name="width" value="1400" />
+    <option name="height" value="1000" />
+  </component>
+  <component name="ProjectLevelVcsManager" settingsEditedManually="false">
+    <OptionsSetting value="true" id="Add" />
+    <OptionsSetting value="true" id="Remove" />
+    <OptionsSetting value="true" id="Checkout" />
+    <OptionsSetting value="true" id="Update" />
+    <OptionsSetting value="true" id="Status" />
+    <OptionsSetting value="true" id="Edit" />
+    <ConfirmationsSetting value="0" id="Add" />
+    <ConfirmationsSetting value="0" id="Remove" />
+  </component>
+  <component name="ProjectView">
+    <navigator currentView="ProjectPane" proportions="" version="1">
+      <flattenPackages />
+      <showMembers />
+      <showModules />
+      <showLibraryContents />
+      <hideEmptyPackages />
+      <abbreviatePackageNames />
+      <autoscrollToSource />
+      <autoscrollFromSource />
+      <sortByType />
+    </navigator>
+    <panes>
+      <pane id="ProjectPane">
+        <subPane>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="imobile" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="imobile" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="imobile" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="imobile" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="imobile" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="public" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="imobile" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="imobile" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="public" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="assets" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="imobile" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="imobile" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="app" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="imobile" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="imobile" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="app" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="controllers" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+        </subPane>
+      </pane>
+      <pane id="Scope" />
+    </panes>
+  </component>
+  <component name="PropertiesComponent">
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/public/assets/global.less" />
+    <property name="DefaultHtmlFileTemplate" value="Html5" />
+    <property name="LayoutCode.rearrangeEntriesPHP" value="false" />
+    <property name="options.lastSelected" value="editing.templates" />
+    <property name="options.splitter.main.proportions" value="0.3" />
+    <property name="options.splitter.details.proportions" value="0.2" />
+  </component>
+  <component name="RunManager">
+    <configuration default="true" type="PHPUnitRunConfigurationType" factoryName="PHPUnit">
+      <TestRunner />
+      <method />
+    </configuration>
+    <configuration default="true" type="PhpLocalRunConfigurationType" factoryName="PHP Console">
+      <method />
+    </configuration>
+    <configuration default="true" type="JavascriptDebugType" factoryName="JavaScript Debug">
+      <method />
+    </configuration>
+    <configuration default="true" type="PhpBehatConfigurationType" factoryName="Behat">
+      <BehatRunner />
+      <method />
+    </configuration>
+    <configuration default="true" type="PhpUnitRemoteRunConfigurationType" factoryName="PHPUnit on Server">
+      <method />
+    </configuration>
+    <configuration default="true" type="js.build_tools.gulp" factoryName="Gulp.js">
+      <method />
+    </configuration>
+    <list size="0" />
+  </component>
+  <component name="ShelveChangesManager" show_recycled="false" />
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="26c9510f-5f92-4c73-b7fa-d4737bffee45" name="Default" comment="" />
+      <created>1431775890259</created>
+      <option name="number" value="Default" />
+      <updated>1431775890259</updated>
+    </task>
+    <servers />
+  </component>
+  <component name="ToolWindowManager">
+    <frame x="260" y="20" width="1400" height="1000" extended-state="1" />
+    <editor active="true" />
+    <layout>
+      <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
+      <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
+      <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.3468208" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="-1" side_tool="true" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="-1" side_tool="true" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
+      <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
+      <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
+      <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+    </layout>
+  </component>
+  <component name="Vcs.Log.UiProperties">
+    <option name="RECENTLY_FILTERED_USER_GROUPS">
+      <collection />
+    </option>
+    <option name="RECENTLY_FILTERED_BRANCH_GROUPS">
+      <collection />
+    </option>
+  </component>
+  <component name="VcsContentAnnotationSettings">
+    <option name="myLimit" value="2678400000" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <option name="myTodoPanelSettings">
+      <TodoPanelSettings />
+    </option>
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager />
+    <watches-manager />
+  </component>
+  <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/app/controllers/testemmet.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="255">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/controllers/PresaController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-8.5" vertical-offset="0" max-vertical-offset="1581">
+          <caret line="13" column="0" selection-start-line="13" selection-start-column="0" selection-end-line="13" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/js/jquery/add_imobil.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="919">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/assets/global.less">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.04187192" vertical-offset="0" max-vertical-offset="812">
+          <caret line="2" column="15" selection-start-line="2" selection-start-column="15" selection-end-line="2" selection-end-column="15" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+  </component>
+</project>

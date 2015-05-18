@@ -7,7 +7,7 @@ var Login = function() {
             errorClass: 'help-block', // default input error message class
             focusInvalid: false, // do not focus the last invalid input
             rules: {
-                username: {
+                email: {
                     required: true
                 },
                 password: {
@@ -20,10 +20,10 @@ var Login = function() {
 
             messages: {
                 username: {
-                    required: "Username is required."
+                    required: "Numele este obligatoriu."
                 },
                 password: {
-                    required: "Password is required."
+                    required: "Introduceti parola."
                 }
             },
 
@@ -154,42 +154,44 @@ var Login = function() {
             ignore: "",
             rules: {
 
-                fullname: {
+                nume: {
+                    required: true
+                },
+                prenume: {
                     required: true
                 },
                 email: {
                     required: true,
                     email: true
-                },
-                address: {
-                    required: true
-                },
-                city: {
-                    required: true
-                },
-                country: {
-                    required: true
-                },
-
-                username: {
+                },  
+                nume: {
                     required: true
                 },
                 password: {
                     required: true
                 },
-                rpassword: {
+                password_confirmation: {
                     equalTo: "#register_password"
-                },
-
-                tnc: {
-                    required: true
-                }
+                } 
             },
 
-            messages: { // custom messages for radio buttons and checkboxes
-                tnc: {
-                    required: "Please accept TNC first."
-                }
+            messages: {
+                nume: {
+                    required: "Numele este obligatoriu."
+                },
+                prenume: {
+                    required: "Prenumele este obligatoriu."
+                },
+                email: {
+                    required: "Email-ul este obligatoriu.",
+                    email: "Email-ul nu este valid"
+                },
+                password: {
+                    required: "Introduceti parola."
+                },
+                password_confirmation:{
+                    equalTo: "Parolele nu coincid"
+                } 
             },
 
             invalidHandler: function(event, validator) { //display error alert on form submit   

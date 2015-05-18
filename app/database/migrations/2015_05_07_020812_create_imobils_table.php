@@ -20,8 +20,10 @@ class CreateImobilsTable extends Migration {
 			$table->integer('id_ansamblu')->unsigned()->nullable();
 			$table->integer('id_tip_categorie')->unsigned()->nullable();
 			$table->integer('id_tip_imobil')->unsigned()->nullable();
+			$table->string('denumire',50);
 			$table->double('suprafata_min');
 			$table->double('suprafata_max');
+
 
 			$table
 			->foreign('id_tip_categorie')

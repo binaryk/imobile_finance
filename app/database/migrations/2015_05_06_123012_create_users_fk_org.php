@@ -12,14 +12,14 @@ class CreateUsersFkOrg extends Migration {
 	 */
 	public function up()
 	{
-		Schema::table('users',function(Blueprint $t){
+		/*Schema::table('users',function(Blueprint $t){
 			$t
 			->foreign('id_organizatie')
 			->references('id')
 			->on('organizatii')
 			->onDelete('restrict')
 			->onUpdate('cascade'); 
-		});
+		});*/
 	}
 
 
@@ -30,9 +30,9 @@ class CreateUsersFkOrg extends Migration {
 	 */
 	public function down()
 	{
-		Schema::table('users', function (Blueprint $t) {
+		/*Schema::table('users', function (Blueprint $t) {
 			$t->dropForeign('users_id_organizatie_foreign');
-        }); 
+        }); */
 	}
 
 }
