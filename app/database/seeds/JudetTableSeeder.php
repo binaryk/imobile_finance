@@ -52,7 +52,7 @@ class JudetTableSeeder extends Seeder {
 	{
 		DB::table('judete')->delete();
 		$faker = Faker::create();
-		Judet::insert($this->judete); 
+		Imobiliare\Nomenclator\Judet::insert($this->judete); 
 	}
 
 }

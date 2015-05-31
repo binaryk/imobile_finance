@@ -10,7 +10,7 @@ class LocalitatiTableSeeder extends Seeder {
 	{
 		DB::table('localitati')->delete();
 		$faker = Faker::create();
-		Localitate::insert($this->localitati); 
+		Imobiliare\Nomenclator\Localitate::insert($this->localitati); 
 	}
 
 }

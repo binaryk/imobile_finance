@@ -11,7 +11,7 @@ class TelefoanesTableSeeder extends Seeder {
 		$faker = Faker::create();
 		$faker->seed(9);
 		$intermediari = IntermediarImobil::all()->lists('id');
-		$dezvoltatori = Dezvoltator::all()->lists('id');
+		$dezvoltatori = Imobiliare\Dezvoltator::all()->lists('id');
 
 		foreach(range(1, 10) as $index)
 		{

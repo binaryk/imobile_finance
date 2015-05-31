@@ -23,6 +23,8 @@ class CreateAnsambluRezidentialTable extends Migration {
 			$table->integer('id_tip_stadiu_ansamblu')->unsigned()->nullable();
 			$table->string('telefon',15);
 			$table->string('nume',50);
+			$table->integer('anul_infiintarii');
+			$table->date('data_estimativa_vanzare');
 			$table->string('strada',50);
 		});
 	}

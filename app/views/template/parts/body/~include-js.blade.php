@@ -5,6 +5,7 @@
 <!-- BEGIN PAGE LEVEL SCRIPTS -->
 {{ HTML::script("assets/global/scripts/metronic.js") }}
 {{ HTML::script("assets/admin/layout/scripts/layout.js") }} 
+@yield('custom-scripts')
 <script>
 jQuery(document).ready(function() {    
    Metronic.init(); // init metronic core componets

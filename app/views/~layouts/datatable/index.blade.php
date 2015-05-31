@@ -1,21 +1,13 @@
 @section('content')
-@yield('before-table-row')
+@yield('before-table-row')		
 <div class="row">
-	<div class="col-xs-12">
-		<div class="box box-solid box-default box-dt" id="box-{{$dt->id()}}">
-			@if( $dt->caption() )
-				<div class="box-header">
-					@if($dt->icon())
-						{{HTML::image($dt->icon())}}
-					@endif
-					<h3 class="box-title">{{$dt->caption()}}</h3>
-					<i class="fa fa-refresh btn-dt-refresh pull-right" data-dt-name="{{$dt->name()}}"></i>
-		        </div><!-- /.box-header -->
-			@endif
+	<div class="col-xs-12"> 
+		<div class="box box-solid box-default box-dt" id="box-{{$dt->id()}}"> 
 			<div class="box-body">
 
 				<!-- toolbar -->
 				@if( ! empty($toolbar) )
+
 				<div class="dt-toolbar-container">
 					<div class="row">
 						<div class="col-xs-12">{{$toolbar}}</div>
@@ -28,27 +20,29 @@
 				<!-- /Message -->
 
 				<!-- Insert/Update/Delete Form -->
-				@if($form)
-				<div class="dt-form-container" id="form-{{$dt->id()}}">
-					<div class="row">
-						<div class="col-xs-12">
-							<div class="box box-solid box-default">
-								<div class="box-header"><h3 id="action-title" class="box-title">-</h3>
-									<div class="box-tools pull-right">
-                    					<button class="btn btn-sm btn-close-form" data-widget="remove"><i class="fa fa-times"></i></button>
-                  					</div>
-								</div>
-								<div class="box-body">{{$form->showForm()}}</div>
-								<div class="box-footer">
-									<button data-action="" class="btn btn-primary btn-do-action">Primary</button>
-								</div>
-							</div>
+				@if($form) 
+				<div class="dt-form-container portlet box blue" id="form-{{$dt->id()}}">
+					<div class="portlet-title">
+						<div class="caption">
+							<h4 id="action-title" class="box-title">-</h4>   
 						</div>
+						<div class="tools">
+							<button class="btn btn-sm btn-close-form" data-widget="remove"><i class="fa fa-times"></i></button>
+						</div>
+					</div>
+					<div class="portlet-body form">
+						<div class="form-body">
+							{{$form->showForm()}}
+						</div>
+					</div> 
+					<div class="form-actions">
+                                <button class="btn-do-action btn blue m-icon ">
+                                    Salveaza
+                                </button>
 					</div>
 				</div>
 				@endif
-				<!-- Form -->
-
+				<!-- Form --> 
 				<!-- datatable -->
 				{{ $dt->table() }}
 				<!-- /datatable -->
@@ -69,11 +63,7 @@
 
 	<script>
 	$(document).ready(function(){
-		{{ $dt->init() }}
-
-		@if($dt->id() == 'operatiuni')
-			var operatiuni = new OPERATIUNI("{{URL::route('update-record')}}");
-		@endif
+		{{ $dt->init() }} 
 
 		@if($form)
 		var form = new DTFORM("#form-{{$dt->id()}}", "{{URL::route('datatable-load-form', ['id' => $dt->id()])}}", '{{$form->model()}}', "{{URL::route('datatable-do-action', ['id' => $dt->id()])}}", eval('{{$dt->name()}}'));

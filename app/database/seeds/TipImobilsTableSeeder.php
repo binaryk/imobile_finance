@@ -9,7 +9,7 @@ class TipImobilsTableSeeder extends Seeder {
 	{
 		DB::table('tip_imobile')->delete();
 		$faker = Faker::create(); 
-		TipImobil::insert([
+		Imobiliare\Nomenclator\TipImobil::insert([
 			[ 'nume' => '1 camera' ],
 			[ 'nume' => '2 camere' ],
 			[ 'nume' => '3 camere' ],

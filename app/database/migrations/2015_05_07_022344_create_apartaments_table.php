@@ -17,6 +17,7 @@ class CreateApartamentsTable extends Migration {
 			$table->increments('id');
 			$table->timestamps();
 			$table->softdeletes();
+			$table->integer('id_cladire')->unsigned()->nullable();
 			$table->integer('id_imobil')->unsigned()->nullable();
 			$table->integer('id_cartier')->unsigned()->nullable();
 			$table->integer('id_organizatie')->unsigned()->nullable();

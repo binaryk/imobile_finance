@@ -1,0 +1,123 @@
+span.quick-report-title
+{
+	font-size:14px;
+	font-weight:bold;
+	display:inline-block;
+	background-image: url("../../img/icons/dt/report.png");
+	background-repeat:no-repeat;
+	height:32px;
+	line-height:32px;
+	margin:2px 0px;
+	padding-left:36px;
+	width:100%;
+}
+
+a.quick-report-toolbar
+{
+	width:120px;
+	margin-left:2px;
+}
+table.quick-report-table
+{
+	thead
+	{
+		tr
+		{
+			font-size:14px;
+			
+			th
+			{
+				vertical-align:middle;
+				text-align:center;
+			}
+		}
+	}
+
+	tbody
+	{
+		tr
+		{
+			td
+			{
+				font-size:75%;
+			}
+		}
+		td
+		{
+			background-color:#fff;
+		}
+		td.quick-reprt-cell-integer, td.quick-reprt-cell-float
+		{
+			text-align:right;
+		}
+		td.quick-reprt-cell-check, td.quick-reprt-cell-date
+		{
+			text-align:center;
+		}
+	}
+}
+
+.rapoarte-gal-beneficiar-hightlight
+{
+	td
+	{
+		background-color:#B2CADE !important;
+		color:#fff;
+		font-size:85% !important;
+		font-weight:bold;
+		background-image : url("../../img/icons/dt/beneficiari.png");
+		background-repeat:no-repeat;
+		background-position:2px 2px;
+		padding:2px 0px 2px 40px !important;
+		line-height:32px !important;
+	}
+}
+
+.rapoarte-gal-proiect-hightlight
+{
+	td
+	{
+		background-color:#FADD84 !important;
+		color:#000;
+		font-size:85% !important;
+		font-weight:bold;
+		background-image : url("../../img/icons/dt/proiecte.png");
+		background-repeat:no-repeat;
+		background-position:32px 2px;
+		padding:2px 0px 2px 70px !important;
+		line-height:32px !important;
+	}
+}
+
+.rapoarte-gal-beneficiar-summary-hightlight
+{
+	td
+	{
+		background-color:#F0F4F8 !important;
+		color:#000;
+		font-size:85% !important;
+		font-weight:bold;
+	}
+}
+
+.rapoarte-gal-proiect-summary-hightlight
+{
+	td
+	{
+		background-color:#FEF5DA !important;
+		color:#000;
+		font-size:85% !important;
+		font-weight:bold;
+	}
+}
+
+.rapoarte-gal-summary-hightlight
+{
+	td
+	{
+		background-color:#DDD !important;
+		color:#000;
+		font-size:100% !important;
+		font-weight:bold;
+	}
+}

@@ -14,9 +14,9 @@ class FormsRecord
 		'delete' => '',
 	];
 	protected $buttons  = [
-		'insert' => 'Adaugă', 
-		'update' => 'Salvează', 
-		'delete' => 'Şterge',
+		'insert' => 'Adaugă <i class="m-icon-swapleft"></i>',
+		'update' => 'Salvează <i class="m-icon-swapleft"></i>',
+		'delete' => 'Şterge <i class="fa fa-trash-o"></i>',
 	];
 	protected $feedback = [
 		'insert' => [

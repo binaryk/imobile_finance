@@ -1,0 +1,71 @@
+.row-indicatori-etape
+{
+	.box
+	{
+		border-top:initial;
+		border-radius:1px;
+		margin-bottom:2px;
+		.box-header
+		{
+			border-radius:1px;
+			h3
+			{
+				padding:5px 10px;
+				font-weight:bold;
+			}
+		}
+	}
+}
+
+.table-indicatori-etape
+{
+	th, td
+	{
+		padding:4px !important;
+		font-size:13px;
+	}
+	th
+	{
+		background-color:f7f7f7;
+	}
+	.year-header
+	{
+		background-color:#e5dfec;
+	}
+	.year-summary
+	{
+		background-color:#b4a4c8;
+		font-weight:bold;
+	}
+	.summary
+	{
+		font-weight:bold;
+		color:#fff;
+		font-size:14px;	
+	}
+}
+
+#table-indicatori-etapa-2
+{
+	th:nth-child(n+3)
+	{
+		width:10%;
+	}
+	th
+	{
+		text-align:center;
+		font-size:12px;
+		vertical-align:middle;
+	}
+}
+
+.indicatori-toolbar
+{
+	.btn.btn-app
+	{
+		margin-left:0px;
+		margin-bottom:2px;
+		padding:5px 5px;
+		height:45px;
+	}
+}

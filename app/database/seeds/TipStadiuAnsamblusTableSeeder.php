@@ -10,7 +10,7 @@ class TipStadiuAnsamblusTableSeeder extends Seeder {
 		DB::table('tip_stadii_ansamblu')->delete();
 		$faker = Faker::create();
 		 
-		TipStadiuAnsamblu::insert([
+		Imobiliare\Nomenclator\TipStadiuAnsamblu::insert([
 			['nume' => 'Neinceput'],
 			['nume' => 'In constructie'],
 			['nume' => 'Finalizat']

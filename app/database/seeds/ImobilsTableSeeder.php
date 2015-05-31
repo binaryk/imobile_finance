@@ -10,8 +10,8 @@ class ImobilsTableSeeder extends Seeder {
 		DB::table('imobile')->delete();
 		$faker = Faker::create();
 		$faker->seed(10);
-		$categorie = TipCategorieImobil::all()->lists('id');
-		$tip = TipImobil::all()->lists('id');
+		$categorie = Imobiliare\Nomenclator\TipCategorieImobil::all()->lists('id');
+		$tip = Imobiliare\Nomenclator\TipImobil::all()->lists('id');
 		$ansamblu = AnsambluRezidential::all()->lists('id');
 
 		foreach(range(1, 10) as $index)

@@ -14,7 +14,7 @@ return array(
 		'mysql' => array(
 			'driver'    => 'mysql',
 			'host'      => 'localhost',
-			'database'  => 'bn_imobiliare',
+			'database'  => 'imobile',
 			'username'  => 'root',
 			'password'  => '',
 			'charset'   => 'utf8',

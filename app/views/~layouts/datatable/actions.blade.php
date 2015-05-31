@@ -1,9 +1,11 @@
 <div class="btn-group">
-	<button type="button" class="btn btn-default btn-xs dropdown-toggle" data-toggle="dropdown">
-		<span class="fa fa-bars"></span>
-	</button>
-
-	<ul class="dropdown-menu dropdown-menu-right text-left" role="menu">
-		@yield('actions-items')
-	</ul>
+    <a class="btn default yellow-stripe" href="#" data-toggle="dropdown">
+        <i class="fa fa-gear"></i>
+            <span class="hidden-480">
+            Actiuni </span>
+        <i class="fa fa-angle-down"></i>
+    </a>
+    <ul class="dropdown-menu pull-right">
+        @yield('actions-items')
+    </ul>
 </div>

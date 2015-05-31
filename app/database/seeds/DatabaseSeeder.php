@@ -29,6 +29,10 @@ class DatabaseSeeder extends Seeder {
 		$this->call('TelefoanesTableSeeder');
 		$this->call('ImobilsTableSeeder');
 		$this->call('ApartamentsTableSeeder');
+		$this->call('TipDestinatieCladireSeed');
+		$this->call('TipEtajsTableSeeder');
+		$this->call('TipCategorieTerenSeeder');
+		$this->call('TipDestinatieTerenSeeder');
 
 }
 

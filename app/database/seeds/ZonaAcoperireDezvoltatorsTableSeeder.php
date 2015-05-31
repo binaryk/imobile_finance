@@ -10,8 +10,8 @@ class ZonaAcoperireDezvoltatorsTableSeeder extends Seeder {
 		DB::table('zona_acoperire_dezvoltatori')->delete();
 		$faker = Faker::create();
 		$faker->seed(6);
-		$judete = Judet::all()->lists('id');
-		$dezvoltatori = Dezvoltator::all()->lists('id');
+		$judete = Imobiliare\Nomenclator\Judet::all()->lists('id');
+		$dezvoltatori = Imobiliare\Dezvoltator::all()->lists('id');
 
 		foreach(range(1, 10) as $index)
 		{

@@ -6,14 +6,30 @@ class Sidebar
 	protected static $instance = NULL;
 
 	protected $sidebar = [
-		'group-nomenclatoare' => [
+        'principal' => [
+            'header' => [
+                'caption' => 'Principala',
+                'icon'    => 'icon-home'
+            ],
+            'options' => [],
+            'active'  => []
+        ],
+		'dezvoltatori' => [
 			'header' => [
-				'caption' => 'Nomenclatoare',
-				'icon'  => 'fa-cog'
+				'caption' => 'Dezvoltatori',
+				'icon'  => 'icon-user'
 			],
 			'options' => [],
-			'active'  => ['roles', 'users', 'feedback', 'nomenclatoare/program_operational', 'nomenclatoare/gali']
-		] 
+			'active'  => ['nomenclatoare/dezvoltatori']
+		],
+        'date-baza' => [
+            'header' => [
+                'caption' => 'Date de baza',
+                'icon'  => 'icon-folder '
+            ],
+            'options' => [],
+            'active'  => ['nomenclatoare/tip_intermediar','nomenclatoare/tip_categorie_imobil','nomenclatoare/tip_stadii_ansamblu','nomenclatoare/tip_imobile','nomenclatoare/judet']
+        ],
 
 	];
 
@@ -34,14 +50,18 @@ class Sidebar
 		/**
 		NOMENCLATOARE
 		**/
-		->addOption('group-nomenclatoare', \URL::to('cautare-date'), 'Grupuri', 'fa-users')
+		->addOption('date-baza', \URL::route('datatable-index', ['id' => 'tip_intermediar']), 'Tipuri de intermediari', 'fa-circle-o')
+		->addOption('date-baza', \URL::route('datatable-index', ['id' => 'tip_categorie_imobil']), 'Tipuri categorii imobile', 'fa-circle-o')
+		->addOption('date-baza', \URL::route('datatable-index', ['id' => 'tip_stadii_ansamblu']), 'Tipuri stadii ansamblu', 'fa-circle-o')
+		->addOption('date-baza', \URL::route('datatable-index', ['id' => 'tip_imobile']), 'Tipuri imobile', 'fa-circle-o')
+		->addOption('date-baza', \URL::route('datatable-index', ['id' => 'judet']), 'Judet', 'fa-circle-o')
+		/**
+		 Dezvoltatori
+		**/
+		->addOption('dezvoltatori', \URL::route('datatable-index', ['id' => 'dezvoltatori']), 'Dezvoltatori', 'fa-circle-o')
 		;
 	}
-/*<li>
-				<a href="{{ URL::route('verificare-presa') }}">
-				<i class="icon-graph"></i>
-				Verificare presa</a>
-			</li>*/
+
 	public static function make()
 	{
 		return self::$instance = new Sidebar();
@@ -50,7 +70,14 @@ class Sidebar
 
 	public function OutGroupHeader( $header )
 	{
-		return '<a href="#"><i class="fa ' . $header['icon'] . '"></i><span>' . $header ['caption'] . '</span><i class="fa fa-angle-left pull-right"></i></a>';
+        return '<a href="javascript:;">
+		<i class="'. $header ['icon'] .'"></i>
+		<span class="title">'. $header ['caption'] .'</span>
+		<span class="selected"></span>
+		<span class="arrow open"></span>
+		</a>';
+
+//		return '<a href="#"><i class="fa ' . $header['icon'] . '"></i><span>' . $header ['caption'] . '</span><i class="fa fa-angle-left pull-right"></i></a>';
 	}
 
 	public function OutOption( $option )
@@ -65,7 +92,7 @@ class Sidebar
 		{
 			if(\Request::is($item))
 			{
-				return ' active selected';
+				return ' active open';
 			}
 		}
 		return $result;
@@ -89,7 +116,7 @@ class Sidebar
 		$result = '';
 		foreach($this->sidebar as $key => $group)
 		{
-			$result .= '<li class="treeview' . $this->_active($group['active'])  . '">' . $this->OutGroup($group) . '</li>';
+			$result .= '<li class="start' . $this->_active($group['active'])  . '">' . $this->OutGroup($group) . '</li>';
 		}
 		return $result;
 	}

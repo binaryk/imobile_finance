@@ -10,8 +10,8 @@ class AnsambluRezidentialsTableSeeder extends Seeder {
 		DB::table('ansambluri_rezidentiale')->delete();
 		$faker = Faker::create();
 		$faker->seed(3);
-		$tip_stadii = TipStadiuAnsamblu::all()->lists('id');
-		$dezvoltatori = Dezvoltator::all()->lists('id');
+		$tip_stadii = Imobiliare\Nomenclator\TipStadiuAnsamblu::all()->lists('id');
+		$dezvoltatori = Imobiliare\Dezvoltator::all()->lists('id');
 		$organizatii = Organizatie::all()->lists('id');
 		foreach(range(1, 10) as $index)
 		{

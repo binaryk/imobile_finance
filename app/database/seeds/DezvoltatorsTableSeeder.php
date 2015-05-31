@@ -10,17 +10,17 @@ class DezvoltatorsTableSeeder extends Seeder {
 		DB::table('dezvoltatori')->delete();
 		$faker = Faker::create();
 		$faker->seed(5);
-		$judete = Judet::all()->lists('id');
+		$judete = Imobiliare\Nomenclator\Judet::all()->lists('id');
 
 		foreach(range(1, 10) as $index)
 		{
-			Dezvoltator::create([
+			Imobiliare\Dezvoltator::create([
 				'id_judet' => $faker->randomElement($judete),
 				'nume' => $faker->lastName(),
 				'prenume' => $faker->firstName(),
 				'adresa' => $faker->address(),
-				'telefon' => $faker->unique()->email(),
-				'email' => $faker->phoneNumber(),
+				'telefon' => $faker->phoneNumber(),
+				'email' => $faker->unique()->email()
 			]);
 		}
 	}

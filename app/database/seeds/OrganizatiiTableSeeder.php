@@ -10,7 +10,7 @@ class OrganizatiiTableSeeder extends Seeder {
 		DB::table('organizatii')->delete();
 		$faker = Faker::create();
 		$faker->seed(2);
-		$localitati = Localitate::all()->lists('id');
+		$localitati = Imobiliare\Nomenclator\Localitate::all()->lists('id');
 		foreach(range(1, 10) as $index)
 		{
 			Organizatie::create([

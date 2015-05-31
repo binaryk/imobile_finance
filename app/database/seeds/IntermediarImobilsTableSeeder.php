@@ -10,8 +10,8 @@ class IntermediarImobilsTableSeeder extends Seeder {
 		DB::table('intermediari_imobile')->delete();
 		$faker = Faker::create();
 		$faker->seed(7);
-		$judete = Judet::all()->lists('id');
-		$tip_intemediar = TipIntermediar::all()->lists('id');
+		$judete = Imobiliare\Nomenclator\Judet::all()->lists('id');
+		$tip_intemediar = Imobiliare\Nomenclator\TipIntermediar::all()->lists('id');
 
 		foreach(range(1, 10) as $index)
 		{

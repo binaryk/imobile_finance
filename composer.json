@@ -8,12 +8,14 @@
 		"doctrine/dbal": "~2.3",
 		"barryvdh/laravel-debugbar": "~1.8", 
 		"rcrowe/twigbridge": "0.6.*", 
-		"way/generators": "~2.0",
 		"fzaninotto/faker": "v1.3.0", 
 		"goodby/csv" : "1.2.0", 
 		"edvinaskrucas/notification"  : "3.*",
 		"cartalyst/sentry": "2.1.*",
 		"laracasts/validation": "~1.0"
+	},
+	"require-dev": {
+    	"way/generators": "~2.0"
 	},
 	"autoload": {
 		"classmap": [

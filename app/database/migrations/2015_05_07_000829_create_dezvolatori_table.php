@@ -16,6 +16,7 @@ class CreateDezvolatoriTable extends Migration {
 		{
 			$table->increments('id');
 			$table->timestamps();
+			$table->softdeletes(); 
 			$table->integer('id_judet')->unsigned()->nullable();
 			$table->string('nume',50);
 			$table->string('prenume',50);

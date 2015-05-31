@@ -16,7 +16,7 @@ class Route
 		/**
 		IMOBILE
 		**/ 
-		->add('get', 'imobile-index', 'aaa/{id}', 'ImobileController@index', '\Imobiliare\Datatable') 
+		 
 		->add('get', 'imobile-index-row-source', 'aaa/row-source/{id}', 'ImobileController@rows', '\Imobiliare\Datatable')
 
 
@@ -25,7 +25,17 @@ class Route
 		->add('post', 'datatable-load-form', 'nomenclatoare/load-dt-form/{id}', 'DatatableController@loadForm', 'Imobiliare\Datatable')
 		->add('post', 'datatable-do-action', 'nomenclatoare/dt-do-action/{id}', 'DatatableController@doAction', 'Imobiliare\Datatable')
 
-		 
+
+/**
+ 		Date de baza	
+ **/
+ 		->add('get','judet_localitate_index','nomenclatoare/{id}/{judet_id}','JudetController@index','Imobiliare\Datatable')
+		->add('get', 'judet-localitate-row-source', 'nomenclatoare/row-source/{id}/{judet_id}', 'JudetController@rows', 'Imobiliare\Datatable')
+ 		
+		 /**
+         Dezvoltatori
+          *
+          **/
 		/**
 		END IMOBILE
 		**/ 

@@ -13,37 +13,6 @@
 		<!-- DOC: Apply "sidebar-search-bordered sidebar-search-solid" class the below search form to have bordered & solid search box -->
 		@include('template.parts.body.~search-form')
 		<!-- END RESPONSIVE QUICK SEARCH FORM -->
-	</li>
-	<li class="start active open">
-		<a href="javascript:;">
-		<i class="icon-home"></i>
-		<span class="title">Pagina principala</span>
-		<span class="selected"></span>
-		<span class="arrow open"></span>
-		</a>
-		<ul class="sub-menu">
-			<li>
-				<a href="{{URL::route('imobile-index',['id' => 'imobile'])}}">
-				<i class="icon-bar-chart"></i>
-				Lista de imobile</a>
-			</li>
-			<li>
-				<a href="#">
-				<i class="icon-bulb"></i>
-				Cautare date</a>
-			</li>
-			<li>
-				<a href="#">
-				<i class="icon-bulb"></i>
-				Agentii</a>
-			</li>
-			<li>
-				<a href="#">
-				<i class="icon-graph"></i>
-				Verificare presa</a>
-			</li>
-		</ul>
-	</li>
 			{{ Sidebar::make()->out()  }}
 	
 </ul>

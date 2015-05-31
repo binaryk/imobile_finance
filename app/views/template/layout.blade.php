@@ -8,8 +8,6 @@
  	@include('template.parts.body.~footer')
     @include('template.parts.body.~include-js') 
         
-    @yield('custom-scripts')
+   
 </body>
 </html>
-
-

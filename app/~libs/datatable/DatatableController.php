@@ -5,7 +5,11 @@ namespace Datatable;
 class DatatableController extends \BaseController 
 {
 
-	public function show($config)
+    /**
+     * @param $config - array cu particularitati primit din functia toIndexConfig a clasei Grids
+     * @throws \Exception
+     */
+    public function show($config)
 	{
 		if( empty($config['view']) )
 		{
@@ -13,7 +17,7 @@ class DatatableController extends \BaseController
 		}
 		if( empty($config['name']) )
 		{
-			throw new \Exception(__METHOD__ . '. Javascript datatable variable name not defined.');			
+			throw new \Exception(__METHOD__ . '. Javascript datatable variable name not defined.');
 		}
 		$other_info = array_key_exists('other-info', $config) ? $config['other-info'] : [];
 		$this->layout->title = strip_tags($config['caption']);
@@ -25,12 +29,13 @@ class DatatableController extends \BaseController
 		{
 			$form = $config['form']::make()->other_info($other_info);
 		}
-		// dd($config[])
 		$this->layout->content = \View::make($config['view'])->with([
 			'dt'   		=> Table::create($config),
 			'toolbar' 	=> \View::make($config['toolbar'])->with($other_info)->render(),
 			'form'      => $form,
 		] + $other_info);
+
+
 	}
 
 	public function dataset($config)

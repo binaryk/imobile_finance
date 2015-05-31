@@ -8,19 +8,19 @@ return [
     |--------------------------------------------------------------------------
     |
     */
-    'model_template_path' => 'C:\xampp\htdocs\imob\app/templates/model.txt',
+    'model_template_path' => 'C:\xampp\htdocs\imobile\app/templates/model.txt',
 
-    'scaffold_model_template_path' => 'C:\xampp\htdocs\imob\app/templates/scaffolding/model.txt',
+    'scaffold_model_template_path' => 'C:\xampp\htdocs\imobile\app/templates/scaffolding/model.txt',
 
-    'controller_template_path' => 'C:\xampp\htdocs\imob\app/templates/controller.txt',
+    'controller_template_path' => 'C:\xampp\htdocs\imobile\app/templates/controller.txt',
 
-    'scaffold_controller_template_path' => 'C:\xampp\htdocs\imob\app/templates/scaffolding/controller.txt',
+    'scaffold_controller_template_path' => 'C:\xampp\htdocs\imobile\app/templates/scaffolding/controller.txt',
 
-    'migration_template_path' => 'C:\xampp\htdocs\imob\app/templates/migration.txt',
+    'migration_template_path' => 'C:\xampp\htdocs\imobile\app/templates/migration.txt',
 
-    'seed_template_path' => 'C:\xampp\htdocs\imob\app/templates/seed.txt',
+    'seed_template_path' => 'C:\xampp\htdocs\imobile\app/templates/seed.txt',
 
-    'view_template_path' => 'C:\xampp\htdocs\imob\app/templates/view.txt',
+    'view_template_path' => 'C:\xampp\htdocs\imobile\app/templates/view.txt',
 
 
     /*

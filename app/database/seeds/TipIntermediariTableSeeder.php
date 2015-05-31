@@ -9,7 +9,7 @@ class TipIntermediariTableSeeder extends Seeder {
 	{
 		DB::table('intermediari_imobile')->delete();
 		$faker = Faker::create(); 
-		TipIntermediar::insert([
+		 Imobiliare\Nomenclator\TipIntermediar::insert([
 			['nume' => 'Agentie'],
 			['nume' => 'Persoana fizica'],
 		]);

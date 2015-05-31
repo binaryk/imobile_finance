@@ -1,0 +1,177 @@
+#proiect-dashboard
+{
+	margin-bottom:4px;
+	.proiect-dashboard-item
+	{
+		border:1px solid #ccc;
+		background-color:#fcfcfc;
+		background-repeat:no-repeat;
+		background-position:2px 2px;
+		min-height:38px;
+		padding-top:6px;
+		padding-left:38px;
+		a
+		{
+			color:#da251d;
+			font-size:13px;
+			&:hover
+			{
+				font-weight:bold;
+				text-decoration:underline;
+			}
+		}
+		&:hover
+		{
+			background-color:#f7f7f7;
+		}
+		margin-bottom:2px;
+	}
+	.active
+	{
+		background-color:#f7f7f7;
+		border:1px solid #da251d;
+		a
+		{
+			font-weight:bold;
+		}
+	}
+	.date-proiect-proiect
+	{
+		background-image : url("../../img/icons/dt/proiecte.png");
+	}
+	.date-contract-proiect
+	{
+		background-image : url("../../img/icons/dt/contract.png");
+	}
+	.cereri-plata-proiect
+	{
+		background-image : url("../../img/icons/dt/cereri-plata.png");
+	}
+	.declaratii-esalonare-proiect
+	{
+		background-image : url("../../img/icons/dt/declaratie-esalonare.png");
+	}
+	.achizitii-proiect
+	{
+		background-image : url("../../img/icons/dt/achizitii.png");
+	}
+	.echipa-proiect
+	{
+		background-image : url("../../img/icons/dt/echipa.png");
+	}
+}
+
+/*
+.btn-app.active
+{
+	opacity:0.5;
+}
+*/
+
+
+.box-date-contract.box-solid > .box-header
+{
+	padding-bottom:4px !important;
+}
+
+.box-date-contract
+{
+	.box-header
+	{
+		padding-left:4px !important;
+	}
+	.alert
+	{
+		display:none;
+		margin:0px 0px 2px 0px;
+		padding:4px 4px 4px 10px;
+		h4
+		{
+			margin-bottom:2px;
+		}
+		button.close
+		{
+			right:0px;
+		}
+	}
+
+	label
+	{
+		margin-bottom:0px;
+		font-size:12px;
+	}
+
+	.box-header
+	{
+		.box-tools
+		{
+			padding-top:10px !important;
+		}
+	}
+}
+
+.input-group
+{
+	input
+	{
+		background-color:#fff !important;
+	}
+}
+
+#date-contract-finantare, #date-suplimentare
+{
+	display:none;
+}
+
+#date-suplimentare, #date-suplimentare-achizitie
+{
+	.box-date-contract
+	{
+		.box-header
+		{
+			color:#000;
+		}
+		.box-body
+		{
+			input
+			{
+				color:#000;
+				font-size:13px;
+			}
+		}
+	}
+}
+
+#box-proiecte-achizitii
+{
+	.box-header
+	{
+	}
+}
+
+.stadiu-achizitie-controls
+{
+	display:none;
+}
+
+.input-group-addon
+{
+	padding:5px 8px;
+}
+
+.help-block
+{
+	margin:1px 0px 1px 0px;
+	color:#f56954 !important;
+	font-size:12px;
+}
+
+label.error-sign, .has-error label, .has-error .input-group-addon i
+{
+	color:#f56954 !important;
+}
+
+.has-error .form-control, .has-error .input-group-addon
+{
+	border-color:#f56954 !important;
+}

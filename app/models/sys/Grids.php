@@ -2,6 +2,10 @@
 
 namespace Imobiliare;
 
+/**
+ * Class Grids
+ * @package Imobiliare
+ */
 class Grids
 {
 
@@ -9,33 +13,48 @@ class Grids
 	protected $grids =[];
 
 	protected $maps = [
-		'imobile' => '\Imobiliare\Imobile\Grid\ImobileRecord',
+		'imobile' 				 => '\Imobiliare\Imobile\Grid\ImobileRecord',
+		'tip_intermediar'   	 => '\Imobiliare\Imobile\Grid\TipIntermediariRecord',
+		'tip_categorie_imobil'   => '\Imobiliare\Imobile\Grid\TipCategorieImobilRecord',
+		'tip_stadii_ansamblu'    => '\Imobiliare\Imobile\Grid\TipStadiiAnsambluRecord',
+		'tip_imobile'  			 => '\Imobiliare\Imobile\Grid\TipImobileRecord',
+		'judet'  			 	 => '\Imobiliare\Imobile\Grid\JudetRecord',
+		'localitati'  			 => '\Imobiliare\Imobile\Grid\LocalitateRecord',
+		'dezvoltatori'  		 => '\Imobiliare\Imobile\Grid\DezvoltatoriRecord',
+
 	];
 
 	public function __construct($id)
 	{
+//        responsabilitatea lui este de apune in array-ul grids instanta obiectului creat
 		$this->addGrid( call_user_func([$this->maps[$id], 'create']));
 	}
 
-	protected function addGrid( GridsRecord $grid)
+	protected function addGrid( GridsRecord $grid )
 	{
+//        aici (in array-ul grids, la key-ul trimis de noi) pune instanta obiectului dorit de noi, fie imobile, fie dezvoltatori etc.
 		$this->grids[$grid->id] = $grid;
+//        returneaza in constructor
 		return $this;
 	}
-
-	public static function make($id)
+    /**
+     * @param $id
+     * @return Grids returneaza instanta obiectului particular
+     */
+    public static function make($id)
 	{
 		return self::$instance = new Grids($id);
 	}
 
-	public function toIndexConfig($id)
-	{ 
+    /**
+     * @param $id
+     * @return array cu cateva particularitati ale obiectului instantiat
+     */
+    public function toIndexConfig($id)
+	{
+//        aici in $this->grids[$id] avem stabilita deja instanta obiectului particular pentru creare
 		$record = $this->grids[$id];
-
-
-
-
-		$result = [
+        $result = [
 			'id' 		     => $record->id,
 			'view'		     => $record->view,
 			'name'		     => $record->name,
@@ -52,7 +71,6 @@ class Grids
 			'custom_styles'  => $record->css,
 			'custom_scripts' => $record->js,
 		];
-
 		return $result;
 	}
 

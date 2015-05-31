@@ -3,6 +3,7 @@ function DTFORM(formid, loadformurl, model, doactionurl, dt)
 	this.classActionInsert   = '.action-insert-record';
 	this.classActionUpdate   = '.action-update-record';
 	this.classActionDelete   = '.action-delete-record';
+	this.classActionClose    = '.btn-close-form';
 	this.classDoButton       = '.btn-do-action';
 	this.classSourceControls = '.data-source';
 	this.idMessageBox        = '#dt-action-message';
@@ -153,7 +154,7 @@ function DTFORM(formid, loadformurl, model, doactionurl, dt)
 		console.log('2 -----> Hide Action Message');
 		this.hideActionMessage();
 		console.log('3 -----> Hide form');
-		this.hideform();
+        this.hideform();
 		$.ajax({
 			url      : this.loadformurl,
         	type     : 'post',
@@ -337,6 +338,7 @@ function DTFORM(formid, loadformurl, model, doactionurl, dt)
 		});
 	};
 
+
 	this.bindActions = function()
 	{
 		var self = this;
@@ -352,6 +354,10 @@ function DTFORM(formid, loadformurl, model, doactionurl, dt)
 
 		$(document).on( 'click', this.classActionDelete, function(){
 			self.loadform('delete', $(this).data('id'));
+		});
+
+		$(document).on( 'click', this.classActionClose, function(){
+			self.hideform(); 
 		});
 
 		$(document).on( 'click', this.classDoButton, function(){

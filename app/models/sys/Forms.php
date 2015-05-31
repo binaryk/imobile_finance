@@ -9,6 +9,13 @@ class Forms
 	protected $forms =[];
 
 	protected $maps = [
+		'tip_intermediar'        => '\Imobiliare\Nomenclatoare\Form\TipIntermediariRecord',
+		'tip_categorie_imobil'   => '\Imobiliare\Nomenclatoare\Form\TipCategorieImobilRecord',
+		'tip_stadii_ansamblu'    => '\Imobiliare\Nomenclatoare\Form\TipStadiiAnsambluRecord',
+		'tip_imobile'    		 => '\Imobiliare\Nomenclatoare\Form\TipImobilRecord',
+		'judet'    		 		 => '\Imobiliare\Nomenclatoare\Form\JudetRecord',
+		'localitati'    		 => '\Imobiliare\Nomenclatoare\Form\LocalitateRecord',
+		'dezvoltatori'    		 => '\Imobiliare\Nomenclatoare\Form\DezvoltatoriRecord',
 	];
 
 	public function __construct($id)
