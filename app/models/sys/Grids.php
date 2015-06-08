@@ -21,6 +21,8 @@ class Grids
 		'judet'  			 	 => '\Imobiliare\Imobile\Grid\JudetRecord',
 		'localitati'  			 => '\Imobiliare\Imobile\Grid\LocalitateRecord',
 		'dezvoltatori'  		 => '\Imobiliare\Imobile\Grid\DezvoltatoriRecord',
+		'dezvoltator-ansambluri' => '\Imobiliare\Imobile\Grid\DezvoltatoriAnsambluriRecord',
+		'ansamblu_imobile' 		 => '\Imobiliare\Imobile\Grid\AnsambluriImobileRecord',
 
 	];
 
@@ -70,6 +72,7 @@ class Grids
 			'form'           => $record->form,
 			'custom_styles'  => $record->css,
 			'custom_scripts' => $record->js,
+			'breadcrumbs'    => $record->breadcrumbs
 		];
 		return $result;
 	}

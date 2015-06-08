@@ -15,6 +15,7 @@ class Dezvoltator extends \Eloquent
 		'adresa',
 		'telefon',
 		'email',
+        'id_organizatie'
     ];
 
     public static function getRecord( $id )
@@ -24,6 +25,7 @@ class Dezvoltator extends \Eloquent
 
     public static function createRecord($data )
     {
+        $data['id_organizatie'] = $data['id_organizatie'];  
         return self::create($data);
     }
 

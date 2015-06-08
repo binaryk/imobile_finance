@@ -12,8 +12,12 @@ class CartiersTableSeeder extends Seeder {
 
 		foreach(range(1, 10) as $index)
 		{
-			Cartier::create([
-
+			Imobiliare\Cartier::insert([
+				['nume' => 'Grigorescu'],
+				['nume' => 'Gheorghieni'],
+				['nume' => 'Buna ziua'],
+				['nume' => 'Marasti'],
+				['nume' => 'Observator'],
 			]);
 		}
 	}

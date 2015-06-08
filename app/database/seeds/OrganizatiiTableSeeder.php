@@ -13,7 +13,7 @@ class OrganizatiiTableSeeder extends Seeder {
 		$localitati = Imobiliare\Nomenclator\Localitate::all()->lists('id');
 		foreach(range(1, 10) as $index)
 		{
-			Organizatie::create([
+			Imobiliare\Organizatie::create([
 				'id_localitate' => $faker->randomElement($localitati),
 				'denumire' => $faker->company,
 				'telefon' => $faker->unique()->phoneNumber(),

@@ -17,9 +17,6 @@ class Route
 		IMOBILE
 		**/ 
 		 
-		->add('get', 'imobile-index-row-source', 'aaa/row-source/{id}', 'ImobileController@rows', '\Imobiliare\Datatable')
-
-
 		->add('get', 'datatable-index', 'nomenclatoare/{id}', 'DatatableController@index', 'Imobiliare\Datatable')
 		->add('get', 'datatable-row-source', 'nomenclatoare/row-source/{id}', 'DatatableController@rows', 'Imobiliare\Datatable')
 		->add('post', 'datatable-load-form', 'nomenclatoare/load-dt-form/{id}', 'DatatableController@loadForm', 'Imobiliare\Datatable')
@@ -34,8 +31,16 @@ class Route
  		
 		 /**
          Dezvoltatori
-          *
           **/
+         ->add('get','dezvoltatori-index','dezvoltatori', 'DezvoltatoriController@index', 'Imobiliare\Datatable')
+         ->add('get','dezvoltatori-row-source','dezvoltatori/{id}', 'DezvoltatoriController@rows', 'Imobiliare\Datatable')
+
+         ->add('get','dezvoltatori_ansambluri','dezvoltatori/{id}/{id_dezvoltator}', 'DezvoltatoriAnsambluriController@index', 'Imobiliare\Datatable')
+         ->add('get','dezvoltatori-ansambluri-row-source','dezvoltatori/row-source/{id}/{id_dezvoltator}', 'DezvoltatoriAnsambluriController@rows', 'Imobiliare\Datatable') 
+
+         ->add('get','ansamblu_imobil','ansambluri-imobile/{id}/{id_ansamblu}', 'AnsambluriImobileController@index', 'Imobiliare\Datatable')
+         ->add('get','ansamblu-imobil-row-source','ansambluri-imobile/row-source/{id}/{id_ansamblu}', 'AnsambluriImobileController@rows', 'Imobiliare\Datatable')
+         
 		/**
 		END IMOBILE
 		**/ 

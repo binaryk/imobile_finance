@@ -1,13 +1,25 @@
 <?php
 
-class Imobil extends \Eloquent {
-	protected $table = 'imobile';
-	protected $fillable = [
-	'denumire'
-	];
+namespace Imobiliare;
 
-	public static function getRecord( $id )
- 	{
+use \Illuminate\Database\Eloquent\SoftDeletingTrait;
+
+class Imobil extends \Eloquent
+{
+    use SoftDeletingTrait;
+    protected $table = 'imobile';
+    protected $fillable = [ 
+        'nume',
+        'id_ansamblu',
+        'id_tip_categorie',
+        'id_tip_imobil',
+        'suprafata_min',
+        'suprafata_max',
+
+    ];
+
+    public static function getRecord( $id )
+    {
         return self::find($id);
     }
 
@@ -26,7 +38,7 @@ class Imobil extends \Eloquent {
         return $record->update($data);
     }
 
-    public static function deleteRecord($id)
+    public static function deleteRecord($id, $data)
     {
         $record = self::find($id);
         if( ! $record )
@@ -34,5 +46,10 @@ class Imobil extends \Eloquent {
             return false;
         }
         return $record->delete();
-    }	
+    }
+
+    public static function toCombobox()
+    {
+        return [0 => ' -- Selectaţi imobil --'] + self::orderBy('nume')->lists('nume', 'id');
+    }
 }

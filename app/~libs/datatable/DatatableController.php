@@ -20,7 +20,9 @@ class DatatableController extends \BaseController
 			throw new \Exception(__METHOD__ . '. Javascript datatable variable name not defined.');
 		}
 		$other_info = array_key_exists('other-info', $config) ? $config['other-info'] : [];
-		$this->layout->title = strip_tags($config['caption']);
+		$this->layout->title = strip_tags($config['caption']); 
+		
+		$this->layout->breadcrumbs = $config['breadcrumbs'];
 		if( ! $config['form']  )
 		{
 			$form = NULL;
@@ -32,7 +34,7 @@ class DatatableController extends \BaseController
 		$this->layout->content = \View::make($config['view'])->with([
 			'dt'   		=> Table::create($config),
 			'toolbar' 	=> \View::make($config['toolbar'])->with($other_info)->render(),
-			'form'      => $form,
+			'form'      => $form, 
 		] + $other_info);
 
 

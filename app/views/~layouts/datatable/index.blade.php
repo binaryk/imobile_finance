@@ -1,3 +1,5 @@
+@extends('template.layout')
+
 @section('content')
 @yield('before-table-row')		
 <div class="row">
@@ -18,7 +20,7 @@
 				<!-- Message -->
 				<div id="dt-action-message"></div>
 				<!-- /Message -->
-
+ 
 				<!-- Insert/Update/Delete Form -->
 				@if($form) 
 				<div class="dt-form-container portlet box blue" id="form-{{$dt->id()}}">

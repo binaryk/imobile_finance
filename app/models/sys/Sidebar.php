@@ -20,7 +20,7 @@ class Sidebar
 				'icon'  => 'icon-user'
 			],
 			'options' => [],
-			'active'  => ['nomenclatoare/dezvoltatori']
+			'active'  => ['dezvoltatori*']
 		],
         'date-baza' => [
             'header' => [
@@ -58,7 +58,7 @@ class Sidebar
 		/**
 		 Dezvoltatori
 		**/
-		->addOption('dezvoltatori', \URL::route('datatable-index', ['id' => 'dezvoltatori']), 'Dezvoltatori', 'fa-circle-o')
+		->addOption('dezvoltatori', \URL::route('dezvoltatori-index'), 'Dezvoltatori', 'fa-circle-o')
 		;
 	}
 

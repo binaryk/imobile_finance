@@ -12,10 +12,10 @@ class AnsambluRezidentialsTableSeeder extends Seeder {
 		$faker->seed(3);
 		$tip_stadii = Imobiliare\Nomenclator\TipStadiuAnsamblu::all()->lists('id');
 		$dezvoltatori = Imobiliare\Dezvoltator::all()->lists('id');
-		$organizatii = Organizatie::all()->lists('id');
+		$organizatii = Imobiliare\Organizatie::all()->lists('id');
 		foreach(range(1, 10) as $index)
 		{
-			AnsambluRezidential::create([
+			Imobiliare\AnsambluRezidential::create([
 				'nume' => $faker->company,
 				'telefon' => $faker->phoneNumber(),
 				'id_tip_stadiu_ansamblu'=> $faker->randomElement($tip_stadii),

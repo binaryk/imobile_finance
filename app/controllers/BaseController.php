@@ -7,12 +7,17 @@ class BaseController extends Controller {
 	 *
 	 * @return void
 	 */
+	
 
-	public function __construct()
-	{
-		$this->beforeFilter('csrf', array('on' => 'post'));
-	   	$this->current_user = Auth::user(); 
-	}
+	protected $current_user = NULL;
+	protected $current_org  = NULL; 
+	
+    public function __construct()
+    { 
+        $this->beforeFilter('csrf', array('on' => 'post'));
+	   	$this->current_user = Sentry::getUser();
+	   	$this->current_org = $this->current_user ? Imobiliare\Organizatie::find($this->current_user->id_organizatie) : NULL;
+    } 
 
 	protected function setupLayout()
 	{

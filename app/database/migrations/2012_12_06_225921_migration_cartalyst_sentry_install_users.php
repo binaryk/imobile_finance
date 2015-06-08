@@ -41,6 +41,7 @@ class MigrationCartalystSentryInstallUsers extends Migration {
 			$table->timestamp('last_login')->nullable();
 			$table->string('persist_code')->nullable();
 			$table->string('reset_password_code')->nullable();
+			$table->integer('id_organizatie')->unsigned()->nullable();
 			$table->string('prenume')->nullable();
 			$table->string('nume')->nullable();
 			$table->timestamps();

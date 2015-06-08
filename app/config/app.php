@@ -43,6 +43,7 @@ return [
 		'Cartalyst\Sentry\SentryServiceProvider',
 		'Laracasts\Validation\ValidationServiceProvider',
 		'basicAuth\Repo\BackendServiceProvider',
+		'Baum\BaumServiceProvider',
 	],
 	'manifest' => storage_path() . '/meta',
 	'aliases' => [

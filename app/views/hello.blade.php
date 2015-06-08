@@ -2,6 +2,7 @@
 	
 @section('content')
 	 <div class="row">  
+	 @if(isset($links))
 	 	@foreach($links as $i => $link)
 			<div class="col-lg-3 col-md-3 col-sm-6 col-xs-12">
 				<div class="dashboard-stat blue-madison {{ $link['bg'] }}">
@@ -21,5 +22,6 @@
 				</div>
 			</div>
 	 	@endforeach
+	 @endif
 	 </div>
 @endsection

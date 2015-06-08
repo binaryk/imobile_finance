@@ -68,8 +68,8 @@ class Dezvoltatori extends \Processing\Form\Form
         $this->addControl( // 11 Judet
             \Easy\Form\Combobox::make('~layouts.form.controls.comboboxes.combobox')
                 ->name('id_judet')->caption('Judetul')
-                ->class('form-control input-sm data-source')
-                ->controlsource('id_judet')->controltype('combobox')->options([])
+                ->class('form-control input-sm data-source init-on-update-delete')
+                ->controlsource('id_judet')->controltype('combobox')->options(\Imobiliare\Nomenclator\Judet::toCombobox())
         );
 
 		$this->addControl(

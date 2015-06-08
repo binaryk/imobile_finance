@@ -4,16 +4,16 @@ namespace Imobiliare\Datatable;
 
 class DatatableController extends \Datatable\DatatableController 
 {
-	protected $layout 		= 'template.layout';
+	// //protected $layout 		= 'template.layout';
 
     /**
      * @param $id
      * @throws \Exception
      */
     public function index($id)
-	{
+	{ 
+        return \View::make('hello');
         $this->show( \Imobiliare\Grids::make($id)->toIndexConfig($id) );
-
 	}
 
     /**

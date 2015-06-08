@@ -12,12 +12,12 @@ class ImobilsTableSeeder extends Seeder {
 		$faker->seed(10);
 		$categorie = Imobiliare\Nomenclator\TipCategorieImobil::all()->lists('id');
 		$tip = Imobiliare\Nomenclator\TipImobil::all()->lists('id');
-		$ansamblu = AnsambluRezidential::all()->lists('id');
+		$ansamblu = Imobiliare\AnsambluRezidential::all()->lists('id');
 
 		foreach(range(1, 10) as $index)
 		{
-			Imobil::create([
-				'denumire' => $faker->sentence(),
+			Imobiliare\Imobil::create([
+				'nume' => $faker->sentence(),
 				'id_tip_categorie' => $faker->randomElement($categorie),
 				'id_ansamblu' => $faker->randomElement($ansamblu),
 				'id_tip_imobil' => $faker->randomElement($tip),

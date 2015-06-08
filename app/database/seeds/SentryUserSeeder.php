@@ -16,6 +16,7 @@ class SentryUserSeeder extends Seeder {
 	        'password' => 'sentryuser',
 	        'prenume' => 'UserFirstName',
 	        'nume' => 'UserLastName',
+	        'id_organizatie' => 1,
 	        'activated' => 1,
 	    ));
 
@@ -24,6 +25,7 @@ class SentryUserSeeder extends Seeder {
 	        'password' => 'sentryadmin',
 	        'prenume' => 'AdminFirstName',
 	        'nume' => 'AdminLastName',
+	        'id_organizatie' => 2,
 	        'activated' => 1,
 	    ));
 

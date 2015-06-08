@@ -12,7 +12,8 @@
 		"goodby/csv" : "1.2.0", 
 		"edvinaskrucas/notification"  : "3.*",
 		"cartalyst/sentry": "2.1.*",
-		"laracasts/validation": "~1.0"
+		"laracasts/validation": "~1.0",
+		"baum/baum": "~1.0"
 	},
 	"require-dev": {
     	"way/generators": "~2.0"

@@ -27,6 +27,7 @@ class GridsRecord
 	public $count_filtered_records_sql 	= '';
 	public $count_total_records_sql     = '';
 	public $filters                     = [];
+	public $breadcrumbs 			 	= [];
 
 	public function __construct($id)
 	{

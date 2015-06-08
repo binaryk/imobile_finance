@@ -28,6 +28,7 @@ class DatabaseSeeder extends Seeder {
 		$this->call('IntermediarImobilsTableSeeder');
 		$this->call('TelefoanesTableSeeder');
 		$this->call('ImobilsTableSeeder');
+		$this->call('TipFinisajeInterioareTableSeeder');
 		$this->call('ApartamentsTableSeeder');
 		$this->call('TipDestinatieCladireSeed');
 		$this->call('TipEtajsTableSeeder');

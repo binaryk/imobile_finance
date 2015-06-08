@@ -9,6 +9,13 @@ class DezvoltatoriRecord extends \Imobiliare\GridsRecord
     {
         parent::__construct($id);
         $this->view           = 'dezvoltatori.index';
+        $this->breadcrumbs = [
+            [
+            'name' => 'Dezvoltatori',
+            'url'  => "dezvoltatori-index",
+            'ids' => ''
+            ]
+        ];
         $this->icon           = 'admin/img/icons/dt/settings.png';
         $this->caption        = 'Dezvoltatori';
         $this->toolbar        = 'dezvoltatori.toolbar';
@@ -19,7 +26,7 @@ class DezvoltatoriRecord extends \Imobiliare\GridsRecord
         $this->form           = 'Imobiliare\Imobile\Form\Dezvoltatori';
         $this->css            = 'admin/css/dt/dt.css, admin/css/dt/toolbar.css, admin/css/dt/dtform.css';
         $this->js             = 'admin/js/libraries/form/dtform.js, admin/js/libraries/form/combobox.js, admin/js/dezvoltatori/dezvoltatori.js';
-        $this->row_source     = 'datatable-row-source';
+        $this->row_source     = 'dezvoltatori-row-source';
         $this->rows_source_sql 				= 'SELECT
                                                 dezvoltatori.*,
                                                  judete.nume as judet

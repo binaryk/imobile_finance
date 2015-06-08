@@ -16,6 +16,8 @@ class Forms
 		'judet'    		 		 => '\Imobiliare\Nomenclatoare\Form\JudetRecord',
 		'localitati'    		 => '\Imobiliare\Nomenclatoare\Form\LocalitateRecord',
 		'dezvoltatori'    		 => '\Imobiliare\Nomenclatoare\Form\DezvoltatoriRecord',
+		'dezvoltator-ansambluri' => '\Imobiliare\Nomenclatoare\Form\DezvoltatoriAnsambluriRecord',
+		'ansamblu_imobile' 		 => '\Imobiliare\Nomenclatoare\Form\AnsambluriImobileRecord',
 	];
 
 	public function __construct($id)
