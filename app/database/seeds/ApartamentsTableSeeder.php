@@ -15,6 +15,7 @@ class ApartamentsTableSeeder extends Seeder {
 		$judete  = Imobiliare\Nomenclator\Judet::all()->lists('id');
 		$cartiere  = Imobiliare\Cartier::all()->lists('id');
 		$finisaje_int  = Imobiliare\Nomenclator\TipFinisajeInterioare::all()->lists('id');
+		$compartiment  = Imobiliare\Nomenclator\TipCompartiment::all()->lists('id');
 		foreach(range(1, 50) as $index)
 		{
 			Imobiliare\Apartament::create([
@@ -29,7 +30,7 @@ class ApartamentsTableSeeder extends Seeder {
 				// 'id_proprietar_pf'		=> $faker->
 				// 'id_tip_cladire'		=> $faker->
 				'id_tip_finisaje_interioare'		=> $faker->randomElement($finisaje_int),
-				// 'id_tip_compartiment'		=> $faker->
+				'id_tip_compartiment'		=> $faker->randomElement($compartiment),
 				// 'is_agentie'		=> $faker->
 				'oferta_valabila'		=> $faker->numberBetween(0, 1),
 				'pret_m2'		=> $faker->numberBetween(15, 150),
