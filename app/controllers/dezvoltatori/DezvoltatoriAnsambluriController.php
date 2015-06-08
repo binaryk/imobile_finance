@@ -23,7 +23,7 @@ class DezvoltatoriAnsambluriController extends \Datatable\DatatableController{
             [
             'name' => 'Ansambluri rezidentiale',
             'url'  => "dezvoltatori_ansambluri" ,
-            'ids' => [ 'id' => $id_dezvoltator ]
+            'ids' => [ 'id' => 'dezvoltator-ansambluri' ]
             ]
         ];
         $this->show( $config + ['other-info' => [ 'dezvoltator' => $dezvoltator]] );

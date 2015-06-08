@@ -38,8 +38,20 @@ class Route
          ->add('get','dezvoltatori_ansambluri','dezvoltatori/{id}/{id_dezvoltator}', 'DezvoltatoriAnsambluriController@index', 'Imobiliare\Datatable')
          ->add('get','dezvoltatori-ansambluri-row-source','dezvoltatori/row-source/{id}/{id_dezvoltator}', 'DezvoltatoriAnsambluriController@rows', 'Imobiliare\Datatable') 
 
-         ->add('get','ansamblu_imobil','ansambluri-imobile/{id}/{id_ansamblu}', 'AnsambluriImobileController@index', 'Imobiliare\Datatable')
+         ->add('get','ansamblu_imobil','dezvoltatori/ansambluri-imobile/{id}/{id_ansamblu}', 'AnsambluriImobileController@index', 'Imobiliare\Datatable')
          ->add('get','ansamblu-imobil-row-source','ansambluri-imobile/row-source/{id}/{id_ansamblu}', 'AnsambluriImobileController@rows', 'Imobiliare\Datatable')
+
+         ->add('get','categorie_imobil','dezvoltatori/categorie_imobil/{id}/{id_imobil}', 'ImobilCategorieController@index', 'Imobiliare\Datatable')
+         ->add('get','categorie-imobil-row-source','dezvoltatori/categorie-imobil/row-source/{id}/{id_imobil}', 'ImobilCategorieController@rows', 'Imobiliare\Datatable')
+
+         ->add('get','cladire_imobil','dezvoltatori/cladire_imobil/{id}/{id_imobil}', 'CladireImobilController@index', 'Imobiliare\Datatable')
+         ->add('get','cladire_imobil-row-source','cladire_imobil/row-source/{id}/{id_imobil}', 'CladireImobilController@rows', 'Imobiliare\Datatable') 
+
+         ->add('get','apartament_imobil','dezvoltatori/apartament_imobil/{id}/{id_imobil}', 'ApartamentImobilController@index', 'Imobiliare\Datatable')
+         ->add('get','apartament_imobil-row-source','apartament_imobil/row-source/{id}/{id_imobil}', 'ApartamentImobilController@rows', 'Imobiliare\Datatable') 
+         
+         ->add('get','teren_imobil','dezvoltatori/teren_imobil/{id}/{id_imobil}', 'TerenImobilController@index', 'Imobiliare\Datatable')
+         ->add('get','teren_imobil-row-source','teren_imobil/row-source/{id}/{id_imobil}', 'TerenImobilController@rows', 'Imobiliare\Datatable') 
          
 		/**
 		END IMOBILE

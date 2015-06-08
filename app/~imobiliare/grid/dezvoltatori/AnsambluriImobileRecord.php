@@ -22,10 +22,13 @@ class AnsambluriImobileRecord extends \Imobiliare\GridsRecord
         $this->row_source     = 'ansamblu-imobil-row-source';
         $this->rows_source_sql 				= 'SELECT
                                                     imobile.*,
-                                                    ansambluri_rezidentiale.nume as ansamblu
+                                                    ansambluri_rezidentiale.nume as ansamblu,
+                                                    tip_categorie_imobil.nume as categorie
                                                 FROM imobile
                                                 LEFT JOIN ansambluri_rezidentiale
                                                 ON ansambluri_rezidentiale.id = imobile.id_ansamblu
+                                                LEFT JOIN tip_categorie_imobil
+                                                ON tip_categorie_imobil.id = imobile.id_tip_categorie
                                                 :where: :order:';
         $this->count_filtered_records_sql 	= 'SELECT COUNT(*) as cnt FROM imobile :where:';
         $this->count_total_records_sql     	= 'SELECT COUNT(*) AS cnt FROM imobile';
@@ -44,7 +47,7 @@ class AnsambluriImobileRecord extends \Imobiliare\GridsRecord
                 'orderable' => 'yes',
                 'class'     => 'td-align-left',
                 'visible'   => 'yes',
-                'header'    => ['caption' => 'Ansamblu rezidential', 'style'   => 'width:45%',],
+                'header'    => ['caption' => 'Ansamblu rezidential', 'style'   => 'width:18%',],
                 'type'      => 'field',
                 'source'    => 'ansamblu',
             ],
@@ -53,12 +56,39 @@ class AnsambluriImobileRecord extends \Imobiliare\GridsRecord
                 'orderable' => 'yes',
                 'class'     => 'td-align-left',
                 'visible'   => 'yes',
-                'header'    => ['caption' => 'Imobil', 'style'   => 'width:45%',],
+                'header'    => ['caption' => 'Imobil', 'style'   => 'width:18%',],
                 'type'      => 'field',
                 'source'    => 'nume',
             ],
-
             '4' => [
+                'id'        => 'categorie',
+                'orderable' => 'yes',
+                'class'     => 'td-align-left',
+                'visible'   => 'yes',
+                'header'    => ['caption' => 'Categorie imobil', 'style'   => 'width:18%',],
+                'type'      => 'field',
+                'source'    => 'categorie',
+            ],
+            '5' => [
+                'id'        => 'suprafata_min',
+                'orderable' => 'yes',
+                'class'     => 'td-align-left',
+                'visible'   => 'yes',
+                'header'    => ['caption' => 'Suprafata minima', 'style'   => 'width:18%',],
+                'type'      => 'field',
+                'source'    => 'suprafata_min',
+            ],
+            '6' => [
+                'id'        => 'suprafata_max',
+                'orderable' => 'yes',
+                'class'     => 'td-align-left',
+                'visible'   => 'yes',
+                'header'    => ['caption' => 'Suprafata maxima', 'style'   => 'width:18%',],
+                'type'      => 'field',
+                'source'    => 'suprafata_max',
+            ],
+
+            '7' => [
                 'id'        => 'action',
                 'orderable' => 'no',
                 'class'     => 'td-align-left td-actions',

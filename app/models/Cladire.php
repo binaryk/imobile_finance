@@ -4,11 +4,25 @@ namespace Imobiliare;
 
 use \Illuminate\Database\Eloquent\SoftDeletingTrait;
 
-class Teren extends \Eloquent
+class Cladire extends \Eloquent
 {
     use SoftDeletingTrait;
-    protected $table = 'terenuri';
-    protected $fillable = ['nume', 'adresa', 'telefon', 'carte_funciara', 'id_tip_destinatie_teren', 'id_imobil'];
+    protected $table = 'cladiri';
+    protected $fillable = [ 
+      'id_imobil',
+      'id_localitate',
+      'id_tip_destinatie',
+      'id_tip_regim_inaltime',
+      'id_tip_stadiu',
+      'nr_spatii_indivize',
+      'nume',
+      'ascensor',
+      'adresa',
+      'telefon',
+      'email',
+      'carte_funciara',
+
+    ];
 
     public static function getRecord( $id )
     {
@@ -42,6 +56,6 @@ class Teren extends \Eloquent
 
     public static function toCombobox()
     {
-        return [0 => ' -- Selectaţi teren --'] + self::orderBy('nume')->lists('nume', 'id');
+        return [0 => ' -- Selectaţi cladire --'] + self::orderBy('nume')->lists('nume', 'id');
     }
 }

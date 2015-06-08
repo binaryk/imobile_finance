@@ -1,14 +1,14 @@
 <?php
 
-namespace Imobiliare;
+namespace Imobiliare\Nomenclator;
 
 use \Illuminate\Database\Eloquent\SoftDeletingTrait;
 
-class Teren extends \Eloquent
+class TipCompartiment extends \Eloquent
 {
     use SoftDeletingTrait;
-    protected $table = 'terenuri';
-    protected $fillable = ['nume', 'adresa', 'telefon', 'carte_funciara', 'id_tip_destinatie_teren', 'id_imobil'];
+    protected $table = 'tip_compartiment';
+    protected $fillable = ['nume'];
 
     public static function getRecord( $id )
     {
@@ -42,6 +42,6 @@ class Teren extends \Eloquent
 
     public static function toCombobox()
     {
-        return [0 => ' -- Selectaţi teren --'] + self::orderBy('nume')->lists('nume', 'id');
+        return [0 => ' -- Selectaţi tip compartiment --'] + self::orderBy('nume')->lists('nume', 'id');
     }
 }

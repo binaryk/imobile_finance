@@ -9,17 +9,13 @@ class CartiersTableSeeder extends Seeder {
 	{
 		DB::table('cartiere')->delete();
 		$faker = Faker::create();
-
-		foreach(range(1, 10) as $index)
-		{
-			Imobiliare\Cartier::insert([
-				['nume' => 'Grigorescu'],
-				['nume' => 'Gheorghieni'],
-				['nume' => 'Buna ziua'],
-				['nume' => 'Marasti'],
-				['nume' => 'Observator'],
-			]);
-		}
+		Imobiliare\Cartier::insert([
+			['nume' => 'Grigorescu'],
+			['nume' => 'Gheorghieni'],
+			['nume' => 'Buna ziua'],
+			['nume' => 'Marasti'],
+			['nume' => 'Observator'],
+		]);
 	}
 
 }

@@ -9,10 +9,16 @@ class AnsambluriImobileController extends \Datatable\DatatableController{
         if( ! ( $ansamblu = \Imobiliare\AnsambluRezidential::getRecord( (int) $id_ansamblu) ) ){
             return \Redirect::route('dezvoltatori-index');
         }
+
+        if( ! ( $dezvoltator = \Imobiliare\Dezvoltator::getRecord( (int) $ansamblu->id_dezvoltator) ) ){
+            return \Redirect::route('dezvoltatori-index');
+        }
+
+
+
         $config = \Imobiliare\Grids::make($id)->toIndexConfig($id);
-        $config['row-source'] .= '/'.$id_ansamblu;
-        // $config['row-source'] .= '/'.$id_ansamblu;
-        /*$config['breadcrumbs'] = [
+        $config['row-source'] .= '/'.$id_ansamblu; 
+        $config['breadcrumbs'] = [
             [
             'name' => 'Dezvoltatori',
             'url'  => "dezvoltatori-index",
@@ -21,9 +27,14 @@ class AnsambluriImobileController extends \Datatable\DatatableController{
             [
             'name' => 'Ansambluri rezidentiale',
             'url'  => "dezvoltatori_ansambluri" ,
-            'ids' => [ 'id' => $id_ansamblu ]
+            'ids' => [ 'id' => 'dezvoltator-ansambluri', 'id_dezvoltator' => $dezvoltator->id ]
+            ],
+            [
+            'name' => 'Imobile',
+            'url'  => "ansamblu_imobil",
+            'ids' => [ 'id' => 'ansamblu_imobile', 'id_ansamblu' => $id_ansamblu ]
             ]
-        ];*/
+        ];
         $this->show( $config + ['other-info' => [ 'ansamblu' => $ansamblu]] );
     }
 

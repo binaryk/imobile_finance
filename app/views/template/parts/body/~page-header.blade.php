@@ -3,7 +3,7 @@
 	@yield('title') {{ @$title }}	<small> @yield('small') {{ @$small_title }} </small>
 </h3>
 <div class="page-bar"> 
-	aaaa@include('template.parts.body.~page-breadcrumb')
+	@include('template.parts.body.~page-breadcrumb')
 	<div class="page-toolbar">
 		<div class="btn-group pull-right">
 			@include('template.parts.body.~page-right-menu')

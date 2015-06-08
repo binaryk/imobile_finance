@@ -23,6 +23,9 @@ class Grids
 		'dezvoltatori'  		 => '\Imobiliare\Imobile\Grid\DezvoltatoriRecord',
 		'dezvoltator-ansambluri' => '\Imobiliare\Imobile\Grid\DezvoltatoriAnsambluriRecord',
 		'ansamblu_imobile' 		 => '\Imobiliare\Imobile\Grid\AnsambluriImobileRecord',
+		'apartament_imobil' 	 => '\Imobiliare\Imobile\Grid\ApartamentImobilRecord',
+		'cladire_imobil' 	 	 => '\Imobiliare\Imobile\Grid\CladireImobilRecord',
+		'teren_imobil' 	 	 	 => '\Imobiliare\Imobile\Grid\TerenImobilRecord',
 
 	];
 

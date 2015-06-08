@@ -26,7 +26,8 @@ class AnsambluriImobile extends \Processing\Form\Form
     protected function addControls()
     {
         // denumire_tip
-        $this->addControl(
+        $this
+        ->addControl(
             \Easy\Form\Textbox::make('~layouts.form.controls.textboxes.textbox')
                 ->name('nume')
                 ->caption('Nume imobil')
@@ -36,7 +37,37 @@ class AnsambluriImobile extends \Processing\Form\Form
                 ->controltype('textbox')
                 ->maxlength(255)
         ) 
-
+        ->addControl(
+            \Easy\Form\Textbox::make('~layouts.form.controls.textboxes.textbox')
+                ->name('suprafata_min')
+                ->caption('Suprafata minima')
+                ->placeholder('Suprafata minima')
+                ->class('form-control input-sm data-source')
+                ->controlsource('suprafata_min')
+                ->controltype('textbox')
+                ->maxlength(255)
+        ) 
+        ->addControl(
+            \Easy\Form\Textbox::make('~layouts.form.controls.textboxes.textbox')
+                ->name('suprafata_max')
+                ->caption('Suprafata maxima')
+                ->placeholder('Suprafata maxima')
+                ->class('form-control input-sm data-source')
+                ->controlsource('suprafata_max')
+                ->controltype('textbox')
+                ->maxlength(255)
+        ) 
+        // teren, cladire, apartament 
+        ->addControl(
+            \Easy\Form\Combobox::make('~layouts.form.controls.comboboxes.combobox')
+                ->name('id_tip_categorie')
+                ->caption('Judetul')
+                ->class('form-control input-sm data-source init-on-update-delete')
+                ->controlsource('id_tip_categorie')
+                ->controltype('combobox') 
+                ->enabled('false')
+                ->options(\Imobiliare\Nomenclator\TipCategorieImobil::toCombobox())
+            )  
         ;
 
     }

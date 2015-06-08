@@ -18,6 +18,9 @@ class Forms
 		'dezvoltatori'    		 => '\Imobiliare\Nomenclatoare\Form\DezvoltatoriRecord',
 		'dezvoltator-ansambluri' => '\Imobiliare\Nomenclatoare\Form\DezvoltatoriAnsambluriRecord',
 		'ansamblu_imobile' 		 => '\Imobiliare\Nomenclatoare\Form\AnsambluriImobileRecord',
+		'apartament_imobil'      => '\Imobiliare\Nomenclatoare\Form\ApartamentImobilRecord',
+		'cladire_imobil'      	 => '\Imobiliare\Nomenclatoare\Form\CladireImobilRecord',
+		'teren_imobil'      	 => '\Imobiliare\Nomenclatoare\Form\TerenImobilRecord',
 	];
 
 	public function __construct($id)

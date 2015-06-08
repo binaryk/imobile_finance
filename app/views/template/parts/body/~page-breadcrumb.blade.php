@@ -3,7 +3,6 @@
 	<li>
 		<i class="fa fa-home"></i>
 		<a href="index.html">Home</a>  
-		{{ @$test }}
 	@if( isset($breadcrumbs) )
 		<i class="fa fa-angle-right"></i>
 	</li>
