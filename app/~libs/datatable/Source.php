@@ -20,6 +20,8 @@ class Source
 	protected $orderables  = '';
 	protected $cells       = '';
 
+	protected $columns     = NULL;
+
 	protected $length     = NULL;
 	protected $start      = NULL;
 	protected $search     = NULL;
@@ -105,9 +107,45 @@ class Source
 		return $result;
 	}
 
+	protected function searchByCriterias()
+	{
+		$result = '';
+
+		if( is_array($this->columns) )
+		{
+			foreach($this->columns as $i => $col)
+			{
+				if( array_key_exists('search', $col) )
+				{
+					if( array_key_exists('value', $col['search']) )
+					{
+						if( $value = $col['search']['value'] )
+						{
+							$e = $this->fields[$i] . '=' . $value;
+							$result .= '(' . $e . ') AND';
+						}
+					}
+				}
+			}
+		}
+		if( $result )
+		{
+			return substr($result, 0, strlen($result) - 4);
+		}
+		return $result;
+	}
+
 	protected function Where()
 	{
-		$expressions = [$this->searchWhere(), $this->customFilter()];
+
+		if( $search_by_criterias = $this->searchByCriterias() )
+		{
+			$expressions = [$search_by_criterias];
+		}
+		else
+		{
+			$expressions = [$this->searchWhere(), $this->customFilter()];
+		}
 		$result = '';
 		foreach($expressions as $i => $expression)
 		{

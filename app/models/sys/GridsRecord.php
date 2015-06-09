@@ -100,6 +100,7 @@ class GridsRecord
 			->orderables( $this->fields['orderables'] )
 			->cells($this->cells())
 			->custom_filters( $this->filters )
+			->columns( \Input::get('columns') ? \Input::get('columns') : NULL)
 		;
 	}
 

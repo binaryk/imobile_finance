@@ -22,9 +22,9 @@ class CautareApartamenteController extends \Datatable\DatatableController
 	public function rows()
 	{
 		$config = \Imobiliare\Grids::make('cauta-apartamente')->toRowDatasetConfig('cauta-apartamente');
-		// $filters = $config['source']->custom_filters();
+		$filters = $config['source']->custom_filters();
 		// $config['source']->custom_filters( $filters + [
-		// 	'gal-current' => 'proiecte.id_org = ' . $this->current_gal->id ,
+		// 	'oferta-valabila' => 'v_apartamente.oferta_valabila = ' . 1 ,
 		// ]);
 		return $this->dataset( $config );
 	}

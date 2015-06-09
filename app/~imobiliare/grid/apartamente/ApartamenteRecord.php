@@ -14,11 +14,11 @@ class ApartamenteRecord extends \Imobiliare\GridsRecord
         $this->toolbar        = 'apartamente.cautare.toolbar';
         $this->name           = 'dt';
         $this->display_start  = 0;
-        $this->display_length = 25;
+        $this->display_length = 5;
         $this->default_order  = "0,'asc'";
         $this->form           = NULL;
         $this->css            = 'admin/css/dt/dt.css, admin/css/dt/toolbar.css, admin/css/dt/dtform.css';
-        $this->js             = 'admin/js/libraries/form/dtform.js, admin/js/libraries/form/combobox.js';
+        $this->js             = 'admin/js/libraries/form/dtform.js, admin/js/libraries/form/combobox.js, admin/js/apartamente/cautare.js';
         $this->row_source     = 'apartamente-cautare-row-source';
         $this->rows_source_sql = '
             SELECT
@@ -53,8 +53,8 @@ class ApartamenteRecord extends \Imobiliare\GridsRecord
             ], 
         ];  
         $this->fields = [
-            'fields'      => '',
-            'searchables' => '',
+            'fields'      => 'v_apartamente.id,v_apartamente.oferta_valabila',
+            'searchables' => 'v_apartamente.oferta_valabila',
             'orderables'  => [],
         ];
         $this->filters = [];

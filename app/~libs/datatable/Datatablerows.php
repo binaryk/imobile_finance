@@ -6,7 +6,7 @@ class Datatablerows
 {
 	protected static $instance = NULL;
 
-	protected $draw = NULL;
+	protected $draw       = NULL;
 	protected $source     = NULL;
 
 	public static function make()
