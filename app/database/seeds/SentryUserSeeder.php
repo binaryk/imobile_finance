@@ -29,6 +29,15 @@ class SentryUserSeeder extends Seeder {
 	        'activated' => 1,
 	    ));
 
+	    Sentry::getUserProvider()->create(array(
+	        'email'    => 'admin',
+	        'password' => '123',
+	        'prenume' => 'AdminFirstName',
+	        'nume' => 'AdminLastName',
+	        'id_organizatie' => 2,
+	        'activated' => 1,
+	    ));
+
 	    
 	}
 
