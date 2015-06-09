@@ -16,7 +16,7 @@ return array(
 			'host'      => 'localhost',
 			'database'  => 'imobile',
 			'username'  => 'root',
-			'password'  => '',
+			'password'  => 'traiesc1993',
 			'charset'   => 'utf8',
 			'collation' => 'utf8_unicode_ci',
 			'prefix'    => '',
