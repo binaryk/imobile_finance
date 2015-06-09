@@ -27,6 +27,8 @@ class Grids
 		'cladire_imobil' 	 	 => '\Imobiliare\Imobile\Grid\CladireImobilRecord',
 		'teren_imobil' 	 	 	 => '\Imobiliare\Imobile\Grid\TerenImobilRecord',
 
+		'cauta-apartamente'      => 'Apartamente\Grid\ApartamenteRecord',
+
 	];
 
 	public function __construct($id)

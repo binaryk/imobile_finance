@@ -59,6 +59,7 @@ class Sidebar
 		 Dezvoltatori
 		**/
 		->addOption('dezvoltatori', \URL::route('dezvoltatori-index'), 'Dezvoltatori', 'fa-circle-o')
+		->addOption('dezvoltatori', \URL::route('cautare-apartamente-index'), 'Cautare apartamente', 'fa-circle-o')
 		;
 	}
 
