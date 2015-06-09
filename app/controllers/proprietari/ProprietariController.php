@@ -6,6 +6,13 @@ class ProprietariController  extends \Datatable\DatatableController{
 
     public function index(){ 
         $config = \Imobiliare\Grids::make('proprietari')->toIndexConfig('proprietari');
+        $config['breadcrumbs'] = [
+            [
+            'name' => 'Proprietari',
+            'url'  => "proprietar-index",
+            'ids' => ''
+            ]  
+        ];
         $this->show( $config + ['other-info' => [ 'current_org' => $this->current_org]] );
     }
 

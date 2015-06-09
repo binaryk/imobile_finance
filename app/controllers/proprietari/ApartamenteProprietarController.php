@@ -12,7 +12,19 @@ class ApartamenteProprietarController  extends \Datatable\DatatableController{
 
 
         $config = \Imobiliare\Grids::make($id)->toIndexConfig($id);
-         $config['row-source'] .= '/'.$id_proprietar; 
+        $config['row-source'] .= '/'.$id_proprietar; 
+        $config['breadcrumbs'] = [
+            [
+            'name' => 'Proprietari',
+            'url'  => "proprietar-index",
+            'ids' => ''
+            ],
+            [
+            'name' => 'Apartamente',
+            'url'  => "apartamente_proprietar" ,
+            'ids' => [ 'id' => 'apartamente_proprietar', 'id_proprietar' => $id_proprietar ]
+            ] 
+        ];
         $this->show( $config + ['other-info' => [ 'proprietar' => $proprietar]] );
     }
 

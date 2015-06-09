@@ -8,17 +8,36 @@ class ApartamenteProprietarRecord extends \Imobiliare\GridsRecord
     public function __construct($id)
     {
         parent::__construct($id);
-        $this->view           = 'dezvoltatori.ansambluri.imobile.apartament.index'; 
+        $this->view           = 'proprietari.apartamente.index'; 
         $this->icon           = 'admin/img/icons/dt/settings.png';
         $this->caption        = 'Apartamente';
-        $this->toolbar        = 'dezvoltatori.ansambluri.imobile.apartament.toolbar';
+        $this->toolbar        = 'proprietari.apartamente.toolbar';
         $this->name           = 'dt';
         $this->display_start  = 0;
         $this->display_length = 10;
         $this->default_order  = "1,'asc'";
         $this->form           = 'Imobiliare\Imobile\Form\ApartamentProprietar';
-        $this->css            = 'admin/css/dt/dt.css, admin/css/dt/toolbar.css, admin/css/dt/dtform.css, assets/global/plugins/icheck/skins/all.css';
-        $this->js             = 'admin/js/libraries/form/dtform.js, admin/js/libraries/form/combobox.js, assets/global/plugins/icheck/icheck.min.js, assets/admin/pages/scripts/form-icheck.js';
+        $this->css            = 'admin/css/dt/dt.css, 
+                                admin/css/dt/toolbar.css, 
+                                admin/css/dt/dtform.css, 
+                                assets/global/plugins/icheck/skins/all.css,
+                                assets/global/plugins/bootstrap-datepicker/css/datepicker3.css
+                                 ';
+
+
+        $this->js             = 'admin/js/libraries/form/dtform.js,  
+                                 assets/global/plugins/icheck/icheck.min.js, 
+                                 assets/admin/pages/scripts/form-icheck.js,
+                                
+                                assets/global/plugins/bootstrap-datepicker/js/bootstrap-datepicker.js,
+                                assets/global/plugins/bootstrap-timepicker/js/bootstrap-timepicker.min.js,
+                                assets/global/plugins/clockface/js/clockface.js,
+                                assets/global/plugins/bootstrap-daterangepicker/moment.min.js,
+                                assets/global/plugins/bootstrap-daterangepicker/daterangepicker.js,
+                                assets/global/plugins/bootstrap-colorpicker/js/bootstrap-colorpicker.js,
+                                assets/global/plugins/bootstrap-datetimepicker/js/bootstrap-datetimepicker.min.js
+
+                                 ';
         $this->row_source     = 'apartamente_proprietar-row-source';
         $this->rows_source_sql              = 'SELECT
                                                     apartamente.*,
@@ -57,7 +76,7 @@ class ApartamenteProprietarRecord extends \Imobiliare\GridsRecord
                 'class'     => 'td-align-left',
                 'visible'   => 'yes',
                 'header'    => ['caption' => 'Ultima actualizare', 'style'   => 'width:15%',],
-                'type'      => 'field',
+                'type'      => 'field-date',
                 'source'    => 'ultima_actualizare',
             ],
             '4' => [
@@ -80,20 +99,20 @@ class ApartamenteProprietarRecord extends \Imobiliare\GridsRecord
             ],
             '6' => [
                 'id'        => 'suprafata_min',
-                'orderable' => 'yes',
-                'class'     => 'td-align-left',
+                'orderable' => 'no',
+                'class'     => 'td-align-right',
                 'visible'   => 'yes',
                 'header'    => ['caption' => 'Suprafata minima', 'style'   => 'width:15%',],
-                'type'      => 'field',
+                'type'      => 'field-float',
                 'source'    => 'suprafata_min',
             ],
             '7' => [
                 'id'        => 'suprafata_max',
-                'orderable' => 'yes',
-                'class'     => 'td-align-left',
+                'orderable' => 'no',
+                'class'     => 'td-align-right',
                 'visible'   => 'yes',
                 'header'    => ['caption' => 'Suprafata maxima', 'style'   => 'width:15%',],
-                'type'      => 'field',
+                'type'      => 'field-float',
                 'source'    => 'suprafata_max',
             ],
             '8' => [
@@ -103,7 +122,7 @@ class ApartamenteProprietarRecord extends \Imobiliare\GridsRecord
                 'visible'   => 'yes',
                 'header'    => ['caption' => 'Acţiuni', 'style'   => 'width:7%',],
                 'type'      => 'view',
-                'source'    => 'dezvoltatori.ansambluri.imobile.apartament.~actions',
+                'source'    => 'proprietari.apartamente.~actions',
             ],
         ];
         $this->fields = [

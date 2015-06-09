@@ -269,6 +269,14 @@ class ApartamentImobil extends \Processing\Form\Form
                 ->maxlength(255)
         )
 
+        ->addControl(
+                \Easy\Form\Textbox::make('~layouts.form.controls.textboxes.textbox-addon')
+                ->name('ultima_actualizare')->caption('Ultima actualizare')->placeholder('Ultima actualizare')
+                ->class('form-control data-source')->readonly(1)
+                ->controlsource('ultima_actualizare')->controltype('textbox')
+                ->addon(['before' => '<i class="fa fa-calendar"></i>', 'after' => NULL]) 
+            )
+
         ;
 
     }
