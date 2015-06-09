@@ -28,7 +28,7 @@ class TipIntermediar extends \Processing\Form\Form
 			->name('denumire')
 			->caption('Denumirea tipului de intermediar')
 			->placeholder('Denumirea tipului de intermediar')
-			->class('form-control input-sm data-source')
+			->class('form-control data-source')
 			->controlsource('nume')
 			->controltype('textbox')
 			->maxlength(255)
