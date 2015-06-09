@@ -28,7 +28,7 @@ class Localitate extends \Processing\Form\Form
 			->name('denumire')
 			->caption('Denumire localitate')
 			->placeholder('Denumire localitate')
-			->class('form-control input-sm data-source')
+			->class('form-control  data-source')
 			->controlsource('nume')
 			->controltype('textbox')
 			->maxlength(255)

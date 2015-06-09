@@ -52,11 +52,19 @@ class Route
          
          ->add('get','teren_imobil','dezvoltatori/teren_imobil/{id}/{id_imobil}', 'TerenImobilController@index', 'Imobiliare\Datatable')
          ->add('get','teren_imobil-row-source','teren_imobil/row-source/{id}/{id_imobil}', 'TerenImobilController@rows', 'Imobiliare\Datatable') 
+
+         /**
+          Proprietari apartamente
+          */
+		->add('get','proprietar-index','proprietari', 'ProprietariController@index', 'Imobiliare\Datatable')
+		->add('get','proprietar-row-source','proprietari/{id}', 'ProprietariController@rows', 'Imobiliare\Datatable')
+         
+		->add('get','apartamente_proprietar','apartamente_proprietar/{id}/{id_proprietar}', 'ApartamenteProprietarController@index', 'Imobiliare\Datatable')
+         ->add('get','apartamente_proprietar-row-source','apartamente_proprietar/row-source/{id}/{id_proprietar}', 'ApartamenteProprietarController@rows', 'Imobiliare\Datatable') 
          
 		/**
 		END IMOBILE
 		**/ 
-
  
 		;
 	}

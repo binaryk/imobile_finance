@@ -2,7 +2,7 @@
 
 namespace Imobiliare\Imobile\Form;
 
-class ApartamentImobil extends \Processing\Form\Form
+class ApartamentProprietar extends \Processing\Form\Form
 {
 
     /**
@@ -10,12 +10,12 @@ class ApartamentImobil extends \Processing\Form\Form
      */
     public static function make()
     { 
-        return self::$instance = new ApartamentImobil();
+        return self::$instance = new ApartamentProprietar();
     }
 
     protected function setView()
     {
-        $this->view('dezvoltatori.ansambluri.imobile.apartament.form');
+        $this->view('proprietari.apartamente.form');
     }
 
     protected function setModel()

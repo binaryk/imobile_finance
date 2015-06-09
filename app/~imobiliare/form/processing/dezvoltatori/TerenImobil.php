@@ -32,7 +32,7 @@ class TerenImobil extends \Processing\Form\Form
                 ->name('nume')
                 ->caption('Nume teren')
                 ->placeholder('Nume teren')
-                ->class('form-control input-sm data-source')
+                ->class('form-control  data-source')
                 ->controlsource('nume')
                 ->controltype('textbox')
                 ->maxlength(255)

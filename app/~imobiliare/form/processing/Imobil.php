@@ -28,7 +28,7 @@ class Imobil extends \Processing\Form\Form
 			->name('denumire')
 			->caption('Denumirea imobilului')
 			->placeholder('Denumirea imobilului')
-			->class('form-control input-sm data-source')
+			->class('form-control  data-source')
 			->controlsource('denumire')
 			->controltype('textbox')
 			->maxlength(255)

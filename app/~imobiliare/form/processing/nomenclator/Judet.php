@@ -28,7 +28,7 @@ class Judet extends \Processing\Form\Form
 			->name('denumire')
 			->caption('Denumire judet')
 			->placeholder('Denumire judet')
-			->class('form-control input-sm data-source')
+			->class('form-control  data-source')
 			->controlsource('nume')
 			->controltype('textbox')
 			->maxlength(255)

@@ -22,6 +22,14 @@ class Sidebar
 			'options' => [],
 			'active'  => ['dezvoltatori*']
 		],
+		'imobile' => [
+			'header' => [
+				'caption' => 'Imobile',
+				'icon'  => 'icon-home'
+			],
+			'options' => [],
+			'active'  => ['proprietari']
+		],
         'date-baza' => [
             'header' => [
                 'caption' => 'Date de baza',
@@ -59,6 +67,7 @@ class Sidebar
 		 Dezvoltatori
 		**/
 		->addOption('dezvoltatori', \URL::route('dezvoltatori-index'), 'Dezvoltatori', 'fa-circle-o')
+		->addOption('imobile', \URL::route('proprietar-index'), 'Apartamente', 'fa-circle-o')
 		;
 	}
 
