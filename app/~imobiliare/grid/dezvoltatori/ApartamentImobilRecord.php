@@ -17,8 +17,17 @@ class ApartamentImobilRecord extends \Imobiliare\GridsRecord
         $this->display_length = 10;
         $this->default_order  = "1,'asc'";
         $this->form           = 'Imobiliare\Imobile\Form\ApartamentImobil';
-        $this->css            = 'admin/css/dt/dt.css, admin/css/dt/toolbar.css, admin/css/dt/dtform.css, assets/global/plugins/icheck/skins/all.css';
-        $this->js             = 'admin/js/libraries/form/dtform.js, admin/js/libraries/form/combobox.js, assets/global/plugins/icheck/icheck.min.js, assets/admin/pages/scripts/form-icheck.js';
+        $this->css            = 'admin/css/dt/dt.css, 
+                                admin/css/dt/toolbar.css, 
+                                admin/css/dt/dtform.css, 
+                                assets/global/plugins/icheck/skins/all.css,
+                                assets/global/plugins/bootstrap-datepicker/css/datepicker3.css
+                                 ';
+        $this->js             = 'admin/js/libraries/form/dtform.js,  
+                                 assets/global/plugins/icheck/icheck.min.js, 
+                                 assets/admin/pages/scripts/form-icheck.js,
+                                 assets/global/plugins/bootstrap-datepicker/js/bootstrap-datepicker.js 
+                                 ';
         $this->row_source     = 'apartament_imobil-row-source';
         $this->rows_source_sql 				= 'SELECT
                                                     apartamente.*,
@@ -69,7 +78,7 @@ class ApartamentImobilRecord extends \Imobiliare\GridsRecord
                 'class'     => 'td-align-left',
                 'visible'   => 'yes',
                 'header'    => ['caption' => 'Ultima actualizare', 'style'   => 'width:12.8%',],
-                'type'      => 'field',
+                'type'      => 'field-date',
                 'source'    => 'ultima_actualizare',
             ],
             '5' => [
@@ -93,19 +102,19 @@ class ApartamentImobilRecord extends \Imobiliare\GridsRecord
             '7' => [
                 'id'        => 'suprafata_min',
                 'orderable' => 'yes',
-                'class'     => 'td-align-left',
+                'class'     => 'td-align-right',
                 'visible'   => 'yes',
                 'header'    => ['caption' => 'Suprafata minima', 'style'   => 'width:12.8%',],
-                'type'      => 'field',
+                'type'      => 'field-float',
                 'source'    => 'suprafata_min',
             ],
             '8' => [
                 'id'        => 'suprafata_max',
                 'orderable' => 'yes',
-                'class'     => 'td-align-left',
+                'class'     => 'td-align-right',
                 'visible'   => 'yes',
                 'header'    => ['caption' => 'Suprafata maxima', 'style'   => 'width:12.8%',],
-                'type'      => 'field',
+                'type'      => 'field-float',
                 'source'    => 'suprafata_max',
             ],
             '9' => [

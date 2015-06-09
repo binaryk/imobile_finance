@@ -23,20 +23,10 @@ class ApartamenteProprietarRecord extends \Imobiliare\GridsRecord
                                 assets/global/plugins/icheck/skins/all.css,
                                 assets/global/plugins/bootstrap-datepicker/css/datepicker3.css
                                  ';
-
-
         $this->js             = 'admin/js/libraries/form/dtform.js,  
                                  assets/global/plugins/icheck/icheck.min.js, 
                                  assets/admin/pages/scripts/form-icheck.js,
-                                
-                                assets/global/plugins/bootstrap-datepicker/js/bootstrap-datepicker.js,
-                                assets/global/plugins/bootstrap-timepicker/js/bootstrap-timepicker.min.js,
-                                assets/global/plugins/clockface/js/clockface.js,
-                                assets/global/plugins/bootstrap-daterangepicker/moment.min.js,
-                                assets/global/plugins/bootstrap-daterangepicker/daterangepicker.js,
-                                assets/global/plugins/bootstrap-colorpicker/js/bootstrap-colorpicker.js,
-                                assets/global/plugins/bootstrap-datetimepicker/js/bootstrap-datetimepicker.min.js
-
+                                 assets/global/plugins/bootstrap-datepicker/js/bootstrap-datepicker.js 
                                  ';
         $this->row_source     = 'apartamente_proprietar-row-source';
         $this->rows_source_sql              = 'SELECT

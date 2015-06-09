@@ -28,7 +28,7 @@ class Sidebar
 				'icon'  => 'icon-home'
 			],
 			'options' => [],
-			'active'  => ['proprietari']
+			'active'  => ['proprietari', 'apartamente_proprietar*']
 		],
         'date-baza' => [
             'header' => [

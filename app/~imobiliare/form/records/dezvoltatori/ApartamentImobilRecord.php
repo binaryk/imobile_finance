@@ -23,6 +23,14 @@ class ApartamentImobilRecord extends \Imobiliare\FormsRecord
             ->addRule('insert', 'telefon', 'required') 
             ->addRule('update', 'telefon', 'required') 
 
+            ->addRule('insert', 'id_cartier', 'required|integer|not_in:0') 
+            ->addRule('update', 'id_cartier', 'required|integer|not_in:0') 
+
+            ->addMessage('insert', 'id_cartier.not_in', 'Cartierul apartamentului trebuie completat.')
+            ->addMessage('insert', 'id_cartier.required', 'Cartierul apartamentului trebuie completat.')
+            ->addMessage('update', 'id_cartier.not_in', 'Cartierul apartamentului trebuie completat.') 
+            ->addMessage('update', 'id_cartier.required', 'Cartierul apartamentului trebuie completat.') 
+            
             ->addMessage('insert', 'telefon.required', 'Telefonul apartamentului trebuie completat.')
             ->addMessage('update', 'telefon.required', 'Telefonul apartamentului trebuie completat.') 
         ;

@@ -105,6 +105,10 @@
 	<div class="col-md-3">
 		{{$controls[22]->out()}}
 	</div> 
+	<!-- ultima actualizare -->
+	<div class="col-md-3">
+		{{$controls[23]->out()}}
+	</div> 
 </div>
 
 {{
