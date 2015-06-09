@@ -36,6 +36,9 @@ class RegistrationController extends \BaseController {
     	}
 
 		$input = Input::only('email', 'password', 'prenume', 'nume');
+		// !!!!!!!! Temporar pentru logarea pe app
+		 $id_organizatie = \Imobiliare\Organizatie::createRecord(['denumire' => 'Organizatia lui: ' . $input['nume']])->id;
+		 $input['id_organizatie'] = $id_organizatie;
 		$input = array_add($input, 'activated', true);
 
 		$user = $this->user->create($input);
