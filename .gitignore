@@ -3,8 +3,7 @@
 /bootstrap/compiled.php
 /vendor
 /vendor/*
-composer.phar
-composer.lock
+composer.phar 
 .env.*.php
 .env.php 
 .DS_Store
