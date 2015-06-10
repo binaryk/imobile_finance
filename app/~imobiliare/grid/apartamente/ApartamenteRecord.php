@@ -47,13 +47,31 @@ class ApartamenteRecord extends \Imobiliare\GridsRecord
                 'orderable' => 'no',
                 'class'     => 'td-record-count td-align-center',
                 'visible'   => 'yes',
-                'header'    => ['caption' => 'Oferta valabila', 'style'   => 'width:95%',],
+                'header'    => ['caption' => 'Oferta valabila', 'style'   => 'width:5%',],
                 'type'      => 'field',
                 'source'    => 'oferta_valabila',
             ], 
+            '3' => [
+                'id'        => 'adresa-exacta',
+                'orderable' => 'no',
+                'class'     => 'td-record-count td-align-left',
+                'visible'   => 'yes',
+                'header'    => ['caption' => 'Adresa', 'style'   => 'width:85%',],
+                'type'      => 'field',
+                'source'    => 'adresa_exacta',
+            ], 
+            '4' => [
+                'id'        => 'is-agentie',
+                'orderable' => 'no',
+                'class'     => 'td-record-count td-align-center',
+                'visible'   => 'yes',
+                'header'    => ['caption' => 'Agentie', 'style'   => 'width:5%',],
+                'type'      => 'field',
+                'source'    => 'is_agentie',
+            ], 
         ];  
         $this->fields = [
-            'fields'      => 'v_apartamente.id,v_apartamente.oferta_valabila',
+            'fields'      => 'v_apartamente.id,v_apartamente.oferta_valabila,v_apartamente.adresa_exacta,v_apartamente.is_agentie',
             'searchables' => 'v_apartamente.oferta_valabila',
             'orderables'  => [],
         ];

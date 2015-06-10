@@ -39,7 +39,24 @@ class CautareApartamenteController extends \Datatable\DatatableController
 				->addon([
 					'before' => \Form::checkbox('oferta_valabila', '1', true, ['class' => 'data-source', 'id' => 'oferta_valabila', 'data-control-source' => 'oferta_valabila', 'data-control-type' => 'checkbox', 'data-on' => 1, 'data-off' => 0]), 
 					'after' => NULL
-				])
+				]),
+			'adresa-exacta' => 
+				\Easy\Form\Textbox::make('~layouts.form.controls.textboxes.textbox')
+				->name('adresa_exacta')
+				->caption('Adresa')
+				->placeholder('Adresa')
+				->class('form-control data-source input-sm')
+				->controlsource('adresa_exacta')
+				->controltype('textbox')
+				->maxlength(255),
+			'is-agentie' =>
+				\Easy\Form\Textbox::make('~layouts.form.controls.textboxes.textbox-addon')
+				->caption('Este agentie?')->name('txt-is-agentie')->placeholder('')
+				->value('Este agentie?')->class('form-control input-sm')->enabled(0)
+				->addon([
+					'before' => \Form::checkbox('is_agentie', '1', true, ['class' => 'data-source', 'id' => 'is_agentie', 'data-control-source' => 'is_agentie', 'data-control-type' => 'checkbox', 'data-on' => 1, 'data-off' => 0]), 
+					'after' => NULL
+				]),
 		];
 	}
 }

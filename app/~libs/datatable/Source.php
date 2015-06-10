@@ -119,10 +119,12 @@ class Source
 				{
 					if( array_key_exists('value', $col['search']) )
 					{
-						if( $value = $col['search']['value'] )
+						$value = $col['search']['value'];
+						if( strlen($value) )
 						{
-							$e = $this->fields[$i] . '=' . $value;
-							$result .= '(' . $e . ') AND';
+							$result .= "(CAST(" . $this->fields[$i] . " AS CHAR) LIKE '%" . $value ."%') AND ";
+							// $e = $this->fields[$i] . '=' . $value;
+							// $result .= '(' . $e . ') AND ';
 						}
 					}
 				}
@@ -130,7 +132,7 @@ class Source
 		}
 		if( $result )
 		{
-			return substr($result, 0, strlen($result) - 4);
+			return substr($result, 0, strlen($result) - 5);
 		}
 		return $result;
 	}
