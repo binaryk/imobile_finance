@@ -38,6 +38,9 @@ class DatabaseSeeder extends Seeder {
 		$this->call('TipCategorieTerenSeeder');
 		$this->call('TipDestinatieTerenSeeder');
 
+		$this->call('TipUtilitatiTerenTableSeeder');
+		$this->call('TipClasificareTerenTableSeeder');
+
 }
 
 }

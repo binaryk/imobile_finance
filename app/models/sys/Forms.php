@@ -23,6 +23,7 @@ class Forms
 		'teren_imobil'      	 => '\Imobiliare\Nomenclatoare\Form\TerenImobilRecord',
 		'proprietari'      	 	 => '\Imobiliare\Nomenclatoare\Form\ProprietariRecord',
 		'apartamente_proprietar' => '\Imobiliare\Nomenclatoare\Form\ApartamenteProprietarRecord',
+		'apartament_photo' 	 	 => '\Imobiliare\Nomenclatoare\Form\ApartamentePhotosRecord',
 
 	];
 
