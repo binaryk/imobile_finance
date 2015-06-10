@@ -17,19 +17,43 @@ class CladireImobilRecord extends \Imobiliare\GridsRecord
         $this->display_length = 10;
         $this->default_order  = "1,'asc'";
         $this->form           = 'Imobiliare\Imobile\Form\CladireImobil';
-        $this->css            = 'admin/css/dt/dt.css, admin/css/dt/toolbar.css, admin/css/dt/dtform.css';
-        $this->js             = 'admin/js/libraries/form/dtform.js, admin/js/libraries/form/combobox.js';
+        $this->css            = 'admin/css/dt/dt.css, 
+                                admin/css/dt/toolbar.css, 
+                                admin/css/dt/dtform.css, 
+                                assets/global/plugins/icheck/skins/all.css,
+                                assets/global/plugins/bootstrap-datepicker/css/datepicker3.css';
+        $this->js             = 'admin/js/libraries/form/dtform.js,  
+                                 assets/global/plugins/icheck/icheck.min.js, 
+                                 assets/admin/pages/scripts/form-icheck.js,
+                                 assets/global/plugins/bootstrap-datepicker/js/bootstrap-datepicker.js';
         $this->row_source     = 'cladire_imobil-row-source';
         $this->rows_source_sql 				= 'SELECT
                                                     cladiri.*,
-                                                    imobile.nume AS imobil 
+                                                    imobile.nume AS imobil,
+                                                    localitati.nume AS localitate,
+                                                    tip_destinatie_cladire.nume AS destinatie,
+                                                    tip_regim_inaltime_cladire.nume AS inaltime,
+                                                    tip_stadii_ansamblu.nume AS stadiu 
                                                 FROM cladiri
                                                 LEFT JOIN imobile
-                                                ON imobile.id = cladiri.id_imobil 
+                                                ON imobile.id = cladiri.id_imobil
+                                                LEFT JOIN localitati
+                                                ON localitati.id = cladiri.id_imobil
+                                                LEFT JOIN tip_destinatie_cladire
+                                                ON tip_destinatie_cladire.id = cladiri.id_tip_destinatie
+                                                LEFT JOIN tip_regim_inaltime_cladire
+                                                ON tip_regim_inaltime_cladire.id = cladiri.id_tip_regim_inaltime
+                                                LEFT JOIN tip_stadii_ansamblu
+                                                ON tip_stadii_ansamblu.id = cladiri.id_tip_stadiu 
                                                 :where: :order:';
         $this->count_filtered_records_sql 	= 'SELECT COUNT(*) as cnt FROM cladiri :where:';
         $this->count_total_records_sql     	= 'SELECT COUNT(*) AS cnt FROM cladiri';
         $this->columns        = [
+        /*id_localitate
+        id_tip_destinatie
+        id_tip_regim_inaltime
+        id_tip_stadiu
+        nr_spatii_indivize*/
             '1' => [
                 'id'        => '#',
                 'orderable' => 'no',
@@ -44,7 +68,7 @@ class CladireImobilRecord extends \Imobiliare\GridsRecord
                 'orderable' => 'yes',
                 'class'     => 'td-align-left',
                 'visible'   => 'yes',
-                'header'    => ['caption' => 'Imobil', 'style'   => 'width:45%',],
+                'header'    => ['caption' => 'Imobil', 'style'   => 'width:15%',],
                 'type'      => 'field',
                 'source'    => 'imobil',
             ], 
@@ -53,11 +77,47 @@ class CladireImobilRecord extends \Imobiliare\GridsRecord
                 'orderable' => 'yes',
                 'class'     => 'td-align-left',
                 'visible'   => 'yes',
-                'header'    => ['caption' => 'Clădire nume', 'style'   => 'width:45%',],
+                'header'    => ['caption' => 'Clădire nume', 'style'   => 'width:15%',],
                 'type'      => 'field',
                 'source'    => 'nume',
-            ],
+            ], 
             '4' => [
+                'id'        => 'localitate',
+                'orderable' => 'yes',
+                'class'     => 'td-align-left',
+                'visible'   => 'yes',
+                'header'    => ['caption' => 'Localitate', 'style'   => 'width:15%',],
+                'type'      => 'field',
+                'source'    => 'localitate',
+            ], 
+            '5' => [
+                'id'        => 'destinatie',
+                'orderable' => 'yes',
+                'class'     => 'td-align-left',
+                'visible'   => 'yes',
+                'header'    => ['caption' => 'Destinatie', 'style'   => 'width:15%',],
+                'type'      => 'field',
+                'source'    => 'destinatie',
+            ], 
+            '6' => [
+                'id'        => 'inaltime',
+                'orderable' => 'yes',
+                'class'     => 'td-align-left',
+                'visible'   => 'yes',
+                'header'    => ['caption' => 'Inaltime', 'style'   => 'width:15%',],
+                'type'      => 'field',
+                'source'    => 'inaltime',
+            ], 
+            '7' => [
+                'id'        => 'stadiu',
+                'orderable' => 'yes',
+                'class'     => 'td-align-left',
+                'visible'   => 'yes',
+                'header'    => ['caption' => 'Stadiu', 'style'   => 'width:15%',],
+                'type'      => 'field',
+                'source'    => 'stadiu',
+            ],
+            '8' => [
                 'id'        => 'action',
                 'orderable' => 'no',
                 'class'     => 'td-align-left td-actions',

@@ -3,7 +3,7 @@
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
 
-class AlterTableProprietari extends Migration {
+class AlterTableCladiriRenameEmail extends Migration {
 
 	/**
 	 * Run the migrations.
@@ -12,10 +12,11 @@ class AlterTableProprietari extends Migration {
 	 */
 	public function up()
 	{
-		Schema::table('proprietari_persoane_fizice', function(Blueprint $t){
-			$t
-			->integer('id_organizatie');
+		Schema::table('cladiri', function($table)
+		{
+		    $table->renameColumn('meail', 'email');
 		});
+		
 	}
 
 	/**
@@ -25,10 +26,10 @@ class AlterTableProprietari extends Migration {
 	 */
 	public function down()
 	{
-		Schema::table('proprietari_persoane_fizice', function(Blueprint $t){
-			$t->dropColumn('id_organizatie');
+		Schema::table('cladiri', function($table)
+		{
+		    $table->renameColumn('email', 'meail');
 		});
-
 	}
 
 }

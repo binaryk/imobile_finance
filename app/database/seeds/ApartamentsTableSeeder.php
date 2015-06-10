@@ -34,7 +34,7 @@ class ApartamentsTableSeeder extends Seeder {
 				// 'is_agentie'		=> $faker->
 				'oferta_valabila'		=> $faker->numberBetween(0, 1),
 				'pret_m2'		=> $faker->numberBetween(15, 150),
-				'ultima_actualizare'		=> $faker->dateTime($max = 'now'), 
+				'ultima_actualizare'		=> \Carbon\Carbon::now()->format('Y-m-d'), 
 				'email'		=> $faker->email(),
 				'telefon'		=> $faker->phoneNumber(),
 				'telefon_secundar_1'		=> $faker->phoneNumber(),
