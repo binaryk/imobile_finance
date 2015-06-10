@@ -32,7 +32,7 @@ class CladireImobil extends \Processing\Form\Form
                 ->name('nume')
                 ->caption('Nume cladire')
                 ->placeholder('Nume cladire')
-                ->class('form-control input-sm data-source')
+                ->class('form-control data-source')
                 ->controlsource('nume')
                 ->controltype('textbox')
                 ->maxlength(255)

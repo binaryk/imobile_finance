@@ -112,5 +112,5 @@
 </div>
 
 {{
-	Form::hidden('id_imobil', $imobil->id, ['id' => 'id_imobil', 'class' => 'data-source', 'data-control-source' => 'id_imobil', 'data-control-type' => 'persistent'])
+	Form::hidden('id_proprietar', $proprietar->id, ['id' => 'id_proprietar', 'class' => 'data-source', 'data-control-source' => 'id_proprietar_pf', 'data-control-type' => 'persistent'])
 }}

@@ -28,7 +28,7 @@ class TipImobile extends \Processing\Form\Form
 			->name('denumire')
 			->caption('Denumirea tipului de imobil')
 			->placeholder('Denumirea tipului de imobil')
-			->class('form-control input-sm data-source')
+			->class('form-control  data-source')
 			->controlsource('nume')
 			->controltype('textbox')
 			->maxlength(255)

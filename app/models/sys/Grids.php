@@ -26,6 +26,8 @@ class Grids
 		'apartament_imobil' 	 => '\Imobiliare\Imobile\Grid\ApartamentImobilRecord',
 		'cladire_imobil' 	 	 => '\Imobiliare\Imobile\Grid\CladireImobilRecord',
 		'teren_imobil' 	 	 	 => '\Imobiliare\Imobile\Grid\TerenImobilRecord',
+		'proprietari' 	 	 	 => '\Imobiliare\Imobile\Grid\ProprietariRecord',
+		'apartamente_proprietar' => '\Imobiliare\Imobile\Grid\ApartamenteProprietarRecord',
 
 		'cauta-apartamente'      => 'Apartamente\Grid\ApartamenteRecord',
 

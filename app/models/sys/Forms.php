@@ -21,6 +21,9 @@ class Forms
 		'apartament_imobil'      => '\Imobiliare\Nomenclatoare\Form\ApartamentImobilRecord',
 		'cladire_imobil'      	 => '\Imobiliare\Nomenclatoare\Form\CladireImobilRecord',
 		'teren_imobil'      	 => '\Imobiliare\Nomenclatoare\Form\TerenImobilRecord',
+		'proprietari'      	 	 => '\Imobiliare\Nomenclatoare\Form\ProprietariRecord',
+		'apartamente_proprietar' => '\Imobiliare\Nomenclatoare\Form\ApartamenteProprietarRecord',
+
 	];
 
 	public function __construct($id)

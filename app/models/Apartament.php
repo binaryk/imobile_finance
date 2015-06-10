@@ -73,6 +73,30 @@ class Apartament extends \Eloquent {
         return $record->delete();
     }
 
+	public function getDate($camp)
+	{
+	    return date("d.m.Y",strtotime($this->attributes[$camp]));
+	}
+
+	public function setDate($camp,$value)   
+	{
+	    $this->attributes[$camp] = date("Y-m-d",strtotime($value));
+	}
+
+	public function getUltimaActualizareAttribute()
+    { 
+        return $this->getDate('ultima_actualizare');
+    }
+
+    public function setUltimaActualizareAttribute($value)
+    {
+    	if( $value == '' )
+    		$value = \Carbon\Carbon::now()->format('Y-m-d');
+
+        $this->setDate('ultima_actualizare',$value);
+    }
+     
+
     public static function toCombobox()
     {
         return [0 => ' -- Selectaţi apartamentul --'] + self::orderBy('nume')->lists('nume', 'id');

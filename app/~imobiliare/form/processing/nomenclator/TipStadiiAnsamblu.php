@@ -28,7 +28,7 @@ class TipStadiiAnsamblu extends \Processing\Form\Form
 			->name('denumire')
 			->caption('Denumirea stadiului ansamblului')
 			->placeholder('Denumirea stadiului ansamblului')
-			->class('form-control input-sm data-source')
+			->class('form-control  data-source')
 			->controlsource('nume')
 			->controltype('textbox')
 			->maxlength(255)
