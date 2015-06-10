@@ -65,7 +65,10 @@ class Route
 		/**
 		END IMOBILE
 		**/ 
- 
+
+
+		->add('get', 'cautare-apartamente-index', 'cautare-apartamente', 'CautareApartamenteController@index', 'Apartamente') 
+		->add('get', 'apartamente-cautare-row-source', 'cautare-apartamente-row-source', 'CautareApartamenteController@rows', 'Apartamente')
 		;
 	}
 

@@ -29,6 +29,8 @@ class Grids
 		'proprietari' 	 	 	 => '\Imobiliare\Imobile\Grid\ProprietariRecord',
 		'apartamente_proprietar' => '\Imobiliare\Imobile\Grid\ApartamenteProprietarRecord',
 
+		'cauta-apartamente'      => 'Apartamente\Grid\ApartamenteRecord',
+
 	];
 
 	public function __construct($id)
