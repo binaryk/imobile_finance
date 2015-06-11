@@ -10,18 +10,18 @@
     <div class="modal-content">
       <div class="modal-header">
         <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-        <h4 class="modal-title" id="myModalLabel">Modal title</h4>
+        <h4 class="modal-title" id="myModalLabel">Poze apartament</h4>
       </div>
       <div class="modal-body">
         <ul class="bxslider">
 			@foreach($photos as $key => $photo)
 				<li> <img src="{{ $photo }}"> </li> 
 			@endforeach
+			{{ $apartament->id }}
 		</ul>
       </div>
       <div class="modal-footer">
-        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-        <button type="button" class="btn btn-primary">Save changes</button>
+        <button type="button" class="btn btn-default" data-dismiss="modal">Inchide</button> 
       </div>
     </div>
   </div>
@@ -40,6 +40,7 @@
 	}); 
 
 	$('#form-documente .box-footer').hide();
+
 	var upload_document = $("#file-document").fileinput({
 		'previewClass'    : 'one-file',
 		'previewSettings' :
@@ -66,9 +67,16 @@
 				'indicatorNewTitle' : 'Fişierul nu este încărcat'
 			}
 	});
+	
 	upload_document.on('fileuploaded', function(event, data, previewId, index){
 		$("#file-document").fileinput('clear');
 		form.hideform();
+
+		console.log(data.files[0].name)
+		var date = new Date();
+		var _src = "{{ \URL::to('../app/storage/uploads/') }}" + '/' + "{{ $apartament->id }}" + '/' + data.files[0].name + '-' + "{{ $apartament->id }}" + '-' + date.getFullYear() + '-' + (date.getMonth() + 1) + '-' +  date.getDay()  ;
+		console.log(_src);
+		$('.bxslider').append('<li><img src = "'+ _src  +'"></li>' )
 		dt.draw( false );
 	});
 	$(document).on('click', '.action-delete-apartament-document', function(){
