@@ -1,6 +1,44 @@
 @extends('~layouts.datatable.index')
+@section('content')
+@parent
+<!-- Button trigger modal -->
 
+
+<!-- Modal -->
+<div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+        <h4 class="modal-title" id="myModalLabel">Modal title</h4>
+      </div>
+      <div class="modal-body">
+        <ul class="bxslider">
+			@foreach($photos as $key => $photo)
+				<li> <img src="{{ $photo }}"> </li> 
+			@endforeach
+		</ul>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+        <button type="button" class="btn btn-primary">Save changes</button>
+      </div>
+    </div>
+  </div>
+</div>
+		
+	
+
+		
+
+
+
+@stop
 @section('datatable-specific-page-jquery-initializations')
+	$(document).ready(function(){
+	  $('.bxslider').bxSlider();
+	}); 
+
 	$('#form-documente .box-footer').hide();
 	var upload_document = $("#file-document").fileinput({
 		'previewClass'    : 'one-file',

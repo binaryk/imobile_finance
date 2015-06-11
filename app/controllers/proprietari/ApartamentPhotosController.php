@@ -16,8 +16,15 @@ class ApartamentPhotosController extends \Datatable\DatatableController
 
 		$config = \Imobiliare\Grids::make($id)->toIndexConfig($id);
 		// $config['caption'] .= ' pentru apartamentul <span class="text-blue">' . $Imobiliare->nume . '</span>';
+		$photos = \Imobiliare\Nomenclatoare\ApartamentPhotos::where('id_apartament',$id_apartament)->select('file_name')->get()->toArray();
+		foreach ($photos as $key => $photo) {
+			$test = explode( '/', $photos[$key]['file_name']);
+			$out_photos[] = \URL::to('../app/storage/uploads/') . '/' . $id_apartament . '/' . end( $test );
+		}
+ 
+//app_path() .
 		$config['row-source'] .= '/' . $id_apartament;
-		$this->show( $config + ['other-info' => ['apartament' => $apartament]]);
+		$this->show( $config + ['other-info' => ['apartament' => $apartament, 'photos' => $out_photos]]);
 	}
 
 	public function rows($id, $id_apartament)

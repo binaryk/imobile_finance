@@ -18,8 +18,8 @@ class ApartamentePhotosRecord extends \Imobiliare\GridsRecord
 		$this->display_length = 10;
 		$this->default_order  = "1,'asc'";
 		$this->form           = 'Imobiliare\Nomenclatoare\Form\ApartamentPhotos';
-		$this->css            = 'admin/css/dt/dt.css, admin/css/dt/toolbar.css, admin/css/dt/dtform.css, packages/fileinput/css/fileinput.min.css,admin/css/fileinput/fileinput.css';
-		$this->js             = 'admin/js/libraries/form/dtform.js,packages/fileinput/js/fileinput.min.js';
+		$this->css            = 'admin/css/dt/dt.css, admin/css/dt/toolbar.css, admin/css/dt/dtform.css, packages/fileinput/css/fileinput.min.css,admin/css/fileinput/fileinput.css, packages/bxslider/jquery.bxslider.css';
+		$this->js             = 'admin/js/libraries/form/dtform.js,packages/fileinput/js/fileinput.min.js, packages/bxslider/jquery.bxslider.js';
 		$this->row_source     = 'apartament_photo-row-source';
 		$this->rows_source_sql 				= 
 			"
