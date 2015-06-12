@@ -59,16 +59,16 @@ class CautareApartamenteController extends \Datatable\DatatableController
 			'nr_camere_min' => 
 				\Easy\Form\Textbox::make('~layouts.form.controls.textboxes.textbox')
 				->name('nr_camere_min')
-				->caption('Numarul de camere. De la')
-				->placeholder('Numar de camere. De la')
+				->caption('Numarul de camere')
+				->placeholder('De la')
 				->class('form-control data-source input-sm')
 				->controlsource('nr_camere_min')
 				->controltype('textbox'),
 			'nr_camere_max' => 
 				\Easy\Form\Textbox::make('~layouts.form.controls.textboxes.textbox')
 				->name('nr_camere_max')
-				->caption('Numarul de camere. Pana la')
-				->placeholder('Numar de camere. Pana la')
+				->caption('&nbsp;')
+				->placeholder('Pana la')
 				->class('form-control data-source input-sm')
 				->controlsource('nr_camere_max')
 				->controltype('textbox'),
@@ -76,21 +76,21 @@ class CautareApartamenteController extends \Datatable\DatatableController
 			'pret_m2_min' => 
 				\Easy\Form\Textbox::make('~layouts.form.controls.textboxes.textbox')
 				->name('pret_m2_min')
-				->caption('Pretul. De la')
-				->placeholder('Pretul. De la')
+				->caption('Pretul')
+				->placeholder('De la')
 				->class('form-control data-source input-sm')
 				->controlsource('pret_min')
 				->controltype('textbox'),
 			'pret_m2_max' => 
 				\Easy\Form\Textbox::make('~layouts.form.controls.textboxes.textbox')
 				->name('pret_max')
-				->caption('Pretul. Pana la')
-				->placeholder('Pretul. Pana la')
+				->caption('&nbsp;')
+				->placeholder('Pana la')
 				->class('form-control data-source input-sm')
 				->controlsource('Pret_max')
 				->controltype('textbox'),
 			// [5] = daca este agentie sau nu
-			'is-agentie' =>
+			'is_agentie' =>
 				\Easy\Form\Textbox::make('~layouts.form.controls.textboxes.textbox-addon')
 				->caption('Este agentie?')->name('txt-is-agentie')->placeholder('')
 				->value('Este agentie?')->class('form-control input-sm')->enabled(0)
@@ -130,16 +130,16 @@ class CautareApartamenteController extends \Datatable\DatatableController
 			'nr_etaj_min' => 
 				\Easy\Form\Textbox::make('~layouts.form.controls.textboxes.textbox')
 				->name('nr_etaj_min')
-				->caption('Numarul de etaje. De la')
-				->placeholder('Numar de etaje. De la')
+				->caption('Numarul de etaje')
+				->placeholder('De la')
 				->class('form-control data-source input-sm')
 				->controlsource('nr_etaj_min')
 				->controltype('textbox'),
 			'nr_etaj_max' => 
 				\Easy\Form\Textbox::make('~layouts.form.controls.textboxes.textbox')
 				->name('nr_etaj_max')
-				->caption('Numarul de etaje. Pana la')
-				->placeholder('Numar de etaje. Pana la')
+				->caption('&nbsp;')
+				->placeholder('Pana la')
 				->class('form-control data-source input-sm')
 				->controlsource('nr_etaj_max')
 				->controltype('textbox'),
