@@ -32,9 +32,14 @@ class DatabaseSeeder extends Seeder {
 		$this->call('TipCompartimentTableSeeder');
 		$this->call('ApartamentsTableSeeder');
 		$this->call('TipDestinatieCladireSeed');
+		$this->call('TipRegimInaltimeTableSeeder');
+		$this->call('TipCategorieCladireTableSeeder');
 		$this->call('TipEtajsTableSeeder');
 		$this->call('TipCategorieTerenSeeder');
 		$this->call('TipDestinatieTerenSeeder');
+
+		$this->call('TipUtilitatiTerenTableSeeder');
+		$this->call('TipClasificareTerenTableSeeder');
 
 }
 

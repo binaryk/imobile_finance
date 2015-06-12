@@ -46,7 +46,7 @@ Route::group(['before' => 'auth|standardUser'], function()
 # Admin Routes
 Route::group(['before' => 'auth|admin'], function()
 {
-	Route::get('/admin', ['as' => 'admin_dashboard', 'uses' => 'AdminController@getHome']);
+	Route::get('/admin', ['as' => 'admin_dashboard', 'uses' => 'HomeController@showWelcome']);
     Route::resource('admin/profiles', 'AdminUsersController', ['only' => ['index', 'show', 'edit', 'update', 'destroy']]);
 });
 

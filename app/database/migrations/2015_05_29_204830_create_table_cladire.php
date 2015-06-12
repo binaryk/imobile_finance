@@ -27,9 +27,9 @@ class CreateTableCladire extends Migration {
 			$table->tinyInteger('ascensor');
 			$table->string('adresa', 200)->nullable();
 			$table->string('telefon', 100)->nullable();
-			$table->string('email', 100);
+			$table->string('meail', 100);
 			$table->text('carte_funciara', 100);
-		});
+		}); 
 	}
 
 	/**

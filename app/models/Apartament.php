@@ -91,7 +91,7 @@ class Apartament extends \Eloquent {
     public function setUltimaActualizareAttribute($value)
     {
     	if( $value == '' )
-    		$value = \Carbon\Carbon::now()->format('Y-m-d');
+    		$value =  \Carbon\Carbon::now()->format('Y-m-d');
 
         $this->setDate('ultima_actualizare',$value);
     }

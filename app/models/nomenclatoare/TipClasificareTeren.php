@@ -1,37 +1,14 @@
 <?php
 
-namespace Imobiliare;
+namespace Imobiliare\Nomenclator;
 
 use \Illuminate\Database\Eloquent\SoftDeletingTrait;
 
-class Cladire extends \Eloquent
+class TipClasificareTeren extends \Eloquent
 {
     use SoftDeletingTrait;
-    protected $table = 'cladiri';
-    protected $fillable = [ 
-      'id_imobil',
-      'id_localitate',
-      'id_tip_destinatie',
-      'id_tip_regim_inaltime',
-      'id_tip_stadiu',
-      'nr_spatii_indivize',
-      'nume',
-      'ascensor',
-      'adresa',
-      'telefon',
-      'email',
-      'carte_funciara',
-      'id_tip_categorie',
-      'dotari',
-      'cota_indiviza',
-      'perioada_constructie',
-      'suprafata_utila',
-      'id_cartier',
-      'climatizare',
-      'mansarda',
-      'observatii' 
-
-    ];
+    protected $table = 'tip_clasificare_teren';
+    protected $fillable = ['nume'];
 
     public static function getRecord( $id )
     {
@@ -65,6 +42,6 @@ class Cladire extends \Eloquent
 
     public static function toCombobox()
     {
-        return [0 => ' -- Selectaţi cladire --'] + self::orderBy('nume')->lists('nume', 'id');
+        return [0 => ' -- Selectaţi tip clasificare teren --'] + self::orderBy('nume')->lists('nume', 'id');
     }
 }

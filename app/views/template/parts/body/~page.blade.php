@@ -1,5 +1,8 @@
 <!-- BEGIN CONTAINER -->
+
+
 <div class="page-container">
+
 	<!-- BEGIN SIDEBAR -->
 	@include('template.parts.body.~sidebar')
 	<!-- END SIDEBAR -->

@@ -61,6 +61,12 @@ class Route
          
 		->add('get','apartamente_proprietar','apartamente_proprietar/{id}/{id_proprietar}', 'ApartamenteProprietarController@index', 'Imobiliare\Datatable')
          ->add('get','apartamente_proprietar-row-source','apartamente_proprietar/row-source/{id}/{id_proprietar}', 'ApartamenteProprietarController@rows', 'Imobiliare\Datatable') 
+
+         ->add('get', 'apartament_photo','apartament-poze/{id}/{id_apartament}', 'ApartamentPhotosController@index', 'Imobiliare\Datatable')
+         ->add('get', 'apartament_photo-row-source','apartament-poze/row-source/{id}/{id_apartament}', 'ApartamentPhotosController@rows', 'Imobiliare\Datatable')
+         ->add('post', 'upload-apartament-photo', 'upload-apartament-photo/{id_apartament}', 'ApartamentPhotosController@upload', 'Imobiliare\Datatable')
+         ->add('post', 'delete-apartament-photo', 'delete-apartament-photo', 'ApartamentPhotosController@delete', 'Imobiliare\Datatable')
+         ->add('get',  'download-apartament-document', 'download-apartament-document/{document_id}', 'ApartamentPhotosController@download', 'Imobiliare\Datatable')
          
 		/**
 		END IMOBILE

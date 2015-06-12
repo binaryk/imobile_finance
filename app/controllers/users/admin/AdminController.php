@@ -1,6 +1,6 @@
 <?php
 
-class AdminController extends \BaseController {
+class AdminController extends \HomeController {
 
 
 	/**
@@ -10,7 +10,8 @@ class AdminController extends \BaseController {
 	 */
 	public function getHome()
 	{
-		return View::make('protected.admin.admin_dashboard');
+		return $this->showWelcome();
+		// return View::make('protected.admin.admin_dashboard');
 	}
 
 
