@@ -21,7 +21,7 @@ class DatatableController extends \BaseController
 		}
 		$other_info = array_key_exists('other-info', $config) ? $config['other-info'] : [];
 		$this->layout->title = strip_tags($config['caption']); 
-		
+		$this->layout->caption = $config['caption'];
 		$this->layout->breadcrumbs = $config['breadcrumbs'];
 		if( ! $config['form']  )
 		{
