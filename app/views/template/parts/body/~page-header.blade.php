@@ -1,6 +1,6 @@
 <!-- BEGIN PAGE HEADER-->
 <h3 class="page-title">
-	@yield('title') {{ @$title }}	<small> @yield('small') {{ @$small_title }} </small>
+	@yield('title') {{ @$caption }}	<small> @yield('small') {{ @$small_title }} </small>
 </h3>
 <div class="page-bar"> 
 	@include('template.parts.body.~page-breadcrumb')

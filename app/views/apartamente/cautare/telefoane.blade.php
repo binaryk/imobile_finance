@@ -1,0 +1,1 @@
+{{ Easy\Form\StringHelper::Items([$record->telefon, $record->telefon_secundar_1, $record->telefon_secundar_2]) }}
