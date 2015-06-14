@@ -7,11 +7,71 @@
 	label
 	{
 		margin-bottom:1px;
+		color:#3598dc;
+		font-size:12px;
 	}
 
 	.portlet-footer
 	{
 		background-color:#F7f7f7;
 		padding:4px;
+	}
+}
+
+.dt-container
+{
+	table.dataTable 
+	{
+		thead th, tbody td
+		{
+			font-size:12px;
+		}
+		thead th
+		{
+			background-color:#3598dc;
+			color:#fff;
+		}
+	}
+}
+
+.daterangepicker 
+{
+	.calendar
+	{
+		td, th
+		{
+			border:1px solid #ccc;
+			font-size:12px;
+			height:initial;
+			border-radius:1px;
+		}
+		td
+		{
+			text-align:right;
+		}
+		td.old, td.new
+		{
+			background-color:#999;
+			color:#000;
+		}
+	}
+
+	.btn-small
+	{
+		width:74px;
+		padding:3px 6px;
+	}
+
+	.cancelBtn
+	{
+		margin-left:8px;
+	}
+
+	.ranges
+	{
+		.input-mini
+		{
+			width:74px !important;
+		}
 	}
 }

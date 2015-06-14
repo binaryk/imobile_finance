@@ -15,7 +15,7 @@ class ApartamenteRecord extends \Imobiliare\GridsRecord
         $this->name           = 'dt';
         $this->display_start  = 0;
         $this->display_length = 25;
-        $this->default_order  = "0,'asc'";
+        $this->default_order  = "6,'desc'";
         $this->form           = NULL;
         $this->css            = 'admin/css/dt/dt.css, admin/css/dt/toolbar.css, admin/css/dt/dtform.css';
         $this->js             = 'admin/js/libraries/form/dtform.js, admin/js/libraries/form/combobox.js, admin/js/apartamente/cautare.js';
@@ -44,7 +44,7 @@ class ApartamenteRecord extends \Imobiliare\GridsRecord
             ], 
             '2' => [
                 'id'        => 'oferta-valabila',
-                'orderable' => 'no',
+                'orderable' => 'yes',
                 'class'     => 'td-record-count td-align-center',
                 'visible'   => 'yes',
                 'header'    => ['caption' => 'Oferta valabila', 'style'   => 'width:5%',],
@@ -53,7 +53,7 @@ class ApartamenteRecord extends \Imobiliare\GridsRecord
             ], 
             '3' => [
                 'id'        => 'adresa-exacta',
-                'orderable' => 'no',
+                'orderable' => 'yes',
                 'class'     => 'td-record-count td-align-left',
                 'visible'   => 'yes',
                 'header'    => ['caption' => 'Adresa', 'style'   => 'width:20%',],
@@ -62,7 +62,7 @@ class ApartamenteRecord extends \Imobiliare\GridsRecord
             ], 
             '4' => [
                 'id'        => 'nr-camere',
-                'orderable' => 'no',
+                'orderable' => 'yes',
                 'class'     => 'td-record-count td-align-right',
                 'visible'   => 'yes',
                 'header'    => ['caption' => 'Numar de camere', 'style'   => 'width:5%',],
@@ -71,7 +71,7 @@ class ApartamenteRecord extends \Imobiliare\GridsRecord
             ],
             '5' => [
                 'id'        => 'pret-m2',
-                'orderable' => 'no',
+                'orderable' => 'yes',
                 'class'     => 'td-record-count td-align-right',
                 'visible'   => 'yes',
                 'header'    => ['caption' => 'Pret', 'style'   => 'width:5%',],
@@ -80,7 +80,7 @@ class ApartamenteRecord extends \Imobiliare\GridsRecord
             ], 
             '6' => [
                 'id'        => 'is-agentie',
-                'orderable' => 'no',
+                'orderable' => 'yes',
                 'class'     => 'td-record-count td-align-center',
                 'visible'   => 'yes',
                 'header'    => ['caption' => 'Agentie', 'style'   => 'width:5%',],
@@ -89,7 +89,7 @@ class ApartamenteRecord extends \Imobiliare\GridsRecord
             ], 
             '7' => [
                 'id'        => 'ultima-actualizare',
-                'orderable' => 'no',
+                'orderable' => 'yes',
                 'class'     => 'td-record-count td-align-center',
                 'visible'   => 'yes',
                 'header'    => ['caption' => 'Ultima actualizare', 'style'   => 'width:10%',],
@@ -98,7 +98,7 @@ class ApartamenteRecord extends \Imobiliare\GridsRecord
             ], 
             '8' => [
                 'id'        => 'telefon',
-                'orderable' => 'no',
+                'orderable' => 'yes',
                 'class'     => 'td-record-count td-align-left',
                 'visible'   => 'yes',
                 'header'    => ['caption' => 'Telefoane', 'style'   => 'width:15%',],
@@ -107,7 +107,7 @@ class ApartamenteRecord extends \Imobiliare\GridsRecord
             ], 
             '9' => [
                 'id'        => 'credit-prima-casa',
-                'orderable' => 'no',
+                'orderable' => 'yes',
                 'class'     => 'td-record-count td-align-center',
                 'visible'   => 'yes',
                 'header'    => ['caption' => 'Credit prima casa', 'style'   => 'width:5%',],
@@ -116,7 +116,7 @@ class ApartamenteRecord extends \Imobiliare\GridsRecord
             ], 
             '10' => [
                 'id'        => 'nr-etaje',
-                'orderable' => 'no',
+                'orderable' => 'yes',
                 'class'     => 'td-record-count td-align-right',
                 'visible'   => 'yes',
                 'header'    => ['caption' => 'Numar de etaje', 'style'   => 'width:5%',],
@@ -125,7 +125,7 @@ class ApartamenteRecord extends \Imobiliare\GridsRecord
             ],
             '11' => [
                 'id'        => 'tip-finisaje-interioare',
-                'orderable' => 'no',
+                'orderable' => 'yes',
                 'class'     => 'td-record-count td-align-left',
                 'visible'   => 'yes',
                 'header'    => ['caption' => 'Finisaj interioar', 'style'   => 'width:10%',],
@@ -134,7 +134,7 @@ class ApartamenteRecord extends \Imobiliare\GridsRecord
             ],
             '12' => [
                 'id'        => 'tip-compartiment',
-                'orderable' => 'no',
+                'orderable' => 'yes',
                 'class'     => 'td-record-count td-align-left',
                 'visible'   => 'yes',
                 'header'    => ['caption' => 'Tip compartiment', 'style'   => 'width:10%',],
@@ -143,9 +143,21 @@ class ApartamenteRecord extends \Imobiliare\GridsRecord
             ],
         ];  
         $this->fields = [
-            'fields'      => 'v_apartamente.id,v_apartamente.oferta_valabila,v_apartamente.adresa_exacta,v_apartamente.is_agentie,v_apartamente.nr_camere',
-            'searchables' => 'v_apartamente.oferta_valabila',
-            'orderables'  => [],
+            'fields'      => '',
+            'searchables' => 'v_apartamente.adresa_exacta, v_apartamente.telefon, v_apartamente.telefon_secundar_1, v_apartamente.telefon_secundar_2, v_apartamente.finisaj_interior, v_apartamente.tip_compartiment',
+            'orderables'  => [
+                1 => 'v_apartamente.oferta_valabila',
+                2 => 'v_apartamente.adresa_exacta',
+                3 => 'v_apartamente.nr_camere',
+                4 => 'v_apartamente.pret_m2',
+                5 => 'v_apartamente.is_agentie',
+                6 => 'v_apartamente.ultima_actualizare',
+                7 => 'v_apartamente.telefon',
+                8 => 'v_apartamente.credit_prima_casa',
+                9 => 'v_apartamente.nr_etaj',
+               10 => 'v_apartamente.finisaj_interior',
+               11 => 'v_apartamente.tip_compartiment',
+            ],
         ];
         $this->filters = [];
     }

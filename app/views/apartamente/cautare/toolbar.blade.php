@@ -27,6 +27,8 @@
 		</div>
 	</div>
 	<div class="portlet-footer text-left">
-		<button id="test-api" class="btn bg-blue">Cauta</button>
+		<button id="cmd-search" class="btn bg-blue">Cauta</button>
+		<button id="cmd-reset" class="btn">Reseteaza</button>
 	</div>
 </div>
+<input type="hidden" id="id_organizatie" value="{{$current_org->id}}" />

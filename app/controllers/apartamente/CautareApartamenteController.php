@@ -15,9 +15,8 @@ class CautareApartamenteController extends \Datatable\DatatableController
 
 		$config['caption'] = '<span class="font-blue">Cautare</span> apartamente. Organizatia: ' . $this->current_org->denumire;
 		$this->show( $config + ['other-info' => [
-		
+			'current_org' => $this->current_org,
 			'controls' => $this->controls()
-
 		]]);
 	}
 
@@ -100,7 +99,7 @@ class CautareApartamenteController extends \Datatable\DatatableController
 				->name('perioada')
 				->caption('Perioada ultimei actualizari')
 				->placeholder('Perioada ultimei actuzlizari')
-				->value('01.01.2009 - ' . \Carbon\Carbon::now()->format('d.m.Y'))
+				->value('01.01.1965 - ' . \Carbon\Carbon::now()->format('d.m.Y'))
 				->class('form-control input-sm perioada-picker')
 				->addon(['before' => '<i class="fa fa-calendar"></i>', 'after' => NULL]),
 			// [7] = telefon, telefon 1, telefon 2
