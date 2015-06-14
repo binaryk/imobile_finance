@@ -49,4 +49,5 @@ class CompoboxHelper
 	{
 		return ['0' => 'Nu', '1' => 'Da'];
 	}
+
 }

@@ -1,0 +1,1 @@
+{{ Easy\Form\StringHelper::Checked( $record->is_agentie ) }}

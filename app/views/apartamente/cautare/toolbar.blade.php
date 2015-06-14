@@ -10,16 +10,16 @@
 			<div class="col-md-2">{{ $controls['nr_camere_max']->out()}}</div>
 		</div>
 		<div class="row">
+			<div class="col-md-4">{{ $controls['ultima_actualizare']->out()}}</div>
 			<div class="col-md-2">{{ $controls['pret_m2_min']->out()}}</div>
 			<div class="col-md-2">{{ $controls['pret_m2_max']->out()}}</div>
 			<div class="col-md-4">{{ $controls['is_agentie']->out()}}</div>
-			<div class="col-md-4">{{ $controls['ultima_actualizare']->out()}}</div>
 		</div>
 		<div class="row">
 			<div class="col-md-4">{{ $controls['telefon']->out()}}</div>
+			<div class="col-md-4">{{ $controls['credit_prima_casa']->out()}}</div>
 			<div class="col-md-2">{{ $controls['nr_etaj_min']->out()}}</div>
 			<div class="col-md-2">{{ $controls['nr_etaj_max']->out()}}</div>
-			<div class="col-md-4">{{ $controls['credit_prima_casa']->out()}}</div>
 		</div>
 		<div class="row">
 			<div class="col-md-6">{{ $controls['id_tip_finisaje_interioare']->out()}}</div>

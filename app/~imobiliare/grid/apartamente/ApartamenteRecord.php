@@ -48,8 +48,8 @@ class ApartamenteRecord extends \Imobiliare\GridsRecord
                 'class'     => 'td-record-count td-align-center',
                 'visible'   => 'yes',
                 'header'    => ['caption' => 'Oferta valabila', 'style'   => 'width:5%',],
-                'type'      => 'field',
-                'source'    => 'oferta_valabila',
+                'type'      => 'view',
+                'source'    => 'apartamente.cautare.oferta_valabila',
             ], 
             '3' => [
                 'id'        => 'adresa-exacta',
@@ -84,8 +84,8 @@ class ApartamenteRecord extends \Imobiliare\GridsRecord
                 'class'     => 'td-record-count td-align-center',
                 'visible'   => 'yes',
                 'header'    => ['caption' => 'Agentie', 'style'   => 'width:5%',],
-                'type'      => 'field',
-                'source'    => 'is_agentie',
+                'type'      => 'view',
+                'source'    => 'apartamente.cautare.is_agentie',
             ], 
             '7' => [
                 'id'        => 'ultima-actualizare',
@@ -111,8 +111,8 @@ class ApartamenteRecord extends \Imobiliare\GridsRecord
                 'class'     => 'td-record-count td-align-center',
                 'visible'   => 'yes',
                 'header'    => ['caption' => 'Credit prima casa', 'style'   => 'width:5%',],
-                'type'      => 'field',
-                'source'    => 'credit_prima_casa',
+                'type'      => 'view',
+                'source'    => 'apartamente.cautare.credit_prima_casa',
             ], 
             '10' => [
                 'id'        => 'nr-etaje',

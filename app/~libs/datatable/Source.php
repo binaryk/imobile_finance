@@ -110,7 +110,6 @@ class Source
 	protected function searchByCriterias()
 	{
 		$result = '';
-
 		if( is_array($this->columns) )
 		{
 			foreach($this->columns as $i => $col)
@@ -122,14 +121,13 @@ class Source
 						$value = $col['search']['value'];
 						if( strlen($value) )
 						{
-							$result .= "(CAST(" . $this->fields[$i] . " AS CHAR) LIKE '%" . $value ."%') AND ";
-							// $e = $this->fields[$i] . '=' . $value;
-							// $result .= '(' . $e . ') AND ';
+							$result .= '(' . $value . ') AND ';
 						}
 					}
 				}
 			}
 		}
+		// dd($result);
 		if( $result )
 		{
 			return substr($result, 0, strlen($result) - 5);

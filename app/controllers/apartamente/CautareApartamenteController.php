@@ -38,13 +38,11 @@ class CautareApartamenteController extends \Datatable\DatatableController
 		return [
 			// [1] = daca oferta este valabila sa nu
 			'oferta-valabila' =>
-				\Easy\Form\Textbox::make('~layouts.form.controls.textboxes.textbox-addon')
-				->caption('Cu oferta valabilă?')->name('txt-oferta-valabila')->placeholder('')
-				->value('Cu oferta valabila?')->class('form-control input-sm')->enabled(0)
-				->addon([
-					'before' => \Form::checkbox('oferta_valabila', '1', true, ['class' => 'data-source', 'id' => 'oferta_valabila', 'data-control-source' => 'oferta_valabila', 'data-control-type' => 'checkbox', 'data-on' => 1, 'data-off' => 0]), 
-					'after' => NULL
-				]),
+				\Easy\Form\Combobox::make('~layouts.form.controls.comboboxes.combobox')
+				->name('oferta_valabila')->caption('Oferta valabila')
+				->class('form-control input-sm data-source')
+				->controlsource('oferta_valabila')->controltype('combobox')
+				->options([-1 => 'Toate (cu oferta valabila sau nu)', 0 => 'Fara oferta valabila', 1 => 'Doar cele cu oferta valabila']),
 			// [2] = parte din adresa
 			'adresa-exacta' => 
 				\Easy\Form\Textbox::make('~layouts.form.controls.textboxes.textbox')
@@ -79,30 +77,28 @@ class CautareApartamenteController extends \Datatable\DatatableController
 				->caption('Pretul')
 				->placeholder('De la')
 				->class('form-control data-source input-sm')
-				->controlsource('pret_min')
+				->controlsource('pret_m2_min')
 				->controltype('textbox'),
 			'pret_m2_max' => 
 				\Easy\Form\Textbox::make('~layouts.form.controls.textboxes.textbox')
-				->name('pret_max')
+				->name('pret_m2_max')
 				->caption('&nbsp;')
 				->placeholder('Pana la')
 				->class('form-control data-source input-sm')
-				->controlsource('Pret_max')
+				->controlsource('pret_m2_max')
 				->controltype('textbox'),
 			// [5] = daca este agentie sau nu
 			'is_agentie' =>
-				\Easy\Form\Textbox::make('~layouts.form.controls.textboxes.textbox-addon')
-				->caption('Este agentie?')->name('txt-is-agentie')->placeholder('')
-				->value('Este agentie?')->class('form-control input-sm')->enabled(0)
-				->addon([
-					'before' => \Form::checkbox('is_agentie', '1', true, ['class' => 'data-source', 'id' => 'is_agentie', 'data-control-source' => 'is_agentie', 'data-control-type' => 'checkbox', 'data-on' => 1, 'data-off' => 0]), 
-					'after' => NULL
-				]),
+				\Easy\Form\Combobox::make('~layouts.form.controls.comboboxes.combobox')
+				->name('is_agentie')->caption('Este agentie')
+				->class('form-control input-sm data-source')
+				->controlsource('is_agentie')->controltype('combobox')
+				->options([-1 => 'Toate (agentii sau nu)', 0 => 'Fara agentii', 1 => 'Doar agentiile']),
 			// [6] = data ultima actualizare
 			'ultima_actualizare' =>
 				\Easy\Form\Textbox::make('~layouts.form.controls.textboxes.textbox-addon')
 				->name('perioada')
-				->caption('Perioada ultimei actuzlizari')
+				->caption('Perioada ultimei actualizari')
 				->placeholder('Perioada ultimei actuzlizari')
 				->value('01.01.2009 - ' . \Carbon\Carbon::now()->format('d.m.Y'))
 				->class('form-control input-sm perioada-picker')
@@ -119,13 +115,11 @@ class CautareApartamenteController extends \Datatable\DatatableController
 				->maxlength(255),
 			// [8] = daca este credit prima casa sau nu
 			'credit_prima_casa' =>
-				\Easy\Form\Textbox::make('~layouts.form.controls.textboxes.textbox-addon')
-				->caption('Accepta credit prima casa?')->name('txt-credit_prima_casa')->placeholder('')
-				->value('Accepta credit prima casa?')->class('form-control input-sm')->enabled(0)
-				->addon([
-					'before' => \Form::checkbox('credit_prima_casa', '1', true, ['class' => 'data-source', 'id' => 'credit_prima_casa', 'data-control-source' => 'credit_prima_casa', 'data-control-type' => 'checkbox', 'data-on' => 1, 'data-off' => 0]), 
-					'after' => NULL
-				]),
+				\Easy\Form\Combobox::make('~layouts.form.controls.comboboxes.combobox')
+				->name('credit_prima_casa')->caption('Accepta credit prima casa')
+				->class('form-control input-sm data-source')
+				->controlsource('credit_prima_casa')->controltype('combobox')
+				->options([-1 => 'Toate (accepta sau nu)', 0 => 'Nu accepta', 1 => 'Accepta']),
 			// [9] = etajul
 			'nr_etaj_min' => 
 				\Easy\Form\Textbox::make('~layouts.form.controls.textboxes.textbox')
