@@ -26,18 +26,14 @@
     </div>
   </div>
 </div>
-		
-	
-
-		
 
 
 
 @stop
 @section('datatable-specific-page-jquery-initializations')
-	$(document).ready(function(){
-	  $('.bxslider').bxSlider();
-	}); 
+ 
+	  var bx =  $('.bxslider').bxSlider();
+	 
 
 	$('#form-documente .box-footer').hide();
 
@@ -67,14 +63,25 @@
 				'indicatorNewTitle' : 'Fişierul nu este încărcat'
 			}
 	});
-	
+
 	upload_document.on('fileuploaded', function(event, data, previewId, index){
 		$("#file-document").fileinput('clear');
 		form.hideform();
 
-		console.log(data.files[0].name)
-		var date = new Date();
-		var _src = "{{ \URL::to('../app/storage/uploads/') }}" + '/' + "{{ $apartament->id }}" + '/' + data.files[0].name + '-' + "{{ $apartament->id }}" + '-' + date.getFullYear() + '-' + (date.getMonth() + 1) + '-' +  date.getDay()  ;
+		console.log(data)
+		var file_name = data.files[0].name;
+		var extention = file_name.split('.')[1];
+		var file_name = file_name.split('.')[0]; 
+		var MyDate = new Date();
+		var MyDateString;
+		console.log(MyDateString);
+
+
+		//MyDate.setDate(MyDate.getDate() + 20);
+
+		MyDateString =  MyDate.getFullYear() + '-' + ('0' + (MyDate.getMonth()+1)).slice(-2)   + '-' + ('0' + MyDate.getDate()).slice(-2) ;
+
+		var _src = "{{ \URL::to('../app/storage/uploads/') }}" + '/' + '{{ $apartament->id }}' + '/' + file_name + '-' + '{{ $apartament->id }}' + '-' + MyDateString + '.' + extention  ; ;
 		console.log(_src);
 		$('.bxslider').append('<li><img src = "'+ _src  +'"></li>' )
 		dt.draw( false );
@@ -89,6 +96,7 @@
         	{
         		if(result.success)
         		{
+        			bx.reloadSlider();
         			dt.draw(false);
         		}
         	}
