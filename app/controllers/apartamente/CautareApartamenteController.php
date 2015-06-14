@@ -13,7 +13,7 @@ class CautareApartamenteController extends \Datatable\DatatableController
 	{
 		$config = \Imobiliare\Grids::make('cauta-apartamente')->toIndexConfig('cauta-apartamente');
 
-		$config['caption'] = '<span class="font-blue">Cautare</span> apartamente';
+		$config['caption'] = '<span class="font-blue">Cautare</span> apartamente. Organizatia: ' . $this->current_org->denumire;
 		$this->show( $config + ['other-info' => [
 		
 			'controls' => $this->controls()
@@ -25,9 +25,9 @@ class CautareApartamenteController extends \Datatable\DatatableController
 	{
 		$config = \Imobiliare\Grids::make('cauta-apartamente')->toRowDatasetConfig('cauta-apartamente');
 		$filters = $config['source']->custom_filters();
-		// $config['source']->custom_filters( $filters + [
-		// 	'oferta-valabila' => 'v_apartamente.oferta_valabila = ' . 1 ,
-		// ]);
+		$config['source']->custom_filters( $filters + [
+			'oferta-valabila' => 'v_apartamente.id_organizatie = ' . $this->current_org->id,
+		]);
 		return $this->dataset( $config );
 	}
 

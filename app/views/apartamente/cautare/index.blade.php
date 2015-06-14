@@ -4,6 +4,7 @@
 @section('custom-styles')
 	@parent
 	{{ HTML::style('packages/daterangepicker/css/daterangepicker-bs3.css') }}
+	{{ HTML::style('apartamente/cautare.css') }}
 @stop
 
 @section('custom-scripts')
@@ -12,6 +13,8 @@
 @stop
 
 @section('datatable-specific-page-jquery-initializations')
+
+	$('.page-bar').hide();
 
 	$('#perioada').daterangepicker({
 		'format' : 'DD.MM.YYYY',

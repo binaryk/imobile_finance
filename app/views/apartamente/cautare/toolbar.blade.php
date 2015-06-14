@@ -1,4 +1,4 @@
-<div class="portlet blue box">
+<div id="form-cautare-apartamente" class="portlet blue box">
 	<div class="portlet-title">
 		<div class="caption"><i class="fa fa-search"></i> Criterii de cautare</div>
 	</div>
@@ -26,7 +26,7 @@
 			<div class="col-md-6">{{ $controls['id_tip_compartiment']->out()}}</div>
 		</div>
 	</div>
-	<div class="portlet-footer text-center">
-		<button id="test-api" class="btn">Cauta</button>
+	<div class="portlet-footer text-left">
+		<button id="test-api" class="btn bg-blue">Cauta</button>
 	</div>
 </div>

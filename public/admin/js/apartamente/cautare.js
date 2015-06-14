@@ -166,7 +166,6 @@ function CautareApartamente( parameters )
 	$('#test-api').click(function(){
 		var table = my.dt;
 		
-
 		table
 			.columns(1).search( my.oferta_valabila() ) 		 /*  1 -> oferta valabila */
 			.columns(2).search( my.adresa_exacta() )   		 /*  2 -> adresa exacta   */
