@@ -15,6 +15,23 @@ class ApartamentPhotosController extends \Datatable\DatatableController
 		}
 
 		$config = \Imobiliare\Grids::make($id)->toIndexConfig($id);
+		$config['breadcrumbs'] = [
+		    [
+		    'name' => 'Proprietari',
+		    'url'  => "proprietar-index",
+		    'ids' => ''
+		    ],
+		    [
+		    'name' => 'Apartamente',
+		    'url'  => "apartamente_proprietar" ,
+		    'ids' => [ 'id' => 'apartamente_proprietar', 'id_proprietar' =>$apartament->id_proprietar_pf ]
+		    ],
+		    [
+		    'name' => 'Poze',
+		    'url'  => "apartament_photo" ,
+		    'ids' => [ 'id' => 'apartament_photo', 'id_apartament' => $id_apartament ]
+		    ] 
+		];
 		// $config['caption'] .= ' pentru apartamentul <span class="text-blue">' . $Imobiliare->nume . '</span>';
 		$photos = \Imobiliare\Nomenclatoare\ApartamentPhotos::where('id_apartament',$id_apartament)->select('file_name')->get()->toArray();
 		$out_photos = [];
@@ -22,8 +39,6 @@ class ApartamentPhotosController extends \Datatable\DatatableController
 			$test = explode( '/', $photos[$key]['file_name']);
 			$out_photos[] = \URL::to('../app/storage/uploads/') . '/' . $id_apartament . '/' . end( $test );
 		}
- 
-//app_path() .
 		$config['row-source'] .= '/' . $id_apartament;
 		$this->show( $config + ['other-info' => ['apartament' => $apartament, 'photos' => $out_photos]]);
 	}
@@ -32,7 +47,7 @@ class ApartamentPhotosController extends \Datatable\DatatableController
 	{
 		$config = \Imobiliare\Grids::make($id)->toRowDatasetConfig($id);
 		$filters = $config['source']->custom_filters();
-		$config['source']->custom_filters( $filters + ['apartament' => 'id_apartament = ' . $id_apartament] );
+		$config['source']->custom_filters( $filters + ['apartament' => 'id_apartament = ' . $id_apartament, 'deleted2' => 'uploaded_photos.deleted_at is null'] );
 		return $this->dataset( $config );
 	}
 
