@@ -11,13 +11,22 @@ class TipEtajsTableSeeder extends Seeder {
 		$faker = Faker::create();
 		 
 		Imobiliare\Nomenclator\TipEtaj::insert([
-			['nume' => '1'],
-			['nume' => '2'],
-			['nume' => '3'],
-			['nume' => '4'],
-			['nume' => '5'],
-			['nume' => '6'],
-			['nume' => '7'],
+			['nume' => 'Nespecificat'], 
+			['nume' => 'Demisol'], 
+			['nume' => 'Parter'], 
+			['nume' => 'Etajul 1'], 
+			['nume' => 'Etajul 2'], 
+			['nume' => 'Etajul 3'], 
+			['nume' => 'Etajul 4'], 
+			['nume' => 'Etajul 5'], 
+			['nume' => 'Etajul 6'], 
+			['nume' => 'Etajul 7'], 
+			['nume' => 'Etajul 8'], 
+			['nume' => 'Etajul 9'], 
+			['nume' => 'Etajul 10'], 
+			['nume' => 'Etaj intermediar'], 
+			['nume' => 'Ultimul etaj'], 
+			['nume' => 'Mansarda'],  
 		]);
 
 	}

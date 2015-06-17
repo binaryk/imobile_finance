@@ -37,6 +37,6 @@ class TipFinisajeInterioare extends \Eloquent {
 
     public static function toCombobox()
     {
-        return [0 => ' -- Selectaţi tip finisaj --'] + self::orderBy('nume')->lists('nume', 'id');
+        return ['' => ''] + self::orderBy('nume')->lists('nume', 'id');
     }
 }

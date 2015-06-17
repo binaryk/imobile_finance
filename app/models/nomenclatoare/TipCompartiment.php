@@ -42,6 +42,6 @@ class TipCompartiment extends \Eloquent
 
     public static function toCombobox()
     {
-        return [0 => ' -- Selectaţi tip compartiment --'] + self::orderBy('nume')->lists('nume', 'id');
+        return ['' => ''] + self::orderBy('nume')->lists('nume', 'id');
     }
 }

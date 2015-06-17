@@ -10,11 +10,35 @@ class CartiersTableSeeder extends Seeder {
 		DB::table('cartiere')->delete();
 		$faker = Faker::create();
 		Imobiliare\Cartier::insert([
+			['nume' => 'Andrei Muresanu'],
+			['nume' => 'Apahida'],
+			['nume' => 'Baciu'],
+			['nume' => 'Baisoara'],
+			['nume' => 'Becas'],
+			['nume' => 'Belis'],
+			['nume' => 'Borhanci'],
+			['nume' => 'Bulgaria'],
+			['nume' => 'Buna-Ziua'],
+			['nume' => 'Centru'],
+			['nume' => 'Chinteni'],
+			['nume' => 'Dambul-Rotund'],
+			['nume' => 'Europa'],
+			['nume' => 'Faget'],
+			['nume' => 'Feleacu'],
+			['nume' => 'Floresti'],
+			['nume' => 'Gara'],
+			['nume' => 'Gheorgheni'],
+			['nume' => 'Gilau'],
 			['nume' => 'Grigorescu'],
-			['nume' => 'Gheorghieni'],
-			['nume' => 'Buna ziua'],
+			['nume' => 'Gruia'],
+			['nume' => 'Iris'],
+			['nume' => 'Jucu'],
+			['nume' => 'Manastur'],
 			['nume' => 'Marasti'],
-			['nume' => 'Observator'],
+			['nume' => 'Plopilor'],
+			['nume' => 'Someseni'],
+			['nume' => 'Sopor'],
+			['nume' => 'Zorilor'] 
 		]);
 	}
 

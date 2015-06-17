@@ -3,12 +3,18 @@ var ComponentsPickers = function () {
     var handleDatePickers = function () {
 
         if (jQuery().datepicker) {
-            $('.date-picker').datepicker({
+            $('#ultima_actualizare').datepicker(
+            {
+                language: "ro", 
+                format: "dd.mm.yyyy", 
+                autoclose: true,
                 rtl: Metronic.isRTL(),
                 orientation: "left",
-                autoclose: true
-            });
-            //$('body').removeClass("modal-open"); // fix bug when inline picker is used in modal
+                autoclose: true,
+                todayBtn: 'linked',
+                clearBtn: true 
+            }).on('changeDate', function(e)
+            {});
         }
 
         /* Workaround to restrict daterange past date select: http://stackoverflow.com/questions/11933173/how-to-restrict-the-selectable-date-ranges-in-bootstrap-datepicker */
@@ -212,11 +218,11 @@ var ComponentsPickers = function () {
         //main function to initiate the module
         init: function () {
             handleDatePickers();
-            handleTimePickers();
-            handleDatetimePicker();
-            handleDateRangePickers();
-            handleClockfaceTimePickers();
-            handleColorPicker();
+            // handleTimePickers();
+            // handleDatetimePicker();
+            // handleDateRangePickers();
+            // handleClockfaceTimePickers();
+            // handleColorPicker();
         }
     };
 

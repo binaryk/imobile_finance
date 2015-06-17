@@ -1,2 +1,3 @@
-<?php $name_ = explode('/', $record->photo); $name_ = end($name_); ?>
-<img src="{{ \URL::to('../app/storage/uploads/'.$record->id.'/'. $name_) }}">
+@if(isset ($record->photo) )
+<img src="{{(string) Image::make($record->photo)->encode('data-url')}}" style="width:64px"/>
+@endif

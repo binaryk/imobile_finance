@@ -13,7 +13,8 @@
 		"edvinaskrucas/notification"  : "3.*",
 		"cartalyst/sentry": "2.1.*",
 		"laracasts/validation": "~1.0",
-		"baum/baum": "~1.0"
+		"baum/baum": "~1.0",
+		"intervention/image"          : "2.*"
 	},
 	"require-dev": {
     	"way/generators": "~2.0"

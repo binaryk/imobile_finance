@@ -44,6 +44,7 @@ return [
 		'Laracasts\Validation\ValidationServiceProvider',
 		'basicAuth\Repo\BackendServiceProvider',
 		'Baum\BaumServiceProvider',
+		'Intervention\Image\ImageServiceProvider',
 	],
 	'manifest' => storage_path() . '/meta',
 	'aliases' => [
@@ -90,6 +91,7 @@ return [
 		'Debugbar'          => 'Barryvdh\Debugbar\Facade',
 		'Twig'              => 'TwigBridge\Facade\Twig',
 		'Sentry' => 'Cartalyst\Sentry\Facades\Laravel\Sentry',
+		'Image'           => 'Intervention\Image\Facades\Image',
 	],
 
 ];

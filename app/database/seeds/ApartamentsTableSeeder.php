@@ -47,8 +47,8 @@ class ApartamentsTableSeeder extends Seeder {
 				'nr_bai'		=> $faker->numberBetween(1, 3),
 				'detalii_bacoane'		=> $faker->text(),
 				// 'id_sistem_incalzire'		=> $faker->
-				'are_termopane'		=> $faker->boolean($chanceOfGettingTrue = 20),
-				'parcare'		=> $faker->text(), 
+				'termopan'		=> $faker->boolean($chanceOfGettingTrue = 20),
+				'parcare'		=> $faker->boolean($chanceOfGettingTrue = 20),
 				'zona_aproximativa'		=> $faker->address(),
 				'adresa_exacta'		=> $faker->address(),
 				'detalii'		=> $faker->text(),

@@ -1,11 +1,16 @@
 <?php
+
 namespace Imobiliare\Nomenclator;
 
-class TipEtaj extends \Eloquent {
-	protected $fillable = ['nume'];
-	protected $table    = 'tip_etaje';
+use \Illuminate\Database\Eloquent\SoftDeletingTrait;
 
-	public static function getRecord( $id )
+class TipNrBalcoane extends \Eloquent
+{
+    use SoftDeletingTrait;
+    protected $table = 'tip_nr_balcoane';
+    protected $fillable = ['nume'];
+
+    public static function getRecord( $id )
     {
         return self::find($id);
     }
@@ -37,6 +42,6 @@ class TipEtaj extends \Eloquent {
 
     public static function toCombobox()
     {
-        return ['' => ''] + self::orderBy('nume')->lists('nume', 'id');
+        return [ '' => ''] + self::orderBy('nume')->lists('nume', 'id');
     }
 }

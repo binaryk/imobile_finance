@@ -21,19 +21,27 @@ class ApartamenteProprietarRecord extends \Imobiliare\GridsRecord
                                 admin/css/dt/toolbar.css, 
                                 admin/css/dt/dtform.css, 
                                 assets/global/plugins/icheck/skins/all.css,
-                                assets/global/plugins/bootstrap-datepicker/css/datepicker3.css
+                                assets/global/plugins/bootstrap-datepicker/css/datepicker3.css,
+                                assets/global/plugins/bootstrap-select/bootstrap-select.min.css,
+                                assets/global/plugins/select2/select2.css,
+                                assets/global/css/plugins.css
                                  ';
         $this->js             = 'admin/js/libraries/form/dtform.js,  
                                  assets/global/plugins/icheck/icheck.min.js, 
                                  assets/admin/pages/scripts/form-icheck.js,
-                                 assets/global/plugins/bootstrap-datepicker/js/bootstrap-datepicker.js 
+                                 assets/global/plugins/bootstrap-datepicker/js/bootstrap-datepicker.js,
+                                 assets/global/plugins/bootstrap-select/bootstrap-select.min.js,
+                                 assets/global/plugins/select2/select2.min.js,
+                                 assets/global/plugins/bootstrap-datetimepicker/js/bootstrap-datetimepicker.min.js,
+                                 assets/admin/pages/scripts/components-pickers.js
                                  ';
         $this->row_source     = 'apartamente_proprietar-row-source';
         $this->rows_source_sql              = 'SELECT
                                                     apartamente.*,
                                                     cartiere.nume AS cartier,
                                                     tip_finisaje_interioare.nume AS finisaje_interioare,
-                                                    uploaded_photos.file_name AS photo
+                                                    uploaded_photos.file_name AS photo,
+                                                    uploaded_photos.file_url
                                                 FROM apartamente
                                                 LEFT JOIN cartiere
                                                 ON cartiere.id = apartamente.id_cartier 

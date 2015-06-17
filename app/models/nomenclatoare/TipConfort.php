@@ -1,11 +1,16 @@
 <?php
+
 namespace Imobiliare\Nomenclator;
 
-class TipEtaj extends \Eloquent {
-	protected $fillable = ['nume'];
-	protected $table    = 'tip_etaje';
+use \Illuminate\Database\Eloquent\SoftDeletingTrait;
 
-	public static function getRecord( $id )
+class TipConfort extends \Eloquent
+{
+    use SoftDeletingTrait;
+    protected $table = 'tip_confort';
+    protected $fillable = ['nume'];
+
+    public static function getRecord( $id )
     {
         return self::find($id);
     }
