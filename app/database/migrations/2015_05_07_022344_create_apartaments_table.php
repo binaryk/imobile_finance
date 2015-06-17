@@ -48,6 +48,7 @@ class CreateApartamentsTable extends Migration {
 			$table->tinyinteger('has_telefon');
 			$table->tinyinteger('loc_pivnita');
 			$table->tinyinteger('parcare'); 
+			$table->tinyinteger('negociabil'); 
 			$table->integer('nr_etaj');
 			$table->integer('nr_balcoane');
 			$table->integer('tip_acoperis');

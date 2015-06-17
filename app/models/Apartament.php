@@ -60,6 +60,7 @@ class Apartament extends \Eloquent {
 	'adresa_exacta',
 	'detalii',
 	'detalii_private',
+	'negociabil'
 	];
 
 	public static function getRecord( $id )
