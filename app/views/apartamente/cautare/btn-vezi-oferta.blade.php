@@ -1,0 +1,1 @@
+<a href="{{ URL::route('apartament-detalii-oferta', ['id' => $record->id])}}" class="btn btn-success btn-xs">Oferta</a>

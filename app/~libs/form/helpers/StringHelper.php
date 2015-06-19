@@ -25,6 +25,6 @@ class StringHelper
 	public static function Checked( $value )
 	{
 		$value = (bool) $value;
-		return \HTML::image( 'admin/img/symbols/' . ($value ? '' : 'un') . 'check.png' );
+		return \HTML::image( \URL::to('/') . '/admin/img/symbols/' . ($value ? '' : 'un') . 'check.png' );
 	}
 }

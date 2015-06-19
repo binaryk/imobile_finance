@@ -74,7 +74,8 @@ class Route
 
 
 		->add('get', 'cautare-apartamente-index', 'cautare-apartamente', 'CautareApartamenteController@index', 'Apartamente') 
-		->add('get', 'apartamente-cautare-row-source', 'cautare-apartamente-row-source', 'CautareApartamenteController@rows', 'Apartamente')
+		->add('get', 'apartamente-cautare-row-source', 'cautare-apartamente-row-source/{id}', 'CautareApartamenteController@rows', 'Apartamente')
+		->add('get', 'apartament-detalii-oferta', 'apartament-detalii-oferta/{id}', 'CautareApartamenteController@showDetails', 'Apartamente')
 		;
 	}
 

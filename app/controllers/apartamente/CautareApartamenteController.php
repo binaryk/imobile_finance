@@ -30,6 +30,19 @@ class CautareApartamenteController extends \Datatable\DatatableController
 		return $this->dataset( $config );
 	}
 
+	public function showDetails($id)
+	{
+		$apartament = \Imobiliare\Apartament::find($id);
+		if( ! $apartament )
+		{
+			return \Redirect::route('cautare-apartamente-index');
+		}
+		$this->layout->content = \View::make('apartamente.detalii.index')->with([
+			'record'   		=> $apartament,
+		]);
+	}
+
+
 	protected function controls()
 	{
 		// cum se face resetarea filtrarii???

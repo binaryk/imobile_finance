@@ -86,7 +86,8 @@ class GridsRecord
 
 	public function source()
 	{
-		return
+		
+		$result =
 			\Datatable\Source::make()->type(\Datatable\Source::SOURCE_SQL)
 			->length(\Input::get('length') ? \Input::get('length') : $this->display_length)
 			->start(\Input::get('start') ? \Input::get('start') : $this->display_start)
@@ -100,8 +101,12 @@ class GridsRecord
 			->orderables( $this->fields['orderables'] )
 			->cells($this->cells())
 			->custom_filters( $this->filters )
-			->columns( \Input::get('columns') ? \Input::get('columns') : NULL)
 		;
+		if(\Input::get('columns'))
+		{
+			$result->columns(\Input::get('columns'));
+		}
+		return $result;
 	}
 
 }
