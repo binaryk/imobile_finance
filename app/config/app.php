@@ -45,6 +45,7 @@ return [
 		'basicAuth\Repo\BackendServiceProvider',
 		'Baum\BaumServiceProvider',
 		'Intervention\Image\ImageServiceProvider',
+		'Thujohn\Pdf\PdfServiceProvider',
 	],
 	'manifest' => storage_path() . '/meta',
 	'aliases' => [
@@ -92,6 +93,7 @@ return [
 		'Twig'              => 'TwigBridge\Facade\Twig',
 		'Sentry' => 'Cartalyst\Sentry\Facades\Laravel\Sentry',
 		'Image'           => 'Intervention\Image\Facades\Image',
+		'PDF' 				=> 'Thujohn\Pdf\PdfFacade',
 	],
 
 ];

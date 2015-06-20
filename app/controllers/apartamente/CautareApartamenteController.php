@@ -39,9 +39,48 @@ class CautareApartamenteController extends \Datatable\DatatableController
 		}
 		$this->layout->content = \View::make('apartamente.detalii.index')->with([
 			'record'   		=> $apartament,
+			'sections'      => [
+				'tab1' => [
+					'caption' => 'Localizare',
+					'view' => '1'
+				],
+				'tab2' => [
+					'caption' => 'Clădire şi imobil',
+					'view' => '2'
+				],
+				'tab3' => [
+					'caption' => '333',
+					'view' => '3'
+				],
+				'tab4' => [
+					'caption' => 'Alte informaţii',
+					'view' => '4'
+				]
+			]
 		]);
 	}
 
+	public function downloadPDF($id)
+	{
+		$apartament = \Imobiliare\Apartament::find($id);
+		if( ! $apartament )
+		{
+			return \Redirect::route('cautare-apartamente-index');
+		}
+		$pdf = new CreateOfertaPdf('P', 'A4', 'D', $apartament);
+		$pdf->Output();
+	}
+
+	public function openPDF($id)
+	{
+		$apartament = \Imobiliare\Apartament::find($id);
+		if( ! $apartament )
+		{
+			return \Redirect::route('cautare-apartamente-index');
+		}
+		$pdf = new CreateOfertaPdf('P', 'A4', 'I', $apartament);
+		$pdf->Output();
+	}
 
 	protected function controls()
 	{

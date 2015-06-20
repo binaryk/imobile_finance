@@ -20,6 +20,16 @@ function _toDate($value, $format = 'd.m.Y', $default = '-')
 	return Carbon\Carbon::createFromFormat('Y-m-d', $value)->format($format);
 }
 
+function _toDateTime($value, $format = 'd.m.Y H:i:s', $default = '-')
+{
+	if( empty($value) )
+	{
+		return $default;
+	}
+	$value = substr($value, 0, 19);
+	return Carbon\Carbon::createFromFormat('Y-m-d H:i:s', $value)->format($format);
+}
+
 function _toFileSize($size, $precision = 2)
 {
     $base     = log($size, 1024);

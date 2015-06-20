@@ -121,4 +121,70 @@ class Apartament extends \Eloquent {
     {
         return [0 => ' -- Selectaţi apartamentul --'] + self::orderBy('nume')->lists('nume', 'id');
     }
+
+    /**
+     * Accesors
+     **/
+    public function getNumejudetAttribute()
+    {
+    	return $this->judet ? $this->judet->nume : NULL;
+    }
+
+    public function getNumelocalitateAttribute()
+    {
+    	return $this->localitate ? $this->localitate->nume : NULL;
+    }
+
+    public function getNumecartierAttribute()
+    {
+    	return $this->cartier ? $this->cartier->nume : NULL;
+    }
+
+    public function getNumetipetajAttribute()
+    {
+    	return $this->tipetaj ? $this->tipetaj->nume : NULL;
+    }
+
+    public function getNumetipbalconAttribute()
+    {
+    	return $this->tipbalcon ? $this->tipbalcon->nume : NULL;
+    }
+
+    public function getNumetipfinisareAttribute()
+    {
+    	return $this->tipfinisare ? $this->tipfinisare->nume : NULL;
+    }
+
+    /**
+     * Relations
+     **/
+    public function Judet()
+    {
+        return $this->belongsTo('\Imobiliare\Nomenclator\Judet', 'id_judet');
+    }
+
+	public function Localitate()
+    {
+        return $this->belongsTo('\Imobiliare\Nomenclator\Localitate', 'id_localitate');
+    }
+
+    public function Cartier()
+    {
+        return $this->belongsTo('\Imobiliare\Cartier', 'id_cartier');
+    }
+
+    public function Tipetaj()
+    {
+        return $this->belongsTo('Imobiliare\Nomenclator\TipEtaj', 'nr_etaj');
+    }
+
+    public function Tipbalcon()
+    {
+        return $this->belongsTo('\Imobiliare\Nomenclator\TipNrBalcoane', 'nr_balcoane');
+    }
+
+    public function Tipfinisare()
+    {
+        return $this->belongsTo('\Imobiliare\Nomenclator\TipFinisajeInterioare', 'id_tip_finisaje_interioare');
+    }
 }
