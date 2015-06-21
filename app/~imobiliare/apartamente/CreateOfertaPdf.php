@@ -44,6 +44,7 @@ class CreateOfertaPdf
 		$logo_file = str_replace('\\', '/', storage_path() . '/app/apartamente/images/logo.png');
 		$this->pdf->Pdf()->Image($logo_file, 10, 0, 70, 0, 'PNG', '', 'T', false, 308, '', false, false, 0, false, false, false);
 		$this->pdf->Cell()->text('OFERTE IMOBILIARE')->top(13)->left(75)->out()->reset('top')->reset('left');
+		$this->pdf->cell()->text('Data ofertei: ' . \Carbon\Carbon::now()->format('d.m.Y'))->top(13)->left(130)->width(70)->halign('R')->out()->reset('top')->reset('left');
 	}
 
 	protected function outnume()
@@ -187,14 +188,29 @@ class CreateOfertaPdf
 			'9' => ['caption' => 'Compartimentare: ', 'source' => 'compartimentare'],
 		   '10' => ['caption' => 'Număr de băi: ', 'source' => 'bai'],
 		   '11' => ['caption' => 'Număr de camere: ', 'source' => 'camere'],
-		   '12' => ['caption' => 'Detalii: ', 'source' => 'detaliiApartament'],
+		   // '12' => ['caption' => 'Detalii: ', 'source' => 'detaliiApartament'],
 		];
 
 		foreach($rows as $i => $row)
 		{
+			$this->pdf->Pdf()->SetFont('freeserif', 'B', 12, '', false);
 			$this->pdf->Cell()->text( $row['caption'] )->width(50)->border('')->halign('R')->linefeed(0)->out();
+			$this->pdf->Pdf()->SetFont('freeserif', '', 12, '', false);
 			$this->pdf->Cell()->text( $this->{$row['source']}() )->width(140)->border('')->halign('L')->linefeed(1)->out();
 		}
+
+		if( $detalii = $this->detalii()) // afisarea campului detalii
+		{
+			$this->pdf->Pdf()->ln();
+			$this->pdf->Pdf()->ln();
+			$this->pdf->Cell()->text($detalii)->width(190)->border('')->halign('C')->out();
+		}
+	}
+
+	protected function outfooter()
+	{
+		$this->pdf->Pdf()->SetXY(10, -25);
+		$this->pdf->Cell()->text('Pentru informaţii suplimentare sau alte oferte imobiliare mă puteţi contacta la telefon 0744332116, pe email ioana.biris@creditfin.ro sau la sediul nostru pe str. Constantin Brâncuşi, nr. 85, etaj 1, Cluj-Napoca')->width(190)->border('T')->halign('C')->out();
 	}
 
 	protected function createpdf()
@@ -203,6 +219,7 @@ class CreateOfertaPdf
 		$this->outnume();
 		$this->outphotos();
 		$this->outdetails();
+		$this->outfooter();
 	}
 
 	public function output()
