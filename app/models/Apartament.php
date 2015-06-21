@@ -155,6 +155,16 @@ class Apartament extends \Eloquent {
     	return $this->tipfinisare ? $this->tipfinisare->nume : NULL;
     }
 
+    public function getNumetipgarajAttribute()
+    {
+    	return $this->tipgaraj ? $this->tipgaraj->nume : NULL;
+    }
+
+    public function getNumetipcompartimentareAttribute()
+    {
+    	return $this->tipcompartimentare ? $this->tipcompartimentare->nume : NULL;
+    }
+
     /**
      * Relations
      **/
@@ -186,5 +196,15 @@ class Apartament extends \Eloquent {
     public function Tipfinisare()
     {
         return $this->belongsTo('\Imobiliare\Nomenclator\TipFinisajeInterioare', 'id_tip_finisaje_interioare');
+    }
+
+    public function Tipgaraj()
+    {
+        return $this->belongsTo('\Imobiliare\Nomenclator\TipGaraj', 'id_tip_garaj');
+    }
+
+    public function Tipcompartimentare()
+    {
+        return $this->belongsTo('\Imobiliare\Nomenclator\TipCompartiment', 'id_tip_compartiment');
     }
 }

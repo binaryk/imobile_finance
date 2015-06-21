@@ -118,6 +118,11 @@ class CreateOfertaPdf
 		]);
 	}
 
+	protected function suprafataApartament()
+	{
+		return ($s = $this->suprafata()) ? _toFloat($s) . ' mp' : '-';
+	}
+
 	protected function locparcare()
 	{
 		return $this->parcare() ? 'DA' : 'NU';
@@ -138,20 +143,51 @@ class CreateOfertaPdf
 		return $this->apartament->numetipfinisare ? $this->apartament->numetipfinisare : '-';
 	}
 
+	protected function garaj()
+	{
+		return $this->apartament->numetipgaraj ? $this->apartament->numetipgaraj : '-';
+	}
+
+	protected function centralatermica()
+	{
+		return $this->centrala_termica() ? 'DA' : 'NU';
+	}
+
+	protected function compartimentare()
+	{
+		return $this->apartament->numetipcompartimentare ? $this->apartament->numetipcompartimentare : '-';
+	}
+
+	protected function bai()
+	{
+		return ($s = $this->nr_bai()) ? _toInt($s) : '-';
+	}
+
+	protected function camere()
+	{
+		return ($s = $this->nr_camere()) ? _toInt($s) : '-';
+	}
+
 	protected function outdetails()
 	{
 		$rows = [
 			'1' => ['caption' => 'Adresa: ', 'source' => 'adresa'],
-			'2' => ['caption' => 'Loc parcare: ', 'source' => 'locparcare'],
-			'3' => ['caption' => 'Etaj: ', 'source' => 'etaj'],
-			'4' => ['caption' => 'Număr de balcoane: ', 'source' => 'balcoane'],
-			'5' => ['caption' => 'Grad de finisare: ', 'source' => 'finisare'],
+			'2' => ['caption' => 'Suprafaţa:', 'source' => 'suprafataApartament'],
+			'3' => ['caption' => 'Loc parcare: ', 'source' => 'locparcare'],
+			'4' => ['caption' => 'Etaj: ', 'source' => 'etaj'],
+			'5' => ['caption' => 'Număr de balcoane: ', 'source' => 'balcoane'],
+			'6' => ['caption' => 'Grad de finisare: ', 'source' => 'finisare'],
+			'7' => ['caption' => 'Garaj: ', 'source' => 'garaj'],
+			'8' => ['caption' => 'Centrală termică: ', 'source' => 'centralatermica'],
+			'9' => ['caption' => 'Compartimentare: ', 'source' => 'compartimentare'],
+		   '10' => ['caption' => 'Număr de băi: ', 'source' => 'bai'],
+		   '11' => ['caption' => 'Număr de camere: ', 'source' => 'camere'],
 		];
 
 		foreach($rows as $i => $row)
 		{
-			$this->pdf->Cell()->text( $row['caption'] )->width(40)->border('')->halign('R')->linefeed(0)->out();
-			$this->pdf->Cell()->text( $this->{$row['source']}() )->width(150)->border('')->halign('L')->linefeed(1)->out();
+			$this->pdf->Cell()->text( $row['caption'] )->width(50)->border('')->halign('R')->linefeed(0)->out();
+			$this->pdf->Cell()->text( $this->{$row['source']}() )->width(140)->border('')->halign('L')->linefeed(1)->out();
 		}
 	}
 
