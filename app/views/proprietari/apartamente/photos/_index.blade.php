@@ -1,42 +1,33 @@
 @extends('~layouts.datatable.index')
 @section('content')
-@parent
-<!-- Button trigger modal -->
-
-
-<!-- Modal -->
-<div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
-  <div class="modal-dialog">
-    <div class="modal-content">
-      <div class="modal-header">
-        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-        <h4 class="modal-title" id="myModalLabel">Poze apartament</h4>
-      </div>
-      <div class="modal-body">
-        <ul class="bxslider">
-			@foreach($photos as $key => $photo)
-				<li> <img src="{{ $photo }}"> </li> 
-			@endforeach 
-		</ul>
-      </div>
-      <div class="modal-footer">
-        <button type="button" class="btn btn-default" data-dismiss="modal">Inchide</button> 
-      </div>
-    </div>
-  </div>
-</div>
+@parent 
  
 
 @stop
 @section('datatable-specific-page-jquery-initializations')
+		var photos = [];
+	@foreach($photos as $key => $photo)
+		photos.push("{{ $photo }}");
+		console.log(photos);
+	@endforeach 
+
+
+	$('.action-slider').click(function(){ 
+		var carouselOptions = {
+		    hidePageScrollbars: false,
+		    toggleControlsOnReturn: false,
+		    toggleSlideshowOnSpace: false,
+		    enableKeyboardNavigation: false,
+		    closeOnEscape: false,
+		    closeOnSlideClick: true,
+		    closeOnSwipeUpOrDown: false,
+		    disableScroll: false,
+		    startSlideshow: true
+		};
+		var gallery = blueimp.Gallery(photos); 
+	})
  
-	  var bx =  $('.bxslider').bxSlider();
-	//$('#modal').click(function(e){
-		//if(document.modificari){
-			// location.reload();
-		//	e.preventdefault();
-	//	}
-	//})
+
 	document.modificari = false;
 	$('#form-documente .box-footer').hide();
 

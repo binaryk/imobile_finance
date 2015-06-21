@@ -32,6 +32,10 @@ class ApartamentPhotosController extends \Datatable\DatatableController
 		    'ids' => [ 'id' => 'apartament_photo', 'id_apartament' => $id_apartament ]
 		    ] 
 		];
+		$config['right_menu'] = [
+			['caption' => 'Adaugă', 'class' => 'action-insert-record'],
+			['caption' => 'Vezi poze', 'class' => 'action-slider'],
+		];
 		// $config['caption'] .= ' pentru apartamentul <span class="text-blue">' . $Imobiliare->nume . '</span>';
 		$photos = \Imobiliare\Nomenclatoare\ApartamentPhotos::where('id_apartament',$id_apartament)->select('file_name')->get()->toArray();
 		$out_photos = [];

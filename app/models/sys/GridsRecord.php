@@ -28,7 +28,7 @@ class GridsRecord
 	public $count_total_records_sql     = '';
 	public $filters                     = [];
 	public $breadcrumbs 			 	= [];
-	public $right_menu 			 		= [['caption' => 'Adaugă', 'class' => 'action-insert-record']];
+	public $right_menu 			 		= [ ['caption' => 'Adaugă', 'class' => 'action-insert-record'] ];
 
 	public function __construct($id)
 	{
