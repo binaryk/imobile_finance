@@ -35,9 +35,9 @@ class Proprietari extends \Processing\Form\Form
 		$this->addControl(
 			\Easy\Form\Textbox::make('~layouts.form.controls.textboxes.textbox')
 			->name('nume')
-			->caption('Nume proprietar')
-			->placeholder('Nume proprietar')
+			->caption('Nume proprietar') 
 			->class('form-control  data-source')
+			->value('Nume')
 			->controlsource('nume')
 			->controltype('textbox')
 			->maxlength(255)
@@ -45,8 +45,7 @@ class Proprietari extends \Processing\Form\Form
 		->addControl(
 			\Easy\Form\Textbox::make('~layouts.form.controls.textboxes.textbox')
 			->name('telefon')
-			->caption('Telefon proprietar')
-			->placeholder('Telefon proprietar')
+			->caption('Telefon proprietar') 
 			->class('form-control  data-source')
 			->controlsource('telefon')
 			->controltype('textbox')

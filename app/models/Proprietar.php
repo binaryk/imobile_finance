@@ -22,6 +22,9 @@ class Proprietar extends \Eloquent
     public static function createRecord($data )
     {
         $data['id_organizatie'] = $data['id_organizatie'];  
+        if( $data['nume'] == ''){
+            $data['nume'] = 'Nume proprietar';
+        }
         return self::create($data);
     }
 
@@ -48,5 +51,6 @@ class Proprietar extends \Eloquent
     public static function toCombobox()
     {
         return [0 => ' -- Selectaţi proprietarul --'] + self::orderBy('nume')->lists('nume', 'id');
-    }
+    }   
+     
 }

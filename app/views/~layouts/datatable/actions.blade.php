@@ -1,4 +1,4 @@
-<div class="btn-group">
+<div class="btn-group dropdown">
     <a class="btn default yellow-stripe" href="#" data-toggle="dropdown">
         <i class="fa fa-gear"></i>
             <span class="hidden-480">

@@ -14,7 +14,7 @@ class HomeController extends BaseController {
 	|	Route::get('/', 'HomeController@showWelcome');
 	|
 	*/
-	protected $title = 'Bine ati venit pe aplicatia Imobiliare';
+	protected $caption = 'Bine ati venit pe aplicatia Imobiliare';
 	protected $small = 'aici veti putea gestiona afacerea dvs';
 
 	public function showWelcome()
@@ -22,25 +22,31 @@ class HomeController extends BaseController {
 		$links = [
 			'my-profile' => [
 					'bg' => 'blue-madison',
-					'header'=> 'Profil',
-					'title'	=> 'Profilul meu',
+					'header'=> 'Apartamente',
+					'title'	=> 'Apartamente',
 					'icon'  => 'fa-user',
-					'url'	=> URL::route('home')
+					'url'	=> URL::route('apartamente_proprietar')
 				],
 			'my-imobils' => [
 					'bg' => 'red-intense',
-					'header'=> 'Imobile',
-					'title'	=> 'Imobilele mele',
+					'header'=> 'Cautare&Ofertare',
+					'title'	=> 'Cautare&Ofertare',
 					'icon'  => 'fa-home',
-					'url'	=> URL::route('home')
+					'url'	=> URL::route('cautare-apartamente-index')
 				]
 		];
 
 		return View::make('hello')->with([
-			'title'       => $this->title,
+			'caption'       => $this->caption,
 			'small_title' => $this->small,
 			'links'       => $links 
 			]);
+	}
+
+	public function lockScreen()
+	{
+		$user = $this->current_user;
+		return View::make('account.lock')->with(compact('user'));
 	}
 
 }

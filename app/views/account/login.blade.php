@@ -26,10 +26,8 @@
 <body class="login">
 <div class="menu-toggler sidebar-toggler">
 </div>
-<div class="logo">
-	<a href="index.html">
-	{{ HTML::image("assets/admin/layout/img/logo-big.png") }}
-	</a>
+<div class="logo"> 
+			{{HTML::image("assets/admin/layout/img/logo_creditfin.png",null, ['width' => '197px', 'height' => '35px', 'style' => 'margin-bottom: -8px; border-radius: 5px;']) }}
 </div>
 <!-- END LOGO -->
 <!-- BEGIN LOGIN -->

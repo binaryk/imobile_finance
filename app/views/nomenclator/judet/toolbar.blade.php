@@ -1,1 +1,0 @@
-<a class="btn btn-lg blue action-insert-record"><i class="fa fa-plus"></i>Adaugă</a>

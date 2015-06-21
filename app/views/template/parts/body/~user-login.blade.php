@@ -1,36 +1,14 @@
 <!-- DOC: Apply "dropdown-dark" class after below "dropdown-extended" to change the dropdown styte -->
 <li class="dropdown dropdown-user">
 	<a href="javascript:;" class="dropdown-toggle" data-toggle="dropdown" data-hover="dropdown" data-close-others="true">
-	{{HTML::image("assets/admin/layout/img/avatar3_small.jpg") }}
+	{{HTML::image("assets/admin/layout/img/logo_creditfin.png",null, ['width' => '30px', 'height' => '29px']) }}
 	<span class="username username-hide-on-mobile">
-	Nick </span>
+	CreditFin </span>
 	<i class="fa fa-angle-down"></i>
 	</a>
-	<ul class="dropdown-menu dropdown-menu-default">
+	<ul class="dropdown-menu dropdown-menu-default"> 
 		<li>
-			<a href="extra_profile.html">
-			<i class="icon-user"></i> My Profile </a>
-		</li>
-		<li>
-			<a href="page_calendar.html">
-			<i class="icon-calendar"></i> My Calendar </a>
-		</li>
-		<li>
-			<a href="inbox.html">
-			<i class="icon-envelope-open"></i> My Inbox <span class="badge badge-danger">
-			3 </span>
-			</a>
-		</li>
-		<li>
-			<a href="page_todo.html">
-			<i class="icon-rocket"></i> My Tasks <span class="badge badge-success">
-			7 </span>
-			</a>
-		</li>
-		<li class="divider">
-		</li>
-		<li>
-			<a href="extra_lock.html">
+			<a href="{{ URL::route('lock') }}">
 			<i class="icon-lock"></i> Lock Screen </a>
 		</li>
 		<li>

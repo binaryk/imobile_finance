@@ -6,6 +6,7 @@ function DTFORM(formid, loadformurl, model, doactionurl, dt)
 	this.classActionClose    = '.btn-close-form';
 	this.classDoButton       = '.btn-do-action';
 	this.classSourceControls = '.data-source';
+	this.inputTypeCheckbox   = '.input_label'
 	this.idMessageBox        = '#dt-action-message';
 	this.messageBoxHtml      = '<div  class="alert alert-:type: alert-dismissable"><button type="button" class="close" data-dismiss="alert" aria-hidden="true">×</button><h4><i class="icon fa fa-:icon:"></i>:caption:</h4>:message:</div>';
 
@@ -111,7 +112,7 @@ function DTFORM(formid, loadformurl, model, doactionurl, dt)
 				var formgroup = $(this).closest('.form-group')
 				switch($(this).data('control-type'))
 				{
-					case 'textbox'  :
+					case 'textbox'  :  
 					case 'editbox'  :
 						$(this).val('');
 						break;
@@ -340,7 +341,7 @@ function DTFORM(formid, loadformurl, model, doactionurl, dt)
 
 
 	this.bindActions = function()
-	{
+	{ 
 		var self = this;
 
 		$(this.classActionInsert).on('click', function(){
@@ -358,7 +359,23 @@ function DTFORM(formid, loadformurl, model, doactionurl, dt)
 
 		$(document).on( 'click', this.classActionClose, function(){
 			self.hideform(); 
+		});    
+
+		$(document).find('.input-group > ' + this.inputTypeCheckbox ).closest('.input-group').on('mouseover mouseout click', this, function(event) { 
+			var label = $(this).siblings('label');
+			switch(event.type) {
+				case 'click':
+					label.click();
+					break;
+				case 'mouseover':
+					label.mouseover();
+					break;
+				default :
+					label.mouseout();
+					break;
+			} 
 		});
+
 
 		$(document).on( 'click', this.classDoButton, function(){
 			if( ! $(this).hasClass('disabled') )

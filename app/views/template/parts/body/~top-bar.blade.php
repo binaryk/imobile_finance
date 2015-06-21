@@ -5,7 +5,7 @@
 		<!-- BEGIN LOGO -->
 		<div class="page-logo">
 			<a href="{{URL::route('home')}}">
-			{{HTML::image("assets/admin/layout/img/logo.png") }}
+			{{HTML::image("assets/admin/layout/img/logo_creditfin.png",null, ['width' => '197px', 'height' => '29px', 'style' => 'margin-top: 8px']) }}
 			</a>
 			<div class="menu-toggler sidebar-toggler hide">
 			</div>

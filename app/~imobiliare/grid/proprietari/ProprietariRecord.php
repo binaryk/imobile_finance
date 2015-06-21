@@ -67,7 +67,7 @@ class ProprietariRecord extends \Imobiliare\GridsRecord
         $this->fields = [
             'fields'      => '',
             'searchables' => 'id, nume',
-            'orderables'  => [1 => 'nume'],
+            'orderables'  => [1 => "id"],
         ];
         $this->filters = [
             'deleted' => 'deleted_at is null',

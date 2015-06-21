@@ -6,7 +6,6 @@ $('select.form-select').select2({
     allowClear: true 
 }); 
 ComponentsPickers.init(); 
-
 $('.fullscreen').click(function(event){ 
 	$('select.form-select').select2({
 	    placeholder: "Alege",

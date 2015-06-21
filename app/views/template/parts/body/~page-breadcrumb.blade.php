@@ -2,7 +2,7 @@
 
 	<li>
 		<i class="fa fa-home"></i>
-		<a href="index.html">Home</a>  
+		<a href="{{URL::route('home') }}">Home</a>  
 	@if( isset($breadcrumbs) )
 		<i class="fa fa-angle-right"></i>
 	</li>

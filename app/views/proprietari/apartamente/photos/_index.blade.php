@@ -16,8 +16,7 @@
         <ul class="bxslider">
 			@foreach($photos as $key => $photo)
 				<li> <img src="{{ $photo }}"> </li> 
-			@endforeach
-			{{ $apartament->id }}
+			@endforeach 
 		</ul>
       </div>
       <div class="modal-footer">
@@ -26,15 +25,19 @@
     </div>
   </div>
 </div>
-
-
+ 
 
 @stop
 @section('datatable-specific-page-jquery-initializations')
  
 	  var bx =  $('.bxslider').bxSlider();
-	 
-
+	//$('#modal').click(function(e){
+		//if(document.modificari){
+			// location.reload();
+		//	e.preventdefault();
+	//	}
+	//})
+	document.modificari = false;
 	$('#form-documente .box-footer').hide();
 
 	var upload_document = $("#file-document").fileinput({
@@ -67,8 +70,8 @@
 	upload_document.on('fileuploaded', function(event, data, previewId, index){
 		$("#file-document").fileinput('clear');
 		form.hideform();
-
 		console.log(data)
+		document.modificari = true;
 		var file_name = data.files[0].name;
 		var extention = file_name.split('.')[1];
 		var file_name = file_name.split('.')[0]; 
@@ -98,6 +101,7 @@
         		{
         			bx.reloadSlider();
         			dt.draw(false);
+        			document.modificari = true;
         		}
         	}
 		});
