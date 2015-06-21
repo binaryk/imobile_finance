@@ -1,11 +1,18 @@
-<div class="list-group">
-	<a href="#" class="list-group-item list-group-item-info">
-		ID<span class="badge badge-info"> #{{$record->id}} </span>
-	</a>
-	<a href="#" class="list-group-item list-group-item-info">
-		Data creării<span class="badge badge-info"> {{_toDateTime($record->created_at) }} </span>
-	</a>
-	<a href="#" class="list-group-item list-group-item-info">
-		Data modificării<span class="badge badge-info"> {{_toDateTime($record->updated_at) }} </span>
-	</a>
+@if( $photos->count() == 0 )
+<div class="note note-danger">
+	<p>Apartamentul <strong>{{ $record->nume }}</strong> nu are încărcate poze.</p>
 </div>
+@else
+<div class="row">
+	@foreach($photos as $i => $photo)
+		<div class="col-sm-12 col-md-6 col-lg-4">
+			<div class="thumbnail" data-id="{{$photo->id}}">
+			
+				<img src="{{(string) Image::make($photo->file_name)->resize(NULL, 200, function ($constraint){$constraint->aspectRatio(); $constraint->upsize();})->encode('data-url')}}" style="height: 200px; display: block;"/>
+
+			</div>
+
+		</div>
+	@endforeach
+</div>
+@endif

@@ -52,22 +52,27 @@ class CautareApartamenteController extends \Datatable\DatatableController
         ];
 		$this->layout->content = \View::make('apartamente.detalii.index')->with([
 			'record'   		=> $apartament,
+			'photos'        => \Imobiliare\Nomenclatoare\ApartamentPhotos::where('id_apartament', $apartament->id)->where('file_extension', '<>', 'bmp')->orderby('id')->get(),
 			'sections'      => [
 				'tab1' => [
 					'caption' => 'Localizare',
 					'view' => '1'
 				],
 				'tab2' => [
-					'caption' => 'Clădire şi imobil',
+					'caption' => 'Date generale',
 					'view' => '2'
 				],
 				'tab3' => [
-					'caption' => '333',
+					'caption' => 'Date suplimentare',
 					'view' => '3'
 				],
 				'tab4' => [
-					'caption' => 'Alte informaţii',
+					'caption' => 'Poze',
 					'view' => '4'
+				],
+				'tab5' => [
+					'caption' => 'Proprietar',
+					'view' => '5'
 				]
 			]
 		]);
@@ -93,6 +98,13 @@ class CautareApartamenteController extends \Datatable\DatatableController
 		}
 		$pdf = new CreateOfertaPdf('P', 'A4', 'I', $apartament);
 		$pdf->Output();
+	}
+
+	public function loadPhoto()
+	{
+		$photo = \Imobiliare\Nomenclatoare\ApartamentPhotos::find( (int) \Input::get('id_photo') );
+		return 
+			\Response::json(['img' => '<img src="' . (string) \Image::make($photo->file_name)->resize(480, NULL, function ($constraint){$constraint->aspectRatio(); $constraint->upsize();})->encode('data-url') . '" style="width: 480px; display: block;"/>']);
 	}
 
 	protected function controls()

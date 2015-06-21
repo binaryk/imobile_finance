@@ -81,3 +81,22 @@
 	color:#fff;
 	background-color:#3598dc;
 }
+
+#tab1, #tab2, #tab3, #tab4, #tab5
+{
+	.list-group
+	{
+		margin-bottom:2px;
+	}
+	.well
+	{
+		background-color:#d9edf7;
+		margin-top:2px;
+		margin-bottom:2px;
+		padding:4px 16px 4px 16px;
+		h4
+		{
+			margin:0px;
+		}
+	}
+}

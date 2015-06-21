@@ -165,6 +165,31 @@ class Apartament extends \Eloquent {
     	return $this->tipcompartimentare ? $this->tipcompartimentare->nume : NULL;
     }
 
+    public function getNumeproprietarAttribute()
+    {
+        return $this->proprietar ? $this->proprietar->nume : NULL;
+    }
+
+    public function getTelefonproprietarAttribute()
+    {
+        return $this->proprietar ? $this->proprietar->telefon : NULL;
+    }
+
+    public function getNumetipcladireAttribute()
+    {
+        return $this->tipcladire ? $this->tipcladire->nume : NULL;
+    }
+
+    public function getNumetipacoperisAttribute()
+    {
+        return $this->tipacoperis ? $this->tipacoperis->nume : NULL;
+    }
+
+    public function getNumetipconfortAttribute()
+    {
+        return $this->tipconfort ? $this->tipconfort->nume : NULL;
+    }
+
     /**
      * Relations
      **/
@@ -206,5 +231,25 @@ class Apartament extends \Eloquent {
     public function Tipcompartimentare()
     {
         return $this->belongsTo('\Imobiliare\Nomenclator\TipCompartiment', 'id_tip_compartiment');
+    }
+
+    public function Proprietar()
+    {
+        return $this->belongsTo('\Imobiliare\Proprietar', 'id_proprietar_pf');
+    }
+
+    public function Tipcladire()
+    {
+        return $this->belongsTo('\Imobiliare\Nomenclator\TipCategorieCladire', 'id_tip_cladire');
+    }
+
+    public function Tipacoperis()
+    {
+        return $this->belongsTo('\Imobiliare\Nomenclator\TipAcoperis', 'tip_acoperis');
+    }
+
+    public function Tipconfort()
+    {
+        return $this->belongsTo('\Imobiliare\Nomenclator\TipConfort', 'tip_confort');
     }
 }

@@ -8,6 +8,4 @@
 	<a href="#" class="list-group-item list-group-item-info">
 		Cartier<span class="badge badge-info"> {{$record->cartier ? $record->cartier->nume : '-'}} </span>
 	</a>
-	
-
 </div>
