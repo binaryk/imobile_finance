@@ -13,6 +13,8 @@ class Route
 		$this
 		/* Database general operations */
 		->add('get', 'home', '/', 'HomeController@showWelcome', '')
+		->add('get', 'lock', 'loock', 'HomeController@lockScreen', '')
+
 		/**
 		IMOBILE
 		**/ 
@@ -78,6 +80,9 @@ class Route
 		->add('get', 'apartament-detalii-oferta', 'apartament-detalii-oferta/{id}', 'CautareApartamenteController@showDetails', 'Apartamente')
 		->add('get', 'apartament-descarca-pdf', 'apartament-descarca-pdf/{id}', 'CautareApartamenteController@downloadPDF', 'Apartamente')
 		->add('get', 'apartament-deschide-pdf', 'apartament-deschide-pdf/{id}', 'CautareApartamenteController@openPDF', 'Apartamente')
+
+
+		/**/
 		;
 	}
 

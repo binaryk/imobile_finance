@@ -106,7 +106,7 @@ class Base extends \Easy\HTML\HTML
 		if($this->model)
 		{
 			$result['data-model'] = $this->model;	
-		}
+		} 
 		return $result;
 	}
 

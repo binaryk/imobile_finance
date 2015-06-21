@@ -18,7 +18,7 @@ class ProprietariController  extends \Datatable\DatatableController{
 
     public function rows($id){
         $config = \Imobiliare\Grids::make($id)->toRowDatasetConfig($id);
-        $filters = $config['source']->custom_filters();
+        $filters = $config['source']->custom_filters(); 
         $config['source']->custom_filters( $filters + [ 'proprietar_org' => 'proprietari_persoane_fizice.id_organizatie = '.$this->current_org->id ]);
         return $this->dataset( $config );
     }

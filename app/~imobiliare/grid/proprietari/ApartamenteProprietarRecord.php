@@ -33,7 +33,8 @@ class ApartamenteProprietarRecord extends \Imobiliare\GridsRecord
                                  assets/global/plugins/bootstrap-select/bootstrap-select.min.js,
                                  assets/global/plugins/select2/select2.min.js,
                                  assets/global/plugins/bootstrap-datetimepicker/js/bootstrap-datetimepicker.min.js,
-                                 assets/admin/pages/scripts/components-pickers.js
+                                 assets/admin/pages/scripts/components-pickers.js,
+                                 assets/admin/pages/scripts/portlet-draggable.js
                                  ';
         $this->row_source     = 'apartamente_proprietar-row-source';
         $this->rows_source_sql              = 'SELECT

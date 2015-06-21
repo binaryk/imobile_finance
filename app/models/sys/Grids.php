@@ -80,7 +80,8 @@ class Grids
 			'form'           => $record->form,
 			'custom_styles'  => $record->css,
 			'custom_scripts' => $record->js,
-			'breadcrumbs'    => $record->breadcrumbs
+			'breadcrumbs'    => $record->breadcrumbs,
+			'right_menu'    => $record->right_menu
 		];
 		return $result;
 	}

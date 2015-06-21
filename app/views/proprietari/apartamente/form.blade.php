@@ -1,15 +1,20 @@
 <div class="row"> 
-<div class="col-md-6">
+<div class="col-md-6"> 
 	<!-- BEGIN PORTLET-->
 	<div class="portlet light bg-inverse" style="background-color: white; border: 1px solid #d3d3d3;">
+	<div class="portlet">
 		<div class="portlet-title">
 			<div class="caption font-purple-plum">
 				<i class="icon-speech font-purple-plum"></i>
 				<span class="caption-subject bold uppercase"> Date generale apartament</span>
 				<span class="caption-helper">aici completati datele generale</span>
 			</div>
-			<div class="actions"> 
-				<a class="btn btn-circle btn-icon-only btn-default fullscreen" href="#" data-original-title="" title="">
+			<div class="tools">
+				<a href="" class="collapse" data-original-title="" title="">
+				</a> 
+				<a href="" class="fullscreen" data-original-title="" title="">
+				</a>
+				<a href="" class="remove" data-original-title="" title="">
 				</a>
 			</div>
 		</div> 
@@ -17,6 +22,10 @@
 			<div id="context" data-toggle="context" data-target="#context-menu">
 				
 				<div class="row">
+					<!-- Titlu apartament -->
+					<div class="col-md-6">
+						{{$controls[45]->out()}}
+					</div>
 					<!-- telefon -->
 					<div class="col-md-6">
 						{{$controls[0]->out()}}
@@ -82,11 +91,12 @@
 					<!-- ultima actualizare -->
 					<div class="col-md-6">
 						{{$controls[23]->out()}}
-					</div>
+					</div> 
 				</div> 
 				
 					
 			</div>  
+		</div>
 		</div>
 	</div>
 	<!-- END PORTLET-->
@@ -100,8 +110,12 @@
 					<span class="caption-subject bold uppercase"> Informatii optionale</span>
 					<span class="caption-helper">aici completati date suplimentare despre apartament</span>
 				</div>
-				<div class="actions"> 
-					<a class="btn btn-circle btn-icon-only btn-default fullscreen" href="#" data-original-title="" title="">
+				<div class="tools">
+					<a href="" class="collapse" data-original-title="" title="">
+					</a> 
+					<a href="" class="fullscreen" data-original-title="" title="">
+					</a>
+					<a href="" class="remove" data-original-title="" title="">
 					</a>
 				</div>
 			</div> 

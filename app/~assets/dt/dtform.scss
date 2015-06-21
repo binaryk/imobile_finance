@@ -79,6 +79,10 @@
 		padding:2px 8px;
 	}
 
+	input.input_label[disabled]{
+		cursor: pointer;
+	}
+
 }
 
 /*.datepicker 

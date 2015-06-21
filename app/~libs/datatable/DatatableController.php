@@ -23,6 +23,7 @@ class DatatableController extends \BaseController
 		$this->layout->title = strip_tags($config['caption']); 
 		$this->layout->caption = $config['caption'];
 		$this->layout->breadcrumbs = $config['breadcrumbs'];
+		$this->layout->right_menu = $config['right_menu'];;
 		if( ! $config['form']  )
 		{
 			$form = NULL;

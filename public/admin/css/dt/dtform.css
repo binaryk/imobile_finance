@@ -51,6 +51,9 @@
 .dt-form-container .input-group-addon {
   padding: 2px 8px;
 }
+.dt-form-container input.input_label[disabled] {
+  cursor: pointer;
+}
 
 /*.datepicker 
 {
