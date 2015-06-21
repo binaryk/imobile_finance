@@ -237,3 +237,7 @@
 {{
 	Form::hidden('id_proprietar', $proprietar->id, ['id' => 'id_proprietar', 'class' => 'data-source', 'data-control-source' => 'id_proprietar_pf', 'data-control-type' => 'persistent'])
 }}
+
+{{
+	Form::hidden('id_organizatie', $current_org->id, ['id' => 'id_organizatie', 'class' => 'data-source', 'data-control-source' => 'id_organizatie', 'data-control-type' => 'persistent'])
+}}

@@ -25,7 +25,7 @@ class ApartamenteProprietarController  extends \Datatable\DatatableController{
             'ids' => [ 'id' => 'apartamente_proprietar', 'id_proprietar' => $id_proprietar ]
             ] 
         ];
-        $this->show( $config + ['other-info' => [ 'proprietar' => $proprietar]] );
+        $this->show( $config + ['other-info' => [ 'proprietar' => $proprietar, 'current_org' => $this->current_org]] );
     }
 
     public function rows($id, $id_proprietar){

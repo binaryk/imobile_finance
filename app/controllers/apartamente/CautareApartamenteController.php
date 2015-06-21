@@ -14,6 +14,7 @@ class CautareApartamenteController extends \Datatable\DatatableController
 		$config = \Imobiliare\Grids::make('cauta-apartamente')->toIndexConfig('cauta-apartamente');
 
 		$config['caption'] = '<span class="font-blue">Cautare</span> apartamente. Organizatia: ' . $this->current_org->denumire;
+		
 		$this->show( $config + ['other-info' => [
 			'current_org' => $this->current_org,
 			'controls' => $this->controls()
@@ -37,6 +38,18 @@ class CautareApartamenteController extends \Datatable\DatatableController
 		{
 			return \Redirect::route('cautare-apartamente-index');
 		}
+		$this->layout->breadcrumbs = [
+            [
+            'name' => 'Cautare apartamente',
+            'url'  => "cautare-apartamente-index",
+            'ids' => ''
+            ],
+            [
+            'name' => 'Detalii apartament',
+            'url'  => "apartament-detalii-oferta",
+            'ids' =>  $id
+            ]  
+        ];
 		$this->layout->content = \View::make('apartamente.detalii.index')->with([
 			'record'   		=> $apartament,
 			'sections'      => [

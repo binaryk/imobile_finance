@@ -6,7 +6,7 @@ class Sidebar
 	protected static $instance = NULL;
 
 	protected $sidebar = [
-        'principal' => [
+     /*   'principal' => [
             'header' => [
                 'caption' => 'Principala',
                 'icon'    => 'icon-home'
@@ -21,7 +21,7 @@ class Sidebar
 			],
 			'options' => [],
 			'active'  => ['dezvoltatori*']
-		],
+		],*/
 		'imobile' => [
 			'header' => [
 				'caption' => 'Imobile',
@@ -32,7 +32,7 @@ class Sidebar
 		],
         'date-baza' => [
             'header' => [
-                'caption' => 'Date de baza',
+                'caption' => 'Nomenclator',
                 'icon'  => 'icon-folder '
             ],
             'options' => [],
@@ -66,10 +66,10 @@ class Sidebar
 		/**
 		 Dezvoltatori
 		**/
-		->addOption('dezvoltatori', \URL::route('dezvoltatori-index'), 'Dezvoltatori', 'fa-circle-o')
+		// ->addOption('dezvoltatori', \URL::route('dezvoltatori-index'), 'Dezvoltatori', 'fa-circle-o')
 
-		->addOption('imobile', \URL::route('cautare-apartamente-index'), 'Cautare apartamente', 'fa-circle-o')
 		->addOption('imobile', \URL::route('proprietar-index'), 'Apartamente', 'fa-circle-o')
+		->addOption('imobile', \URL::route('cautare-apartamente-index'), 'Cautare apartamente', 'fa-circle-o')
 		;
 	}
 
