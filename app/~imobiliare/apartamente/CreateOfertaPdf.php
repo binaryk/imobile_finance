@@ -168,6 +168,11 @@ class CreateOfertaPdf
 		return ($s = $this->nr_camere()) ? _toInt($s) : '-';
 	}
 
+	protected function detaliiApartament()
+	{
+		return $this->detalii();
+	}
+
 	protected function outdetails()
 	{
 		$rows = [
@@ -182,6 +187,7 @@ class CreateOfertaPdf
 			'9' => ['caption' => 'Compartimentare: ', 'source' => 'compartimentare'],
 		   '10' => ['caption' => 'Număr de băi: ', 'source' => 'bai'],
 		   '11' => ['caption' => 'Număr de camere: ', 'source' => 'camere'],
+		   '12' => ['caption' => 'Detalii: ', 'source' => 'detaliiApartament'],
 		];
 
 		foreach($rows as $i => $row)
