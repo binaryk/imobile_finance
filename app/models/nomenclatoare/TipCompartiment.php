@@ -40,8 +40,8 @@ class TipCompartiment extends \Eloquent
         return $record->delete();
     }
 
-    public static function toCombobox()
+    public static function toCombobox($noneCaption = '')
     {
-        return ['0' => ''] + self::orderBy('nume')->lists('nume', 'id');
+        return ['0' => $noneCaption] + self::orderBy('nume')->lists('nume', 'id');
     }
 }
