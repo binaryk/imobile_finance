@@ -4,16 +4,13 @@ namespace Apartamente;
 
 class CautareApartamenteController extends \Datatable\DatatableController
 {
-
-	// sa nu uitam de userul curent (organizatia) curenta
-
 	protected $layout 		= 'template.layout';
 
 	public function index()
 	{
 		$config = \Imobiliare\Grids::make('cauta-apartamente')->toIndexConfig('cauta-apartamente');
 
-		$config['caption'] = '<span class="font-blue">Cautare</span> apartamente. Organizatia: ' . $this->current_org->denumire;
+		$config['caption'] = '<span class="font-blue">Căutare</span> imobil';
 		
 		$this->show( $config + ['other-info' => [
 			'current_org' => $this->current_org,
