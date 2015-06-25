@@ -30,8 +30,7 @@ class AlterTableApartamenteAddCols extends Migration {
 	public function down()
 	{
 		Schema::table('apartamente', function(Blueprint $t){
-				// $t->dropColumn(['strada','nr_cladire','scara','nr_apartament']);
-
+			// $t->dropColumn(['strada','nr_cladire','scara','nr_apartament']);
 		});
 	}
 
