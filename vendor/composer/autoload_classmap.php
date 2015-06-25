@@ -18,6 +18,7 @@ return array(
     'AlterLocalitatiFkJudetAdd' => $baseDir . '/app/database/migrations/2015_05_06_153637_alter_localitati_fk_judet_add.php',
     'AlterOrganizatiiFkLocalitate' => $baseDir . '/app/database/migrations/2015_05_07_142825_alter_organizatii_fk_localitate.php',
     'AlterTableApartamentFkCladire' => $baseDir . '/app/database/migrations/2015_05_29_230956_alter_table_apartament_fk_cladire.php',
+    'AlterTableApartamenteAddCols' => $baseDir . '/app/database/migrations/2015_06_25_102325_alter_table_apartamente_add_cols.php',
     'AlterTableCladireAddCols' => $baseDir . '/app/database/migrations/2015_06_10_094945_alter_table_cladire_add_cols.php',
     'AlterTableCladireFkTipDestinatieCladire' => $baseDir . '/app/database/migrations/2015_05_29_205247_alter_table_cladire_fk_tip_destinatie_cladire.php',
     'AlterTableCladireFkTipEtaj' => $baseDir . '/app/database/migrations/2015_05_29_214913_alter_table_cladire_fk_tip_etaj.php',

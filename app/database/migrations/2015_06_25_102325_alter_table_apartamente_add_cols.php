@@ -3,7 +3,7 @@
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
 
-class AlterApartamenteAddCols extends Migration {
+class AlterTableApartamenteAddCols extends Migration {
 
 	/**
 	 * Run the migrations.
@@ -13,8 +13,11 @@ class AlterApartamenteAddCols extends Migration {
 	public function up()
 		{
 			Schema::table('apartamente', function(Blueprint $t){
-				$t->tinyinteger('vechime_imobil');
-				$t->integer('tip_imobil')->unsigned()->nullable();
+				$t->   text('strada')->after('zona_aproximativa');
+				$t->integer('nr_cladire')->after('strada');
+				$t->integer('scara')->after('nr_cladire');
+				$t->integer('nr_apartament')->after('scara');
+				$t->double('suprafata_teren')->after('nr_apartament');
 
 			});
 		}
@@ -27,7 +30,7 @@ class AlterApartamenteAddCols extends Migration {
 	public function down()
 	{
 		Schema::table('apartamente', function(Blueprint $t){
-				// $t->dropColumn(['vechime_imobil', 'tip_imobil']);
+				// $t->dropColumn(['strada','nr_cladire','scara','nr_apartament']);
 
 		});
 	}

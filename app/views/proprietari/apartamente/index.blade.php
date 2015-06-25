@@ -1,5 +1,15 @@
 @extends('~layouts.datatable.index')
 @section('datatable-specific-page-jquery-initializations')
+
+
+$('[name=tip_imobil]').on('change', function(e){
+	if( $(this).val() == '1' )//apartament
+		$('.apartamente').show();
+	if( $(this).val() == '3' )//casa
+		$('.apartamente, .apartamente > .casa').show();
+})
+
+
 FormiCheck.init();
 $('select.form-select').select2({
     placeholder: "Alege",

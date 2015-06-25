@@ -49,6 +49,11 @@ loc_pivnita
 parcare
 tip_acoperis
 tip_confort
+strada
+nr_cladire
+scara
+nr_apartament
+
 */       
         $this
         // 0
@@ -273,11 +278,11 @@ tip_confort
         // 19
         ->addControl(
             \Easy\Form\Textbox::make('~layouts.form.controls.textboxes.textbox')
-                ->name('adresa_exacta')
-                ->caption('Adresa exacta')
+                ->name('strada')
+                ->caption('Strada')
                 // ->placeholder('Detalii privind adresa exacta')
                 ->class('form-control data-source')
-                ->controlsource('adresa_exacta')
+                ->controlsource('strada')
                 ->controltype('textbox')
                 ->maxlength(255)
         )
@@ -285,7 +290,7 @@ tip_confort
         ->addControl(
             \Easy\Form\Textbox::make('~layouts.form.controls.textboxes.textbox')
                 ->name('pret_m2')
-                ->caption('Pret')
+                ->caption('Pret (EUR/MP)')
                 // ->placeholder('Pret')
                 ->class('form-control data-source')
                 ->controlsource('pret_m2')
@@ -587,24 +592,80 @@ tip_confort
                  ), 
              'after' => NULL])
              )
-         // Detalii proprietar
-         // 44
-         ->addControl(
-             \Easy\Form\Textbox::make('~layouts.form.controls.textboxes.textbox')
-                 ->name('nume_proprietar')
-                 ->caption('Nume proprietar') 
-                 ->class('form-control data-source')
-                 ->controlsource('nume_proprietar')
-                 ->controltype('textbox')
-                 ->maxlength(255)
-         )
-         // 45 
+         // 44 nume_apartament
          ->addControl(
              \Easy\Form\Textbox::make('~layouts.form.controls.textboxes.textbox')
                  ->name('nume')
                  ->caption('Nume') 
                  ->class('form-control data-source')
                  ->controlsource('nume')
+                 ->controltype('textbox')
+                 ->maxlength(255)
+         ) 
+         // 45  
+         ->addControl(
+             \Easy\Form\Textbox::make('~layouts.form.controls.textboxes.textbox')
+                 ->name('nr_cladire')
+                 ->caption('Nr. cladire') 
+                 ->class('form-control data-source')
+                 ->controlsource('nr_cladire')
+                 ->controltype('textbox')
+                 ->maxlength(255)
+         ) 
+         // 46 
+         ->addControl(
+             \Easy\Form\Textbox::make('~layouts.form.controls.textboxes.textbox')
+                 ->name('scara')
+                 ->caption('Scara') 
+                 ->class('form-control data-source')
+                 ->controlsource('scara')
+                 ->controltype('textbox')
+                 ->maxlength(255)
+         ) 
+         // 47
+         ->addControl(
+             \Easy\Form\Textbox::make('~layouts.form.controls.textboxes.textbox')
+                 ->name('nr_apartament')
+                 ->caption('Nr. apartament') 
+                 ->class('form-control data-source')
+                 ->controlsource('nr_apartament')
+                 ->controltype('textbox')
+                 ->maxlength(255)
+         ) 
+
+        // 48
+         ->addControl(
+             \Easy\Form\Combobox::make('~layouts.form.controls.comboboxes.combobox')
+                 ->name('tip_imobil')
+                 ->caption('Tip imobil')
+                 ->class('form-control data-source input-group form-select init-on-update-delete')
+                 ->controlsource('tip_imobil')
+             ->controltype('combobox') 
+                 ->enabled('true')
+                 ->options(\Imobiliare\Nomenclator\TipImobil::toCombobox())
+         )
+
+         // 49
+         ->addControl(
+             \Easy\Form\Textbox::make('~layouts.form.controls.textboxes.textbox-addon')
+         ->caption('Imobil nou')->name('vechime_imobil')->placeholder('Textbox')
+         ->value('Bifati daca imobilul este nou')->class('form-control input_label')->enabled(0)
+         ->addon([
+             'before' => \Form::checkbox('vechime_imobil', '1', false, 
+                 ['class' => 'data-source icheck', 'id' => 'vechime_imobil', 
+                 'data-checkbox' => 'icheckbox_square-green', 'data-control-source' => 'vechime_imobil', 
+                 'data-control-type' => 'checkbox', 'data-on' => 1, 'data-off' => 0]
+                 ), 
+             'after' => NULL])
+             )
+
+          // 50
+         ->addControl(
+             \Easy\Form\Textbox::make('~layouts.form.controls.textboxes.textbox')
+                 ->name('suprafata_teren')
+                 ->caption('Suprafata teren') 
+                 ->class('form-control data-source')
+                 ->controlsource('suprafata_teren')
                  ->controltype('textbox')
                  ->maxlength(255)
          ) 

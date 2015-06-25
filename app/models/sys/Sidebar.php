@@ -68,8 +68,8 @@ class Sidebar
 		**/
 		// ->addOption('dezvoltatori', \URL::route('dezvoltatori-index'), 'Dezvoltatori', 'fa-circle-o')
 
-		->addOption('imobile', \URL::route('proprietar-index'), 'Apartamente', 'fa-circle-o')
-		->addOption('imobile', \URL::route('cautare-apartamente-index'), 'Cautare apartamente', 'fa-circle-o')
+		->addOption('imobile', \URL::route('proprietar-index'), 'Imobile', 'fa-circle-o')
+		->addOption('imobile', \URL::route('cautare-apartamente-index'), 'Cautare imobile', 'fa-circle-o')
 		;
 	}
 

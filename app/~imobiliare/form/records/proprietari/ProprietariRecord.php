@@ -20,10 +20,14 @@ class ProprietariRecord extends \Imobiliare\FormsRecord
 		->setFeedback('delete', 'success', 'Ştergerea proprietarului a fost realizată cu succes.')
 		->setFeedback('delete', 'error', 'Ştergerea proprietarului <span class="badge">nu</span> a fost realizată.')
 
-		->addRule('insert', 'nume', 'required')
+		->addRule('insert', 'telefon', 'required')
+		->addRule('insert', 'telefon', 'required|unique:proprietari_persoane_fizice')
 		
-		->addMessage('insert', 'nume.required', 'Numele proprietarului trebuie completat.')
-		->addMessage('update', 'nume.required', 'Numele proprietarului trebuie completat.') 
+		->addMessage('insert', 'telefon.required', 'Telefonul proprietarului trebuie completat.')
+		->addMessage('update', 'telefon.required', 'Telefonul proprietarului trebuie completat.')
+
+		->addMessage('insert', 'telefon.unique', 'Telefonul proprietarului trebuie sa fie unic.')
+		->addMessage('update', 'telefon.unique', 'Telefonul proprietarului trebuie sa fie unic.') 
 		;
 	}
 

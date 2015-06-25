@@ -25,6 +25,7 @@ class ApartamenteProprietarController  extends \Datatable\DatatableController{
             'ids' => [ 'id' => 'apartamente_proprietar', 'id_proprietar' => $id_proprietar ]
             ] 
         ];
+        $config['right_menu']= [ ['caption' => 'Adaugă imobil', 'class' => 'action-insert-record'] ];
         $this->show( $config + ['other-info' => [ 'proprietar' => $proprietar, 'current_org' => $this->current_org]] );
     }
 
