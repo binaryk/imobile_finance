@@ -1,13 +1,15 @@
 <?php
+
 namespace Imobiliare;
 use \Illuminate\Database\Eloquent\SoftDeletingTrait;
 
-class Cartier extends \Eloquent {
+class Cartier extends \Eloquent 
+{
     use SoftDeletingTrait;
     protected $fillable = ['nume'];
     protected $table    = 'cartiere';
 
-   public static function getRecord( $id )
+    public static function getRecord( $id )
     {
         return self::find($id);
     }
@@ -37,8 +39,9 @@ class Cartier extends \Eloquent {
         return $record->delete();
     }
 
-    public static function toCombobox()
+    public static function toCombobox( $noneCaption = '')
     {
-        return ['' => ''] + self::orderBy('nume')->lists('nume', 'id');
+        return ['0' => $noneCaption] + self::orderBy('nume')->lists('nume', 'id');
     }
+
 }

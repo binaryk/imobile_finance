@@ -22,9 +22,17 @@
 {
 	table.dataTable 
 	{
+		thead
+		{
+			.sorting
+			{
+				background-image:none !important;
+			}
+		}
 		thead th, tbody td
 		{
-			font-size:12px;
+			font-size:11px;
+			font-weight:normal !important;
 		}
 		thead th
 		{

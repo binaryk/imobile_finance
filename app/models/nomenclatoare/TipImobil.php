@@ -40,8 +40,8 @@ class TipImobil extends \Eloquent
         return $record->delete();
     }
 
-    public static function toCombobox()
+    public static function toCombobox( $noneCaption = ' -- Selectaţi tip imobil --' )
     {
-        return ['' => ''] + self::orderBy('nume')->lists('nume', 'id');
+        return [0 => $noneCaption] + self::orderBy('nume')->lists('nume', 'id');
     }
 }

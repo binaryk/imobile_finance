@@ -153,20 +153,67 @@ function CautareApartamente( parameters )
 		return 'v_apartamente.id_tip_compartiment = ' + value;
 	}
 
+	/* 12 -> cartier  */
+	this.cartier = function()
+	{
+		var value = $('#id_cartier').val();
+		if(value == 0)
+		{
+			return '';
+		}
+		return 'v_apartamente.id_cartier = ' + value;
+	}
+
+	/* 13 -> tip imobil  */
+	this.tip_imobil = function()
+	{
+		var value = $('#tip_imobil').val();
+		if(value == 0)
+		{
+			return '';
+		}
+		return 'v_apartamente.id_tip_imobil = ' + value;
+	}
+
+	/* 14 -> tip imobil  */
+	this.vechime_imobil = function()
+	{
+		var value = $('#vechime_imobil').val();
+		if(value == -1)
+		{
+			return '';
+		}
+		return 'v_apartamente.vechime_imobil = ' + value;
+	}
+
 	$('#cmd-search').click(function(){
+		
+		/**
+		 * Calin Verdes. COMPTECH SOFT. 25.06.2015
+		 * am scos cautarea dupa "is_agentie" .columns(5).search( my.is_agentie() )      	
+		 */
+
 		var table = my.dt;
 		table
 			.columns(1).search( my.oferta_valabila() ) 		 /*  1 -> oferta valabila      */
 			.columns(2).search( my.adresa_exacta() )   		 /*  2 -> adresa exacta        */
 			.columns(3).search( my.numar_camere() )    		 /*  3 -> numarul de camare    */
 			.columns(4).search( my.pret() )            		 /*  4 -> pretul               */
-			.columns(5).search( my.is_agentie() )      		 /*  5 -> is agentie           */
+			
 			.columns(6).search( my.ultima_actualizare() )    /*  6 -> ultima_actualizare   */
 			.columns(7).search( my.telefoane() )       		 /*  7 -> telefoane            */
 			.columns(8).search( my.credit_prima_casa() )     /*  8 -> credit prima casa    */
 			.columns(9).search( my.numar_etaje() )           /*  9 -> numar etaje          */
 			.columns(10).search( my.tip_finisaj_interior() ) /* 10 -> tip finisaj interior */
 			.columns(11).search( my.tip_compartimentare() )  /* 11 -> tip compartimentare  */
+
+			/**
+			 * Issue #2. Calin Verde. COMPTECH SOFT
+			 **/
+			.columns(12).search( my.cartier() )  			 /* 12 -> cartier              */
+			.columns(13).search( my.tip_imobil() )  		 /* 13 -> tip_imobil           */
+			.columns(5).search( my.vechime_imobil() )       /* 14 -> vechime imobil       */
+
 			.draw();
 	});
 
@@ -184,7 +231,12 @@ function CautareApartamente( parameters )
 		$('#nr_etaj_max').val('');
 		$('#id_tip_finisaje_interioare').val(0);
 		$('#id_tip_compartiment').val(0);
+		$('#id_cartier').val(0);
+		$('#tip_imobil').val(0);
+		$('#vechime_imobil').val(-1);
 		my.perioada.setStartDate(my.d1);
 		my.perioada.setEndDate(my.d2);
+
+		$('#cmd-search').trigger('click');
 	});
 }

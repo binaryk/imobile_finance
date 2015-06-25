@@ -4,16 +4,13 @@ namespace Apartamente;
 
 class CautareApartamenteController extends \Datatable\DatatableController
 {
-
-	// sa nu uitam de userul curent (organizatia) curenta
-
 	protected $layout 		= 'template.layout';
 
 	public function index()
 	{
 		$config = \Imobiliare\Grids::make('cauta-apartamente')->toIndexConfig('cauta-apartamente');
 
-		$config['caption'] = '<span class="font-blue">Cautare</span> apartamente. Organizatia: ' . $this->current_org->denumire;
+		$config['caption'] = '<span class="font-blue">Căutare</span> imobil';
 		
 		$this->show( $config + ['other-info' => [
 			'current_org' => $this->current_org,
@@ -123,8 +120,8 @@ class CautareApartamenteController extends \Datatable\DatatableController
 			'adresa-exacta' => 
 				\Easy\Form\Textbox::make('~layouts.form.controls.textboxes.textbox')
 				->name('adresa_exacta')
-				->caption('Adresa')
-				->placeholder('Adresa')
+				->caption('Strada')
+				->placeholder('Strada')
 				->class('form-control data-source input-sm')
 				->controlsource('adresa_exacta')
 				->controltype('textbox')
@@ -164,12 +161,18 @@ class CautareApartamenteController extends \Datatable\DatatableController
 				->controlsource('pret_m2_max')
 				->controltype('textbox'),
 			// [5] = daca este agentie sau nu
+			/**
+			 * 25.06.2015 - Issue #2: 14.2 Dispare cautarea dupa campul “Este agentie”
+			 * Calin Verdes - COMPTECH SOFT
+			 **/
+			/*
 			'is_agentie' =>
 				\Easy\Form\Combobox::make('~layouts.form.controls.comboboxes.combobox')
 				->name('is_agentie')->caption('Este agentie')
 				->class('form-control input-sm data-source')
 				->controlsource('is_agentie')->controltype('combobox')
 				->options([-1 => 'Toate (agentii sau nu)', 0 => 'Fara agentii', 1 => 'Doar agentiile']),
+			*/
 			// [6] = data ultima actualizare
 			'ultima_actualizare' =>
 				\Easy\Form\Textbox::make('~layouts.form.controls.textboxes.textbox-addon')
@@ -219,14 +222,41 @@ class CautareApartamenteController extends \Datatable\DatatableController
 				->name('id_tip_finisaje_interioare')->caption('Finisaje interioare')
 				->class('form-control input-sm data-source')
 				->controlsource('id_tip_finisaje_interioare')->controltype('combobox')
-				->options(\Imobiliare\Nomenclator\TipFinisajeInterioare::ToCombobox()),
+				->options(\Imobiliare\Nomenclator\TipFinisajeInterioare::ToCombobox('- Toate -')),
 			// [11] = compartimentare
 			'id_tip_compartiment' =>
 				\Easy\Form\Combobox::make('~layouts.form.controls.comboboxes.combobox')
 				->name('id_tip_compartiment')->caption('Tip compartiment')
 				->class('form-control input-sm data-source')
 				->controlsource('id_tip_compartiment')->controltype('combobox')
-				->options(\Imobiliare\Nomenclator\TipCompartiment::ToCombobox())
+				->options(\Imobiliare\Nomenclator\TipCompartiment::ToCombobox('- Toate -')),
+			
+			/**
+			 * 25.96.2015 - Issue #2
+			 * Calin Verdes. COMPTECH SOFT
+			 * Actualizare formular cautare
+			 **/
+			// [12] = cartier
+			'id_cartier' =>
+				\Easy\Form\Combobox::make('~layouts.form.controls.comboboxes.combobox')
+				->name('id_cartier')->caption('Cartier')
+				->class('form-control input-sm data-source')
+				->controlsource('id_cartier')->controltype('combobox')
+				->options(\Imobiliare\Cartier::ToCombobox('- Toate -')),
+			// [13] = tip imobil
+			'tip_imobil' =>
+				\Easy\Form\Combobox::make('~layouts.form.controls.comboboxes.combobox')
+				->name('tip_imobil')->caption('Tip imobil')
+				->class('form-control input-sm data-source')
+				->controlsource('tip_imobil')->controltype('combobox')
+				->options(\Imobiliare\Nomenclator\TipImobil::ToCombobox('- Toate -')),
+			// [14] = vechime imobil
+			'vechime_imobil' =>
+				\Easy\Form\Combobox::make('~layouts.form.controls.comboboxes.combobox')
+				->name('vechime_imobil')->caption('Vechime imobil')
+				->class('form-control input-sm data-source')
+				->controlsource('vechime_imobil')->controltype('combobox')
+				->options([-1 => 'Toate (vechi sau noi)', 1 => 'Imobil nou', 2 => 'Imobil vechi']),
 		];
 	}
 }
