@@ -60,7 +60,13 @@ class Apartament extends \Eloquent {
 	'adresa_exacta',
 	'detalii',
 	'detalii_private',
-	'negociabil'
+	'negociabil',
+    'strada',
+    'nr_cladire',
+    'scara',
+    'nr_apartament',
+    'suprafata_teren',
+    'tip_imobil',
 	];
 
 	public static function getRecord( $id )

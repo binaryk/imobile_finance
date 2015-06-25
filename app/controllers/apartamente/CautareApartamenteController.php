@@ -119,11 +119,11 @@ class CautareApartamenteController extends \Datatable\DatatableController
 			// [2] = parte din adresa
 			'adresa-exacta' => 
 				\Easy\Form\Textbox::make('~layouts.form.controls.textboxes.textbox')
-				->name('adresa_exacta')
+				->name('strada')
 				->caption('Strada')
 				->placeholder('Strada')
 				->class('form-control data-source input-sm')
-				->controlsource('adresa_exacta')
+				->controlsource('strada')
 				->controltype('textbox')
 				->maxlength(255),
 			// [3] = numarul de camere

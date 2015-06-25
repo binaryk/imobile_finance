@@ -17,7 +17,7 @@ class AlterTableApartamenteAddCols extends Migration {
 				$t->integer('nr_cladire')->after('strada');
 				$t->integer('scara')->after('nr_cladire');
 				$t->integer('nr_apartament')->after('scara');
-				$t->double('suprafata_teren')->after('nr_apartament');
+				$t->double( 'suprafata_teren')->after('nr_apartament');
 
 			});
 		}

@@ -22,12 +22,12 @@ function CautareApartamente( parameters )
 	/* 2 -> adresa exacta */
 	this.adresa_exacta = function()
 	{
-		var value = $('#adresa_exacta').val();
+		var value = $('#strada').val();
 		if(value.length == 0)
 		{
 			return '';
 		}
-		return "v_apartamente.adresa_exacta LIKE '%" + value + "%'";
+		return "v_apartamente.strada LIKE '%" + value + "%'";
 	}
 
 	/* 3 -> numar camere */
