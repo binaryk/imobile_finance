@@ -5,9 +5,11 @@
 $('[name=tip_imobil]').on('change', function(e){
 	if( $(this).val() == '1' )//apartament
 		$('.apartamente').show();
-	if( $(this).val() == '3' )//casa
+	else if( $(this).val() == '3' )//casa
 		$('.apartamente, .apartamente > .casa').show();
-})
+	else 
+		$('.apartamente, .apartamente > .casa').hide();
+});	
 
 
 FormiCheck.init();

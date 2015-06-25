@@ -15,6 +15,7 @@ class TipGarajTableSeeder extends Seeder {
 			['nume' => 'Beton'], 
 			['nume' => 'Caramida'], 
 			['nume' => 'Tabla'], 
+			['nume' => 'Copertina'], 
 
 		]);
 	}

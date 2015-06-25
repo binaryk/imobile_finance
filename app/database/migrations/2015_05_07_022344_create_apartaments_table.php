@@ -66,7 +66,7 @@ class CreateApartamentsTable extends Migration {
 			$table->text('telefon_secundar_2',50);
 			$table->integer('nr_camere');
 			$table->tinyinteger('credit_prima_casa');
-			$table->integer('anul_constructiei');
+			$table->text('anul_constructiei', 50);
 			$table->integer('nr_bai');
 			$table->text('detalii_bacoane');
 			$table->tinyinteger('id_sistem_incalzire'); 

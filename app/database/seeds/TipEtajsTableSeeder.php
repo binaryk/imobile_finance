@@ -14,6 +14,7 @@ class TipEtajsTableSeeder extends Seeder {
 			['nume' => 'Nespecificat'], 
 			['nume' => 'Demisol'], 
 			['nume' => 'Parter'], 
+			['nume' => 'Parter înalt'], 
 			['nume' => 'Etajul 1'], 
 			['nume' => 'Etajul 2'], 
 			['nume' => 'Etajul 3'], 

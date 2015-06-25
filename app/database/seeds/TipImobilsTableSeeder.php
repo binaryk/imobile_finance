@@ -14,7 +14,7 @@ class TipImobilsTableSeeder extends Seeder {
 			[ 'nume' => 'Garsoniera' ],
 			[ 'nume' => 'Casa' ],
 			[ 'nume' => 'Duplex' ],
-			[ 'nume' => 'Teren' ],
+			[ 'nume' => 'Teren' ]
 		]);
 	}
 

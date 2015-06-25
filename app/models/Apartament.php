@@ -67,6 +67,7 @@ class Apartament extends \Eloquent {
     'nr_apartament',
     'suprafata_teren',
     'tip_imobil',
+    'vechime_imobil'
 	];
 
 	public static function getRecord( $id )
