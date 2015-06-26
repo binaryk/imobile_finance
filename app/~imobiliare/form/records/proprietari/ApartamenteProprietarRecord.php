@@ -20,8 +20,8 @@ class ApartamenteProprietarRecord extends \Imobiliare\FormsRecord
             ->setFeedback('delete', 'success', 'Ştergerea apartamentului a fost realizată cu succes.')
             ->setFeedback('delete', 'error', 'Ştergerea apartamentului <span class="badge">nu</span> a fost realizată.')
 
-            ->addRule('insert', 'telefon', 'required') 
-            ->addRule('update', 'telefon', 'required')  
+            ->addRule('insert', 'oferta_valabila', 'required') 
+            ->addRule('update', 'oferta_valabila', 'required')  
 
             ->addRule('insert', 'id_cartier', 'required|integer|not_in:0') 
             ->addRule('update', 'id_cartier', 'required|integer|not_in:0') 
@@ -31,8 +31,8 @@ class ApartamenteProprietarRecord extends \Imobiliare\FormsRecord
             ->addMessage('update', 'id_cartier.not_in', 'Cartierul apartamentului trebuie completat.') 
             ->addMessage('update', 'id_cartier.required', 'Cartierul apartamentului trebuie completat.')  
 
-            ->addMessage('insert', 'telefon.required', 'Telefonul apartamentului trebuie completat.')
-            ->addMessage('update', 'telefon.required', 'Telefonul apartamentului trebuie completat.')  
+            ->addMessage('insert', 'oferta_valabila.required', 'Valabilitatea ofertei apartamentului trebuie completată.')
+            ->addMessage('update', 'oferta_valabila.required', 'Valabilitatea ofertei apartamentului trebuie completată.')  
 
             ->addMessage('insert', 'id_cartier.required', 'Cartierul apartamentului trebuie completat.')
             ->addMessage('update', 'id_cartier.required', 'Cartierul apartamentului trebuie completat.') 

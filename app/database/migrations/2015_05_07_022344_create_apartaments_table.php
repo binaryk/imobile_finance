@@ -28,8 +28,8 @@ class CreateApartamentsTable extends Migration {
 			$table->tinyinteger('id_tip_cladire');
 			$table->tinyinteger('id_tip_finisaje_interioare');
 			$table->tinyinteger('id_tip_compartiment');
-			$table->tinyinteger('is_agentie');
-			$table->tinyinteger('oferta_valabila');
+			$table->tinyinteger('is_agentie')->default(0);
+			$table->tinyinteger('oferta_valabila')->default(0);
 			$table->tinyinteger('termopan');
 			$table->tinyinteger('contoare_gaz');
 			$table->tinyinteger('parchet');

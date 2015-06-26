@@ -44,6 +44,7 @@ class MigrationCartalystSentryInstallUsers extends Migration {
 			$table->integer('id_organizatie')->unsigned()->nullable();
 			$table->string('prenume')->nullable();
 			$table->string('nume')->nullable();
+			$table->string('telefon', 30)->nullable();
 			$table->timestamps();
 
 			// We'll need to ensure that MySQL uses the InnoDB engine to
