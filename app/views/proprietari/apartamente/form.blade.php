@@ -123,7 +123,14 @@
 					<!-- ultima actualizare -->
 					<div class="col-md-6">
 						{{$controls[23]->out()}}
-					</div> 
+					</div>
+
+					<!-- valabiliatate oferta -->
+					<div class="col-md-6">
+						{{$controls[51]->out()}}
+					</div>
+
+
 				</div> 
 				
 			</div>

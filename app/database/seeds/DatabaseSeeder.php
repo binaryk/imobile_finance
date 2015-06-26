@@ -44,6 +44,9 @@ class DatabaseSeeder extends Seeder {
 		$this->call('TipNrBalcoaneTableSeeder');
 		$this->call('TipAcoperisTableSeeder');
 		$this->call('TipConfortTableSeeder');
+		
+		$this->call('AgentiiSeeder');
+		$this->call('ProprietariPersoaneFiziceSeeder');
 
 }
 

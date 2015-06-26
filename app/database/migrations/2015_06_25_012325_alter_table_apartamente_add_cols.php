@@ -14,10 +14,10 @@ class AlterTableApartamenteAddCols extends Migration {
 		{
 			Schema::table('apartamente', function(Blueprint $t){
 				$t->text('strada')->after('zona_aproximativa');
-				$t->integer('nr_cladire')->after('strada');
-				$t->integer('scara')->after('nr_cladire');
-				$t->integer('nr_apartament')->after('scara');
-				$t->double( 'suprafata_teren')->after('nr_apartament');
+				$t->text('nr_cladire', 25)->after('strada');
+				$t->text('scara', 25)->after('nr_cladire');
+				$t->text('nr_apartament', 25)->after('scara');
+				$t->double('suprafata_teren')->after('nr_apartament');
 
 			});
 		}
