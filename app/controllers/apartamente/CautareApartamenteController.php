@@ -106,14 +106,11 @@ class CautareApartamenteController extends \Datatable\DatatableController
 
 	public function searchPhone()
 	{
-		$sql = "SELECT * FROM v_telefoane WHERE telefon LIKE '%" . ($searched = \Input::get('q')) . "%'";
-		$data = \DB::select($sql);
-		$result = [];
-		foreach($data as $i => $record)
-		{
-			
-		}
-		return \Response::json($data);
+		return \Response::json([
+			'items' => \DB::select("
+				SELECT * FROM v_telefoane WHERE telefon LIKE '%" . ($searched = \Input::get('q')) . "%'
+				")
+		]);
 	}
 
 	protected function controls()

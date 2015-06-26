@@ -51,33 +51,24 @@
 
   	function formatRepo(repo)
   	{
+  		if(repo.loading)
+  		{
+  			return repo.text;
+  		}
   		console.log(repo);
-    	if(repo.loading)
-    	{
-    		return repo.text;
-    	}
+  		var style = repo.phone_type == 'Agenţie' ? ' style="color:#F00"' : ' style="color:#00F"';
     	var markup = 
 			'<div class="clearfix">' +
-			'<div class="col-sm-1">' +
-			'<img src="' + repo.owner.avatar_url + '" style="max-width: 100%" />' +
-			'</div>' +
-			'<div clas="col-sm-10">' +
-			'<div class="clearfix">' +
-			'<div class="col-sm-6">' + repo.full_name + '</div>' +
-			'<div class="col-sm-3"><i class="fa fa-code-fork"></i> ' + repo.forks_count + '</div>' +
-			'<div class="col-sm-2"><i class="fa fa-star"></i> ' + repo.stargazers_count + '</div>' +
+				'<div style="font-weight:bold">' + repo.telefon + '</div>' +
+				'<div' + style + '>' + repo.nume + ' - ' + repo.phone_type + '</div>' +
 			'</div>';
-    	if (repo.description) 
-    	{
-      		markup += '<div>' + repo.description + '</div>';
-    	}
-    	markup += '</div></div>';
+    	
     	return markup;
     }
 
   	function formatRepoSelection(repo) 
   	{
-    	return repo.full_name || repo.text;
+    	return repo.text || (repo.telefon);
   	}
 
   	$("#cbo_telefon").select2({
@@ -90,12 +81,15 @@
     			dataType      : 'json',
     			delay         : 250,
     			data          : function(params) {return {q: params.term, page: params.page};},
-    			processResults: function(data, page) {return {results: data.items};},
+    			processResults: function(data, page) {
+    				console.log(data.items);
+    				return {results: data.items};
+    			},
     			cache         : true
   			},
- 		escapeMarkup: function (markup) { return markup; }, // let our custom formatter work
+ 		escapeMarkup: function (markup) { return markup; }, 
   		minimumInputLength: 3,
-  		templateResult: formatRepo, // omitted for brevity, see the source of this page
-  		templateSelection: formatRepoSelection // omitted for brevity, see the source of this page
+  		templateResult: formatRepo, 
+  		templateSelection: formatRepoSelection 
   	});
 @stop
