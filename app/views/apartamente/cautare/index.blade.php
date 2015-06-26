@@ -1,5 +1,10 @@
 @extends('~layouts.datatable.index')
 
+@section('before-datatable')
+<div class="note note-info" id="note-info-cautare">
+  <i class="fa fa-info-circle" style="font-size:32px; line-height:32px; vertical-align:middle;"></i> <span style="line-height:32px; padding-left:4px;">Pentru a schimba valabilitatea unei oferte faceţi click pe simbolul din coloana "Oferta valabilă".</span>
+</div>
+@stop
 
 @section('custom-styles')
 	@parent
@@ -48,7 +53,8 @@
 	});
 
 	var cautare = new CautareApartamente({
-		'dt' : eval('{{$dt->name()}}')
+		'dt' : eval('{{$dt->name()}}'),
+    'change_oferta_valabila_endpoint' : "{{ URL::route('change_oferta_valabila_endpoint')}}"
 	});
 	
 	/**

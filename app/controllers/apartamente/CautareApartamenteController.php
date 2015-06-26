@@ -82,6 +82,8 @@ class CautareApartamenteController extends \Datatable\DatatableController
 		{
 			return \Redirect::route('cautare-apartamente-index');
 		}
+		$apartament->current_user = $this->current_user;
+		$apartament->current_org = $this->current_org;		
 		$pdf = new CreateOfertaPdf('P', 'A4', 'D', $apartament);
 		$pdf->Output();
 	}
@@ -93,6 +95,8 @@ class CautareApartamenteController extends \Datatable\DatatableController
 		{
 			return \Redirect::route('cautare-apartamente-index');
 		}
+		$apartament->current_user = $this->current_user;
+		$apartament->current_org = $this->current_org;
 		$pdf = new CreateOfertaPdf('P', 'A4', 'I', $apartament);
 		$pdf->Output();
 	}
@@ -119,6 +123,22 @@ class CautareApartamenteController extends \Datatable\DatatableController
 			$data[0]->phone_type = 'Selectaţi pentru adăugare';
 		}
 		return \Response::json(['searched' => $searched, 'items' => $data]);
+	}
+
+	public function schimbaOfertaValabila()
+	{
+		if( $apartament = \Imobiliare\Apartament::find( (int) \Input::get('id') ) )
+		{
+			$apartament->oferta_valabila = 1 - (int) \Input::get('status');
+			$apartament->save();
+			$result = ['success' => true, 'apartament' => $apartament];
+		}
+		else
+		{
+			$result = ['success' => false];	
+		}
+		return \Response::json($result);
+
 	}
 
 	protected function controls()

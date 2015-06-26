@@ -4,7 +4,9 @@ function CautareApartamente( parameters )
 	this.perioada = $('#perioada').data('daterangepicker');
 	this.d1 	  = this.perioada.startDate;
 	this.d2       = this.perioada.endDate;
+	this.change_oferta_valabila_endpoint = parameters.change_oferta_valabila_endpoint;
 
+	console.log(parameters);
 	var my = this;
 
 
@@ -101,6 +103,10 @@ function CautareApartamente( parameters )
 		return "(v_apartamente.telefon LIKE '%" + value + "%') OR (v_apartamente.telefon_secundar_1 LIKE '%" + value + "%') OR (v_apartamente.telefon_secundar_2 LIKE '%" + value + "%')";
 		*/
 		var value = $('#cbo_telefon').val();
+		if( ! value )
+		{
+			return '';
+		}
 		var type = $('#cbo_telefon').select2('data')[0].phone_type;
 		if(type == 'Agenţie')
 		{
@@ -238,7 +244,8 @@ function CautareApartamente( parameters )
 		$('#pret_m2_min').val('');
 		$('#pret_m2_max').val('');
 		$('#is_agentie').val(-1);
-		$('#telefon').val('');
+		//$('#telefon').val('');
+		$('#cbo_telefon').select2('val', '');
 		$('#credit_prima_casa').val(-1);
 		$('#nr_etaj_min').val('');
 		$('#nr_etaj_max').val('');
@@ -251,5 +258,24 @@ function CautareApartamente( parameters )
 		my.perioada.setEndDate(my.d2);
 
 		$('#cmd-search').trigger('click');
+	});
+
+	/**
+	 * Calin Verdes - COMPTECH SOFT SRL
+	 * 27.06.2015 - schimbare oferta
+	 **/
+	$('#box-cauta-apartamente').on('click', '.schimba-valabilitatea-apartamentului', function(){
+		$.ajax({
+			url      : my.change_oferta_valabila_endpoint,
+        	type     : 'post',
+        	dataType : 'json',
+        	data     : { 'id' : $(this).data('id'), 'status' : $(this).data('status') },
+        	success  : function(result)
+        	{
+        		console.log(result);
+        		var table = my.dt;
+				table.draw();
+        	}
+		});
 	});
 }

@@ -88,7 +88,7 @@
 		Parcare <span class="badge badge-{{$record->parcare ? 'success' : 'warning'}}"> {{$record->parcare ? 'DA' : 'NU'}} </span>
 	</a>
 		<a href="#" class="list-group-item list-group-item-info">
-		Preţ <span class="badge badge-info"> {{$record->pret_m2 ? _toFloat($record->pret_m2) . ' RON' : '-'}} </span>
+		Preţ <span class="badge badge-info"> {{$record->pret_m2 ? _toFloat($record->pret_m2) . ' EURO' : '-'}} </span>
 	</a>
 	<a href="#" class="list-group-item list-group-item-info">
 		Preţ negociabil<span class="badge badge-{{$record->negociabil ? 'success' : 'warning'}}"> {{$record->negociabil ? 'DA' : 'NU'}} </span>

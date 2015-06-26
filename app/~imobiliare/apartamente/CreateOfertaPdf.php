@@ -218,7 +218,13 @@ class CreateOfertaPdf
 		{
 			$this->pdf->Pdf()->ln();
 			$this->pdf->Pdf()->ln();
-			$this->pdf->Cell()->text($detalii)->width(190)->border('')->halign('C')->out();
+			$this->pdf->Cell()->text($detalii)->width(190)->border('')->halign('L')->out();
+		}
+
+		if( $detalii = $this->detalii_private()) // afisarea campului detalii
+		{
+			$this->pdf->Pdf()->ln();
+			$this->pdf->Cell()->text($detalii)->width(190)->border('')->halign('L')->out();
 		}
 	}
 
@@ -226,7 +232,7 @@ class CreateOfertaPdf
 	{
 		$this->pdf->Pdf()->SetFont('freeserif', '', 11, '', false);
 		$this->pdf->Pdf()->SetXY(10, -25);
-		$this->pdf->Cell()->text('Pentru informaţii suplimentare sau alte oferte imobiliare mă puteţi contacta la telefon 0744332116, pe email ioana.biris@creditfin.ro sau la sediul nostru pe str. Constantin Brâncuşi, nr. 85, etaj 1, Cluj-Napoca')->width(190)->border('T')->halign('C')->out()->reset('border')->reset('width')->reset('halign');
+		$this->pdf->Cell()->text('Pentru informaţii suplimentare sau alte oferte imobiliare mă puteţi contacta la telefon ' . $this->apartament->current_user->telefon . ', pe email ' . $this->apartament->current_user->email . ' sau la sediul nostru pe ' . str_replace([chr(13) . chr(10), chr(10) . chr(13), chr(10), chr(13)], ' ', $this->apartament->current_org->adresa) )->width(190)->border('T')->halign('C')->out()->reset('border')->reset('width')->reset('halign');
 	}
 
 	protected function outChapterLocalizare()
@@ -365,7 +371,7 @@ class CreateOfertaPdf
 
 	protected function pretApartament()
 	{
-		return ($p = $this->pret_m2()) ? _toFloat($p) . ' LEI, ' . ($this->negociabil() ? 'negociabil' : 'nenegociabil') : '';
+		return ($p = $this->pret_m2()) ? _toFloat($p) . ' EURO, ' . ($this->negociabil() ? 'negociabil' : 'nenegociabil') : '';
 	}
 
 	protected function ultimaActualizareApartament()

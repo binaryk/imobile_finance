@@ -45,6 +45,7 @@
 				</div>
 				@endif
 				<!-- Form --> 
+				@yield('before-datatable')
 				<!-- datatable -->
 				{{ $dt->table() }}
 				<!-- /datatable -->
