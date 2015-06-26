@@ -97,7 +97,7 @@ class ApartamenteRecord extends \Imobiliare\GridsRecord
                 'source'    => 'ultima_actualizare',
             ], 
             '8' => [
-                'id'        => 'telefon',
+                'id'        => 'proprietar',
                 'orderable' => 'yes',
                 'class'     => 'td-align-left',
                 'visible'   => 'yes',

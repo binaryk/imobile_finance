@@ -92,12 +92,25 @@ function CautareApartamente( parameters )
 	/* 7 -> telefoane */
 	this.telefoane = function()
 	{
+		/**
 		var value = $('#telefon').val();
 		if(value.length == 0)
 		{
 			return '';
 		}
 		return "(v_apartamente.telefon LIKE '%" + value + "%') OR (v_apartamente.telefon_secundar_1 LIKE '%" + value + "%') OR (v_apartamente.telefon_secundar_2 LIKE '%" + value + "%')";
+		*/
+		var value = $('#cbo_telefon').val();
+		var type = $('#cbo_telefon').select2('data')[0].phone_type;
+		if(type == 'Agenţie')
+		{
+			return '';
+		}
+		if( parseInt(value) > 0 )
+		{
+			return 'v_apartamente.id_proprietar_pf = ' + value;		
+		}
+		return '';
 	}
 
 	/* 8 -> credit prima casa */

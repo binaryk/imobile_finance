@@ -17,7 +17,8 @@
 			<div class="col-xs-12 col-md-2">{{ $controls['pret_m2_max']->out()}}</div>
 		</div>
 		<div class="row">
-			<div class="col-xs-12 col-md-4">{{ $controls['cbo_telefon']->out()}}</div>
+			<div class="col-xs-8 col-md-3">{{ $controls['cbo_telefon']->out()}}</div>
+			<div class="col-xs-4 col-md-1"><button id="go-to-adauga-proprietar" type="button" title="Adaugă proprietar persoana fizică" class="btn green btn-xs">Adaugă PF</button></div>
 			<div class="col-xs-12 col-md-4">{{ $controls['credit_prima_casa']->out()}}</div>
 			<div class="col-xs-12 col-md-2">{{ $controls['nr_etaj_min']->out()}}</div>
 			<div class="col-xs-12 col-md-2">{{ $controls['nr_etaj_max']->out()}}</div>

@@ -106,11 +106,19 @@ class CautareApartamenteController extends \Datatable\DatatableController
 
 	public function searchPhone()
 	{
-		return \Response::json([
-			'items' => \DB::select("
+		$data = 
+			\DB::select("
 				SELECT * FROM v_telefoane WHERE telefon LIKE '%" . ($searched = \Input::get('q')) . "%'
-				")
-		]);
+			");
+		if( count($data) == 0)
+		{
+			$data[0] = new \StdClass();
+			$data[0]->id = 'not-exist';
+			$data[0]->telefon = $searched;
+			$data[0]->nume = '<span class="label label-sm label-danger">Nu exista</span>';
+			$data[0]->phone_type = 'Selectaţi pentru adăugare';
+		}
+		return \Response::json(['searched' => $searched, 'items' => $data]);
 	}
 
 	protected function controls()

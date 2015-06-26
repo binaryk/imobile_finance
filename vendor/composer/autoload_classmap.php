@@ -204,6 +204,7 @@ return array(
     'CreateUsersFkOrg' => $baseDir . '/app/database/migrations/2015_05_06_123012_create_users_fk_org.php',
     'CreateUsersTable' => $baseDir . '/app/database/migrations/2015_05_06_115546_create_users_table.php',
     'CreateViewApartamente' => $baseDir . '/app/database/migrations/2015_06_09_143648_create_view_apartamente.php',
+    'CreateViewApartamente260615' => $baseDir . '/app/database/migrations/2015_06_26_182339_create_view_apartamente_260615.php',
     'CreateViewLocalitati' => $baseDir . '/app/database/migrations/2015_05_30_183948_create_view_localitati.php',
     'CreateViewTelefoane' => $baseDir . '/app/database/migrations/2015_06_26_141102_create_view_telefoane.php',
     'CreateZonaAcoperireDezvoltatorsTable' => $baseDir . '/app/database/migrations/2015_05_07_013110_create_zona_acoperire_dezvoltators_table.php',

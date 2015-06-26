@@ -17,6 +17,8 @@
 @stop
 
 @section('datatable-specific-page-jquery-initializations')
+	var searched = '';
+
 	$('.page-bar').hide();
 	$('#perioada').daterangepicker({
 		'format' : 'DD.MM.YYYY',
@@ -48,7 +50,11 @@
 	var cautare = new CautareApartamente({
 		'dt' : eval('{{$dt->name()}}')
 	});
-
+	
+	/**
+	 * 26.06.2015 - Functionalitate SELECT2
+	 * Calin Verdes - COMPTECH SOFT
+	 **/
   	function formatRepo(repo)
   	{
   		if(repo.loading)
@@ -71,9 +77,10 @@
     	return repo.text || (repo.telefon);
   	}
 
-  	$("#cbo_telefon").select2({
+  	var selectTelefon = $("#cbo_telefon").select2({
   		placeholder : "Căutaţi un număr de telefon",
   		allowClear  : true,
+  		closeOnSelect : true,
   		ajax        : 
   			{
     			url           : "{{ URL::route('apartamente-cauta-telefon')}}",
@@ -82,7 +89,7 @@
     			delay         : 250,
     			data          : function(params) {return {q: params.term, page: params.page};},
     			processResults: function(data, page) {
-    				console.log(data.items);
+    				searched = data.searched;
     				return {results: data.items};
     			},
     			cache         : true
@@ -91,5 +98,33 @@
   		minimumInputLength: 3,
   		templateResult: formatRepo, 
   		templateSelection: formatRepoSelection 
+  	});
+
+  	$('#box-cauta-apartamente').on('click', '#go-to-adauga-proprietar', function(){
+		
+		if($('#cbo_telefon').val() == 'not-exist')
+		{
+			var numar = $('#cbo_telefon').select2('data')[0].telefon;
+			if( numar.length )
+			{
+				var route = "{{ URL::route('proprietar-index')}}";
+				location.href = route + '?telefon=' + numar;
+			}
+		}
+	});
+
+  	selectTelefon.on("select2:select", function (e) { 
+  		if($('#cbo_telefon').val() == 'not-exist')
+  		{
+  			var type = $('#cbo_telefon').select2('data')[0].phone_type;
+  			if(type != 'Agenţie')
+  			{
+  				$('#go-to-adauga-proprietar').show();
+  			}
+  		}
+  	});
+
+  	selectTelefon.on("select2:open", function (e) { 
+  		$('#go-to-adauga-proprietar').hide();
   	});
 @stop
