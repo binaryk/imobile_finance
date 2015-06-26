@@ -81,7 +81,7 @@ class Route
 		->add('get', 'apartament-descarca-pdf', 'apartament-descarca-pdf/{id}', 'CautareApartamenteController@downloadPDF', 'Apartamente')
 		->add('get', 'apartament-deschide-pdf', 'apartament-deschide-pdf/{id}', 'CautareApartamenteController@openPDF', 'Apartamente')
 		->add('post', 'apartamente-load-photo', 'apartamente-load-photo', 'CautareApartamenteController@loadPhoto', 'Apartamente')
-
+		->add('post', 'apartamente-cauta-telefon', 'apartamente-cauta-telefon', 'CautareApartamenteController@searchPhone', 'Apartamente')
 		/**/
 		;
 	}

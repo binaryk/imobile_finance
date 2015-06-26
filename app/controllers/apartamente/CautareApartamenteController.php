@@ -104,6 +104,18 @@ class CautareApartamenteController extends \Datatable\DatatableController
 			\Response::json(['img' => '<img src="' . (string) \Image::make($photo->file_name)->resize(480, NULL, function ($constraint){$constraint->aspectRatio(); $constraint->upsize();})->encode('data-url') . '" style="width: 480px; display: block;"/>']);
 	}
 
+	public function searchPhone()
+	{
+		$sql = "SELECT * FROM v_telefoane WHERE telefon LIKE '%" . ($searched = \Input::get('q')) . "%'";
+		$data = \DB::select($sql);
+		$result = [];
+		foreach($data as $i => $record)
+		{
+			
+		}
+		return \Response::json($data);
+	}
+
 	protected function controls()
 	{
 		// cum se face resetarea filtrarii???
@@ -257,6 +269,16 @@ class CautareApartamenteController extends \Datatable\DatatableController
 				->class('form-control input-sm data-source')
 				->controlsource('vechime_imobil')->controltype('combobox')
 				->options([-1 => 'Toate (vechi sau noi)', 1 => 'Imobil nou', 2 => 'Imobil vechi']),
+
+			/**
+			 *  26.06.2015 - Telefoane select2
+			 **/
+			'cbo_telefon' =>
+				\Easy\Form\Combobox::make('~layouts.form.controls.comboboxes.combobox')
+				->name('cbo_telefon')->caption('Telefon')
+				->class('form-control input-sm data-source')
+				->controlsource('cbo_telefon')->controltype('combobox')
+				->options([]),
 		];
 	}
 }

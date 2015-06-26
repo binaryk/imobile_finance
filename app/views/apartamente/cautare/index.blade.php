@@ -4,6 +4,7 @@
 @section('custom-styles')
 	@parent
 	{{ HTML::style('packages/daterangepicker/css/daterangepicker-bs3.css') }}
+	{{ HTML::style('packages/select2/4.0.0/css/select2.min.css') }}
 	{{ HTML::style('apartamente/cautare.css') }}
 @stop
 
@@ -12,6 +13,7 @@
 	{{ HTML::script('packages/daterangepicker/js/daterangepicker.js') }}
 	{{ HTML::script('packages/inputmask/js/jquery.inputmask.js')}}
 	{{ HTML::script('packages/inputmask/js/jquery.inputmask.numeric.extensions.js')}}
+	{{ HTML::script('packages/select2/4.0.0/js/select2.min.js')}}
 @stop
 
 @section('datatable-specific-page-jquery-initializations')
@@ -46,4 +48,54 @@
 	var cautare = new CautareApartamente({
 		'dt' : eval('{{$dt->name()}}')
 	});
+
+  	function formatRepo(repo)
+  	{
+  		console.log(repo);
+    	if(repo.loading)
+    	{
+    		return repo.text;
+    	}
+    	var markup = 
+			'<div class="clearfix">' +
+			'<div class="col-sm-1">' +
+			'<img src="' + repo.owner.avatar_url + '" style="max-width: 100%" />' +
+			'</div>' +
+			'<div clas="col-sm-10">' +
+			'<div class="clearfix">' +
+			'<div class="col-sm-6">' + repo.full_name + '</div>' +
+			'<div class="col-sm-3"><i class="fa fa-code-fork"></i> ' + repo.forks_count + '</div>' +
+			'<div class="col-sm-2"><i class="fa fa-star"></i> ' + repo.stargazers_count + '</div>' +
+			'</div>';
+    	if (repo.description) 
+    	{
+      		markup += '<div>' + repo.description + '</div>';
+    	}
+    	markup += '</div></div>';
+    	return markup;
+    }
+
+  	function formatRepoSelection(repo) 
+  	{
+    	return repo.full_name || repo.text;
+  	}
+
+  	$("#cbo_telefon").select2({
+  		placeholder : "Căutaţi un număr de telefon",
+  		allowClear  : true,
+  		ajax        : 
+  			{
+    			url           : "{{ URL::route('apartamente-cauta-telefon')}}",
+    			type          :'post',
+    			dataType      : 'json',
+    			delay         : 250,
+    			data          : function(params) {return {q: params.term, page: params.page};},
+    			processResults: function(data, page) {return {results: data.items};},
+    			cache         : true
+  			},
+ 		escapeMarkup: function (markup) { return markup; }, // let our custom formatter work
+  		minimumInputLength: 3,
+  		templateResult: formatRepo, // omitted for brevity, see the source of this page
+  		templateSelection: formatRepoSelection // omitted for brevity, see the source of this page
+  	});
 @stop
