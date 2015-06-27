@@ -82,6 +82,7 @@ class Route
 		->add('get', 'apartament-deschide-pdf', 'apartament-deschide-pdf/{id}', 'CautareApartamenteController@openPDF', 'Apartamente')
 		->add('post', 'apartamente-load-photo', 'apartamente-load-photo', 'CautareApartamenteController@loadPhoto', 'Apartamente')
 		->add('post', 'apartamente-cauta-telefon', 'apartamente-cauta-telefon', 'CautareApartamenteController@searchPhone', 'Apartamente')
+		->add('post', 'change_oferta_valabila_endpoint', 'change-oferta-valabila-endpoint', 'CautareApartamenteController@schimbaOfertaValabila', 'Apartamente')
 		/**/
 		;
 	}

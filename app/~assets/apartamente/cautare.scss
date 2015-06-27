@@ -1,5 +1,6 @@
 #form-cautare-apartamente
 {
+	margin-bottom:0px;
 	.form-group
 	{
 		margin-bottom:1px;
@@ -115,4 +116,19 @@
 	height:28px;
 	margin-left:-22px;
 	display:none;
+}
+
+#note-info-cautare
+{
+	margin-top:2px;
+	margin-bottom:2px;
+}
+
+.schimba-valabilitatea-apartamentului
+{
+	cursor:pointer;
+	&:hover
+	{
+		opacity:0.5;	
+	}
 }

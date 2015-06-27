@@ -74,7 +74,7 @@ class ApartamenteRecord extends \Imobiliare\GridsRecord
                 'orderable' => 'yes',
                 'class'     => 'td-align-right',
                 'visible'   => 'yes',
-                'header'    => ['caption' => 'Pret', 'style'   => 'width:4%',],
+                'header'    => ['caption' => 'Pret (EURO)', 'style'   => 'width:4%',],
                 'type'      => 'field-float',
                 'source'    => 'pret_m2',
             ], 
