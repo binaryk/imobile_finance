@@ -3,12 +3,33 @@
 
 
 $('[name=tip_imobil]').on('change', function(e){
-	if( $(this).val() == '1' )//apartament
-		$('.apartamente').show();
-	else if( $(this).val() == '3' )//casa
-		$('.apartamente, .apartamente > .casa').show();
-	else 
-		$('.apartamente, .apartamente > .casa').hide();
+	var caz = parseInt($(this).val());
+	console.log(caz);
+	switch(caz) {
+		// Apartament
+		// Garsoniera
+		// Casa
+		// Duplex
+		// Teren
+		case 1://apartament
+			$('.apartamente').show();
+			$('.casa').hide();
+			$('.optional').show();
+			break;
+		case 2://garsoniera
+			$('apartamente').hide();
+			$('.optional').hide();
+			break;
+		case 3://casa
+		case 4://duplex
+			$('.apartamente,.casa').show();
+			$('.optional').show();
+			break;
+		case 5://teren
+			$('.apartamente').show();
+			$('.optional').hide(); 
+			break;
+	}
 });	
 
 

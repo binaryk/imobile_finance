@@ -53,6 +53,7 @@ strada
 nr_cladire
 scara
 nr_apartament
+id_tip_mobilare
 
 */       
         $this
@@ -104,7 +105,7 @@ nr_apartament
         ->addControl(
             \Easy\Form\Textbox::make('~layouts.form.controls.textboxes.textbox-addon')
         ->caption('Agentie')->name('is_agentie')->placeholder('Textbox')
-        ->value('Bifați daca este agentie.')->class('form-control input_label')->enabled(0)
+        ->value('Bifați dacă este agentie.')->class('form-control input_label')->enabled(0)
         ->addon([
             'before' => \Form::checkbox('is_agentie', '1', false, 
                 ['class' => 'data-source icheck', 'id' => 'is_agentie', 
@@ -126,15 +127,15 @@ nr_apartament
             )
         // 6
         ->addControl(
-            \Easy\Form\Textbox::make('~layouts.form.controls.textboxes.textbox')
+            \Easy\Form\Combobox::make('~layouts.form.controls.comboboxes.combobox')
                 ->name('nr_camere')
-                ->caption('Nr camere')
-                // ->placeholder('Nr camere')
-                ->class('form-control data-source')
+                ->caption('Numar camere')
+                ->class('form-control data-source input-group form-select init-on-update-delete')
                 ->controlsource('nr_camere')
-                ->controltype('textbox')
-                ->maxlength(255)
-        ) 
+                ->controltype('combobox') 
+                ->enabled('false')
+                ->options(\Imobiliare\Nomenclator\NumarCamere::toCombobox())
+            ) 
         // 7
         ->addControl(
             \Easy\Form\Combobox::make('~layouts.form.controls.comboboxes.combobox')
@@ -241,7 +242,7 @@ nr_apartament
         ->addControl(
             \Easy\Form\Textbox::make('~layouts.form.controls.textboxes.textbox-addon')
         ->caption('Parcare')->name('parcare')->placeholder('Textbox')
-        ->value('Bifați daca are parcare.')->class('form-control input_label')->enabled(0)
+        ->value('Bifați dacă are parcare.')->class('form-control input_label')->enabled(0)
         ->addon([
             'before' => \Form::checkbox('parcare', '1', false, 
                 ['class' => 'data-source icheck', 'id' => 'parcare', 
@@ -290,7 +291,7 @@ nr_apartament
         ->addControl(
             \Easy\Form\Textbox::make('~layouts.form.controls.textboxes.textbox')
                 ->name('pret_m2')
-                ->caption('Pret (EUR/MP)')
+                ->caption('Pret (EUR)')
                 // ->placeholder('Pret')
                 ->class('form-control data-source')
                 ->controlsource('pret_m2')
@@ -343,7 +344,7 @@ nr_apartament
         ->addControl(
             \Easy\Form\Textbox::make('~layouts.form.controls.textboxes.textbox-addon')
         ->caption('Geamuri termopan')->name('termopan')->placeholder('Textbox')
-        ->value('Bifați daca are termopan.')->class('form-control input_label')->enabled(0)
+        ->value('Bifați dacă are termopan.')->class('form-control input_label')->enabled(0)
         ->addon([
             'before' => \Form::checkbox('termopan', '1', false, 
                 ['class' => 'data-source icheck', 'id' => 'termopan', 
@@ -357,7 +358,7 @@ nr_apartament
         ->addControl(
             \Easy\Form\Textbox::make('~layouts.form.controls.textboxes.textbox-addon')
         ->caption('Contoare gaz')->name('contoare_gaz')->placeholder('Textbox')
-        ->value('Bifați daca are contoare gaz.')->class('form-control input_label')->enabled(0)
+        ->value('Bifați dacă are contoare gaz.')->class('form-control input_label')->enabled(0)
         ->addon([
             'before' => \Form::checkbox('contoare_gaz', '1', false, 
                 ['class' => 'data-source icheck', 'id' => 'contoare_gaz', 
@@ -371,7 +372,7 @@ nr_apartament
         ->addControl(
             \Easy\Form\Textbox::make('~layouts.form.controls.textboxes.textbox-addon')
         ->caption('Parchet')->name('parchet')->placeholder('Textbox')
-        ->value('Bifați daca are parchet.')->class('form-control input_label')->enabled(0)
+        ->value('Bifați dacă are parchet.')->class('form-control input_label')->enabled(0)
         ->addon([
             'before' => \Form::checkbox('parchet', '1', false, 
                 ['class' => 'data-source icheck', 'id' => 'parchet', 
@@ -385,7 +386,7 @@ nr_apartament
         ->addControl(
             \Easy\Form\Textbox::make('~layouts.form.controls.textboxes.textbox-addon')
         ->caption('Faianta')->name('faianta')->placeholder('Textbox')
-        ->value('Bifați daca are faianta.')->class('form-control input_label')->enabled(0)
+        ->value('Bifați dacă are faianta.')->class('form-control input_label')->enabled(0)
         ->addon([
             'before' => \Form::checkbox('faianta', '1', false, 
                 ['class' => 'data-source icheck', 'id' => 'faianta', 
@@ -399,7 +400,7 @@ nr_apartament
         ->addControl(
             \Easy\Form\Textbox::make('~layouts.form.controls.textboxes.textbox-addon')
         ->caption('Aer conditionat')->name('aer_conditionat')->placeholder('Textbox')
-        ->value('Bifați daca are aer conditionat.')->class('form-control input_label')->enabled(0)
+        ->value('Bifați dacă are aer conditionat.')->class('form-control input_label')->enabled(0)
         ->addon([
             'before' => \Form::checkbox('aer_conditionat', '1', false, 
                 ['class' => 'data-source icheck', 'id' => 'aer_conditionat', 
@@ -413,7 +414,7 @@ nr_apartament
         ->addControl(
             \Easy\Form\Textbox::make('~layouts.form.controls.textboxes.textbox-addon')
         ->caption('Uscator')->name('uscator')->placeholder('Textbox')
-        ->value('Bifați daca are uscator.')->class('form-control input_label')->enabled(0)
+        ->value('Bifați dacă are uscator.')->class('form-control input_label')->enabled(0)
         ->addon([
             'before' => \Form::checkbox('uscator', '1', false, 
                 ['class' => 'data-source icheck', 'id' => 'uscator', 
@@ -439,7 +440,7 @@ nr_apartament
         ->addControl(
             \Easy\Form\Textbox::make('~layouts.form.controls.textboxes.textbox-addon')
         ->caption('Centrala termica')->name('centrala_termica')->placeholder('Textbox')
-        ->value('Bifați daca are centrala termica.')->class('form-control input_label')->enabled(0)
+        ->value('Bifați dacă are centrala termica.')->class('form-control input_label')->enabled(0)
         ->addon([
             'before' => \Form::checkbox('centrala_termica', '1', false, 
                 ['class' => 'data-source icheck', 'id' => 'centrala_termica', 
@@ -453,7 +454,7 @@ nr_apartament
         ->addControl(
             \Easy\Form\Textbox::make('~layouts.form.controls.textboxes.textbox-addon')
         ->caption('Contoare apa')->name('contoare_apa')->placeholder('Textbox')
-        ->value('Bifați daca are contoare apa.')->class('form-control input_label')->enabled(0)
+        ->value('Bifați dacă are contoare apa.')->class('form-control input_label')->enabled(0)
         ->addon([
             'before' => \Form::checkbox('contoare_apa', '1', false, 
                 ['class' => 'data-source icheck', 'id' => 'contoare_apa', 
@@ -479,7 +480,7 @@ nr_apartament
          ->addControl(
              \Easy\Form\Textbox::make('~layouts.form.controls.textboxes.textbox-addon')
          ->caption('Zugravit lavabil')->name('zugravit_lavabil')->placeholder('Textbox')
-         ->value('Bifați daca este zugravit lavabil.')->class('form-control input_label')->enabled(0)
+         ->value('Bifați dacă este zugravit lavabil.')->class('form-control input_label')->enabled(0)
          ->addon([
              'before' => \Form::checkbox('zugravit_lavabil', '1', false, 
                  ['class' => 'data-source icheck', 'id' => 'zugravit_lavabil', 
@@ -492,7 +493,7 @@ nr_apartament
          ->addControl(
              \Easy\Form\Textbox::make('~layouts.form.controls.textboxes.textbox-addon')
          ->caption('TV cablu')->name('tv_cablu')->placeholder('Textbox')
-         ->value('Bifați daca are tv cablu.')->class('form-control input_label')->enabled(0)
+         ->value('Bifați dacă are tv cablu.')->class('form-control input_label')->enabled(0)
          ->addon([
              'before' => \Form::checkbox('tv_cablu', '1', false, 
                  ['class' => 'data-source icheck', 'id' => 'tv_cablu', 
@@ -505,7 +506,7 @@ nr_apartament
          ->addControl(
              \Easy\Form\Textbox::make('~layouts.form.controls.textboxes.textbox-addon')
          ->caption('Loc in pod')->name('loc_pod')->placeholder('Textbox')
-         ->value('Bifați daca are loc in pod.')->class('form-control input_label')->enabled(0)
+         ->value('Bifați dacă are loc in pod.')->class('form-control input_label')->enabled(0)
          ->addon([
              'before' => \Form::checkbox('loc_pod', '1', false, 
                  ['class' => 'data-source icheck', 'id' => 'loc_pod', 
@@ -518,7 +519,7 @@ nr_apartament
          ->addControl(
              \Easy\Form\Textbox::make('~layouts.form.controls.textboxes.textbox-addon')
          ->caption('Usa antiefractie')->name('usa_atiefractie')->placeholder('Textbox')
-         ->value('Bifați daca are usa atiefractie.')->class('form-control input_label')->enabled(0)
+         ->value('Bifați dacă are usa antiefractie.')->class('form-control input_label')->enabled(0)
          ->addon([
              'before' => \Form::checkbox('usa_atiefractie', '1', false, 
                  ['class' => 'data-source icheck', 'id' => 'usa_atiefractie', 
@@ -531,7 +532,7 @@ nr_apartament
          ->addControl(
              \Easy\Form\Textbox::make('~layouts.form.controls.textboxes.textbox-addon')
          ->caption('Modificari interioare')->name('modificari_interioare')->placeholder('Textbox')
-         ->value('Bifați daca s-au facut modificari interioare.')->class('form-control input_label')->enabled(0)
+         ->value('Bifați dacă s-au facut modificari interioare.')->class('form-control input_label')->enabled(0)
          ->addon([
              'before' => \Form::checkbox('modificari_interioare', '1', false, 
                  ['class' => 'data-source icheck', 'id' => 'modificari_interioare', 
@@ -544,7 +545,7 @@ nr_apartament
          ->addControl(
              \Easy\Form\Textbox::make('~layouts.form.controls.textboxes.textbox-addon')
          ->caption('Gresie')->name('gresie')->placeholder('Textbox')
-         ->value('Bifați daca are gresie.')->class('form-control input_label')->enabled(0)
+         ->value('Bifați dacă are gresie.')->class('form-control input_label')->enabled(0)
          ->addon([
              'before' => \Form::checkbox('gresie', '1', false, 
                  ['class' => 'data-source icheck', 'id' => 'gresie', 
@@ -557,7 +558,7 @@ nr_apartament
          ->addControl(
              \Easy\Form\Textbox::make('~layouts.form.controls.textboxes.textbox-addon')
          ->caption('Balcoane inchise')->name('balcoane_inchise')->placeholder('Textbox')
-         ->value('Bifați daca are balcoane inchise.')->class('form-control input_label')->enabled(0)
+         ->value('Bifați dacă are balcoane inchise.')->class('form-control input_label')->enabled(0)
          ->addon([
              'before' => \Form::checkbox('balcoane_inchise', '1', false, 
                  ['class' => 'data-source icheck', 'id' => 'balcoane_inchise', 
@@ -570,7 +571,7 @@ nr_apartament
          ->addControl(
              \Easy\Form\Textbox::make('~layouts.form.controls.textboxes.textbox-addon')
          ->caption('Telefon')->name('has_telefon')->placeholder('Textbox')
-         ->value('Bifați daca are telefon.')->class('form-control input_label')->enabled(0)
+         ->value('Bifați dacă are telefon.')->class('form-control input_label')->enabled(0)
          ->addon([
              'before' => \Form::checkbox('has_telefon', '1', false, 
                  ['class' => 'data-source icheck', 'id' => 'has_telefon', 
@@ -583,7 +584,7 @@ nr_apartament
          ->addControl(
              \Easy\Form\Textbox::make('~layouts.form.controls.textboxes.textbox-addon')
          ->caption('Loc in pivnita')->name('loc_pivnita')->placeholder('Textbox')
-         ->value('Bifați daca are loc in pivnita.')->class('form-control input_label')->enabled(0)
+         ->value('Bifați dacă are loc in pivnita.')->class('form-control input_label')->enabled(0)
          ->addon([
              'before' => \Form::checkbox('loc_pivnita', '1', false, 
                  ['class' => 'data-source icheck', 'id' => 'loc_pivnita', 
@@ -648,7 +649,7 @@ nr_apartament
          ->addControl(
              \Easy\Form\Textbox::make('~layouts.form.controls.textboxes.textbox-addon')
          ->caption('Imobil nou')->name('vechime_imobil')->placeholder('Textbox')
-         ->value('Bifați daca imobilul este nou.')->class('form-control input_label')->enabled(0)
+         ->value('Bifați dacă imobilul este nou.')->class('form-control input_label')->enabled(0)
          ->addon([
              'before' => \Form::checkbox('vechime_imobil', '1', false, 
                  ['class' => 'data-source icheck', 'id' => 'vechime_imobil', 
@@ -671,7 +672,7 @@ nr_apartament
          ->addControl(
              \Easy\Form\Textbox::make('~layouts.form.controls.textboxes.textbox-addon')
          ->caption('Oferta este valabila')->name('oferta_valabila')->placeholder('Textbox')
-         ->value('Bifați daca oferta este valabila..')->class('form-control input_label')->enabled(0)
+         ->value('Bifați dacă oferta este valabila..')->class('form-control input_label')->enabled(0)
          ->addon([
              'before' => \Form::checkbox('oferta_valabila', '1', false, 
                  ['class' => 'data-source icheck', 'id' => 'oferta_valabila', 
@@ -680,6 +681,17 @@ nr_apartament
                  ), 
              'after' => NULL])
              )
+        // 52
+        ->addControl(
+            \Easy\Form\Combobox::make('~layouts.form.controls.comboboxes.combobox')
+                ->name('id_tip_mobilare')
+                ->caption('Tip mobilare')
+                ->class('form-control data-source input-group form-select init-on-update-delete')
+                ->controlsource('id_tip_mobilare')
+                ->controltype('combobox') 
+                ->enabled('false')
+                ->options(\Imobiliare\Nomenclator\TipMobilare::toCombobox())
+            ) 
         ;
 
     }

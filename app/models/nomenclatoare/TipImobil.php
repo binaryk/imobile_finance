@@ -42,6 +42,6 @@ class TipImobil extends \Eloquent
 
     public static function toCombobox( $noneCaption = ' -- Selectaţi tip imobil --' )
     {
-        return [0 => $noneCaption] + self::orderBy('nume')->lists('nume', 'id');
+        return [0 => $noneCaption] + self::orderBy('id')->lists('nume', 'id');
     }
 }
