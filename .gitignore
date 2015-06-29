@@ -1,6 +1,8 @@
 /app/storage/uploads
 /app/storage/uploads/*
 /bootstrap/compiled.php
+/vendor
+/vendor/*
 composer.phar 
 .env.*.php
 .env.php 
@@ -8,3 +10,4 @@ composer.phar
 Thumbs.db
 .project
 /app/config/02-calin/
+/app/config/03-andi/

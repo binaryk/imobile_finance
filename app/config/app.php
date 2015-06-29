@@ -9,8 +9,6 @@ return [
 	'key'             => 'zgXoVFZpFyTjinXT2enOjcAIIw0XmGyY',
 	'cipher'          => MCRYPT_RIJNDAEL_128,
 	'providers'       => [
-		'Barryvdh\Debugbar\ServiceProvider',
-		'TwigBridge\ServiceProvider',
 		'Illuminate\Foundation\Providers\ArtisanServiceProvider',
 		'Illuminate\Auth\AuthServiceProvider',
 		'Illuminate\Cache\CacheServiceProvider',
@@ -38,6 +36,7 @@ return [
 		'Illuminate\View\ViewServiceProvider',
 		'Illuminate\Workbench\WorkbenchServiceProvider',
 
+		'Barryvdh\Debugbar\ServiceProvider',
 		'Way\Generators\GeneratorsServiceProvider',
 		'Krucas\Notification\NotificationServiceProvider',
 		'Cartalyst\Sentry\SentryServiceProvider',
@@ -45,6 +44,7 @@ return [
 		'basicAuth\Repo\BackendServiceProvider',
 		'Baum\BaumServiceProvider',
 		'Intervention\Image\ImageServiceProvider',
+		'TwigBridge\ServiceProvider',
 		'Thujohn\Pdf\PdfServiceProvider',
 	],
 	'manifest' => storage_path() . '/meta',
@@ -93,7 +93,8 @@ return [
 		'Twig'              => 'TwigBridge\Facade\Twig',
 		'Sentry' => 'Cartalyst\Sentry\Facades\Laravel\Sentry',
 		'Image'           => 'Intervention\Image\Facades\Image',
-		'PDF' 				=> 'Thujohn\Pdf\PdfFacade',
+		'PDF' => 'Thujohn\Pdf\PdfFacade',
+		// 'TCPDF' => 'Thujohn\Pdf\PdfFacade',
 	],
 
 ];
