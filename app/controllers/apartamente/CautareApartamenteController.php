@@ -186,8 +186,6 @@ class CautareApartamenteController extends \Datatable\DatatableController
 
 	protected function controls()
 	{
-		// cum se face resetarea filtrarii???
-
 		return [
 			// [1] = daca oferta este valabila sa nu
 			'oferta-valabila' =>

@@ -3,13 +3,9 @@
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
 
-class AlterTableDezAddColumnIdOrg extends Migration {
+class AlterTableDezAddColumnIdOrg extends Migration 
+{
 
-	/**
-	 * Run the migrations.
-	 *
-	 * @return void
-	 */
 	public function up()
 	{
 		Schema::table('dezvoltatori', function(Blueprint $t){
@@ -18,11 +14,6 @@ class AlterTableDezAddColumnIdOrg extends Migration {
 		});
 	}
 
-	/**
-	 * Reverse the migrations.
-	 *
-	 * @return void
-	 */
 	public function down()
 	{
 		Schema::table('dezvoltatori', function($t)

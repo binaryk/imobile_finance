@@ -5,77 +5,58 @@ use Illuminate\Auth\UserInterface;
 use Illuminate\Auth\Reminders\RemindableTrait;
 use Illuminate\Auth\Reminders\RemindableInterface; 
 
-class User extends Cartalyst\Sentry\Users\Eloquent\User implements UserInterface, RemindableInterface {
-	/**
-     * The database table used by the model.
-     *
-     * @var string
-     */
-    protected $table = 'users';
+class User extends Cartalyst\Sentry\Users\Eloquent\User implements UserInterface, RemindableInterface 
+{
 
-    /**
-     * The attributes excluded from the model's JSON form.
-     *
-     * @var array
-     */
+    protected $table = 'users';
     protected $hidden = array('password');
 
-    /**
-     * Get the unique identifier for the user.
-     *
-     * @return mixed
-     */
+    public static function generalValidatorRules($id)
+    {
+        return [
+            'nume'    => 'required',
+            'prenume' => 'required',
+            'email'   => 'required|email|unique:users,email,' . $id,
+            'telefon' => 'required'
+        ];
+    }
+
+    public static function generalValidatorMessages()
+    {
+        return [
+            'nume.required'    => 'Numele trebuie completat',
+            'prenume.required' => 'Prenumele trebuie completat',
+            'email.required'   => 'Emailul trebuie completat',
+            'email.email'      => 'Introduceţi o adresă de email corectă',
+            'telefon.required' => 'Numărul de telefon trebuie completat'
+        ];
+    }
+
     public function getAuthIdentifier()
     {
         return $this->getKey();
     }
 
-    /**
-     * Get the password for the user.
-     *
-     * @return string
-     */
     public function getAuthPassword()
     {
         return $this->password;
     }
 
-    /**
-     * Get the token value for the "remember me" session.
-     *
-     * @return string
-     */
     public function getRememberToken()
     {
         return $this->remember_token;
     }
 
-    /**
-     * Set the token value for the "remember me" session.
-     *
-     * @param  string  $value
-     * @return void
-     */
     public function setRememberToken($value)
     {
         $this->remember_token = $value;
     }
 
-    /**
-     * Get the column name for the "remember me" token.
-     *
-     * @return string
-     */
     public function getRememberTokenName()
     {
         return 'remember_token';
     }
 
-    /**
-     * Get the e-mail address where password reminders are sent.
-     *
-     * @return string
-     */
     public function getReminderEmail()
     {
         return $this->email;
@@ -88,8 +69,10 @@ class User extends Cartalyst\Sentry\Users\Eloquent\User implements UserInterface
 
     public function isCurrent()
     {
-        if (!Sentry::check()) return false;
-
+        if (!Sentry::check())
+        {
+            return false;
+        }
         return Sentry::getUser()->id == $this->id;
     }
 

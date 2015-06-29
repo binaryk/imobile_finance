@@ -31,16 +31,12 @@ Route::group(['before' => 'guest'], function()
 	Route::post('reset_password/{token}', 'RemindersController@postReset');
 });
 
-
 # Standard User Routes
 Route::group(['before' => 'auth|standardUser'], function()
 {
 	Route::get('userProtected', 'StandardUserController@getUserProtected');
 	Route::resource('profiles', 'UsersController', ['only' => ['show', 'edit', 'update']]);
 	Imobile\Route::make()->define();
-
-
-
 });
 
 # Admin Routes
@@ -50,4 +46,6 @@ Route::group(['before' => 'auth|admin'], function()
     Route::resource('admin/profiles', 'AdminUsersController', ['only' => ['index', 'show', 'edit', 'update', 'destroy']]);
 });
 
-include 'macros.php';
+include 'macros.php'; // ??? Calin> Ce cauta asta aici la rute
+
+include app_path() . '/~imobiliare/routes/user.route.php';
