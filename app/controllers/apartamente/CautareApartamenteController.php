@@ -167,6 +167,23 @@ class CautareApartamenteController extends \Datatable\DatatableController
 
 	}
 
+	public function schimbaDataActualizare()
+	{
+		if( $apartament = \Imobiliare\Apartament::find( (int) \Input::get('id') ) )
+		{
+			$apartament->ultima_actualizare = \Carbon\Carbon::now()->format('Y-m-d');
+			$apartament->save();
+			$result = ['success' => true, 'apartament' => $apartament];
+		}
+		else
+		{
+			$result = ['success' => false];	
+		}
+		return \Response::json($result);
+
+	}
+
+
 	protected function controls()
 	{
 		// cum se face resetarea filtrarii???
