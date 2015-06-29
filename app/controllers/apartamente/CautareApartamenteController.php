@@ -84,7 +84,7 @@ class CautareApartamenteController extends \Datatable\DatatableController
 		}
 		$apartament->current_user = $this->current_user;
 		$apartament->current_org = $this->current_org;		
-		$pdf = new CreateOfertaPdf('P', 'A4', 'D', $apartament);
+		$pdf = new CreateOfertaPdf('P', 'A4', 'D', $apartament, false);
 		$pdf->Output();
 	}
 
@@ -97,7 +97,33 @@ class CautareApartamenteController extends \Datatable\DatatableController
 		}
 		$apartament->current_user = $this->current_user;
 		$apartament->current_org = $this->current_org;
-		$pdf = new CreateOfertaPdf('P', 'A4', 'I', $apartament);
+		$pdf = new CreateOfertaPdf('P', 'A4', 'I', $apartament, false);
+		$pdf->Output();
+	}
+
+	public function downloadPDFredus($id)
+	{
+		$apartament = \Imobiliare\Apartament::find($id);
+		if( ! $apartament )
+		{
+			return \Redirect::route('cautare-apartamente-index');
+		}
+		$apartament->current_user = $this->current_user;
+		$apartament->current_org = $this->current_org;		
+		$pdf = new CreateOfertaPdf('P', 'A4', 'D', $apartament, true);
+		$pdf->Output();
+	}
+
+	public function openPDFredus($id)
+	{
+		$apartament = \Imobiliare\Apartament::find($id);
+		if( ! $apartament )
+		{
+			return \Redirect::route('cautare-apartamente-index');
+		}
+		$apartament->current_user = $this->current_user;
+		$apartament->current_org = $this->current_org;
+		$pdf = new CreateOfertaPdf('P', 'A4', 'I', $apartament, true);
 		$pdf->Output();
 	}
 
