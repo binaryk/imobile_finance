@@ -5,8 +5,8 @@
 	"license": "MIT",
 	"require": {
 		"laravel/framework": "4.2.*",
+		"barryvdh/laravel-debugbar": "~1.8",
 		"doctrine/dbal": "~2.3",
-		"barryvdh/laravel-debugbar": "~1.8", 
 		"rcrowe/twigbridge": "0.6.*", 
 		"fzaninotto/faker": "v1.3.0", 
 		"goodby/csv" : "1.2.0", 
@@ -15,11 +15,11 @@
 		"laracasts/validation": "~1.0",
 		"baum/baum": "~1.0",
 		"intervention/image"          : "2.*",
-		"thujohn/pdf": "~1.0",
-		"tecnick.com/tcpdf"           : "6.0.*"
+		"thujohn/pdf": "dev-master",
+		"tecnick.com/tcpdf": "^6.2"
 	},
 	"require-dev": {
-    	"way/generators": "~2.0"
+		"way/generators": "~2.0"
 	},
 	"autoload": {
 		"classmap": [

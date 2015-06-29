@@ -4,8 +4,8 @@ $app = new Illuminate\Foundation\Application;
 $env = $app->detectEnvironment(array(
 	'02-calin'			=>['Dell', 'PC1'],
 	'local' => ['WIN-KE1FRDKJTPK'],
-	'02-server' => ['server1']
-
+	'02-server' => ['server1'],
+	'03-andi' => ['Andi-PC']
 ));
  
 $app->bindInstallPaths(require __DIR__.'/paths.php');

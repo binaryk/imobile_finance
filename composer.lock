@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "hash": "3094b3b7e1d6df03889d8fff014c93e5",
+    "hash": "50688712767bf36d58b467d4aed76982",
     "packages": [
         {
             "name": "barryvdh/laravel-debugbar",
@@ -2757,16 +2757,16 @@
         },
         {
             "name": "tecnick.com/tcpdf",
-            "version": "6.0.099",
+            "version": "6.2.9",
             "source": {
                 "type": "git",
                 "url": "https://github.com/tecnickcom/TCPDF.git",
-                "reference": "75e7ad39458e060d0cae6fcb7d50a2c9f3af1b01"
+                "reference": "fa6ab8a1e1fbabb9e6cfd2f807514fa1497240e4"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/tecnickcom/TCPDF/zipball/75e7ad39458e060d0cae6fcb7d50a2c9f3af1b01",
-                "reference": "75e7ad39458e060d0cae6fcb7d50a2c9f3af1b01",
+                "url": "https://api.github.com/repos/tecnickcom/TCPDF/zipball/fa6ab8a1e1fbabb9e6cfd2f807514fa1497240e4",
+                "reference": "fa6ab8a1e1fbabb9e6cfd2f807514fa1497240e4",
                 "shasum": ""
             },
             "require": {
@@ -2816,20 +2816,20 @@
                 "pdf417",
                 "qrcode"
             ],
-            "time": "2014-11-15 12:35:49"
+            "time": "2015-06-18 09:12:38"
         },
         {
             "name": "thujohn/pdf",
-            "version": "1.0.6",
+            "version": "dev-master",
             "source": {
                 "type": "git",
                 "url": "https://github.com/thujohn/pdf-l4.git",
-                "reference": "8e3a35a1ec54b38cff9ccef5069b628749c1b28b"
+                "reference": "e42bc4aff4512b742c8b7e9a2eb493b92ed9c5e9"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/thujohn/pdf-l4/zipball/8e3a35a1ec54b38cff9ccef5069b628749c1b28b",
-                "reference": "8e3a35a1ec54b38cff9ccef5069b628749c1b28b",
+                "url": "https://api.github.com/repos/thujohn/pdf-l4/zipball/e42bc4aff4512b742c8b7e9a2eb493b92ed9c5e9",
+                "reference": "e42bc4aff4512b742c8b7e9a2eb493b92ed9c5e9",
                 "shasum": ""
             },
             "require": {
@@ -2859,7 +2859,7 @@
                 "laravel4",
                 "pdf"
             ],
-            "time": "2014-12-02 17:45:22"
+            "time": "2014-12-02 17:51:16"
         },
         {
             "name": "twig/twig",
@@ -2971,7 +2971,9 @@
     ],
     "aliases": [],
     "minimum-stability": "stable",
-    "stability-flags": [],
+    "stability-flags": {
+        "thujohn/pdf": 20
+    },
     "prefer-stable": false,
     "prefer-lowest": false,
     "platform": [],
