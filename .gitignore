@@ -1,8 +1,6 @@
 /app/storage/uploads
 /app/storage/uploads/*
 /bootstrap/compiled.php
-/vendor
-/vendor/*
 composer.phar 
 .env.*.php
 .env.php 
