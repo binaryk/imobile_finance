@@ -42,6 +42,6 @@ class TipCategorieTeren extends \Eloquent
 
     public static function toCombobox()
     {
-        return [0 => ' -- Selectaţi tip categorie imobil --'] + self::orderBy('nume')->lists('nume', 'id');
+        return [0 => ' -- Selectaţi tip categorie imobil --'] + self::orderBy('id')->lists('nume', 'id');
     }
 }

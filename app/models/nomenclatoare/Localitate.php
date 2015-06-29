@@ -42,6 +42,6 @@ class Localitate extends \Eloquent
 
     public static function toCombobox()
     {
-        return [0 => ' -- Selectaţi localitatea --'] + self::orderBy('nume')->lists('nume', 'id');
+        return [0 => ' -- Selectaţi localitatea --'] + self::orderBy('id')->lists('nume', 'id');
     }
 }

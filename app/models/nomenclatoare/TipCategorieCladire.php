@@ -42,6 +42,6 @@ class TipCategorieCladire extends \Eloquent
 
     public static function toCombobox()
     {
-        return [0 => ' -- Selectaţi tip categorie cladire --'] + self::orderBy('nume')->lists('nume', 'id');
+        return [0 => ' -- Selectaţi tip categorie cladire --'] + self::orderBy('id')->lists('nume', 'id');
     }
 }

@@ -42,6 +42,6 @@ class TipNrBalcoane extends \Eloquent
 
     public static function toCombobox()
     {
-        return [ '' => ''] + self::orderBy('nume')->lists('nume', 'id');
+        return [ '' => ''] + self::orderBy('id')->lists('nume', 'id');
     }
 }

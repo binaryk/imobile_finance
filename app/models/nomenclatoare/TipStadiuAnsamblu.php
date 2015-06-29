@@ -42,6 +42,6 @@ class TipStadiuAnsamblu extends \Eloquent
 
     public static function toCombobox()
     {
-        return [0 => ' -- Selectaţi stadiu ansamblu --'] + self::orderBy('nume')->lists('nume', 'id');
+        return ['' => ''] + self::orderBy('id')->lists('nume', 'id');
     }
 }

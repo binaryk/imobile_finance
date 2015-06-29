@@ -42,6 +42,6 @@ class TipRegimInaltime extends \Eloquent
 
     public static function toCombobox()
     {
-        return [0 => ' -- Selectaţi regim inaltime --'] + self::orderBy('nume')->lists('nume', 'id');
+        return ['' => ''] + self::orderBy('id')->lists('nume', 'id');
     }
 }

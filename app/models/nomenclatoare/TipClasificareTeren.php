@@ -42,6 +42,6 @@ class TipClasificareTeren extends \Eloquent
 
     public static function toCombobox()
     {
-        return [0 => ' -- Selectaţi tip clasificare teren --'] + self::orderBy('nume')->lists('nume', 'id');
+        return [0 => ' -- Selectaţi tip clasificare teren --'] + self::orderBy('id')->lists('nume', 'id');
     }
 }

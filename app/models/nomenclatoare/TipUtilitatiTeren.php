@@ -42,6 +42,6 @@ class TipUtilitatiTeren extends \Eloquent
 
     public static function toCombobox()
     {
-        return [0 => ' -- Selectaţi tip utilitati teren --'] + self::orderBy('nume')->lists('nume', 'id');
+        return ['' => ''] + self::orderBy('id')->lists('nume', 'id');
     }
 }

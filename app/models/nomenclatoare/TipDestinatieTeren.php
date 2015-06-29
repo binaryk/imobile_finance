@@ -42,6 +42,6 @@ class TipDestinatieTeren extends \Eloquent
 
     public static function toCombobox()
     {
-        return [0 => ' -- Selectaţi tip destinatie terenuri --'] + self::orderBy('nume')->lists('nume', 'id');
+        return [0 => ' -- Selectaţi tip destinatie terenuri --'] + self::orderBy('id')->lists('nume', 'id');
     }
 }
