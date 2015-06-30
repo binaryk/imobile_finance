@@ -121,7 +121,7 @@ function DTFORM(formid, loadformurl, model, doactionurl, dt)
 						Am scos ca sa nu se puna automat pe 0.
 						Gestionez combobox-urile din "custom js"
 						**/
-						//$(this).val(0).trigger('change');
+						// $(this).val(0).trigger('change');
 						break;
 					case 'select2' :
 						$(this).val([]).trigger('change');

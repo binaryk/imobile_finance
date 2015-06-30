@@ -32,6 +32,16 @@ $('[name=tip_imobil]').on('change', function(e){
 	}
 });	
 
+form.aftershow = function(record, action){
+	if( action == 'insert' ){
+		$('select').select2("val", "");
+		$('.apartamente').hide();
+	}
+	if( action == 'update' ){
+		$('[name=tip_imobil]').attr('disabled','disabled');
+	} 
+}
+
 
 FormiCheck.init();
 $('select.form-select').select2({

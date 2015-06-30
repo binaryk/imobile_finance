@@ -638,10 +638,10 @@ id_tip_mobilare
          ->addControl(
              \Easy\Form\Combobox::make('~layouts.form.controls.comboboxes.combobox')
                  ->name('tip_imobil')
-                 ->caption('Tip imobil')
-                 ->class('form-control data-source input-group form-select init-on-update-delete')
+                 // ->caption('Tip imobil')
+                 ->class('form-control data-source input-group form-select bs-select init-on-update-delete reset-on-show')
                  ->controlsource('tip_imobil')
-             ->controltype('combobox') 
+                 ->controltype('combobox') 
                  ->enabled('true')
                  ->options(\Imobiliare\Nomenclator\TipImobil::toCombobox())
          )
@@ -672,7 +672,7 @@ id_tip_mobilare
          ->addControl(
              \Easy\Form\Textbox::make('~layouts.form.controls.textboxes.textbox-addon')
          ->caption('Oferta este valabila')->name('oferta_valabila')->placeholder('Textbox')
-         ->value('Bifați dacă oferta este valabila..')->class('form-control input_label')->enabled(0)
+         ->value('Bifați dacă oferta este valabila.')->class('form-control input_label')->enabled(0)
          ->addon([
              'before' => \Form::checkbox('oferta_valabila', '1', false, 
                  ['class' => 'data-source icheck', 'id' => 'oferta_valabila', 
@@ -692,6 +692,20 @@ id_tip_mobilare
                 ->enabled('false')
                 ->options(\Imobiliare\Nomenclator\TipMobilare::toCombobox())
             ) 
+
+        // 53
+        ->addControl(
+            \Easy\Form\Textbox::make('~layouts.form.controls.textboxes.textbox-addon')
+        ->caption('Prețul este negociabil')->name('negociabil')->placeholder('Textbox')
+        ->value('Bifați prețul este negociabil.')->class('form-control input_label')->enabled(0)
+        ->addon([
+            'before' => \Form::checkbox('negociabil', '1', false, 
+                ['class' => 'data-source icheck', 'id' => 'negociabil', 
+                'data-checkbox' => 'icheckbox_square-green', 'data-control-source' => 'negociabil', 
+                'data-control-type' => 'checkbox', 'data-on' => 1, 'data-off' => 0]
+                ), 
+            'after' => NULL])
+            )
         ;
 
     }

@@ -1,0 +1,562 @@
+[33mcommit dcf71bad196609cfdebb3ab70e45e6f873079c33[m
+Merge: b5670cb 0aa2509
+Author: binaryk <lupacescueduard@yahoo.com>
+Date:   Mon Jun 29 15:58:46 2015 +0300
+
+    Merge branch 'master' of https://bitbucket.org/binaryk/imobiliare
+    
+    Conflicts:
+    	vendor/composer/autoload_classmap.php
+    	vendor/composer/installed.json
+    	vendor/filp/whoops/src/Whoops/Handler/PrettyPageHandler.php
+    	vendor/filp/whoops/src/Whoops/Resources/css/whoops.base.css
+    	vendor/filp/whoops/src/Whoops/Resources/views/env_details.html.php
+
+[33mcommit b5670cbb7f9dc7302b4e9717d8a7725c5fe5dcf2[m
+Author: binaryk <lupacescueduard@yahoo.com>
+Date:   Mon Jun 29 15:58:05 2015 +0300
+
+    autoload_classmap
+
+[33mcommit 0aa25097626912779003f96d7652a4b4a6569269[m
+Author: unknown <dica_andy99@yahoo.com>
+Date:   Mon Jun 29 14:48:04 2015 +0300
+
+    Remove vendor folder from project repository
+
+[33mcommit a9c41a00907a8d572b9161a316b747e9cfc065c7[m
+Author: unknown <dica_andy99@yahoo.com>
+Date:   Mon Jun 29 14:26:58 2015 +0300
+
+    Remove vendor folder from project repository
+
+[33mcommit 9024cbd1c50d9ee5fa0ca19f7c2394be1abc0922[m
+Author: unknown <dica_andy99@yahoo.com>
+Date:   Mon Jun 29 13:12:57 2015 +0300
+
+    Remove vendor folder from project repository
+
+[33mcommit 2a3e51da6f993563edfba2a087ce1c67e2b816b6[m
+Author: binaryk <lupacescueduard@yahoo.com>
+Date:   Mon Jun 29 11:45:59 2015 +0300
+
+    Order By Ids
+
+[33mcommit 072c4d3c471af3af6146a7d904c654192f3874bc[m
+Merge: 6798000 18b0a21
+Author: binaryk <lupacescueduard@yahoo.com>
+Date:   Sat Jun 27 16:40:42 2015 +0300
+
+    Merge branch 'master' of https://bitbucket.org/binaryk/imobiliare
+
+[33mcommit 6798000adff0c62fef9ad53c8529ced7ce79682b[m
+Author: binaryk <lupacescueduard@yahoo.com>
+Date:   Sat Jun 27 16:40:33 2015 +0300
+
+    NumarCamere, TipImobil, coloane noi Apartament.
+    
+    php artisan migrate:refresh --seed
+
+[33mcommit 18b0a21c9bb84fd30284c18aed2d8abd5c83ba66[m
+Author: unknown <calin.verdes@comptech.ro>
+Date:   Sat Jun 27 02:52:45 2015 +0300
+
+    Issues #4 si #6
+
+[33mcommit 1c503ab83e2b7dfc81a935c937e56765494224e1[m
+Merge: 614cd88 66e0ab4
+Author: unknown <calin.verdes@comptech.ro>
+Date:   Sat Jun 27 01:30:23 2015 +0300
+
+    autoload
+
+[33mcommit 614cd885caf940db4ce8451617777c7799ae7eb3[m
+Author: unknown <calin.verdes@comptech.ro>
+Date:   Sat Jun 27 01:29:34 2015 +0300
+
+    autoload
+
+[33mcommit 66e0ab4ad9b428a87ba3ad06d211e9ef70bc4e73[m
+Author: binaryk <lupacescueduard@yahoo.com>
+Date:   Fri Jun 26 21:01:37 2015 +0300
+
+    Autoload
+
+[33mcommit bbf4758298378c5f0e2190faf182ba0580b01632[m
+Author: unknown <calin.verdes@comptech.ro>
+Date:   Fri Jun 26 18:56:56 2015 +0300
+
+    Cautare dupa telefon. DONE
+
+[33mcommit 6d69e8d34d5c9d90e638d692be11394f9e90d04b[m
+Author: unknown <calin.verdes@comptech.ro>
+Date:   Fri Jun 26 15:53:02 2015 +0300
+
+    Cautare dupa telefon
+
+[33mcommit 347e0412c69bd1976989bff46e18afa19d63e207[m
+Author: unknown <calin.verdes@comptech.ro>
+Date:   Fri Jun 26 15:16:58 2015 +0300
+
+    Cautare dupa telefon
+
+[33mcommit cfb2ea07948ef23faa4d2aaa3f08b29fecca4f30[m
+Author: binaryk <lupacescueduard@yahoo.com>
+Date:   Thu Jun 25 23:59:52 2015 +0300
+
+    Anul constructiei
+
+[33mcommit 9cb30882fae1e06ee9ee2289a03e210291451bed[m
+Author: binaryk <lupacescueduard@yahoo.com>
+Date:   Thu Jun 25 12:27:47 2015 +0300
+
+    migration change
+
+[33mcommit 58c227081c1eff95adebd1eac331bb45af65344e[m
+Author: binaryk <lupacescueduard@yahoo.com>
+Date:   Thu Jun 25 11:54:05 2015 +0300
+
+    Cautare strada
+
+[33mcommit 99e7b2efc3ea7ddbbd0182626dda5b7f5328fcd1[m
+Merge: 3db751a e8cfa0e
+Author: binaryk <lupacescueduard@yahoo.com>
+Date:   Thu Jun 25 11:31:03 2015 +0300
+
+    Merge branch 'master' of https://bitbucket.org/binaryk/imobiliare
+    
+    Conflicts:
+    	app/models/nomenclatoare/TipImobil.php
+    	app/models/sys/Sidebar.php
+
+[33mcommit 3db751a1e7d3535a5153353ac7135df45aa2a5ad[m
+Author: binaryk <lupacescueduard@yahoo.com>
+Date:   Thu Jun 25 11:28:39 2015 +0300
+
+    Rezolvare observatii 22.06.2015
+
+[33mcommit e8cfa0e42dce58e2c5bbf10a519fa7c74c55d697[m
+Author: unknown <calin.verdes@comptech.ro>
+Date:   Thu Jun 25 02:30:25 2015 +0300
+
+    Cautare imobile
+
+[33mcommit 316c8dbc849efddfa089b8050ac4370c556a9e90[m
+Merge: 7816765 f1e19ca
+Author: unknown <calin.verdes@comptech.ro>
+Date:   Thu Jun 25 00:57:31 2015 +0300
+
+    Fix conflicts
+
+[33mcommit 7816765e78307fc34e10ee34bd5b915cad8f881d[m
+Author: unknown <calin.verdes@comptech.ro>
+Date:   Thu Jun 25 00:56:05 2015 +0300
+
+    Cautare imobile
+
+[33mcommit f1e19ca7cfe92c281fe84ba043333575201c09dd[m
+Author: binaryk <lupacescueduard@yahoo.com>
+Date:   Thu Jun 25 00:51:37 2015 +0300
+
+    Coloane apartament
+
+[33mcommit d1688ef5ee5a0e0988f1299f90c181733edc431d[m
+Author: unknown <calin.verdes@comptech.ro>
+Date:   Wed Jun 24 14:10:21 2015 +0300
+
+    Completarea PDF-ului oferta de apartament
+
+[33mcommit 5e6aff2ed1bd76dd2eeaae8dfa22dd06ae601ebe[m
+Author: binaryk <lupacescueduard@yahoo.com>
+Date:   Mon Jun 22 12:32:40 2015 +0300
+
+    cautare.css
+
+[33mcommit 54961ce862569a08f7970af4a71539d35494f9da[m
+Merge: 872086b 59437c9
+Author: unknown <calin.verdes@comptech.ro>
+Date:   Mon Jun 22 02:28:54 2015 +0300
+
+    Merge branch 'master' of https://bitbucket.org/binaryk/imobiliare
+
+[33mcommit 872086b4e6ca68f2d72f0d95175fee065011c2c6[m
+Author: unknown <calin.verdes@comptech.ro>
+Date:   Mon Jun 22 02:28:37 2015 +0300
+
+    Apartamente. HTML. Poze
+
+[33mcommit 59437c9d9ad74e6762bd6f3bc6a9ff4ee66ddef7[m
+Author: binaryk <lupacescueduard@yahoo.com>
+Date:   Mon Jun 22 00:16:31 2015 +0300
+
+    Photos
+
+[33mcommit e6600f20e274dd7c4dbb847e05cec14ec36d71a7[m
+Merge: 265fbde 7f157fc
+Author: unknown <calin.verdes@comptech.ro>
+Date:   Sun Jun 21 23:32:29 2015 +0300
+
+    Merge branch 'master' of https://bitbucket.org/binaryk/imobiliare
+
+[33mcommit 265fbde30eef513ad5eab3b6a2ff2d4d572c6510[m
+Author: unknown <calin.verdes@comptech.ro>
+Date:   Sun Jun 21 23:32:03 2015 +0300
+
+    Pdf imobiliare
+
+[33mcommit 7f157fcfbfa8985b0bbbb7077c367ebd4f528f4c[m
+Author: binaryk <lupacescueduard@yahoo.com>
+Date:   Sun Jun 21 20:34:07 2015 +0300
+
+    DropDown, Sidebar, right_menu
+
+[33mcommit a1bf8f95b7ff776319d98ed397b88c9a8d6ad33e[m
+Author: binaryk <lupacescueduard@yahoo.com>
+Date:   Sun Jun 21 15:17:05 2015 +0300
+
+    breadcrumbs
+
+[33mcommit 57d03eba349ad908e578c1bf8f1e9bf1cb559d9d[m
+Author: unknown <calin.verdes@comptech.ro>
+Date:   Sun Jun 21 13:23:00 2015 +0300
+
+    Oferta apartamente
+
+[33mcommit 3221244c62a4ccca1b0607a6d17464bb4b5747dc[m
+Author: unknown <calin.verdes@comptech.ro>
+Date:   Sun Jun 21 13:18:48 2015 +0300
+
+    Oferta apartamente
+
+[33mcommit bd98ad07ae8c354b421eee0a0ba528361811d4cd[m
+Author: unknown <calin.verdes@comptech.ro>
+Date:   Sat Jun 20 16:46:14 2015 +0300
+
+    Oferta apartamente
+
+[33mcommit 6123e648428bf032ab7a82cda5df34e8c32700ef[m
+Merge: dfcc84b c8e91e9
+Author: unknown <calin.verdes@comptech.ro>
+Date:   Sat Jun 20 01:28:25 2015 +0300
+
+    Merge branch 'master' of https://bitbucket.org/binaryk/imobiliare
+
+[33mcommit dfcc84b95704015c62a360d23b86d8945c08a76e[m
+Author: unknown <calin.verdes@comptech.ro>
+Date:   Sat Jun 20 01:27:12 2015 +0300
+
+    Generare pdf
+
+[33mcommit c8e91e98bbcf29b01131d3a57099ccc8989b85e1[m
+Author: binaryk <lupacescueduard@yahoo.com>
+Date:   Sat Jun 20 01:25:56 2015 +0300
+
+    artisan
+
+[33mcommit fdcf10e2f8df4f983b2bb49906b594c598c32a3e[m
+Author: binaryk <lupacescueduard@yahoo.com>
+Date:   Wed Jun 17 22:35:23 2015 +0300
+
+    negociabil in migrate
+
+[33mcommit e653814d0a055f5e8d8f0e43858548d8cf1512c7[m
+Author: binaryk <lupacescueduard@yahoo.com>
+Date:   Wed Jun 17 21:59:09 2015 +0300
+
+    Campuri suplimentare Apartament
+
+[33mcommit dc34558c30c5d006f4c79c24925b3f5ed105e773[m
+Author: binaryk <lupacescueduard@yahoo.com>
+Date:   Mon Jun 15 14:29:15 2015 +0300
+
+    Photos in grid
+
+[33mcommit bb557129af6e7a234a35aee95675042e41c39f9d[m
+Author: unknown <calin.verdes@comptech.ro>
+Date:   Mon Jun 15 01:24:38 2015 +0300
+
+    Cautare apartamente. Parsarea numerelor
+
+[33mcommit 6f975d3c2f498d4fee6a83eb7b45766095a91e5f[m
+Author: unknown <calin.verdes@comptech.ro>
+Date:   Sun Jun 14 23:37:44 2015 +0300
+
+    Cautare apartamente styleing
+
+[33mcommit 9329a6f85a03c0f3725d427ed77e86e8e368f697[m
+Merge: 3563fbf e7bc063
+Author: unknown <calin.verdes@comptech.ro>
+Date:   Sun Jun 14 22:37:32 2015 +0300
+
+    Merge branch 'master' of https://bitbucket.org/binaryk/imobiliare
+
+[33mcommit 3563fbff862f14248107337f90641b429966bf39[m
+Author: unknown <calin.verdes@comptech.ro>
+Date:   Sun Jun 14 22:37:12 2015 +0300
+
+    Cautare apartamente
+
+[33mcommit e7bc06310141b95c7c5a4f2d6d46faeea5410a0b[m
+Merge: be4a991 af32eea
+Author: binaryk <lupacescueduard@yahoo.com>
+Date:   Sun Jun 14 20:19:39 2015 +0300
+
+    Merge branch 'master' of https://bitbucket.org/binaryk/imobiliare
+
+[33mcommit be4a9919d3982aaad71415f8d69824e06c798801[m
+Author: binaryk <lupacescueduard@yahoo.com>
+Date:   Sun Jun 14 20:19:29 2015 +0300
+
+    Photos
+
+[33mcommit af32eea4b9481d675ce0bf17d231b43893020156[m
+Author: unknown <calin.verdes@comptech.ro>
+Date:   Fri Jun 12 10:04:56 2015 +0300
+
+    Cautare apartamente. Search form
+
+[33mcommit 5516bc43dde1f4193267f57840168781e4bb342f[m
+Author: unknown <calin.verdes@comptech.ro>
+Date:   Fri Jun 12 09:42:05 2015 +0300
+
+    Cautare apartamente. Search form
+
+[33mcommit 11e7d19ed12f4c3b2b4ee006db65ef897bc25560[m
+Merge: 664b680 347b1d9
+Author: unknown <calin.verdes@comptech.ro>
+Date:   Fri Jun 12 08:39:44 2015 +0300
+
+    Merge branch 'master' of https://bitbucket.org/binaryk/imobiliare
+
+[33mcommit 664b680455ff695118372f946f0f5b09685ba708[m
+Author: unknown <calin.verdes@comptech.ro>
+Date:   Fri Jun 12 08:39:14 2015 +0300
+
+    Cautare apartamente. Grid
+
+[33mcommit 347b1d93175d991c330ffb4e7944033dad0d5742[m
+Author: binaryk <lupacescueduard@yahoo.com>
+Date:   Thu Jun 11 23:07:06 2015 +0300
+
+    Rename labels
+
+[33mcommit 8da35bcba426d4a2278bf0f494ba690d610df3c8[m
+Author: binaryk <lupacescueduard@yahoo.com>
+Date:   Thu Jun 11 22:37:18 2015 +0300
+
+    $out_photos err
+
+[33mcommit 34e45ac52b65905a5c336ac4c6c4ae015c54470f[m
+Author: binaryk <lupacescueduard@yahoo.com>
+Date:   Thu Jun 11 22:34:52 2015 +0300
+
+    PopUp slider.
+
+[33mcommit df970183102c4b6b490066ba5b2cdfe496a3079d[m
+Author: binaryk <lupacescueduard@yahoo.com>
+Date:   Wed Jun 10 23:33:20 2015 +0300
+
+    Poza apartamente + terenuri
+
+[33mcommit aae147c6443f4333a6c731efdfa32ffd436ab815[m
+Author: binaryk <lupacescueduard@yahoo.com>
+Date:   Wed Jun 10 14:08:32 2015 +0300
+
+    git ignore fara compoaser.lock,
+    
+    http://stackoverflow.com/questions/17003253/which-files-directories-to-ignore-in-a-laravel-4-project-when-using-version-cont#comment28518926_17003253
+
+[33mcommit 6bf27be2410ec54cb53e2625a88e0e3475ed39d7[m
+Merge: 48602b4 813125a
+Author: binaryk <lupacescueduard@yahoo.com>
+Date:   Wed Jun 10 13:48:26 2015 +0300
+
+    Merge branch 'master' of https://bitbucket.org/binaryk/imobiliare
+
+[33mcommit 48602b4b9fc467ff929bd4cfaf580f2bec85639e[m
+Author: binaryk <lupacescueduard@yahoo.com>
+Date:   Wed Jun 10 13:48:14 2015 +0300
+
+    Adaugare campuri necesare cladire.
+
+[33mcommit 813125adab5dbb04e97179dd017a5bb856c73f94[m
+Author: unknown <calin.verdes@comptech.ro>
+Date:   Wed Jun 10 13:36:29 2015 +0300
+
+    Cautare dupa oferta valabila, adresa, agentie
+
+[33mcommit e500b71dc888ed09f62b6dc46c488240bd6afb99[m
+Merge: bc12776 e4094e4
+Author: unknown <calin.verdes@comptech.ro>
+Date:   Wed Jun 10 09:38:32 2015 +0300
+
+    fix conflicts
+
+[33mcommit bc127766eee1488dde2c09bd043908b63c513d3a[m
+Author: unknown <calin.verdes@comptech.ro>
+Date:   Wed Jun 10 01:32:03 2015 +0300
+
+    Cautare apartamente. Base elements
+
+[33mcommit e4094e4d498a85d8981295d028643ad5e8ff18f3[m
+Author: binaryk <lupacescueduard@yahoo.com>
+Date:   Wed Jun 10 00:46:01 2015 +0300
+
+    Organizatie automata in timpul logarii.
+
+[33mcommit 045d9d7a81b500be709fab825944154c83505ea1[m
+Author: binaryk <lupacescueduard@yahoo.com>
+Date:   Wed Jun 10 00:34:36 2015 +0300
+
+    debug
+
+[33mcommit c7e1a091288e0e9e01e29133a7528e4f9bd5d9b7[m
+Author: binaryk <lupacescueduard@yahoo.com>
+Date:   Wed Jun 10 00:30:52 2015 +0300
+
+    Date format
+
+[33mcommit 2f7beb56e2c36bc44f6509ec0ad8a61c8a501ed5[m
+Author: binaryk <lupacescueduard@yahoo.com>
+Date:   Wed Jun 10 00:14:51 2015 +0300
+
+    Pf Apartament
+
+[33mcommit d852df4e25f652cefa7ec2a5f774b3b7d0d8a819[m
+Author: unknown <calin.verdes@comptech.ro>
+Date:   Tue Jun 9 23:27:48 2015 +0300
+
+    Cautare apartamente. Base elements
+
+[33mcommit d8db5c689ef7916f579902c67db665467fda00ba[m
+Author: binaryk <lupacescueduard@yahoo.com>
+Date:   Tue Jun 9 21:38:27 2015 +0300
+
+    GIT IGNORE
+
+[33mcommit 8ca5148b5cefd782ba6d14610ed75138558713fd[m
+Author: binaryk <lupacescueduard@yahoo.com>
+Date:   Tue Jun 9 21:34:17 2015 +0300
+
+    ApartamenteProprietar
+
+[33mcommit 83a5308b375942c43917b86e6f23f6a4df3634b7[m
+Author: binaryk <lupacescueduard@yahoo.com>
+Date:   Tue Jun 9 19:06:00 2015 +0300
+
+    without photo
+
+[33mcommit 545ac74ab0d5ded1465509d6a4a17d645a490d36[m
+Author: binaryk <lupacescueduard@yahoo.com>
+Date:   Tue Jun 9 18:47:09 2015 +0300
+
+    DatatableController return hello
+
+[33mcommit 9bd485edcb8a75c1d8cedc47e6ee94aaa075ad8e[m
+Merge: 937c6ba a790efa
+Author: binaryk <lupacescueduard@yahoo.com>
+Date:   Tue Jun 9 18:34:38 2015 +0300
+
+    Merge branch 'master' of https://bitbucket.org/binaryk/imobiliare
+    
+    Conflicts:
+    	bootstrap/start.php
+
+[33mcommit 937c6ba069a4f560771cc25443aed1fa552d779e[m
+Author: binaryk <lupacescueduard@yahoo.com>
+Date:   Tue Jun 9 18:32:41 2015 +0300
+
+    live
+
+[33mcommit a790efac7c326e1d170eeee64d469ea2dab9d37b[m
+Author: unknown <calin.verdes@comptech.ro>
+Date:   Tue Jun 9 13:46:11 2015 +0300
+
+    Preluare proiect
+
+[33mcommit 0faf04cf93c3921b215f6075f0f64ab1a9c15865[m
+Author: binaryk <lupacescueduard@yahoo.com>
+Date:   Tue Jun 9 00:15:17 2015 +0300
+
+    Adaugare apartament!
+
+[33mcommit 7294e4d95b504fd128cbfab6f5edc730070b2960[m
+Author: binaryk <lupacescueduard@yahoo.com>
+Date:   Mon Jun 8 11:46:55 2015 +0300
+
+    TipCompartimentTableSeeder
+
+[33mcommit 5538dd8cc26f27cdba4aa448ae36fa4d107ab2fc[m
+Author: binaryk <lupacescueduard@yahoo.com>
+Date:   Mon Jun 8 10:49:22 2015 +0300
+
+    Functionalitati
+
+[33mcommit 4a09633db2f87199dc0103c23ad27ec330593aba[m
+Author: binaryk <lupacescueduard@yahoo.com>
+Date:   Sun May 31 19:01:53 2015 +0300
+
+    update
+
+[33mcommit 13b9a8dcd37e5122715f14883d57223eeb16fde3[m
+Author: binaryk <lupacescueduard@yahoo.com>
+Date:   Mon May 18 12:27:50 2015 +0300
+
+    php artisan migrate:refresh --seed
+    
+    daca nu merge, sterge toate tabelel si fa din nou
+    
+    php artisan migrate
+    php artisan db:seed
+
+[33mcommit c72438985e6d008cf55ccb27ecef830a35c15d0f[m
+Author: binaryk <lupacescueduard@yahoo.com>
+Date:   Mon May 18 11:52:37 2015 +0300
+
+    seed
+
+[33mcommit 656d5144961fc3189666681289f342439fc1a69e[m
+Author: binaryk <lupacescueduard@yahoo.com>
+Date:   Mon May 18 11:43:53 2015 +0300
+
+    Ovidiu's modified
+
+[33mcommit a17af2f3ddbf05ec75b0b30781e077fc78003e3b[m
+Author: binaryk <lupacescueduard@yahoo.com>
+Date:   Mon May 18 11:42:39 2015 +0300
+
+    login + reset + remember
+
+[33mcommit e1aac388153a8771bc012512276ae1467545b3e7[m
+Author: Lupacescu Eduard <lupacescueduard@yahoo.com>
+Date:   Thu May 7 16:17:48 2015 +0300
+
+    Restructurarea bazei conform discutiilor avute cu Claudiu si George
+
+[33mcommit 9010215576c3dd80330881715b58c7a1c24bfbaa[m
+Merge: ad37c9e 3da9369
+Author: Lupacescu Eduard <lupacescueduard@yahoo.com>
+Date:   Mon May 4 00:33:58 2015 +0300
+
+    Merge remote-tracking branch 'origin/master'
+    
+    Conflicts:
+    	app/views/template/parts/body/~menu.blade.php
+
+[33mcommit ad37c9eb24dd951f09cdaca1f5f2dee8c0c336a9[m
+Author: Lupacescu Eduard <lupacescueduard@yahoo.com>
+Date:   Mon May 4 00:32:48 2015 +0300
+
+    Presa
+
+[33mcommit 3da9369be2386b77ad63f8e58501e8c3ab00b8c6[m
+Author: victor <malai9696@gmail.com>
+Date:   Sun May 3 23:11:30 2015 +0300
+
+    Agentii
+
+[33mcommit 4535d34df9ad8acabc03cf84ea8c85c44983d99d[m
+Author: Lupacescu Eduard <lupacescueduard@yahoo.com>
+Date:   Sun May 3 22:43:28 2015 +0300
+
+    agentii
