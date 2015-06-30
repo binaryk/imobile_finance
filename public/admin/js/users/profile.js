@@ -21,26 +21,29 @@
 		// $('#success-box').delay(4700).fadeOut(300);
 	}
 
-	this.Error = function(field, message)
+	this.Error = function(field, message, container)
 	{
-		console.log(field + '---->' + message);
-		$('#' + field).parent().addClass('has-error').append('<div class="field-error" style="color:#a94442; font-size:90%">' + message + '</div>');
+		$(container + ' #' + field).parent()
+			.addClass('has-error')
+			.append('<div class="field-error" style="color:#a94442; font-size:90%">' + message + '</div>');
 		// $('.form-group').delay(4700).removeClass('has-error');
 		// $('.field-error').delay(4700).fadeOut(300);
 	}
 
-	this.Errors = function(messages)
+	this.Errors = function(messages, container)
 	{
 		for(field in messages)
 		{
-			this.Error( field, messages[field][0] );
+			this.Error( field, messages[field][0], container );
 		}
 	}
 
-	this.Save = function(data, action)
+	this.Save = function(data, action, container)
 	{
-		$('#success-box, #exception-box, .field-error').remove();
-		$('.form-group').removeClass('has-error');
+		$(container + ' #success-box').remove();
+		$(container + ' #exception-box').remove();
+		$(container + ' .field-error').remove();
+		$(container + ' .form-group').removeClass('has-error');
 		$.ajax({
 			'url'      : this.profile_save_endpoint,
 			'type'     : 'post',
@@ -49,13 +52,17 @@
 			'success'  : function(response){
 				if(response.success)
 				{
-					return my.Success(response.message, '#portlet-date-generale>.portlet-body>#container');
+					if(action == 'savePassword')
+					{
+						$('#old_password, #new_password, #new_password_confirm').val('');
+					}
+					return my.Success(response.message, container + '>.portlet-body>#container');
 				}
 				if( parseInt(response.runtime) == 1 )
 				{
-					return my.Exception(response.exception, '#portlet-date-generale>.portlet-body>#container');	
+					return my.Exception(response.exception, container + '>.portlet-body>#container');	
 				}
-				return my.Errors(response.messages);	
+				return my.Errors(response.messages, container);	
 			}
 		});
 	}
@@ -67,7 +74,16 @@
 			'email'   : $('#email').val(),
 			'telefon' : $('#telefon').val(),
 			'id'      : my.id_user
-		}, 'saveGeneralData');
+		}, 'saveGeneralData', '#portlet-date-generale');
+	});
+
+	$('.page-container').on('click', '#btn-save-password', function(){
+		my.Save({
+			'old_password'         : $('#old_password').val(),
+			'new_password'         : $('#new_password').val(),
+			'new_password_confirm' : $('#new_password_confirm').val(),
+			'id'                   : my.id_user
+		}, 'savePassword', '#portlet-password');
 	});
 
 	var my = this;

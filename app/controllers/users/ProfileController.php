@@ -65,33 +65,33 @@ class ProfileController extends \BaseController
 				->controltype('textbox')
 				->maxlength(255),
 
-			'parola_veche' => 
+			'old_password' => 
 				\Easy\Form\Textbox::make('~layouts.form.controls.textboxes.textbox')
-				->name('parola_veche')
+				->name('old_password')
 				->caption('Parola veche')
 				->placeholder('Parola veche')
 				->class('form-control data-source input-sm')
-				->controlsource('parola_veche')
+				->controlsource('old_password')
 				->controltype('textbox')
 				->maxlength(255),
 
-			'parola_noua' => 
+			'new_password' => 
 				\Easy\Form\Textbox::make('~layouts.form.controls.textboxes.textbox')
-				->name('parola_noua')
+				->name('new_password')
 				->caption('Parola nouă')
 				->placeholder('Parola nouă')
 				->class('form-control data-source input-sm')
-				->controlsource('parola_noua')
+				->controlsource('new_password')
 				->controltype('textbox')
 				->maxlength(255),
 
-			'confirmare_parola' => 
+			'new_password_confirm' => 
 				\Easy\Form\Textbox::make('~layouts.form.controls.textboxes.textbox')
-				->name('confirmare_parola')
+				->name('new_password_confirm')
 				->caption('Confirmarea parolei noi')
 				->placeholder('Confirmare parolă')
 				->class('form-control data-source input-sm')
-				->controlsource('confirmare_parola')
+				->controlsource('new_password_confirm')
 				->controltype('textbox')
 				->maxlength(255),
 		];
@@ -124,4 +124,29 @@ class ProfileController extends \BaseController
 		}
 		return ['success' => false, 'runtime' => 0, 'messages' => $validator->messages()];
 	}
+
+	protected function savePassword($user, $data)
+	{
+		$validator = Validator::make(
+			$data, 
+			User::passwordValidatorRules($user->id, $data['new_password']), 
+			User::passwordValidatorMessages()
+		);
+		if( $validator->passes() )
+		{
+			try
+			{
+				$user->password = $data['new_password'];
+				$user->save();
+				$result = ['success' => true, 'message' => 'Actualizarea parolei s-a realizat cu succes.'];
+			}
+			catch(Exception $e)
+			{
+				$result = ['success' => false, 'runtime' => 1, 'exception' => ['message' => $e->getMessage(), 'method' => __METHOD__, 'line' => $e->getLine(), 'file' => $e->getFile()]];
+			}
+			return $result;
+		}
+		return ['success' => false, 'runtime' => 0, 'messages' => $validator->messages()];
+	}
+
 }
