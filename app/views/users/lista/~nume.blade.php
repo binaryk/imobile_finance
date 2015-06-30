@@ -1,0 +1,1 @@
+{{ Easy\Form\StringHelper::items([$record->nume, $record->prenume]) }}

@@ -30,7 +30,11 @@ class Grids
 		'apartamente_proprietar' => '\Imobiliare\Imobile\Grid\ApartamenteProprietarRecord',
 		'apartament_photo' 	     => '\Imobiliare\Imobile\Grid\ApartamentePhotosRecord',
 
+		/**
+		 * Calin Verdes - COMPTECH SOFT
+		 */
 		'cauta-apartamente'      => 'Apartamente\Grid\ApartamenteRecord',
+		'utilizatori'            => 'Utilizatori\Grid\UtilizatoriRecord',
 
 	];
 
