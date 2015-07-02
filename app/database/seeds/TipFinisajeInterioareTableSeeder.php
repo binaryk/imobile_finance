@@ -11,10 +11,10 @@ class TipFinisajeInterioareTableSeeder extends Seeder {
 		$faker = Faker::create();
 		 
 		Imobiliare\Nomenclator\TipFinisajeInterioare::insert([
-			['nume' => 'Nefinisat'],
-			['nume' => 'Semifinisat'],
-			['nume' => 'Finisat'],
-			['nume' => 'Superfinisat'],
+			['id' => 1, 'nume' => 'Nefinisat'],
+			['id' => 2, 'nume' => 'Semifinisat'],
+			['id' => 3, 'nume' => 'Finisat'],
+			['id' => 4, 'nume' => 'Superfinisat'],
 		]);
 
 	}

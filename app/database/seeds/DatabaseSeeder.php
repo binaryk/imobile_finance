@@ -26,11 +26,11 @@ class DatabaseSeeder extends Seeder {
 		$this->call('AnsambluRezidentialsTableSeeder');
 		$this->call('ZonaAcoperireDezvoltatorsTableSeeder');
 		$this->call('IntermediarImobilsTableSeeder');
-		$this->call('TelefoanesTableSeeder');
+		// $this->call('TelefoanesTableSeeder');
 		$this->call('ImobilsTableSeeder');
 		$this->call('TipFinisajeInterioareTableSeeder');
 		$this->call('TipCompartimentTableSeeder');
-		$this->call('ApartamentsTableSeeder');
+		// $this->call('ApartamentsTableSeeder');
 		$this->call('TipDestinatieCladireSeed');
 		$this->call('TipRegimInaltimeTableSeeder');
 		$this->call('TipCategorieCladireTableSeeder');
@@ -46,7 +46,7 @@ class DatabaseSeeder extends Seeder {
 		$this->call('TipConfortTableSeeder');
 		
 		$this->call('AgentiiSeeder');
-		$this->call('ProprietariPersoaneFiziceSeeder');
+		// $this->call('ProprietariPersoaneFiziceSeeder');
 
 }
 

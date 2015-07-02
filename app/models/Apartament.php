@@ -14,7 +14,8 @@ class Apartament extends \Eloquent {
 	'id_proprietar_pf',
 	'id_tip_garaj',
 	'id_tip_cladire',
-	'id_tip_finisaje_interioare',
+    'id_tip_finisaje_interioare',
+	'id_tip_finisaje_externe',
 	'id_tip_compartiment',
 	'is_agentie',
 	'oferta_valabila',
@@ -68,7 +69,19 @@ class Apartament extends \Eloquent {
     'suprafata_teren',
     'tip_imobil',
     'vechime_imobil',
-    'id_tip_mobilare'
+    'id_tip_mobilare',
+    // noi
+    'extras_cf',
+    'has_balcon',
+    'has_electrocasnice',
+    'has_terasa',
+    'has_dotari',
+    'id_dezvoltator',
+    'nr_etaje_cladire', 
+    'data_aparitiei', 
+    'detalii_suplimentare', 
+    'detalii_suplimentare_2', 
+    // id_tip_finisaje_externe --- sus
 	];
 
 	public static function getRecord( $id )
