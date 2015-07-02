@@ -82,14 +82,14 @@ class CreateApartamentsTable extends Migration {
 			->references('id')
 			->on('imobile')
 			->onDelete('restrict')
-			->onUpdate('cascade');
+			->onUpdate('cascade');/*
 
 			$table
 			->foreign('id_cartier')
 			->references('id')
 			->on('cartiere')
 			->onDelete('restrict')
-			->onUpdate('cascade');
+			->onUpdate('cascade');*/
 
 			$table
 			->foreign('id_organizatie')
@@ -111,8 +111,8 @@ class CreateApartamentsTable extends Migration {
 		Schema::table('apartamente', function( Blueprint $t ){
 			$t
 			->dropForeign('apartamente_id_imobil_foreign');	
-			$t
-			->dropForeign('apartamente_id_cartier_foreign');
+			/*$t
+			->dropForeign('apartamente_id_cartier_foreign');*/
 			$t
 			->dropForeign('apartamente_id_organizatie_foreign');		
 		});

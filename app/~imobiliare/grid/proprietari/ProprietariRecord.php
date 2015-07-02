@@ -66,7 +66,7 @@ class ProprietariRecord extends \Imobiliare\GridsRecord
         ];
         $this->fields = [
             'fields'      => '',
-            'searchables' => 'id, nume',
+            'searchables' => 'id, telefon',
             'orderables'  => [1 => "id"],
         ];
         $this->filters = [

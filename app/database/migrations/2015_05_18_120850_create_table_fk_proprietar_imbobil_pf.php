@@ -13,14 +13,14 @@ class CreateTableFkProprietarImbobilPf extends Migration {
 	public function up()
 	{
 		Schema::table('apartamente', function(Blueprint $t){
-			$t
+			/*$t
 			->foreign('id_proprietar_pf')
 			->references('id')
 			->on('proprietari_persoane_fizice')
 			->onDelete('restrict')
-			->onUpdate('cascade');
+			->onUpdate('cascade');*/
 		});
-	}
+	} 
 
 	/**
 	 * Reverse the migrations.
@@ -30,7 +30,7 @@ class CreateTableFkProprietarImbobilPf extends Migration {
 	public function down()
 	{
 		Schema::table('apartamente', function (Blueprint $t) {
-			$t->dropForeign('apartamente_id_proprietar_pf_foreign');
+			// $t->dropForeign('apartamente_id_proprietar_pf_foreign');
         }); 
 	}
 

@@ -8,7 +8,18 @@ class ApartamentsTableSeeder extends Seeder {
 	public function run()
 	{
 		DB::table('apartamente')->delete();
-		$faker = Faker::create();
+		$url = \URL::to('imobile/public/data/apartamente.json');
+		$json = json_decode(file_get_contents($url), true);
+
+		// $this->command->info($json); 
+		// for($i = 0; $i < count($json); $i++){
+		// 	Imobiliare\Apartament::insert($json[$i]);
+		// }
+		
+		// }
+		// echo $json;
+
+		/*$faker = Faker::create();
 		$faker->seed(11);
 		$imobile = Imobiliare\Imobil::all()->lists('id');
 		$org     = Imobiliare\Organizatie::all()->lists('id');
@@ -54,7 +65,7 @@ class ApartamentsTableSeeder extends Seeder {
 				'detalii'		=> $faker->text(),
 				'detalii_private'		=> $faker->text()
 			]); 
-		}
+		}*/
 	}
 
 }
