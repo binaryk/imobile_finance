@@ -25,9 +25,13 @@ class TipEtajsTableSeeder extends Seeder {
 			['nume' => 'Etajul 8'], 
 			['nume' => 'Etajul 9'], 
 			['nume' => 'Etajul 10'], 
+			['nume' => 'Etajul 11'], 
 			['nume' => 'Etaj intermediar'], 
 			['nume' => 'Ultimul etaj'], 
 			['nume' => 'Mansarda'],  
+			['nume' => 'Etaj+Mansarda'],  
+			['nume' => 'Mezanin'],  
+			['nume' => 'Subsol'],  
 		]);
 
 	}

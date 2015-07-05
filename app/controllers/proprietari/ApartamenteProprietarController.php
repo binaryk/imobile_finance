@@ -37,4 +37,18 @@ class ApartamenteProprietarController extends \Datatable\DatatableController
         $config['source']->custom_filters($filters + ['proprietar' => 'apartamente.id_proprietar_pf = ' . $id_proprietar]);
         return $this->dataset($config);
     }
+
+    public function editFindApartament($id_apartament)
+    {
+        if ( $apartament = \Imobiliare\Apartament::getRecord((int) $id_apartament) ){
+            if( $proprietar  = \Imobiliare\Proprietar::getRecord($apartament->id_proprietar_pf)){
+                $this->index('apartamente_proprietar',$proprietar->id);
+                //return \URL::to(\URL::route('apartamente_proprietar', ['id' => 'apartamente_proprietar', 'id_proprietar' => $proprietar->id]));
+            }else{
+
+            }
+        } else{
+
+        }
+    }
 }

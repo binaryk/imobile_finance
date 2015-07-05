@@ -60,11 +60,12 @@ class Route
           */
 		->add('get','proprietar-index','proprietari', 'ProprietariController@index', 'Imobiliare\Datatable')
 		->add('get','proprietar-row-source','proprietari/{id}', 'ProprietariController@rows', 'Imobiliare\Datatable')
-         
-		->add('get','apartamente_proprietar','apartamente_proprietar/{id}/{id_proprietar}', 'ApartamenteProprietarController@index', 'Imobiliare\Datatable')
-         ->add('get','apartamente_proprietar-row-source','apartamente_proprietar/row-source/{id}/{id_proprietar}', 'ApartamenteProprietarController@rows', 'Imobiliare\Datatable') 
 
-         ->add('get', 'apartament_photo','apartament-poze/{id}/{id_apartament}', 'ApartamentPhotosController@index', 'Imobiliare\Datatable')
+        ->add('get','apartamente_proprietar','apartamente_proprietar/{id}/{id_proprietar}', 'ApartamenteProprietarController@index', 'Imobiliare\Datatable')
+        ->add('get','apartamente_proprietar-row-source','apartamente_proprietar/row-source/{id}/{id_proprietar}', 'ApartamenteProprietarController@rows', 'Imobiliare\Datatable')
+        ->add('get','editare-apartament-gasit','proprietari{id}', 'ApartamenteProprietarController@editFindApartament', 'Imobiliare\Datatable')
+
+        ->add('get', 'apartament_photo','apartament-poze/{id}/{id_apartament}', 'ApartamentPhotosController@index', 'Imobiliare\Datatable')
          ->add('get', 'apartament_photo-row-source','apartament-poze/row-source/{id}/{id_apartament}', 'ApartamentPhotosController@rows', 'Imobiliare\Datatable')
          ->add('post', 'upload-apartament-photo', 'upload-apartament-photo/{id_apartament}', 'ApartamentPhotosController@upload', 'Imobiliare\Datatable')
          ->add('post', 'delete-apartament-photo', 'delete-apartament-photo', 'ApartamentPhotosController@delete', 'Imobiliare\Datatable')

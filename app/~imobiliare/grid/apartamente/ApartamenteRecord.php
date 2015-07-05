@@ -155,7 +155,7 @@ class ApartamenteRecord extends \Imobiliare\GridsRecord
                 'orderable' => 'no',
                 'class'     => 'td-align-center',
                 'visible'   => 'yes',
-                'header'    => ['caption' => 'Vezi oferta', 'style'   => 'width:7%',],
+                'header'    => ['caption' => 'Acțiuni', 'style'   => 'width:7%',],
                 'type'      => 'view',
                 'source'    => 'apartamente.cautare.btn-vezi-oferta',
             ],

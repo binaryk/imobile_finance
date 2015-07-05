@@ -81,6 +81,12 @@
 	<a href="#" class="list-group-item list-group-item-info">
 		Gresie <span class="badge badge-{{$record->gresie ? 'success' : 'warning'}}"> {{$record->gresie ? 'DA' : 'NU'}} </span>
 	</a>
+    <a href="#" class="list-group-item list-group-item-info">
+		Balcon <span class="badge badge-{{$record->has_balcon ? 'success' : 'warning'}}"> {{$record->has_balcon ? 'DA' : 'NU'}} </span>
+	</a>
+    <a href="#" class="list-group-item list-group-item-info">
+        Tip balcoane <span class="badge badge-info"> {{$record->numetipbalcon ? $record->numetipbalcon : '-'}} </span>
+    </a>
 	<a href="#" class="list-group-item list-group-item-info">
 		Balcoane închise <span class="badge badge-{{$record->balcoane_inchise ? 'success' : 'warning'}}"> {{$record->balcoane_inchise ? 'DA' : 'NU'}} </span>
 	</a>
@@ -105,9 +111,7 @@
 		Etaj <span class="badge badge-info"> {{$record->numetipetaj ? $record->numetipetaj : '-'}} </span>
 	</a>
 
-	<a href="#" class="list-group-item list-group-item-info">
-		Balcoane <span class="badge badge-info"> {{$record->numetipbalcon ? $record->numetipbalcon : '-'}} </span>
-	</a>
+
 	<a href="#" class="list-group-item list-group-item-info">
 		Acoperiş <span class="badge badge-info"> {{$record->numetipacoperis ? $record->numetipacoperis : '-'}} </span>
 	</a>

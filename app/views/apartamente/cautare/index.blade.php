@@ -52,7 +52,7 @@
 		digits         : 2,
 		groupSeparator : '.',
 		autoGroup      : true,
-		suffix         : ' LEI'
+		suffix         : ' EURO'
 	});
 	$('#nr_camere_min, #nr_camere_max, #nr_etaj_min, #nr_etaj_max').css({'text-align':'right'}).inputmask('integer', { 
 		groupSeparator : '.',
