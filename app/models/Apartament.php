@@ -115,7 +115,7 @@ class Apartament extends \Eloquent {
         return $record->delete();
     }
 
-	public function getDate($camp)
+    public function getDate($camp)
 	{
 	    return date("d.m.Y",strtotime($this->attributes[$camp]));
 	}

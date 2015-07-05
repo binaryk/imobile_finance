@@ -2,7 +2,7 @@
 
 namespace Imobiliare\Datatable;
 
-class DatatableController extends \Datatable\DatatableController 
+class DatatableController extends \Datatable\DatatableController
 {
 	protected $layout 		= 'template.layout';
 
@@ -11,10 +11,13 @@ class DatatableController extends \Datatable\DatatableController
      * @throws \Exception
      */
     public function index($id)
-	{ 
+	{
         $this->show( \Imobiliare\Grids::make($id)->toIndexConfig($id) );
 	}
 
+    public function test($cevq){
+
+    }
     /**
      * @param $id
      * @return mixed
