@@ -1,0 +1,1 @@
+{{ Easy\Form\StringHelper::items([$record->organizatie_denumire, $record->organizatie_telefon, $record->organizatie_fax, $record->organizatie_email]) }}

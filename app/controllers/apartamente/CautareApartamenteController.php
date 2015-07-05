@@ -84,7 +84,7 @@ class CautareApartamenteController extends \Datatable\DatatableController
 		}
 		$apartament->current_user = $this->current_user;
 		$apartament->current_org = $this->current_org;		
-		$pdf = new CreateOfertaPdf('P', 'A4', 'D', $apartament);
+		$pdf = new CreateOfertaPdf('P', 'A4', 'D', $apartament, false);
 		$pdf->Output();
 	}
 
@@ -97,7 +97,33 @@ class CautareApartamenteController extends \Datatable\DatatableController
 		}
 		$apartament->current_user = $this->current_user;
 		$apartament->current_org = $this->current_org;
-		$pdf = new CreateOfertaPdf('P', 'A4', 'I', $apartament);
+		$pdf = new CreateOfertaPdf('P', 'A4', 'I', $apartament, false);
+		$pdf->Output();
+	}
+
+	public function downloadPDFredus($id)
+	{
+		$apartament = \Imobiliare\Apartament::find($id);
+		if( ! $apartament )
+		{
+			return \Redirect::route('cautare-apartamente-index');
+		}
+		$apartament->current_user = $this->current_user;
+		$apartament->current_org = $this->current_org;		
+		$pdf = new CreateOfertaPdf('P', 'A4', 'D', $apartament, true);
+		$pdf->Output();
+	}
+
+	public function openPDFredus($id)
+	{
+		$apartament = \Imobiliare\Apartament::find($id);
+		if( ! $apartament )
+		{
+			return \Redirect::route('cautare-apartamente-index');
+		}
+		$apartament->current_user = $this->current_user;
+		$apartament->current_org = $this->current_org;
+		$pdf = new CreateOfertaPdf('P', 'A4', 'I', $apartament, true);
 		$pdf->Output();
 	}
 
@@ -141,10 +167,25 @@ class CautareApartamenteController extends \Datatable\DatatableController
 
 	}
 
+	public function schimbaDataActualizare()
+	{
+		if( $apartament = \Imobiliare\Apartament::find( (int) \Input::get('id') ) )
+		{
+			$apartament->ultima_actualizare = \Carbon\Carbon::now()->format('Y-m-d');
+			$apartament->save();
+			$result = ['success' => true, 'apartament' => $apartament];
+		}
+		else
+		{
+			$result = ['success' => false];	
+		}
+		return \Response::json($result);
+
+	}
+
+
 	protected function controls()
 	{
-		// cum se face resetarea filtrarii???
-
 		return [
 			// [1] = daca oferta este valabila sa nu
 			'oferta-valabila' =>

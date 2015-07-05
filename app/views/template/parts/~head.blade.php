@@ -26,8 +26,7 @@
 {{HTML::style("assets/admin/layout/css/layout.css") }}
 {{HTML::style("assets/admin/layout/css/themes/darkblue.css") }}
 
- @yield('custom-styles')
+@yield('custom-styles')
 <link rel="shortcut icon" href="favicon.ico"/>
 
 </head>
-

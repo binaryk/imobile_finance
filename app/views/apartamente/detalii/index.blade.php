@@ -9,9 +9,12 @@
 			<div class="portlet-title">
 				<div class="caption">Detalii despre apartament</div>
 				<div class="actions">
-					<a target="_blank" href="{{URL::route('apartament-deschide-pdf', ['id' => $record->id])}}" class="btn btn-default btn-sm"><i class="fa fa-file-pdf-o"></i> Deschide PDF </a>
-
-					<a href="{{URL::route('apartament-descarca-pdf', ['id' => $record->id])}}" class="btn btn-default btn-sm"><i class="fa fa-download"></i> Descarcă PDF </a>
+					<!-- Complet -->
+					<a target="_blank" href="{{URL::route('apartament-deschide-pdf', ['id' => $record->id])}}" class="btn btn-default btn-sm"><i class="fa fa-file-pdf-o"></i> Deschide PDF complet</a>
+					<a href="{{URL::route('apartament-descarca-pdf', ['id' => $record->id])}}" class="btn btn-default btn-sm"><i class="fa fa-download"></i> Descarcă PDF complet</a>
+					<!-- Redus -->
+					<a target="_blank" href="{{URL::route('apartament-deschide-pdf-redus', ['id' => $record->id])}}" class="btn btn-default btn-sm"><i class="fa fa-file-pdf-o"></i> Deschide PDF redus</a>
+					<a href="{{URL::route('apartament-descarca-pdf-redus', ['id' => $record->id])}}" class="btn btn-default btn-sm"><i class="fa fa-download"></i> Descarcă PDF redus</a>
 				</div>
 			</div>
 			<div class="portlet-body">

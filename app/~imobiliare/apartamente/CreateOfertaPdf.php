@@ -8,8 +8,9 @@ class CreateOfertaPdf
 	protected $pagesize     = 'A4';
 	protected $destionation = 'D';
 	protected $apartament   = NULL;
+	protected $redus        = false;
 
-	public function __construct($orientation, $pagesize, $destionation, $apartament)
+	public function __construct($orientation, $pagesize, $destionation, $apartament, $redus = false)
 	{
 		if( is_null($apartament) )
 		{
@@ -19,6 +20,7 @@ class CreateOfertaPdf
 		$this->pagesize     = $pagesize;
 		$this->destionation = $destionation;
 		$this->apartament   = $apartament;
+		$this->redus        = $redus;
 		$this->pdf          = new \ToPDF\topdf();
 		$this->pdf->newpage($this->orientation, $this->pagesize);
 	}
@@ -240,16 +242,24 @@ class CreateOfertaPdf
 		$this->pdf->Pdf()->SetFont('freeserif', 'B', 14, '', false);
 		$this->pdf->Cell()->text('I. Localizare')->width(190)->border('TB')->halign('L')->background([210, 210, 210])->out()->reset('background');
 		$rows = [
-			'1' => ['caption' => 'Adresa: ', 'source' => 'adresa'],
-			'2' => ['caption' => 'Zona aproximativă: ', 'source' => 'zonaAproximativaApartament'],
+			'1' => ['caption' => 'Adresa: ', 'source' => 'adresa', 'redus' => true],
+			'2' => ['caption' => 'Zona aproximativă: ', 'source' => 'zonaAproximativaApartament', 'redus' => false],
 		];
 		$this->pdf->Pdf()->ln();
 		foreach($rows as $i => $row)
 		{
-			$this->pdf->Pdf()->SetFont('freeserif', 'B', 12, '', false);
-			$this->pdf->Cell()->text( $row['caption'] )->width(50)->border('')->halign('R')->linefeed(0)->out();
-			$this->pdf->Pdf()->SetFont('freeserif', '', 12, '', false);
-			$this->pdf->Cell()->text( $this->{$row['source']}() )->width(140)->border('')->halign('L')->linefeed(1)->out();
+			$apare = true;
+			if($this->redus && ! $row['redus'])
+			{
+				$apare = false;
+			}
+			if($apare)
+			{
+				$this->pdf->Pdf()->SetFont('freeserif', 'B', 12, '', false);
+				$this->pdf->Cell()->text( $row['caption'] )->width(50)->border('')->halign('R')->linefeed(0)->out();
+				$this->pdf->Pdf()->SetFont('freeserif', '', 12, '', false);
+				$this->pdf->Cell()->text( $this->{$row['source']}() )->width(140)->border('')->halign('L')->linefeed(1)->out();
+			}
 		}
 	}
 
@@ -385,33 +395,41 @@ class CreateOfertaPdf
 		$this->pdf->Pdf()->SetFont('freeserif', 'B', 14, '', false);
 		$this->pdf->Cell()->text('III. Date generale')->width(190)->border('TB')->halign('L')->background([210, 210, 210])->out()->reset('background');
 		$rows = [
-			'1' => ['caption' => 'Nume: ', 'source' => 'numeApartament'],
-			'2' => ['caption' => 'Email: ', 'source' => 'emailApartament'],
-			'3' => ['caption' => 'Telefoane: ', 'source' => 'telefoaneApartament'],
-			'4' => ['caption' => 'Este agenţie: ', 'source' => 'esteAgentie'],
-			'5' => ['caption' => 'Oferta valabilă: ', 'source' => 'ofertaValabila'],
-			'6' => ['caption' => 'Anul construcţiei: ', 'source' => 'anConstructieApartament'],
-			'7' => ['caption' => 'Număr de camere: ', 'source' => 'numarCamereApartament'],
-			'8' => ['caption' => 'Suprafaţă: ', 'source' => 'suprafataminmaxApartament'],
-			'9' => ['caption' => 'Număr de băi: ', 'source' => 'numarBaiApartament'],
-		   '10' => ['caption' => 'Număr de balcoane: ', 'source' => 'numarBalcoaneApartament'],
-		   '11' => ['caption' => 'Etaj: ', 'source' => 'etajApartament'],
-		   '12' => ['caption' => 'Acoperiş: ', 'source' => 'acoperisApartament'],
-		   '13' => ['caption' => 'Confort: ', 'source' => 'confortApartament'],
-		   '14' => ['caption' => 'Sistemul de încălzire: ', 'source' => 'sistemIncalzireApartament'],
-		   '15' => ['caption' => 'Garaj: ', 'source' => 'garajApartament'],
-		   '16' => ['caption' => 'Tipul de clădire: ', 'source' => 'tipCladireApartament'],
-		   '17' => ['caption' => 'Tipul de finisaj interior: ', 'source' => 'finisajeApartament'],
-		   '18' => ['caption' => 'Compartimentare: ', 'source' => 'compartimentareApartament'],
-		   '19' => ['caption' => 'Preţ: ', 'source' => 'pretApartament'],
-		   '20' => ['caption' => 'Actualizat la: ', 'source' => 'ultimaActualizareApartament'],		
+			'1' => ['caption' => 'Nume: ', 'source' => 'numeApartament', 'redus' => true],
+			'2' => ['caption' => 'Email: ', 'source' => 'emailApartament', 'redus' => false],
+			'3' => ['caption' => 'Telefoane: ', 'source' => 'telefoaneApartament', 'redus' => false],
+			'4' => ['caption' => 'Este agenţie: ', 'source' => 'esteAgentie', 'redus' => false],
+			'5' => ['caption' => 'Oferta valabilă: ', 'source' => 'ofertaValabila', 'redus' => false],
+			'6' => ['caption' => 'Anul construcţiei: ', 'source' => 'anConstructieApartament', 'redus' => false],
+			'7' => ['caption' => 'Număr de camere: ', 'source' => 'numarCamereApartament', 'redus' => true],
+			'8' => ['caption' => 'Suprafaţă: ', 'source' => 'suprafataminmaxApartament', 'redus' => true],
+			'9' => ['caption' => 'Număr de băi: ', 'source' => 'numarBaiApartament', 'redus' => true],
+		   '10' => ['caption' => 'Număr de balcoane: ', 'source' => 'numarBalcoaneApartament', 'redus' => true],
+		   '11' => ['caption' => 'Etaj: ', 'source' => 'etajApartament', 'redus' => true],
+		   '12' => ['caption' => 'Acoperiş: ', 'source' => 'acoperisApartament', 'redus' => false],
+		   // '13' => ['caption' => 'Confort: ', 'source' => 'confortApartament', 'redus' => false],
+		   '14' => ['caption' => 'Sistemul de încălzire: ', 'source' => 'sistemIncalzireApartament', 'redus' => false],
+		   '15' => ['caption' => 'Garaj: ', 'source' => 'garajApartament', 'redus' => true],
+		   '16' => ['caption' => 'Tipul de clădire: ', 'source' => 'tipCladireApartament', 'redus' => false],
+		   '17' => ['caption' => 'Tipul de finisaj interior: ', 'source' => 'finisajeApartament', 'redus' => true],
+		   '18' => ['caption' => 'Compartimentare: ', 'source' => 'compartimentareApartament', 'redus' => true],
+		   '19' => ['caption' => 'Preţ: ', 'source' => 'pretApartament', 'redus' => true],
+		   '20' => ['caption' => 'Actualizat la: ', 'source' => 'ultimaActualizareApartament', 'redus' => false],		
 		];
 		foreach($rows as $i => $row)
 		{
-			$this->pdf->Pdf()->SetFont('freeserif', 'B', 12, '', false);
-			$this->pdf->Cell()->text( $row['caption'] )->width(50)->border('')->halign('R')->linefeed(0)->out();
-			$this->pdf->Pdf()->SetFont('freeserif', '', 12, '', false);
-			$this->pdf->Cell()->text( $this->{$row['source']}() )->width(140)->border('')->halign('L')->linefeed(1)->out();
+			$apare = true;
+			if( $this->redus && ! $row['redus'] )
+			{
+				$apare = false;
+			}
+			if($apare)
+			{
+				$this->pdf->Pdf()->SetFont('freeserif', 'B', 12, '', false);
+				$this->pdf->Cell()->text( $row['caption'] )->width(50)->border('')->halign('R')->linefeed(0)->out();
+				$this->pdf->Pdf()->SetFont('freeserif', '', 12, '', false);
+				$this->pdf->Cell()->text( $this->{$row['source']}() )->width(140)->border('')->halign('L')->linefeed(1)->out();
+			}
 		}
 	}
 
@@ -421,36 +439,47 @@ class CreateOfertaPdf
 		$this->pdf->Pdf()->SetFont('freeserif', 'B', 14, '', false);
 		$this->pdf->Cell()->text('IV. Opţiuni suplimentare')->width(190)->border('TB')->halign('L')->background([210, 210, 210])->out()->reset('background')->border('TBRL');
 		$items = [
-			'termopan' => 'Termopan',
-			'contoare_gaz' => 'Contoare gaz',
-			'parchet' => 'Parchet',
-			'faianta' => 'Faianţă',
-			'aer_conditionat' => 'Aer condiţionat',
-			'uscator' => 'Uscător',
-			'centrala_termica' => 'Centrală termică',
-			'contoare_apa' => 'Contoare apă',
-			'zugravit_lavabil' => 'Zugrăvit lavabil',
-			'tv_cablu' => 'TV prin cablu',
-			'loc_pod' => 'Loc pod',
-			'usa_atiefractie' => 'Uşă antiefracţie',
-			'modificari_interioare' => 'Modificări interioare',
-			'gresie' => 'Gresie',
-			'balcoane_inchise' => 'Balcoane închise',
-			'has_telefon' => 'Telefon',
-			'loc_pivnita' => 'Loc pivniţă',
-			'parcare' => 'Parcare',
+			'termopan'              => ['Termopan', false],
+			'contoare_gaz'          => ['Contoare gaz', false],
+			'parchet'               => ['Parchet', false],
+			'faianta'               => ['Faianţă', false],
+			'aer_conditionat'       => ['Aer condiţionat', false],
+			'uscator'               => ['Uscător', false],
+			'centrala_termica'      => ['Centrală termică', true],
+			'contoare_apa'          => ['Contoare apă', false],
+			'zugravit_lavabil'      => ['Zugrăvit lavabil', false],
+			'tv_cablu'              => ['TV prin cablu', false],
+			'loc_pod'               => ['Loc pod', false],
+			'usa_atiefractie'       => ['Uşă antiefracţie', false],
+			'modificari_interioare' => ['Modificări interioare', false],
+			'gresie'                => ['Gresie', false],
+			// 'balcoane_inchise'      => ['Balcoane închise', false],
+			// 'has_telefon'           => ['Telefon', false],
+			'loc_pivnita'           => ['Loc pivniţă', false],
+			'parcare'               => ['Parcare', true],
 		];
 
+		// echo '<pre>';
 		$i = 0;
 		foreach($items as $field => $item)
 		{	
-			$i++;
-			$this->pdf->Pdf()->SetFont('freeserif', 'B', 12, '', false);
-			$this->pdf->Cell()->width(70)->text($item . ' ')->linefeed(0)->halign('R')->out();
-			$this->pdf->Pdf()->SetFont('freeserif', '', 12, '', false);
-			$value = $this->$field() ? 'DA' : '-';
-			$this->pdf->Cell()->width(25)->text($value)->halign('C')->linefeed( (int)($i%2 == 0) )->out();
+			$apare = true;
+			if( $this->redus && ! $item[1] )
+			{
+				$apare = false;
+			}
+			// var_dump($apare);
+			if($apare)
+			{
+				$i++;
+				$this->pdf->Pdf()->SetFont('freeserif', 'B', 12, '', false);
+				$this->pdf->Cell()->width(70)->text($item[0] . ' ')->linefeed(0)->halign('R')->out();
+				$this->pdf->Pdf()->SetFont('freeserif', '', 12, '', false);
+				$value = $this->$field() ? 'DA' : '-';
+				$this->pdf->Cell()->width(25)->text($value)->halign('C')->linefeed( (int)($i%2 == 0) )->out();
+			}
 		}
+		// dd('---');
 	}
 
 	protected function createpdf()
@@ -462,11 +491,15 @@ class CreateOfertaPdf
 		$this->outChapterLocalizare(); 
 		$this->outChapterProprietar(); 
 		$this->outChapterDategenerale();
-		$this->outfooter();
+		
 		// Pagina 2
-		$this->pdf->newpage($this->orientation, $this->pagesize);
-		$this->outlogo();
-		$this->outnume();
+		if( ! $this->redus )
+		{
+			$this->outfooter();
+			$this->pdf->newpage($this->orientation, $this->pagesize);
+			$this->outlogo();
+			$this->outnume();
+		}
 		$this->outChapterOptiunisuplimentare();
 		$this->outdetails();
 		$this->outfooter();

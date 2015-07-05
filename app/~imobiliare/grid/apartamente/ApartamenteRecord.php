@@ -93,8 +93,8 @@ class ApartamenteRecord extends \Imobiliare\GridsRecord
                 'class'     => 'td-align-center',
                 'visible'   => 'yes',
                 'header'    => ['caption' => 'Ultima actualizare', 'style'   => 'width:9%',],
-                'type'      => 'field-date',
-                'source'    => 'ultima_actualizare',
+                'type'      => 'view',
+                'source'    => 'apartamente.cautare.ultima_actualizare',
             ], 
             '8' => [
                 'id'        => 'proprietar',

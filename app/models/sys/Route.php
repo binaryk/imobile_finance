@@ -78,11 +78,19 @@ class Route
 		->add('get', 'cautare-apartamente-index', 'cautare-apartamente', 'CautareApartamenteController@index', 'Apartamente') 
 		->add('get', 'apartamente-cautare-row-source', 'cautare-apartamente-row-source/{id}', 'CautareApartamenteController@rows', 'Apartamente')
 		->add('get', 'apartament-detalii-oferta', 'apartament-detalii-oferta/{id}', 'CautareApartamenteController@showDetails', 'Apartamente')
+		
 		->add('get', 'apartament-descarca-pdf', 'apartament-descarca-pdf/{id}', 'CautareApartamenteController@downloadPDF', 'Apartamente')
 		->add('get', 'apartament-deschide-pdf', 'apartament-deschide-pdf/{id}', 'CautareApartamenteController@openPDF', 'Apartamente')
+		->add('get', 'apartament-descarca-pdf-redus', 'apartament-descarca-pdf-redus/{id}', 'CautareApartamenteController@downloadPDFredus', 'Apartamente')
+		->add('get', 'apartament-deschide-pdf-redus', 'apartament-deschide-pdf-redus/{id}', 'CautareApartamenteController@openPDFredus', 'Apartamente')
+
 		->add('post', 'apartamente-load-photo', 'apartamente-load-photo', 'CautareApartamenteController@loadPhoto', 'Apartamente')
 		->add('post', 'apartamente-cauta-telefon', 'apartamente-cauta-telefon', 'CautareApartamenteController@searchPhone', 'Apartamente')
+		
 		->add('post', 'change_oferta_valabila_endpoint', 'change-oferta-valabila-endpoint', 'CautareApartamenteController@schimbaOfertaValabila', 'Apartamente')
+		->add('post', 'change_data_actualizare_endpoint', 'change-data-actualizare-endpoint', 'CautareApartamenteController@schimbaDataActualizare', 'Apartamente')
+		
+
 		/**/
 		;
 	}

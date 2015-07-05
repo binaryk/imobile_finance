@@ -4,7 +4,8 @@ function CautareApartamente( parameters )
 	this.perioada = $('#perioada').data('daterangepicker');
 	this.d1 	  = this.perioada.startDate;
 	this.d2       = this.perioada.endDate;
-	this.change_oferta_valabila_endpoint = parameters.change_oferta_valabila_endpoint;
+	this.change_oferta_valabila_endpoint   = parameters.change_oferta_valabila_endpoint;
+	this.change_data_actualizare_endpoint = parameters.change_data_actualizare_endpoint;
 
 	console.log(parameters);
 	var my = this;
@@ -272,7 +273,20 @@ function CautareApartamente( parameters )
         	data     : { 'id' : $(this).data('id'), 'status' : $(this).data('status') },
         	success  : function(result)
         	{
-        		console.log(result);
+        		var table = my.dt;
+				table.draw();
+        	}
+		});
+	});
+
+	$('#box-cauta-apartamente').on('click', '.update-ultima-actualizare', function(){
+		$.ajax({
+			url      : my.change_data_actualizare_endpoint,
+        	type     : 'post',
+        	dataType : 'json',
+        	data     : { 'id' : $(this).data('id') },
+        	success  : function(result)
+        	{
         		var table = my.dt;
 				table.draw();
         	}

@@ -2,7 +2,14 @@
 
 @section('before-datatable')
 <div class="note note-info" id="note-info-cautare">
-  <i class="fa fa-info-circle" style="font-size:32px; line-height:32px; vertical-align:middle;"></i> <span style="line-height:32px; padding-left:4px;">Pentru a schimba valabilitatea unei oferte faceţi click pe simbolul din coloana "Oferta valabilă".</span>
+  <div style="float:left;width:5%">
+    <i class="fa fa-info-circle" style="font-size:32px; line-height:32px; vertical-align:middle;"></i> 
+  </div>
+  <div style="float:left;width:95%">
+  <span style="padding-left:4px; display:block">Pentru a schimba valabilitatea unei oferte din DA în NU şi invers, faceţi click pe simbolul din coloana "Oferta valabilă".</span>
+  <span style="padding-left:4px;display:block">Pentru a actualiza valoarea "Ultima actualizare" faceţi un click pe butonul corespunzător. Se va seta data corespunzătoare zilei curente, adică {{Carbon\Carbon::now()->format('d.m.Y')}}.</span>
+</div>
+<div class="clearfix"></div>
 </div>
 @stop
 
@@ -54,7 +61,8 @@
 
 	var cautare = new CautareApartamente({
 		'dt' : eval('{{$dt->name()}}'),
-    'change_oferta_valabila_endpoint' : "{{ URL::route('change_oferta_valabila_endpoint')}}"
+    'change_oferta_valabila_endpoint' : "{{ URL::route('change_oferta_valabila_endpoint')}}",
+    'change_data_actualizare_endpoint' : "{{ URL::route('change_data_actualizare_endpoint')}}",
 	});
 	
 	/**

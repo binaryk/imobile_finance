@@ -1,18 +1,19 @@
 <ul class="page-sidebar-menu " data-keep-expanded="false" data-auto-scroll="true" data-slide-speed="200">
-	<!-- DOC: To remove the sidebar toggler from the sidebar you just need to completely remove the below "sidebar-toggler-wrapper" LI element -->
-	<li class="sidebar-toggler-wrapper">
-		<!-- BEGIN SIDEBAR TOGGLER BUTTON -->
-		<div class="sidebar-toggler">
-		</div>
-		<!-- END SIDEBAR TOGGLER BUTTON -->
+	<li class="sidebar-toggler-wrapper"><div class="sidebar-toggler"></div></li>
+	<li class="sidebar-search-wrapper">@include('template.parts.body.~search-form')</li>
+	{{ Sidebar::make()->out()  }}
+
+
+	<li class="start">
+		<a href="javascript:;"><i class="icon-user"></i>
+			<span class="title">Utilizatori</span>
+			<span class="arrow"></span>
+		</a>
+		<ul class="sub-menu">
+			<li>
+				<a href="{{ URL::route('grid-utilizatori') }}"><i class="icon-users"></i>Lista utilizatori</a>
+			</li>
+		</ul>
 	</li>
-	<!-- DOC: To remove the search box from the sidebar you just need to completely remove the below "sidebar-search-wrapper" LI element -->
-	<li class="sidebar-search-wrapper">
-		<!-- BEGIN RESPONSIVE QUICK SEARCH FORM -->
-		<!-- DOC: Apply "sidebar-search-bordered" class the below search form to have bordered search box -->
-		<!-- DOC: Apply "sidebar-search-bordered sidebar-search-solid" class the below search form to have bordered & solid search box -->
-		@include('template.parts.body.~search-form')
-		<!-- END RESPONSIVE QUICK SEARCH FORM -->
-			{{ Sidebar::make()->out()  }}
-	
+
 </ul>
