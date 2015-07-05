@@ -8,10 +8,11 @@ class TipMobilare
     public static function toCombobox()
     {  
         return ['' => ''] + [ 
-            '0' => "Nemobilat",
-            '1' => "Semimobilat",
-            '2' => "Mobilat complet",
-            '3' => "Mobilat și utilat",
+            '1' => "Da",
+            '2' => "Nemobilat",
+            '3' => "Semimobilat",
+            '4' => "Mobilat complet",
+            '5' => "Mobilat și utilat",
             ]; 
 
     }

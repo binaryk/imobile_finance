@@ -9,6 +9,12 @@
 				Tip cladire <span class="badge badge-info"> {{$record->numetipcladire ? $record->numetipcladire : '-'}} </span>
 			</a>
 			<a href="#" class="list-group-item list-group-item-info">
+				Număr etaje clădire <span class="badge badge-info"> {{$record->nr_etaje_cladire ? $record->nr_etaje_cladire : '-'}} </span>
+			</a>
+			<a href="#" class="list-group-item list-group-item-info">
+				Vechime clădire<span class="badge badge-{{$record->vechime_imobil ? 'success' : 'warning'}}"> {{$record->vechime_imobil ? 'Nou' : 'Vechi'}} </span>
+			</a>
+			<a href="#" class="list-group-item list-group-item-info">
 				Finisaj interior <span class="badge badge-info"> {{$record->numetipfinisare ? $record->numetipfinisare : '-'}} </span>
 			</a>
 			<a href="#" class="list-group-item list-group-item-info">
@@ -94,6 +100,7 @@
 		Preţ negociabil<span class="badge badge-{{$record->negociabil ? 'success' : 'warning'}}"> {{$record->negociabil ? 'DA' : 'NU'}} </span>
 	</a>
 
+	
 	<a href="#" class="list-group-item list-group-item-info">
 		Etaj <span class="badge badge-info"> {{$record->numetipetaj ? $record->numetipetaj : '-'}} </span>
 	</a>
@@ -106,6 +113,9 @@
 	</a>
 	<a href="#" class="list-group-item list-group-item-info">
 		Confort <span class="badge badge-info"> {{$record->numetipconfort ? $record->numetipconfort : '-'}} </span>
+	</a>
+	<a href="#" class="list-group-item list-group-item-info">
+		Data apariției <span class="badge badge-info"> {{$record->data_aparitiei ? $record->data_aparitiei : '-'}} </span>
 	</a>
 	<a href="#" class="list-group-item list-group-item-info">
 		Ultima actualizare <span class="badge badge-info"> {{$record->ultima_actualizare ? $record->ultima_actualizare : '-'}} </span>

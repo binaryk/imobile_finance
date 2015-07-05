@@ -11,11 +11,11 @@ class TipCompartimentTableSeeder extends Seeder {
 		$faker = Faker::create();
 		 
 		Imobiliare\Nomenclator\TipCompartiment::insert([
-			['nume' => 'Decomandat'],
-			['nume' => 'Semidecomandat'],
-			['nume' => 'Nedecomandat'],
-			['nume' => 'Circuit'],
-			['nume' => 'Vagon']
+			[ 'id' => 1, 'nume' => 'Decomandat'],
+			[ 'id' => 2, 'nume' => 'Semidecomandat'],
+			[ 'id' => 3, 'nume' => 'Nedecomandat'],
+			[ 'id' => 4, 'nume' => 'Circuit'],
+			[ 'id' => 5, 'nume' => 'Vagon']
 		]);
 	}
 

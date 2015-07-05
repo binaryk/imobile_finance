@@ -1,9 +1,11 @@
 <div class="row"> 
 <!-- Tip imobil -->
-		<div class="col-md-6">
-			{{$controls[48]->out()}}
-		</div>
+		
 <div class="col-md-12"> 
+<div class="alert alert-info">
+	<strong>Atenție!</strong> Selectați tipul de imobil!
+	{{$controls[48]->out()}}
+</div> 
 	<!-- BEGIN PORTLET-->
 	<div class="portlet light bg-inverse" style="background-color: white; border: 1px solid #d3d3d3;">
 	<div class="portlet">
@@ -24,11 +26,8 @@
 		</div> 
 
 		<div class="portlet-body" sty> 
-			<div id="context" data-toggle="context" data-target="#context-menu">
-				
-				<div class="row">
-
-				
+			<div id="context" data-toggle="context" data-target="#context-menu"> 
+				<div class="row"> 
 				<div class="apartamente" style="display: none;">
 					<!-- Titlu apartament -->
 					<div class="col-md-6">
@@ -261,6 +260,10 @@
 						<!-- vechime imobil -->
 						<div class="col-md-6">
 							{{$controls[49]->out()}}
+						</div>
+						<!-- negociabil -->
+						<div class="col-md-6">
+							{{$controls[53]->out()}}
 						</div>
 						
 					</div>

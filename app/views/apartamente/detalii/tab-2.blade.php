@@ -23,14 +23,28 @@
 
 <div class="well">
 	<h4>Zona aproximativă</h4>{{ $record->zona_aproximativa }}
-</div>
-
+</div> 
 <div class="well">
-	<h4>Adresa exactă</h4>{{ $record->adresa_exacta }}
+	<h4>Număr clădire</h4>{{ $record->nr_cladire }}
+</div>
+<div class="well">
+	<h4>Scară</h4>{{ $record->scara }}
+</div>
+<div class="well">
+	<h4>Număr apartament</h4>{{ $record->nr_apartament }}
+</div>
+<div class="well">
+	<h4>Adresa exactă</h4>{{ $record->strada }}
 </div>
 
 <div class="well">
 	<h4>Detalii</h4>{{ $record->detalii }}
+</div>
+<div class="well">
+	<h4>Observatii</h4>{{ $record->detalii_suplimentare }}
+</div>
+<div class="well">
+	<h4>Observatii suplimentare</h4>{{ $record->detalii_suplimentare_2 }}
 </div>
 
 <div class="well">
