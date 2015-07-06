@@ -240,7 +240,7 @@ class CreateOfertaPdf
 	protected function outChapterLocalizare()
 	{
 		$this->pdf->Pdf()->SetFont('freeserif', 'B', 14, '', false);
-		$this->pdf->Cell()->text('I. Localizare')->width(190)->border('TB')->halign('L')->background([210, 210, 210])->out()->reset('background');
+		$this->pdf->Cell()->text('Localizare')->width(190)->border('TB')->halign('L')->background([210, 210, 210])->out()->reset('background');
 		$rows = [
 			'1' => ['caption' => 'Adresa: ', 'source' => 'adresa', 'redus' => true],
 			'2' => ['caption' => 'Zona aproximativă: ', 'source' => 'zonaAproximativaApartament', 'redus' => false],
@@ -266,7 +266,7 @@ class CreateOfertaPdf
 	protected function outChapterProprietar()
 	{
 		$this->pdf->Pdf()->SetFont('freeserif', 'B', 14, '', false);
-		$this->pdf->Cell()->text('II. Proprietar')->width(190)->border('TB')->halign('L')->background([210, 210, 210])->out()->reset('background');
+		$this->pdf->Cell()->text('Proprietar')->width(190)->border('TB')->halign('L')->background([210, 210, 210])->out()->reset('background');
 		$rows = [
 			'1' => ['caption' => 'Proprietar: ', 'source' => 'proprietarApartament'],
 			'2' => ['caption' => 'Telefon: ', 'source' => 'telefonProprietarApartament'],
@@ -393,7 +393,7 @@ class CreateOfertaPdf
 	protected function outChapterDategenerale()
 	{
 		$this->pdf->Pdf()->SetFont('freeserif', 'B', 14, '', false);
-		$this->pdf->Cell()->text('III. Date generale')->width(190)->border('TB')->halign('L')->background([210, 210, 210])->out()->reset('background');
+		$this->pdf->Cell()->text('Date generale')->width(190)->border('TB')->halign('L')->background([210, 210, 210])->out()->reset('background');
 		$rows = [
 			'1' => ['caption' => 'Nume: ', 'source' => 'numeApartament', 'redus' => true],
 			'2' => ['caption' => 'Email: ', 'source' => 'emailApartament', 'redus' => false],
@@ -437,7 +437,7 @@ class CreateOfertaPdf
 	{
 		$this->pdf->Pdf()->ln();
 		$this->pdf->Pdf()->SetFont('freeserif', 'B', 14, '', false);
-		$this->pdf->Cell()->text('IV. Opţiuni suplimentare')->width(190)->border('TB')->halign('L')->background([210, 210, 210])->out()->reset('background')->border('TBRL');
+		$this->pdf->Cell()->text('Opţiuni suplimentare')->width(190)->border('TB')->halign('L')->background([210, 210, 210])->out()->reset('background')->border('TBRL');
 		$items = [
 			'termopan'              => ['Termopan', false],
 			'contoare_gaz'          => ['Contoare gaz', false],
@@ -489,7 +489,10 @@ class CreateOfertaPdf
 		$this->outnume();
 		$this->outphotos();
 		$this->outChapterLocalizare(); 
-		$this->outChapterProprietar(); 
+		if( ! $this->redus )
+		{
+			$this->outChapterProprietar(); 
+		}
 		$this->outChapterDategenerale();
 		
 		// Pagina 2
