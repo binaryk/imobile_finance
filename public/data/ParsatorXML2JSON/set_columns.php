@@ -1,0 +1,63 @@
+<?php
+	$json = file_get_contents('test/out.json');
+
+	 // 'id_judet','id_localitate','id_cartier','id_cladire','id_imobil','id_organizatie','id_proprietar_pf','id_tip_garaj','id_tip_cladire',   'id_tip_finisaje_interioare','id_tip_finisaje_externe','id_tip_compartiment','is_agentie','oferta_valabila','termopan','contoare_gaz','parchet',	'faianta','aer_conditionat','uscator','centrala_termica','contoare_apa','zugravit_lavabil','tv_cablu','loc_pod','usa_atiefractie','modificari_interioare','gresie','balcoane_inchise','has_telefon','loc_pivnita','parcare','nr_etaj','nr_balcoane','tip_acoperis','tip_confort','pret_m2','ultima_actualizare','email','nume','telefon','telefon_secundar_1','telefon_secundar_2','suprafata','suprafata_min','suprafata_max','nr_camere','credit_prima_casa','anul_constructiei','nr_bai','detalii_bacoane','id_sistem_incalzire','zona_aproximativa','adresa_exacta','detalii','detalii_private','negociabil',   'strada',   'nr_cladire',   'scara',   'nr_apartament',   'suprafata_teren',   'tip_imobil',   'vechime_imobil',   'id_tip_mobilare',   
+	 // noi   'extras_cf',   'has_balcon',   'has_electrocasnice',   'has_terasa',   'has_dotari',   'id_dezvoltator',   'nr_etaje_cladire',    
+	 // id_tip_finisaje_externe --- sus data_aparitiei
+	$ids = [
+		'ID_JUDET' => '"id_judet"',
+		'ID_CARTIER' => '"id_cartier"',
+		'NUMAR_DE_C' => '"nr_camere"',
+		'STRADA_CLA' => '"strada"',
+		'NUMAR_CLAD' => '"nr_cladire"',
+		'TIP_CLADIR' => '"id_tip_cladire"',
+		'NUMAR_ETAJ' => '"nr_etaje_cladire"',
+		'PRET_DE_VA' => '"pret_m2"',
+		'PRET_NEGOC' => '"negociabil"',
+		'DATA_APARI' => '"data_aparitiei"',
+		'DATA_ULTIM' => '"ultima_actualizare"',
+		'VALABILITA' => '"oferta_valabila"',
+		'AGENTIE_IM' => '"is_agentie"',
+		'DEZVOLTATO' => '"id_dezvoltator"',
+		'TELEFON_DE' => '"telefon"',
+		'EXTRAS_CF' => '"extras_cf"',
+		'ETAJ_APART' => '"nr_etaj"',
+		'COMPARTIME' => '"id_tip_compartiment"',
+		'SUPRAFATA_' => '"suprafata"',
+		'FINISAJE_I' => '"id_tip_finisaje_interioare"',
+		'GRESIE_NOU' => '"gresie"',
+		'FAIANTA_NO' => '"faianta"',
+		'USA_METALI' => '"usa_atiefractie"',
+		'CENTRALA_T' => '"centrala_termica"',
+		'FERESTRE_T' => '"termopan"',
+		'LOC_PARCAR' => '"parcare"',
+		'PARCHET_NO' => '"parchet"',
+		'ZUGRAVIT_L' => '"zugravit_lavabil"', 
+		'ELECTROCAS' => '"has_electrocasnice"',
+		'EXISTENTA_' => '"has_balcon"',
+		'ACCEPTARE_' => '"credit_prima_casa"',
+		'BECI' => '"loc_pivnita"',
+		'TERASA:' => '"has_terasa":', 
+		'FINISAJE_E' => '"id_tip_finisaje_externe"',
+		'MOBILARE' => '"id_tip_mobilare"',
+		'OBSERVATI0' => '"observatii_generale"',
+		'OSERVATII_' => '"observatii_dotari"',
+		'OBSERVATII' => '"observatii_finisaje_dotari"',
+		'OSERVATII0' => '"observatii_caracteristici_generale"',
+		'NUMAR_APAR' => '"nr_apartament"',
+		'TELEFON_D0' => '"telefon_secundar_1"',
+		'TELEFON_D1' => '"telefon_secundar_2"',
+		'DOTARI' => '"has_dotari"',
+		'id_proprietar_pf' => '"id_proprietar_pf"',
+		'id_organizatie' => '"id_organizatie"',
+		'tip_imobil' => '"tip_imobil"',
+		'vechime_imobil' => '"vechime_imobil"',
+		'][' => ',',
+		'"' => "'",
+		"'" => '"',
+	];
+	$content = strtr($json, $ids);
+	file_put_contents('test/out2.json', $content); 
+
+	echo 'Success';
+ 

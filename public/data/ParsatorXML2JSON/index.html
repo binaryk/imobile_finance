@@ -1,0 +1,395 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<link rel="stylesheet" type="text/css" href="//netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap.min.css">
+	<script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
+</head>
+<body>
+	<div class="container">
+		<button class="todo">Parseaza</button>
+		<button class="sumbmit">Trimite</button>
+	</div>
+</body>
+
+<script type="text/javascript"> 
+	jQuery(document).ready(function($) {
+		var apartamente = [];
+		var out = [];
+		var remove = [
+			'ID_APARTAM',
+			'ID_LOCALIT',
+			'LOCALITATE',
+			'CARTIER', 
+			'D1',
+			'D2',
+			'D3',
+			'EXISTENTA',
+			'NUME_VANZA',
+			'TIP_CLADIR',
+		];
+		var types = [
+		{ PRET_NEGOC : 'unique' },
+		{ VALABILITA : 'unique' },
+		{ AGENTIE_IM : 'unique' }, 
+		{ DEZVOLTATO : 'unique' },
+		{ EXTRAS_CF  : 'unique' },
+		{ GRESIE_NOU : 'unique' },
+		{ FAIANTA_NO : 'unique' },
+		{ PARCHET_NO : 'unique' },
+		{ ZUGRAVIT_L : 'unique' },
+		{ DOTARI 	 : 'unique' },
+		{ USA_METALI : 'unique' },
+		{ CENTRALA_T : 'unique' },
+		{ FERESTRE_T : 'unique' },
+		{ ELECTROCAS : 'unique' },
+		{ LOC_PARCAR : 'unique' },
+		{ EXISTENTA_ : 'unique' },
+		{ ACCEPTARE_ : 'unique' },
+		{ BECI : 'unique' },
+		{ TERASA : 'unique' }, 
+		{ ID_JUDET : 'id_judet' },
+		{ ID_CARTIER : 'id_cartier' },
+		{ NUMAR_DE_C : 'camere' },
+		{ TIP_CLADIR : 'tip_cladire' },//vechime_imobil
+		{ PRET_DE_VA : 'pret_m2' }, 
+		{ DATA_APARI : 'created_at' }, 
+		{ DATA_ULTIM : 'ultima_actualizare' },// 
+		{ TELEFON_DE : 'telefon' },//telefon proprietar
+		{ TELEFON_D0 : 'telefon_secundar_1' },//telefon proprietar
+		{ TELEFON_D1 : 'telefon_secundar_2' },//telefon proprietar
+		{ ETAJ_APART : 'nr_etaj' },
+		{ COMPARTIME : 'id_tip_compartiment' },
+		{ SUPRAFATA_ : 'suprafata' },
+		{ FINISAJE_E : 'id_tip_finisaje_externe' },
+		{ FINISAJE_I : 'id_tip_finisaje_interioare' },
+		{ MOBILARE   : 'id_tip_mobilare' },
+		{ OSERVATII_ : 'observatii_generale' },//observatii generale in app veche
+		{ OSERVATII0 : 'observatii_caracteristici_generale' },//observatii caracteristici apartament in app veche
+		{ OBSERVATII : 'observatii_finisaje_dotari' },//observatii finisaje si dotari in app veche
+		{ OBSERVATI0 : 'observatii_dotari' },//Observatii dotari in app veche
+		{ NUMAR_APAR : 'nr_apartament' }, 
+		{ NUMAR_CLAD : 'nr_cladire' }, 
+		{ STRADA_CLA : 'strada' },  
+		{ NUMAR_ETAJ : 'nr_etaje_cladire' },
+		{ ID_PROPR_PF :'id_proprietar_pf'} 
+		];
+		var properties = { 
+		unique: [
+			{ PRET_NEGOC : 'negociabil'},
+			{ VALABILITA : 'oferta_valabila'},
+			{ AGENTIE_IM : 'is_agentie'},
+			// { D1 : ''},
+			// { D2 : ''},
+			// { D3 : ''},
+			{ DEZVOLTATO : 'id_dezvoltator'},
+			{ EXTRAS_CF : 'extras_cf'},
+			{ GRESIE_NOU : 'gresie'},
+			{ FAIANTA_NO : 'faianta'},
+			{ PARCHET_NO : 'parchet'},
+			{ ZUGRAVIT_L : 'zugravit_lavabil'},
+			{ DOTARI : 'has_dotari'},
+			{ USA_METALI : 'usa_atiefractie'},
+			{ CENTRALA_T : 'centrala_termica'},
+			{ FERESTRE_T : 'termopan'},
+			{ ELECTROCAS : 'has_electrocasnice'},
+			{ LOC_PARCAR : 'parcare'},
+			{ BECI : 'loc_pivnita'},
+			{ TERASA : 'has_terasa'},
+			{ EXISTENTA_ :'has_balcon'}
+
+		],
+		id_judet: [
+			{ JUD00000 : 12 },
+			{ JUD00001 : 1 },
+			{ JUD00002 : 26 },
+			{ JUD00003 : 0 },
+			{ JUD00004 : 6 },
+			{ JUD00005 : 8 },
+			{ JUD00006 : 40 },
+			{ JUD00007 : 40 },
+			{ JUD00008 : 24 },
+			{ JUD00009 : 31 },
+			{ JUD00010 : 5 },
+			{ JUD00011 : 20 },
+			{ JUD00012 : 20 },
+			{ JUD00013 : 33 },
+			{ JUD00014 : 30 },
+			{ JUD00015 : 30 },
+			{ JUD00016 : 27 },
+			{ JUD00017 : 17 },
+			{ JUD00018 : 19 },
+			{ JUD00019 : 26 },
+			{ JUD00020 : 19 },
+			{ JUD00021 : 35 },
+			{ JUD00022 : 7 } 
+		],
+		id_cartier:[
+			{ CAR00001 : 1 },
+			{ CAR00002 : 2 },
+			{ CAR00004 : 5 },
+			{ CAR00007 : 4 },
+			{ CAR00008 : 6 },
+			{ CAR00009 : 3 },
+			{ CAR00011 : 7 },
+			{ CAR00018 : 9 },
+			{ CAR00020 : 10 },
+			{ CAR00022 : 12 },
+			{ CAR00026 : 11 },
+			{ CAR00029 : 14 },
+			{ CAR00032 : 15 },
+			{ CAR00033 : 13 },
+			{ CAR00037 : 17 },
+			{ CAR00038 : 16 },
+			{ CAR00047 : 18 },
+			{ CAR00048 : 19 },
+			{ CAR00053 : 20 },
+			{ CAR00054 : 20 },
+			{ CAR00057 : 21 },
+			{ CAR00067 : 23 },
+			{ CAR00072 : 1 },
+			{ CAR00028 : 24 } 
+		],
+
+		tip_cladire:[
+			{ Bloc_Nou   : 1 },
+			{ Bloc_Vechi : 0 },
+			{ Casa : 3 },
+			{ Duplex : 4 },
+			{ Vila : 6 }
+		],
+		id_tip_compartiment : [
+			{ Decomandat : 1 },
+			{ Semidecomandat : 2 },
+			{ Nedecomandat : 3 },
+			{ In_Circuit : 4 },
+			{ Vagon : 5 },
+		],
+		id_tip_finisaje_externe : [
+			{ Cladire_izolata_termic : 1 },
+			{ Apartament_izolat_termic: 2 },
+		],
+		id_tip_finisaje_interioare : [
+			{ Nefinisat : 1 },
+			{ Semifinisat : 2 },
+			{ Finisat : 3 },
+			{ Superfinisat : 4 },
+		],
+		id_tip_mobilare : [
+			{ Da : 1 },
+            { Nemobilat : 2 },
+            { Semimobilat : 3 },
+            { Mobilat : 4 },
+            { Supermobilat : 5 },
+		],
+		nr_etaj :[
+			{ Nespecificat : 1 },
+			{ Demisol 	 : 2	},
+			{ Parter 	 : 3	},
+			{ Parter_Ina : 4 },
+			{ Etaj_1 : 5 },
+			{ Etaj_2 : 6 },
+			{ Etaj_3 : 7 },
+			{ Etaj_4 : 8 },
+			{ Etaj_5 : 9 },
+			{ Etaj_6 : 10 },
+			{ Etaj_7 : 11 },
+			{ Etaj_8 : 12 },
+			{ Etaj_9 : 13 },
+			{ Etaj_10 : 14 },
+			{ Etaj_11 : 15 },
+			{ Etaj_intermediar : 16 },
+			{ Ultimul_etaj : 17 },
+			{ Mansarda : 18 },
+			{ Etaj_Mansa : 19 },
+			{ Mezanin : 20 }, 
+			{ Subsol : 21 },
+
+		]
+
+
+
+		};
+
+		$('.todo').click(function(){
+			   $.get('http://localhost:3000/data', {}, function(data){
+					var temp = [];
+			   		temp = data.VFPData.RECORD;
+			   		console.log(temp[0].DATA_ULTIM[0]);
+
+			   		for (var i = 0; i < temp.length; i++) {
+			   			if(temp[i].DATA_ULTIM)
+			   				if(temp[i].DATA_ULTIM[0])
+					   			if( temp[i].DATA_ULTIM[0].indexOf('2014') > 0 || temp[i].DATA_ULTIM[0].indexOf('2015') > 0 )
+					   				apartamente.push(temp[i]);
+			   		}
+
+
+			   		for (var i = 0; i < apartamente.length; i++) {
+			   			var ap = apartamente[i];
+			   			ap['id_organizatie'] = '1';
+			   			ap['id_proprietar_pf'] = i + 1;
+			   			ap['tip_imobil'] = 1;
+			   			// merg peste toate proprietatile necesare
+			   			for(var k = 0; k < types.length; k++){
+			   				for(var propertyName in types[k]) {
+			   					var type = types[k][propertyName];
+			   					// vad tipul de proprietate (da/nu, judet etc.)
+				   				switch(type) {
+				   					case 'unique':
+   						   				var value = null;
+   						   				if(ap[propertyName])
+   						   					value = ap[propertyName][0] ? ap[propertyName][0] : null;
+   							   				switch(value) {
+   							   					case 'DA':
+   							   					case 'da':
+   							   						ap[propertyName] = '1';
+   							   						break;
+   							   					case 'NU':
+   							   					case 'nu':
+   							   						ap[propertyName] = '0';
+   							   						break;
+   							   					default:
+   							   						ap[propertyName] = '';
+   							   				} 
+				   						break;
+				   					case 'id_cartier':
+				   					case 'id_judet':
+				   					case 'tip_cladire':
+				   					case 'id_tip_compartiment':
+				   					case 'id_tip_finisaje_externe':
+				   					case 'id_tip_finisaje_interioare':
+				   					case 'id_tip_mobilare':
+				   					case 'nr_etaj':
+				   						var value = null;
+				   						if(ap[propertyName])
+				   							value = ap[propertyName][0] ? ap[propertyName][0] : null;
+				   						// in value am valoarea din vechea aplicatie
+				   						if(!value)
+				   							ap[propertyName] = 0;
+				   						else{
+			   								// deoarece avem 'Bloc Nou ==> Bloc_Nou'
+				   							value = value.toLocaleLowerCase().replace(/ /g , "_");
+				   							value = value.toLocaleLowerCase().replace(/\+/g , "_");
+				   							if(value == 'bloc_nou'){
+				   								console.log(value);
+				   							}
+				   							if (type == 'tip_cladire'){
+				   								if(value == 'bloc_nou' || value == 'bloc_vechi' ){
+				   									// avem imobil vechi sau nou
+				   									for( var j = 0; j < properties[type].length; j++ ){
+				   										for(var judetId in properties[type][j]) {
+				   											if(judetId.toLocaleLowerCase() == value){
+				   												ap['vechime_imobil'] = properties[type][j][judetId];
+				   											}
+				   										}
+				   									}
+				   								}else{
+				   									// adica tipul de cladire este fie casa, fie vila, fie duplex
+				   									for( var j = 0; j < properties[type].length; j++ ){
+				   										for(var judetId in properties[type][j]) {
+				   											if(judetId.toLocaleLowerCase() == value){
+				   												ap['tip_imobil'] = properties[type][j][judetId];
+				   											}
+				   										}
+				   									}
+				   									
+				   								}
+				   							}else{
+						   						for( var j = 0; j < properties[type].length; j++ ){
+						   							for(var judetId in properties[type][j]) {
+						   								if(judetId.toLocaleLowerCase() == value){
+						   									ap[propertyName] = properties[type][j][judetId];
+
+						   								}
+						   							}
+						   						}
+				   							}
+				   						}
+				   						break;
+				   					case 'camere':
+				   					case 'pret_m2':
+				   					case 'created_at':
+				   					case 'ultima_actualizare':
+				   					case 'telefon':
+				   					case 'telefon_secundar_1':
+				   					case 'telefon_secundar_2':
+				   					
+				   					case 'suprafata':
+				   					case 'detalii':
+				   					case 'detalii_suplimentare':
+				   					case 'detalii_suplimentare_2':
+				   					case 'detalii_private':
+				   					case 'nr_apartament':
+				   					case 'nr_cladire':
+				   					case 'strada':
+				   					case 'nr_etaje_cladire':
+				   						var value = null;
+				   						
+				   						if(ap[propertyName])
+				   							value = ap[propertyName][0] ? ap[propertyName][0] : null;
+				   						if(!value)
+				   							ap[propertyName] = '';
+				   						else {				   		
+				   								if(type == 'telefon' || type == 'telefon_secundar_1' || type == 'telefon_secundar_2' )
+					   								value = value.replace(/ /g , "");				
+				   								ap[propertyName] = value;
+				   							}
+				   					break; 
+				   				}
+
+			   				}
+			   			}
+			   			for(var k = 0; k < remove.length; k++){
+			   				for(var proprietate in ap) {
+			   					if(proprietate === remove[k]) 
+			   						delete ap[proprietate];
+			   					if(proprietate == 'DATA_ULTIM' || proprietate == 'DATA_APARI' ){
+			   						var date = new Date(ap[proprietate]);
+			   						ap[proprietate] = date.getFullYear() + '-' + (date.getMonth() + 1) + '-' + date.getDate();
+			   					}
+
+			   				}
+			   			}
+			   			
+			   		}
+			   		console.log(apartamente.length);
+			   		console.log(apartamente);
+
+			   		for (var m = 0; m < apartamente.length; m++) {
+			   			out.push(apartamente[m])
+			   			if(m % 20 == 0){
+			   				write();
+			   				out = [];
+			   			}
+			   		}
+			   		// out = [];
+			   		// out = apartamente[0];
+			   		// write();
+			   		// console.log(out);
+			   		// console.log(out.length);
+			   			 
+
+
+			   		
+			   });
+
+
+		}); 
+		function write () {
+			$.post("http://localhost:3000/data",{data: out}, function(data){
+	            if(data==='done')
+	              {
+	                console.log('Scriere cu succes!');
+	              }
+	          });  
+		}
+		$('.sumbmit').click(function(event) {
+			write();
+		});
+
+	}); 
+</script>
+
+</html>

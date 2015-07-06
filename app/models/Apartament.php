@@ -78,9 +78,11 @@ class Apartament extends \Eloquent {
     'has_dotari',
     'id_dezvoltator',
     'nr_etaje_cladire', 
-    'data_aparitiei', 
-    'detalii_suplimentare', 
-    'detalii_suplimentare_2', 
+    'data_aparitiei',
+    'observatii_caracteristici_generale',
+    'observatii_finisaje_dotari',
+    'observatii_dotari',
+    'observatii_generale ',
     // id_tip_finisaje_externe --- sus
 	];
     protected $guarded = []; 

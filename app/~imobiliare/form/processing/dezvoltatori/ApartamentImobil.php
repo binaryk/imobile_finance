@@ -54,6 +54,10 @@ nr_cladire
 scara
 nr_apartament
 id_tip_mobilare
+observatii_caracteristici_generale
+observatii_finisaje_dotari
+observatii_dotari
+observatii_generale
 
 */       
         $this
@@ -706,6 +710,46 @@ id_tip_mobilare
                 ), 
             'after' => NULL])
             )
+        // 54
+        ->addControl(
+            \Easy\Form\Editbox::make('~layouts.form.controls.editboxes.editbox')
+            ->name('observatii_caracteristici_generale')
+            ->caption('Observații caracteristici generale')
+            // ->placeholder('Detalii')
+            ->controlsource('observatii_caracteristici_generale')
+            ->controltype('editbox')
+            ->class('form-control input-sm data-source')
+        ) 
+        // 55
+        ->addControl(
+            \Easy\Form\Editbox::make('~layouts.form.controls.editboxes.editbox')
+            ->name('observatii_finisaje_dotari')
+            ->caption('Observații finisaje și dotări')
+            // ->placeholder('Detalii')
+            ->controlsource('observatii_finisaje_dotari')
+            ->controltype('editbox')
+            ->class('form-control input-sm data-source')
+        ) 
+        // 56
+        ->addControl(
+            \Easy\Form\Editbox::make('~layouts.form.controls.editboxes.editbox')
+            ->name('observatii_dotari')
+            ->caption('Observații dotări')
+            // ->placeholder('Detalii')
+            ->controlsource('observatii_dotari')
+            ->controltype('editbox')
+            ->class('form-control input-sm data-source')
+        ) 
+        // 57
+        ->addControl(
+            \Easy\Form\Editbox::make('~layouts.form.controls.editboxes.editbox')
+            ->name('observatii_generale')
+            ->caption('Observații generale')
+            // ->placeholder('Detalii')
+            ->controlsource('observatii_generale')
+            ->controltype('editbox')
+            ->class('form-control input-sm data-source')
+        ) 
         ;
 
     }

@@ -262,8 +262,24 @@
 							{{$controls[49]->out()}}
 						</div>
 						<!-- negociabil -->
-						<div class="col-md-6">
+						<div class="col-md-12">
 							{{$controls[53]->out()}}
+						</div>
+						<!-- observatii_caracteristici_generale -->
+						<div class="col-md-6">
+							{{$controls[54]->out()}}
+						</div>
+						<!-- observatii_finisaje_dotari -->
+						<div class="col-md-6">
+							{{$controls[55]->out()}}
+						</div>
+						<!-- observatii_dotari -->
+						<div class="col-md-6">
+							{{$controls[56]->out()}}
+						</div>
+						<!-- observatii_generale -->
+						<div class="col-md-6">
+							{{$controls[57]->out()}}
 						</div>
 						
 					</div>
