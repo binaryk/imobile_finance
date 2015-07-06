@@ -81,20 +81,26 @@ class CreateOfertaPdf
 			$h = 60;
 			foreach($photos as $i => $photo)
 			{
+
 				$new_file = str_replace('\\', '/', storage_path() . '/app/apartamente/photos/resized/' . $photo->id  . '.png');
+				// var_dump($photo->file_name . ' ======> ' . $new_file . ' ::: ' . (int) file_exists($photo->file_name) );
 				$image = \Image::make($photo->file_name)
 					->resize(360, 360, function ($constraint){$constraint->aspectRatio(); $constraint->upsize();})->save($new_file, 100);
+				
+				// var_dump( (int) file_exists($new_file ) );
+				try
+				{
 				$this->pdf->Pdf()->Image(
 					$new_file, 	// Name of the file containing the image
 					$x, 		// Abscissa of the upper-left corner
 					40, 		// Ordinate of the upper-left corner
 					$w, 		// Width of the image in the page. 
 					$h, 		// Height of the image in the page.
-					'PNG', 		// Image format
+					'PNG',     // Image format
 					'', 		// URL or identifier returned by AddLink().
 					'', 		// Indicates the alignment of the pointer next to image insertion relative to image height
 					false, 		// If true resize (reduce) the image to fit $w and $h
-					0, 			// dot-per-inch resolution used on resize
+					0, 		    // dot-per-inch resolution used on resize
 					'', 		// Allows to center or align the image on the current line
 					false, 		// true if this image is a mask, false otherwise
 					false, 		// image object returned by this function or false
@@ -103,9 +109,16 @@ class CreateOfertaPdf
 					true,
 					false, 		// If true do not display the image.
 					false 		// If true the image is resized to not exceed page dimensions.
+					// 'PNG', '', 'T', false, 308, '', false, false, 0, false, false, false
 				);
 				$x += $step;
+				}
+				catch(\Exception $e)
+				{
+					dd($e->getMessage() );
+				}
 			}
+			// dd('---');
 			$this->pdf->Pdf()->ln();
 			$this->pdf->Pdf()->SetXY(10, 110);
 		}

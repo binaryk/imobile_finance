@@ -8,8 +8,8 @@ class ApartamentsTableSeeder extends Seeder {
 	public function run()
 	{
 		DB::table('apartamente')->delete();
-		$url = \URL::to('imobile/public/data/apartamente.json');
-		$json = json_decode(file_get_contents($url), true);
+		// $url = \URL::to('imobile/public/data/apartamente.json');
+		// $json = json_decode(file_get_contents($url), true);
 
 		// $this->command->info($json); 
 		// for($i = 0; $i < count($json); $i++){
