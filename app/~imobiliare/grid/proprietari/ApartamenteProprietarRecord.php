@@ -50,7 +50,7 @@ class ApartamenteProprietarRecord extends \Imobiliare\GridsRecord
                                                 ON tip_finisaje_interioare.id = apartamente.id_tip_finisaje_interioare 
                                                 LEFT JOIN uploaded_photos
                                                 ON uploaded_photos.id_apartament = apartamente.id
-                                                :where: GROUP BY uploaded_photos.id_apartament :order:';
+                                                :where: GROUP BY apartamente.id :order:';
         $this->count_filtered_records_sql   = 'SELECT COUNT(*) as cnt FROM apartamente :where:';
         $this->count_total_records_sql      = 'SELECT COUNT(*) AS cnt FROM apartamente';
         $this->columns        = [
