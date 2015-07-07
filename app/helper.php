@@ -32,6 +32,9 @@ function _toDateTime($value, $format = 'd.m.Y H:i:s', $default = '-')
 
 function _toFileSize($size, $precision = 2)
 {
+	if($size == 0){
+		return _toFloat(0);
+	}
     $base     = log($size, 1024);
     $suffixes = array('', 'K', 'M', 'G', 'T');   
     return _toFloat(round(pow(1024, $base - floor($base)), $precision)) . ' ' . $suffixes[floor($base)];
