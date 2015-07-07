@@ -50,7 +50,7 @@ class ApartamentPhotosController extends \Datatable\DatatableController
 		$out_photos = [];
 		foreach ($photos as $key => $photo) {
 			$test = explode( '/', $photos[$key]['file_name']);
-			$out_photos[] = \URL::to('../app/storage/uploads/') . '/' . $id_apartament . '/' . end( $test );
+			$out_photos[] = \URL::to('../../app/storage/uploads/') . '/' . $id_apartament . '/' . end( $test );
 		}
 		$config['row-source'] .= '/' . $id_apartament;
 		$this->show( $config + ['other-info' => ['apartament' => $apartament, 'photos' => $out_photos]]);
