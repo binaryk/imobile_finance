@@ -36,7 +36,7 @@ class ApartamentPhotosController extends \Datatable\DatatableController
 		// $config['caption'] .= ' pentru apartamentul <span class="text-blue">' . $Imobiliare->nume . '</span>';
 		
 		$photos = \Imobiliare\Nomenclatoare\ApartamentPhotos::where('id_apartament',$id_apartament)->select('file_name')->get()->toArray();
-		
+		// $photos = \Imobiliare\Nomenclatoare\ApartamentPhotos::where('id_apartament', $apartament->id)->where('file_extension', '<>', 'bmp')->orderby('id')->get(),
 		if( count($photos) > 0 )
 			$config['right_menu'] = [
 				['caption' => 'Adaugă poze', 'class' => 'action-insert-record'],
@@ -50,10 +50,10 @@ class ApartamentPhotosController extends \Datatable\DatatableController
 		$out_photos = [];
 		foreach ($photos as $key => $photo) {
 			$test = explode( '/', $photos[$key]['file_name']);
-			$out_photos[] = \URL::to('../../app/storage/uploads/') . '/' . $id_apartament . '/' . end( $test );
+			$out_photos[] = \URL::to('../app/storage/uploads/') . '/' . $id_apartament . '/' . end( $test );
 		}
 		$config['row-source'] .= '/' . $id_apartament;
-		$this->show( $config + ['other-info' => ['apartament' => $apartament, 'photos' => $out_photos]]);
+		$this->show( $config + ['other-info' => ['apartament' => $apartament, 'photos' => $out_photos, 'images' => $photos]]);
 	}
 
 	public function rows($id, $id_apartament)
