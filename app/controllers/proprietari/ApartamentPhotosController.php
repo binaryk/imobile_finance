@@ -35,8 +35,8 @@ class ApartamentPhotosController extends \Datatable\DatatableController
 			
 		// $config['caption'] .= ' pentru apartamentul <span class="text-blue">' . $Imobiliare->nume . '</span>';
 		
-		$photos = \Imobiliare\Nomenclatoare\ApartamentPhotos::where('id_apartament',$id_apartament)->select('file_name')->get()->toArray();
-		// $photos = \Imobiliare\Nomenclatoare\ApartamentPhotos::where('id_apartament', $apartament->id)->where('file_extension', '<>', 'bmp')->orderby('id')->get(),
+		// $photos = \Imobiliare\Nomenclatoare\ApartamentPhotos::where('id_apartament',$id_apartament)->select('file_name')->get()->toArray();
+		$photos = \Imobiliare\Nomenclatoare\ApartamentPhotos::where('id_apartament', $apartament->id)->where('file_extension', '<>', 'bmp')->orderby('id')->get();
 		if( count($photos) > 0 )
 			$config['right_menu'] = [
 				['caption' => 'Adaugă poze', 'class' => 'action-insert-record'],

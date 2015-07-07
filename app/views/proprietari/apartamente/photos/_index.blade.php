@@ -1,17 +1,19 @@
 @extends('~layouts.datatable.index')
 @section('content')
-@parent 
- 
+@parent  
+
 
 @stop
 @section('datatable-specific-page-jquery-initializations')
 		var photos = [];
-	@foreach($photos as $key => $photo)
-		photos.push("{{ $photo }}");
-		console.log(photos);
-	@endforeach 
+			@if(count($images) > 0) 
+			@foreach($images as $i => $photo)
+				photos.push("{{(string) Image::make($photo->file_name)->encode('data-url')}}");
+				console.log(photos);
+			@endforeach 
+			@endif
 
-
+   
 	$('.action-slider').click(function(){ 
 		var carouselOptions = {
 		    hidePageScrollbars: false,
