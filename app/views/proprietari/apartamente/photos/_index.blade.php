@@ -6,12 +6,7 @@
 @stop
 @section('datatable-specific-page-jquery-initializations')
 		var photos = [];
-			@if(count($images) > 0) 
-			@foreach($images as $i => $photo)
-				photos.push("{{(string) Image::make($photo->file_name)->encode('data-url')}}");
-				console.log(photos);
-			@endforeach 
-			@endif
+			
 
    
 	$('.action-slider').click(function(){ 
