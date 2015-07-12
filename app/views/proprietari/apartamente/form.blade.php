@@ -92,6 +92,10 @@
 					<div class="col-md-6">
 						{{$controls[10]->out()}}
 					</div>
+					<!-- etaj cladire-->
+					<div class="col-md-6">
+						{{$controls[58]->out()}}
+					</div>
 
 					<!-- tip compartiemnare -->
 					<div class="col-md-6">
@@ -100,7 +104,11 @@
 					<!-- finisaje interne -->
 					<div class="col-md-6">
 						{{$controls[11]->out()}}
-					</div> 
+					</div>
+					<!-- finisaje exteren -->
+					<div class="col-md-6">
+						{{$controls[59]->out()}}
+					</div>
 
 					<!-- pret -->
 					<div class="col-md-6">
@@ -262,8 +270,12 @@
 							{{$controls[49]->out()}}
 						</div>
 						<!-- negociabil -->
-						<div class="col-md-12">
+						<div class="col-md-6">
 							{{$controls[53]->out()}}
+						</div>
+						<!-- termopan -->
+						<div class="col-md-6">
+							{{$controls[25]->out()}}
 						</div>
 						<!-- observatii_caracteristici_generale -->
 						<div class="col-md-6">

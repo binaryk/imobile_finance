@@ -334,7 +334,7 @@ class CautareApartamenteController extends \Datatable\DatatableController
 				->name('vechime_imobil')->caption('Vechime imobil')
 				->class('form-control input-sm data-source')
 				->controlsource('vechime_imobil')->controltype('combobox')
-				->options([-1 => 'Toate (vechi sau noi)', 1 => 'Imobil nou', 2 => 'Imobil vechi']),
+				->options([-1 => 'Toate (vechi sau noi)', 1 => 'Imobil nou', 0 => 'Imobil vechi']),
 
 			/**
 			 *  26.06.2015 - Telefoane select2

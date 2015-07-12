@@ -178,6 +178,10 @@ class Apartament extends \Eloquent {
     {
     	return $this->tipfinisare ? $this->tipfinisare->nume : NULL;
     }
+    public function getNumetipfinisareexterioareAttribute()
+    {
+    	return $this->tipfinisareexterioare ? $this->tipfinisareexterioare->nume : NULL;
+    }
 
     public function getNumetipgarajAttribute()
     {
@@ -245,6 +249,10 @@ class Apartament extends \Eloquent {
     public function Tipfinisare()
     {
         return $this->belongsTo('\Imobiliare\Nomenclator\TipFinisajeInterioare', 'id_tip_finisaje_interioare');
+    }
+    public function Tipfinisareexterioare()
+    {
+        return $this->belongsTo('\Imobiliare\Nomenclator\TipFinisajeExterioare', 'id_tip_finisaje_externe');
     }
 
     public function Tipgaraj()

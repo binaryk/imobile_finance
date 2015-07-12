@@ -41,7 +41,8 @@ class Cartier extends \Eloquent
 
     public static function toCombobox( $noneCaption = '')
     {
-        return ['0' => $noneCaption] + self::orderBy('nume')->lists('nume', 'id');
+        //        pentru pluginul select2 am nevoie ca primul record sa fie ''=>''
+        return ['' => $noneCaption] + self::orderBy('nume')->lists('nume', 'id');
     }
 
 }

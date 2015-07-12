@@ -18,6 +18,9 @@
 				Finisaj interior <span class="badge badge-info"> {{$record->numetipfinisare ? $record->numetipfinisare : '-'}} </span>
 			</a>
 			<a href="#" class="list-group-item list-group-item-info">
+				Finisaje exterioare <span class="badge badge-info"> {{$record->numetipfinisareexterioare ? $record->numetipfinisareexterioare : '-'}} </span>
+			</a>
+			<a href="#" class="list-group-item list-group-item-info">
 				Compartimentare <span class="badge badge-info"> {{$record->numetipcompartimentare ? $record->numetipcompartimentare : '-'}} </span>
 			</a>
 			<a href="#" class="list-group-item list-group-item-info">

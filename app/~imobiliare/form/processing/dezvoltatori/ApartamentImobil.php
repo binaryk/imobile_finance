@@ -58,7 +58,8 @@ observatii_caracteristici_generale
 observatii_finisaje_dotari
 observatii_dotari
 observatii_generale
-
+nr_etaje_cladire
+id_tip_finisaje_externe
 */       
         $this
         // 0
@@ -177,7 +178,7 @@ observatii_generale
         ->addControl(
             \Easy\Form\Combobox::make('~layouts.form.controls.comboboxes.combobox')
                 ->name('nr_etaj')
-                ->caption('Etaj')
+                ->caption('Etaj apartament')
                 ->class('form-control data-source input-group form-select init-on-update-delete')
                 ->controlsource('nr_etaj')
                 ->controltype('combobox') 
@@ -749,7 +750,29 @@ observatii_generale
             ->controlsource('observatii_generale')
             ->controltype('editbox')
             ->class('form-control input-sm data-source')
-        ) 
+        )
+        // 58
+        ->addControl(
+            \Easy\Form\Combobox::make('~layouts.form.controls.comboboxes.combobox')
+                ->name('nr_etaje_cladire')
+                ->caption('Etaje cladire')
+                ->class('form-control data-source input-group form-select init-on-update-delete')
+                ->controlsource('nr_etaje_cladire')
+                ->controltype('combobox')
+                ->enabled('false')
+                ->options(\Imobiliare\Nomenclator\TipEtajCladire::toCombobox())
+        )
+        // 59
+        ->addControl(
+            \Easy\Form\Combobox::make('~layouts.form.controls.comboboxes.combobox')
+                ->name('id_tip_finisaje_externe')
+                ->caption('Tip finisaje exterioare')
+                ->class('form-control data-source input-group form-select init-on-update-delete')
+                ->controlsource('id_tip_finisaje_externe')
+                ->controltype('combobox')
+                ->enabled('false')
+                ->options(\Imobiliare\Nomenclator\TipFinisajeExterioare::toCombobox())
+        )
         ;
 
     }
