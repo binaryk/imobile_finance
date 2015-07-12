@@ -5,6 +5,7 @@
 <meta content="width=device-width, initial-scale=1" name="viewport">
 <meta content="" name="proiect imobiliare">
 <meta content="" name="Binaryk">
+<meta http-equiv="content-type" content="text/html; charset=utf-8" />
 <link href="http://fonts.googleapis.com/css?family=Open+Sans:400,300,600,700&subset=all" rel="stylesheet" type="text/css"/>
 <link href="http://fonts.googleapis.com/css?family=Open+Sans:400,300,600,700&subset=all" rel="stylesheet" type="text/css"/>
 {{HTML::style("assets/global/plugins/font-awesome/css/font-awesome.min.css") }}

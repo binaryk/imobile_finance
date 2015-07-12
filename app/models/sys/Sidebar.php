@@ -6,7 +6,7 @@ class Sidebar
 	protected static $instance = NULL;
 
 	protected $sidebar = [
-     /*   'principal' => [
+        'principal' => [
             'header' => [
                 'caption' => 'Principala',
                 'icon'    => 'icon-home'
@@ -14,7 +14,7 @@ class Sidebar
             'options' => [],
             'active'  => []
         ],
-		'dezvoltatori' => [
+		/*'dezvoltatori' => [
 			'header' => [
 				'caption' => 'Dezvoltatori',
 				'icon'  => 'icon-user'
@@ -29,6 +29,14 @@ class Sidebar
 			],
 			'options' => [],
 			'active'  => ['proprietari', 'apartamente_proprietar*', 'cautare-apartamente*', 'apartament-detalii-oferta*', 'apartament-poze*', 'proprietar*']
+		],
+		'agentii' => [
+			'header' => [
+				'caption' => 'Agentii',
+				'icon'  => 'fa fa-shopping-cart'
+			],
+			'options' => [],
+			'active'  => ['agentii*']
 		],
         'date-baza' => [
             'header' => [
@@ -66,10 +74,11 @@ class Sidebar
 		/**
 		 Dezvoltatori
 		**/
-		// ->addOption('dezvoltatori', \URL::route('dezvoltatori-index'), 'Dezvoltatori', 'fa-circle-o')
+//		->addOption('dezvoltatori', \URL::route('dezvoltatori-index'), 'Dezvoltatori', 'fa-circle-o')
 
 		->addOption('imobile', \URL::route('proprietar-index'), 'Imobile', 'fa-circle-o')
 		->addOption('imobile', \URL::route('cautare-apartamente-index'), 'Cautare imobile', 'fa-circle-o')
+        ->addOption('agentii', \URL::route('agentii-index'), 'Cautare agentii', 'fa-shopping-cart')
 		;
 	}
 

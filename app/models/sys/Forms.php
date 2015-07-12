@@ -24,6 +24,7 @@ class Forms
 		'proprietari'      	 	 => '\Imobiliare\Nomenclatoare\Form\ProprietariRecord',
 		'apartamente_proprietar' => '\Imobiliare\Nomenclatoare\Form\ApartamenteProprietarRecord',
 		'apartament_photo' 	 	 => '\Imobiliare\Nomenclatoare\Form\ApartamentePhotosRecord',
+		'agentii'		 	 	 => '\Imobiliare\Nomenclatoare\Form\AgentiiRecord',
 
 	];
 

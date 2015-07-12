@@ -13,6 +13,9 @@ class Grids
 	protected $grids =[];
 
 	protected $maps = [
+		/**
+		* Lupacescu Eduard - KleverSystem
+		 */
 		'imobile' 				 => '\Imobiliare\Imobile\Grid\ImobileRecord',
 		'tip_intermediar'   	 => '\Imobiliare\Imobile\Grid\TipIntermediariRecord',
 		'tip_categorie_imobil'   => '\Imobiliare\Imobile\Grid\TipCategorieImobilRecord',
@@ -29,6 +32,7 @@ class Grids
 		'proprietari' 	 	 	 => '\Imobiliare\Imobile\Grid\ProprietariRecord',
 		'apartamente_proprietar' => '\Imobiliare\Imobile\Grid\ApartamenteProprietarRecord',
 		'apartament_photo' 	     => '\Imobiliare\Imobile\Grid\ApartamentePhotosRecord',
+		'agentii' 	    		 => '\Imobiliare\Imobile\Grid\AgentiiRecord',
 
 		/**
 		 * Calin Verdes - COMPTECH SOFT
