@@ -17,36 +17,43 @@
 
 	<a href="#" class="list-group-item list-group-item-info">
 		Anul construcţiei <span class="badge badge-info"> {{ $record->anul_constructiei ? $record->anul_constructiei : '-' }} </span>
+	</a>
+
+	<a href="#" class="list-group-item list-group-item-info">
+		Zona aproximativă <span class="badge badge-info"> {{ $record->zona_aproximativa }} </span>
+	</a>
+
+	<a href="#" class="list-group-item list-group-item-info">
+		Număr clădire <span class="badge badge-info"> {{ $record->nr_cladire }}</span>
+	</a>
+
+	<a href="#" class="list-group-item list-group-item-info">
+		Scară <span class="badge badge-info"> {{ $record->scara }}</span>
+	</a>
+
+	<a href="#" class="list-group-item list-group-item-info">
+		Număr apartament <span class="badge badge-info"> {{ $record->nr_apartament }}</span>
+	</a>
+
+	<a href="#" class="list-group-item list-group-item-info">
+		Adresa exactă <span class="badge badge-info"> {{ $record->strada }}</span>
+	</a>
+
+	<a href="#" class="list-group-item list-group-item-info">
+		Detalii <span class="badge badge-info"> {{ $record->detalii }}</span>
+	</a>
+
+	<a href="#" class="list-group-item list-group-item-info">
+		Observatii <span class="badge badge-info"> {{ $record->detalii_suplimentare }}</span>
+	</a>
+
+	<a href="#" class="list-group-item list-group-item-info">
+		Observatii suplimentare <span class="badge badge-info"> {{ $record->detalii_suplimentare_2 }}</span>
+	</a>
+
+	<a href="#" class="list-group-item list-group-item-info">
+		Detalii private <span class="badge badge-info"> {{ $record->detalii_private }}</span>
 	</a>	
 
 </div>
-
-<div class="well">
-	<h4>Zona aproximativă</h4>{{ $record->zona_aproximativa }}
-</div> 
-<div class="well">
-	<h4>Număr clădire</h4>{{ $record->nr_cladire }}
-</div>
-<div class="well">
-	<h4>Scară</h4>{{ $record->scara }}
-</div>
-<div class="well">
-	<h4>Număr apartament</h4>{{ $record->nr_apartament }}
-</div>
-<div class="well">
-	<h4>Adresa exactă</h4>{{ $record->strada }}
-</div>
-
-<div class="well">
-	<h4>Detalii</h4>{{ $record->detalii }}
-</div>
-<div class="well">
-	<h4>Observatii</h4>{{ $record->detalii_suplimentare }}
-</div>
-<div class="well">
-	<h4>Observatii suplimentare</h4>{{ $record->detalii_suplimentare_2 }}
-</div>
-
-<div class="well">
-	<h4>Detalii private</h4>{{ $record->detalii_private }}
-</div>
+ 

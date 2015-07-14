@@ -48,15 +48,22 @@
 						{{$controls[3]->out()}}
 					</div>
 					
-					<!-- judet -->
+					<!-- cartier -->
+					<div class="col-md-6">
+						{{$controls[60]->out()}}
+					</div>
+
+					<!-- cartier -->
 					<div class="col-md-6">
 						{{$controls[5]->out()}}
-					</div>	
+					</div>
 					
 					
-					<!-- nr_camere -->
-					<div class="col-md-6">
-						{{$controls[6]->out()}}
+					<div class="no_teren">
+						<!-- nr_camere -->
+						<div class="col-md-6">
+							{{$controls[6]->out()}}
+						</div>
 					</div>
 					<!-- suprafata -->
 					<div class="col-md-6">
@@ -76,38 +83,39 @@
 					<div class="col-md-6">
 						{{$controls[19]->out()}}
 					</div>
-					<!-- nr_cladire -->
-					<div class="col-md-6">
-						{{$controls[45]->out()}}
-					</div>
-					<!-- scara -->
-					<div class="col-md-6">
-						{{$controls[46]->out()}}
-					</div>
-					<!-- nr_apartament -->
-					<div class="col-md-6">
-						{{$controls[47]->out()}}
-					</div>
-					<!-- etaj -->
-					<div class="col-md-6">
-						{{$controls[10]->out()}}
-					</div>
-					<!-- etaj cladire-->
-					<div class="col-md-6">
-						{{$controls[58]->out()}}
-					</div>
-
-					<!-- tip compartiemnare -->
-					<div class="col-md-6">
-						{{$controls[7]->out()}}
-					</div>
-					<!-- finisaje interne -->
-					<div class="col-md-6">
-						{{$controls[11]->out()}}
-					</div>
-					<!-- finisaje exteren -->
-					<div class="col-md-6">
-						{{$controls[59]->out()}}
+					<div class="no_teren">
+						<!-- nr_cladire -->
+						<div class="col-md-6">
+							{{$controls[45]->out()}}
+						</div>
+						<!-- scara -->
+						<div class="col-md-6">
+							{{$controls[46]->out()}}
+						</div>
+						<!-- nr_apartament -->
+						<div class="col-md-6">
+							{{$controls[47]->out()}}
+						</div>
+						<!-- etaj -->
+						<div class="col-md-6">
+							{{$controls[10]->out()}}
+						</div>
+						<!-- etaj cladire-->
+						<div class="col-md-6">
+							{{$controls[58]->out()}}
+						</div>
+						<!-- tip compartiemnare -->
+						<div class="col-md-6">
+							{{$controls[7]->out()}}
+						</div>
+						<!-- finisaje interne -->
+						<div class="col-md-6">
+							{{$controls[11]->out()}}
+						</div>
+						<!-- finisaje exteren -->
+						<div class="col-md-6">
+							{{$controls[59]->out()}}
+						</div>
 					</div>
 
 					<!-- pret -->
@@ -119,17 +127,21 @@
 					<div class="col-md-6">
 						{{$controls[23]->out()}}
 					</div>
-					<!-- tip mobilare -->
-					<div class="col-md-6">
-						{{$controls[52]->out()}}
+					<div class="no_teren">
+						<!-- tip mobilare -->
+						<div class="col-md-6">
+							{{$controls[52]->out()}}
+						</div>
 					</div>
 					<!-- valabiliatate oferta -->
 					<div class="col-md-6">
 						{{$controls[51]->out()}}
 					</div>
-					<!-- credit -->
-					<div class="col-md-6">
-						{{$controls[17]->out()}}
+					<div class="no_teren">
+						<!-- credit -->
+						<div class="col-md-6">
+							{{$controls[17]->out()}}
+						</div>
 					</div>
 					<!-- detalii -->
 					<div class="col-md-6">
@@ -138,7 +150,43 @@
 					<!-- detalii private -->
 					<div class="col-md-6">
 						{{$controls[22]->out()}}
-					</div> 
+					</div>
+
+					<div class="teren">
+
+						<!-- Tip utilități existente-->
+						<div class="col-md-6">
+							{{$controls[61]->out()}}
+						</div>
+						<!-- Tip teren-->
+						<div class="col-md-6">
+							{{$controls[62]->out()}}
+						</div>
+						<!-- Front stradă principală -->
+						<div class="col-md-6">
+							{{$controls[63]->out()}}
+						</div>
+						<!-- Există drum de servitute -->
+						<div class="col-md-6">
+							{{$controls[64]->out()}}
+						</div>
+						<!-- Există contrucție pe teren -->
+						<div class="col-md-6">
+							{{$controls[65]->out()}}
+						</div>
+						<!-- Terenul are PUD -->
+						<div class="col-md-6">
+							{{$controls[66]->out()}}
+						</div>
+						<!-- Terenul are PUZ -->
+						<div class="col-md-6">
+							{{$controls[67]->out()}}
+						</div>
+						<!-- regim inaltime -->
+						<div class="col-md-6">
+							{{$controls[68]->out()}}
+						</div>
+					</div>
 
 
 				</div> 

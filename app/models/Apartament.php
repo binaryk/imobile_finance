@@ -83,6 +83,16 @@ class Apartament extends \Eloquent {
     'observatii_finisaje_dotari',
     'observatii_dotari',
     'observatii_generale ',
+//   dupa discutai din 14.07.2015
+    'id_tip_utilitati_existente',
+    'front_strada_principala',
+    'existenta_drum_de_servitute',
+    'existenta_constructie_pe_teren',
+    'id_tip_teren',
+    'existenta_pud_teren',
+    'existenta_puz_teren',
+    'regim_inaltime_teren',
+
     // id_tip_finisaje_externe --- sus
 	];
     protected $guarded = []; 

@@ -17,7 +17,7 @@ class ApartamenteProprietarRecord extends \Imobiliare\GridsRecord
         $this->display_length = 10;
         $this->default_order  = "1,'asc'";
         $this->form           = 'Imobiliare\Imobile\Form\ApartamentProprietar';
-        $this->css            = 'admin/css/dt/dt.css, 
+        $this->css            = 'admin/css/dt/dt.css,
                                 admin/css/dt/toolbar.css, 
                                 admin/css/dt/dtform.css, 
                                 assets/global/plugins/icheck/skins/all.css,

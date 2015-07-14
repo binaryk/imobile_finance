@@ -25,42 +25,51 @@ class ApartamentImobil extends \Processing\Form\Form
 
     protected function addControls()
     {
-/*id_judet
-id_localitate,id_cartier,id_cladire,id_imobil,id_organizatie,id_proprietar_pf,id_tip_cladire,id_tip_finisaje_interioare,
-id_tip_compartiment,is_agentie,id_img,oferta_valabila,pret_m2,ultima_actualizare,suprafata_min,suprafata_max,email,
-telefon,telefon_secundar_1,telefon_secundar_2,nr_camere,credit_prima_casa,nr_etaj,nr_balcoane,anul_constructiei,
-nr_bai,detalii_bacoane,id_sistem_incalzire,termopan,parcare,accepta_prima_casa,zona_aproximativa,adresa_exacta,
-detalii,detalii_private, contoare_gaz
-parchet
-faianta
-aer_conditionat
-uscator
-centrala_termica
-contoare_apa
-zugravit_lavabil
-tv_cablu
-loc_pod
-usa_atiefractie
-modificari_interioare
-gresie
-balcoane_inchise
-has_telefon
-loc_pivnita
-parcare
-tip_acoperis
-tip_confort
-strada
-nr_cladire
-scara
-nr_apartament
-id_tip_mobilare
-observatii_caracteristici_generale
-observatii_finisaje_dotari
-observatii_dotari
-observatii_generale
-nr_etaje_cladire
-id_tip_finisaje_externe
-*/       
+        /*id_judet
+        id_localitate,id_cartier,id_cladire,id_imobil,id_organizatie,id_proprietar_pf,id_tip_cladire,id_tip_finisaje_interioare,
+        id_tip_compartiment,is_agentie,id_img,oferta_valabila,pret_m2,ultima_actualizare,suprafata_min,suprafata_max,email,
+        telefon,telefon_secundar_1,telefon_secundar_2,nr_camere,credit_prima_casa,nr_etaj,nr_balcoane,anul_constructiei,
+        nr_bai,detalii_bacoane,id_sistem_incalzire,termopan,parcare,accepta_prima_casa,zona_aproximativa,adresa_exacta,
+        detalii,detalii_private, contoare_gaz
+        parchet
+        faianta
+        aer_conditionat
+        uscator
+        centrala_termica
+        contoare_apa
+        zugravit_lavabil
+        tv_cablu
+        loc_pod
+        usa_atiefractie
+        modificari_interioare
+        gresie
+        balcoane_inchise
+        has_telefon
+        loc_pivnita
+        parcare
+        tip_acoperis
+        tip_confort
+        strada
+        nr_cladire
+        scara
+        nr_apartament
+        id_tip_mobilare
+        observatii_caracteristici_generale
+        observatii_finisaje_dotari
+        observatii_dotari
+        observatii_generale
+        nr_etaje_cladire
+        id_tip_finisaje_externe
+
+        'id_tip_utilitati_existente',
+        'front_strada_principala',
+        'existenta_drum_de_servitute',
+        'existenta_constructie_pe_teren',
+        'id_tip_teren',
+        'existenta_pud_teren',
+        'existenta_puz_teren',
+        'regim_inaltime_teren',
+        */       
         $this
         // 0
         ->addControl(
@@ -702,7 +711,7 @@ id_tip_finisaje_externe
         ->addControl(
             \Easy\Form\Textbox::make('~layouts.form.controls.textboxes.textbox-addon')
         ->caption('Prețul este negociabil')->name('negociabil')->placeholder('Textbox')
-        ->value('Bifați prețul este negociabil.')->class('form-control input_label')->enabled(0)
+        ->value('Bifați daca prețul este negociabil.')->class('form-control input_label')->enabled(0)
         ->addon([
             'before' => \Form::checkbox('negociabil', '1', false, 
                 ['class' => 'data-source icheck', 'id' => 'negociabil', 
@@ -772,6 +781,120 @@ id_tip_finisaje_externe
                 ->controltype('combobox')
                 ->enabled('false')
                 ->options(\Imobiliare\Nomenclator\TipFinisajeExterioare::toCombobox())
+        )
+        // 60
+        ->addControl(
+            \Easy\Form\Combobox::make('~layouts.form.controls.comboboxes.combobox')
+                ->name('id_localitate')
+                ->caption('Localitate')
+                ->class('form-control data-source input-group form-select init-on-update-delete')
+                ->controlsource('id_localitate')
+                ->controltype('combobox')
+                ->enabled('false')
+                ->options(\Imobiliare\Nomenclator\Localitate::toCombobox())
+        )
+        // 61
+        ->addControl(
+            \Easy\Form\Combobox::make('~layouts.form.controls.comboboxes.combobox')
+                ->name('id_tip_utilitati_existente')
+                ->caption('Tip utilități existente')
+                ->class('form-control data-source input-group form-select init-on-update-delete')
+                ->controlsource('id_tip_utilitati_existente')
+                ->controltype('combobox')
+                ->enabled('false')
+                ->options(\Imobiliare\Nomenclator\TipUtilitatiExistente::toCombobox())
+        )
+        // 62
+        ->addControl(
+            \Easy\Form\Combobox::make('~layouts.form.controls.comboboxes.combobox')
+                ->name('id_tip_teren')
+                ->caption('Tip teren')
+                ->class('form-control data-source input-group form-select init-on-update-delete')
+                ->controlsource('id_tip_teren')
+                ->controltype('combobox')
+                ->enabled('false')
+                ->options(\Imobiliare\Nomenclator\TipTeren::toCombobox())
+        )
+        // 63
+        ->addControl(
+            \Easy\Form\Textbox::make('~layouts.form.controls.textboxes.textbox-addon')
+                ->caption('Front stradă principală')->name('front_strada_principala')->placeholder('Textbox')
+                ->value('Bifați dacă are front la stradă principală.')->class('form-control input_label')->enabled(0)
+                ->addon([
+                    'before' => \Form::checkbox('front_strada_principala', '1', false,
+                        ['class' => 'data-source icheck', 'id' => 'front_strada_principala',
+                            'data-checkbox' => 'icheckbox_square-green', 'data-control-source' => 'front_strada_principala',
+                            'data-control-type' => 'checkbox', 'data-on' => 1, 'data-off' => 0]
+                    ),
+                    'after' => NULL])
+        )
+
+        // 64
+        ->addControl(
+            \Easy\Form\Textbox::make('~layouts.form.controls.textboxes.textbox-addon')
+                ->caption('Există drum de servitute')->name('existenta_drum_de_servitute')->placeholder('Textbox')
+                ->value('Bifați dacă există drum de servitute.')->class('form-control input_label')->enabled(0)
+                ->addon([
+                    'before' => \Form::checkbox('existenta_drum_de_servitute', '1', false,
+                        ['class' => 'data-source icheck', 'id' => 'existenta_drum_de_servitute',
+                            'data-checkbox' => 'icheckbox_square-green', 'data-control-source' => 'existenta_drum_de_servitute',
+                            'data-control-type' => 'checkbox', 'data-on' => 1, 'data-off' => 0]
+                    ),
+                    'after' => NULL])
+        )
+
+        // 65
+        ->addControl(
+            \Easy\Form\Textbox::make('~layouts.form.controls.textboxes.textbox-addon')
+                ->caption('Există contrucție pe teren')->name('existenta_constructie_pe_teren')->placeholder('Textbox')
+                ->value('Bifați dacă există contrucție pe teren.')->class('form-control input_label')->enabled(0)
+                ->addon([
+                    'before' => \Form::checkbox('existenta_constructie_pe_teren', '1', false,
+                        ['class' => 'data-source icheck', 'id' => 'existenta_constructie_pe_teren',
+                            'data-checkbox' => 'icheckbox_square-green', 'data-control-source' => 'existenta_constructie_pe_teren',
+                            'data-control-type' => 'checkbox', 'data-on' => 1, 'data-off' => 0]
+                    ),
+                    'after' => NULL])
+        )
+
+        // 66
+        ->addControl(
+            \Easy\Form\Textbox::make('~layouts.form.controls.textboxes.textbox-addon')
+                ->caption('Terenul are PUD')->name('existenta_pud_teren')->placeholder('Textbox')
+                ->value('Bifați dacă terenul are PUD.')->class('form-control input_label')->enabled(0)
+                ->addon([
+                    'before' => \Form::checkbox('existenta_pud_teren', '1', false,
+                        ['class' => 'data-source icheck', 'id' => 'existenta_pud_teren',
+                            'data-checkbox' => 'icheckbox_square-green', 'data-control-source' => 'existenta_pud_teren',
+                            'data-control-type' => 'checkbox', 'data-on' => 1, 'data-off' => 0]
+                    ),
+                    'after' => NULL])
+        )
+
+        // 67
+        ->addControl(
+            \Easy\Form\Textbox::make('~layouts.form.controls.textboxes.textbox-addon')
+                ->caption('Terenul are PUZ')->name('existenta_puz_teren')->placeholder('Textbox')
+                ->value('Bifați dacă terenul are PUZ.')->class('form-control input_label')->enabled(0)
+                ->addon([
+                    'before' => \Form::checkbox('existenta_puz_teren', '1', false,
+                        ['class' => 'data-source icheck', 'id' => 'existenta_puz_teren',
+                            'data-checkbox' => 'icheckbox_square-green', 'data-control-source' => 'existenta_puz_teren',
+                            'data-control-type' => 'checkbox', 'data-on' => 1, 'data-off' => 0]
+                    ),
+                    'after' => NULL])
+        )
+
+        // 68
+        ->addControl(
+            \Easy\Form\Textbox::make('~layouts.form.controls.textboxes.textbox')
+                ->name('regim_inaltime_teren')
+                ->caption('Completați regimul de înălțime')
+                // ->placeholder('Detalii privind adresa exacta')
+                ->class('form-control data-source')
+                ->controlsource('regim_inaltime_teren')
+                ->controltype('textbox')
+                ->maxlength(255)
         )
         ;
 

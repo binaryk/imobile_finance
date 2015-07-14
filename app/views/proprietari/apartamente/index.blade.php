@@ -3,32 +3,42 @@
 
 
 $('[name=tip_imobil]').on('change', function(e){
-	var caz = parseInt($(this).val());
-	console.log(caz);
+	var caz = parseInt($(this).val()); 
 	switch(caz) {
 		// Apartament
 		// Garsoniera
 		// Casa
 		// Duplex
 		// Teren
+		// Vila
 		case 1://apartament
+		case 2://garsoniera
+		case 6://vila
 			$('.apartamente').show();
 			$('.casa').hide();
 			$('.optional').show();
-			break;
-		case 2://garsoniera
-			$('apartamente').hide();
-			$('.optional').hide();
-			break;
+			$('.teren').hide();
+			$('.no_teren').show();
+			break; 
 		case 3://casa
 		case 4://duplex
 			$('.apartamente,.casa').show();
 			$('.optional').show();
+			$('.teren').hide();
+			$('.no_teren').show();
 			break;
 		case 5://teren
 			$('.apartamente').show();
+			$('.teren').show();
+			$('.casa').show();//suprafata teren
 			$('.optional').hide(); 
+			$('.no_teren').hide(); 
 			break;
+		default:
+			$('.apartamente').hide();
+			$('.optional').hide(); 
+			$('.teren').hide(); 
+
 	}
 });	
 

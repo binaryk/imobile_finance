@@ -20,6 +20,7 @@ class ApartamenteRecord extends \Imobiliare\GridsRecord
         $this->css            = 'admin/css/dt/dt.css, admin/css/dt/toolbar.css, admin/css/dt/dtform.css';
         $this->js             = 'admin/js/libraries/form/dtform.js, admin/js/libraries/form/combobox.js, admin/js/apartamente/cautare.js';
         $this->row_source     = 'apartamente-cautare-row-source';
+        $this->dom            = '<"dt-container"<"row row-dt-processing"<"col-xs-12 dt-processing"r>><"row row-dt-info"<"col-xs-12 dt-info"i>><"row row-dt-toolbar"<"col-xs-6 dt-tb-left"lf<"dt-toolbar">><"col-xs-6 dt-tb-right"p>><"row row-dt"<"col-xs-12 dt-table"t><"col-xs-12 col-md-12 col-lg-12 dt-tb-right"p>>>';
         $this->rows_source_sql = '
             SELECT
                 v_apartamente.*

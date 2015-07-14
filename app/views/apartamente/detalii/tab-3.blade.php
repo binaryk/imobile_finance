@@ -144,8 +144,4 @@
 
 
 	</div>
-</div>
-
-<div class="well">
-	<h4>Detalii balcoane</h4>{{ $record->detalii_bacoane }}
-</div>
+</div> 

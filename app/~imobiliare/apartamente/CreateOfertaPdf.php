@@ -45,7 +45,8 @@ class CreateOfertaPdf
 	{
 		$logo_file = str_replace('\\', '/', storage_path() . '/app/apartamente/images/logo.png');
 		$this->pdf->Pdf()->Image($logo_file, 10, 0, 70, 0, 'PNG', '', 'T', false, 308, '', false, false, 0, false, false, false);
-		$this->pdf->Cell()->text('OFERTE IMOBILIARE')->top(13)->left(75)->out()->reset('top')->reset('left');
+		$this->pdf->Pdf()->SetFontSize(17);
+		$this->pdf->Cell()->text('OFERTE IMOBILIARE')->top(21)->left(75)->out()->reset('top')->reset('left');
 		$this->pdf->cell()->text('Data ofertei: ' . \Carbon\Carbon::now()->format('d.m.Y'))->top(13)->left(130)->width(70)->halign('R')->out()->reset('top')->reset('left');
 	}
 
@@ -53,8 +54,8 @@ class CreateOfertaPdf
 	{
 		$oldFontSize = $this->pdf->Pdf()->getFontSizePt();
 		$this->pdf->Pdf()->ln();
-		$this->pdf->Pdf()->SetXY(10, 25);
-		$this->pdf->Pdf()->SetFontSize(18);
+		$this->pdf->Pdf()->SetXY(10, 29);
+		$this->pdf->Pdf()->SetFontSize(15);
 		$this->pdf->Pdf()->SetTextColor(150, 200, 50);
 		$nume = strtoupper($this->nume());
 		if( ! $nume )

@@ -2,19 +2,20 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="26c9510f-5f92-4c73-b7fa-d4737bffee45" name="Default" comment=";">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/models/nomenclatoare/TipEtajCladire.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/models/nomenclatoare/TipTeren.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/models/nomenclatoare/TipUtilitatiExistente.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/models/Apartament.php" afterPath="$PROJECT_DIR$/app/models/Apartament.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/~imobiliare/form/processing/dezvoltatori/ApartamentImobil.php" afterPath="$PROJECT_DIR$/app/~imobiliare/form/processing/dezvoltatori/ApartamentImobil.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/models/Cartier.php" afterPath="$PROJECT_DIR$/app/models/Cartier.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/controllers/apartamente/CautareApartamenteController.php" afterPath="$PROJECT_DIR$/app/controllers/apartamente/CautareApartamenteController.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/database/seeds/DatabaseSeeder.php" afterPath="$PROJECT_DIR$/app/database/seeds/DatabaseSeeder.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/models/nomenclatoare/TipCompartiment.php" afterPath="$PROJECT_DIR$/app/models/nomenclatoare/TipCompartiment.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/models/nomenclatoare/TipFinisajeExterioare.php" afterPath="$PROJECT_DIR$/app/models/nomenclatoare/TipFinisajeExterioare.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/models/nomenclatoare/TipFinisajeInterioare.php" afterPath="$PROJECT_DIR$/app/models/nomenclatoare/TipFinisajeInterioare.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/~imobiliare/grid/proprietari/ApartamenteProprietarRecord.php" afterPath="$PROJECT_DIR$/app/~imobiliare/grid/proprietari/ApartamenteProprietarRecord.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/~imobiliare/grid/apartamente/ApartamenteRecord.php" afterPath="$PROJECT_DIR$/app/~imobiliare/grid/apartamente/ApartamenteRecord.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/~imobiliare/apartamente/CreateOfertaPdf.php" afterPath="$PROJECT_DIR$/app/~imobiliare/apartamente/CreateOfertaPdf.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/models/nomenclatoare/Localitate.php" afterPath="$PROJECT_DIR$/app/models/nomenclatoare/Localitate.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/config/02-server/app.php" afterPath="$PROJECT_DIR$/app/config/02-server/app.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/proprietari/apartamente/form.blade.php" afterPath="$PROJECT_DIR$/app/views/proprietari/apartamente/form.blade.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/proprietari/apartamente/photo.blade.php" afterPath="$PROJECT_DIR$/app/views/proprietari/apartamente/photo.blade.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/apartamente/detalii/index.blade.php" afterPath="$PROJECT_DIR$/app/views/apartamente/detalii/index.blade.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/proprietari/apartamente/index.blade.php" afterPath="$PROJECT_DIR$/app/views/proprietari/apartamente/index.blade.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/apartamente/detalii/tab-2.blade.php" afterPath="$PROJECT_DIR$/app/views/apartamente/detalii/tab-2.blade.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/apartamente/detalii/tab-3.blade.php" afterPath="$PROJECT_DIR$/app/views/apartamente/detalii/tab-3.blade.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/apartamente/cautare/vechime.blade.php" afterPath="$PROJECT_DIR$/app/views/apartamente/cautare/vechime.blade.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="imobile.iws" />
@@ -37,110 +38,24 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="ApartamenteRecord.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/~imobiliare/grid/apartamente/ApartamenteRecord.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-19.444445">
-              <caret line="87" column="59" selection-start-line="87" selection-start-column="52" selection-end-line="87" selection-end-column="59" />
-              <folding>
-                <marker date="1436122180598" expanded="true" signature="932:1029" placeholder="SELECT v_apa..v_apartamente..." />
-                <marker date="1436122180598" expanded="true" signature="1104:1153" placeholder="SELECT COUNT..v_apartamente..." />
-                <marker date="1436122180598" expanded="true" signature="1229:1268" placeholder="SELECT COUNT..apartamente..." />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="vechime.blade.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/views/apartamente/cautare/vechime.blade.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-0.0">
-              <caret line="0" column="13" selection-start-line="0" selection-start-column="13" selection-end-line="0" selection-end-column="13" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Imobil.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/~imobiliare/form/processing/Imobil.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-7.185185">
-              <caret line="18" column="5" selection-start-line="18" selection-start-column="5" selection-end-line="18" selection-end-column="5" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="index.blade.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/views/apartamente/cautare/index.blade.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-10.444445">
-              <caret line="97" column="22" selection-start-line="97" selection-start-column="22" selection-end-line="97" selection-end-column="22" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="CautaController.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/public/js/angular/cautare/CautaController.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
-              <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="cautare.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/public/admin/js/apartamente/cautare.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
-              <caret line="200" column="32" selection-start-line="200" selection-start-column="24" selection-end-line="200" selection-end-column="38" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="ApartamentImobil.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/~imobiliare/form/processing/dezvoltatori/ApartamentImobil.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-12.296296">
-              <caret line="655" column="26" selection-start-line="655" selection-start-column="20" selection-end-line="655" selection-end-column="26" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="form.blade.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/views/proprietari/apartamente/form.blade.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-6.303571">
-              <caret line="269" column="52" selection-start-line="269" selection-start-column="52" selection-end-line="269" selection-end-column="52" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="photo.blade.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/views/proprietari/apartamente/photo.blade.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-2.7777777">
-              <caret line="3" column="4" selection-start-line="3" selection-start-column="4" selection-end-line="3" selection-end-column="4" />
-              <folding>
-                <element signature="e#155#173#0#HTML" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="CautareApartamenteController.php" pinned="false" current-in-tab="true">
+      <file leaf-file-name="CautareApartamenteController.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/controllers/apartamente/CautareApartamenteController.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.51511335">
-              <caret line="336" column="78" selection-start-line="336" selection-start-column="78" selection-end-line="336" selection-end-column="78" />
+            <state vertical-scroll-proportion="-97.81481">
+              <caret line="326" column="38" selection-start-line="326" selection-start-column="38" selection-end-line="326" selection-end-column="38" />
               <folding>
                 <marker date="1436705321117" expanded="true" signature="3951:4038" placeholder="SELECT * FRO..v_telefoane..." />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="CreateOfertaPdf.php" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/app/~imobiliare/apartamente/CreateOfertaPdf.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.3640351">
+              <caret line="48" column="61" selection-start-line="48" selection-start-column="61" selection-end-line="48" selection-end-column="61" />
+              <folding />
             </state>
           </provider>
         </entry>
@@ -153,13 +68,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/app/views/dezvoltatori/~actions.blade.php" />
-        <option value="$PROJECT_DIR$/app/controllers/dezvoltatori/DezvoltatoriAnsambluriController.php" />
-        <option value="$PROJECT_DIR$/app/views/dezvoltatori/ansambluri/~actions.blade.php" />
-        <option value="$PROJECT_DIR$/app/views/dezvoltatori/ansambluri/form.blade.php" />
-        <option value="$PROJECT_DIR$/app/models/AnsambluRezidential.php" />
-        <option value="$PROJECT_DIR$/app/~imobiliare/form/processing/dezvoltatori/DezvoltatoriAnsambluri.php" />
-        <option value="$PROJECT_DIR$/app/~imobiliare/form/records/dezvoltatori/DezvoltatoriAnsambluriRecord.php" />
         <option value="$PROJECT_DIR$/app/~imobiliare/grid/dezvoltatori/DezvoltatoriAnsambluriRecord.php" />
         <option value="$PROJECT_DIR$/app/~libs/datatable/DatatableController.php" />
         <option value="$PROJECT_DIR$/app/~imobiliare/grid/dezvoltatori/DezvoltatoriRecord.php" />
@@ -171,10 +79,8 @@
         <option value="$PROJECT_DIR$/app/controllers/administration/TestController.php" />
         <option value="$PROJECT_DIR$/app/routes.php" />
         <option value="$PROJECT_DIR$/app/database/migrations/2015_07_05_192234_alter_table_apartamente_modify_cols.php" />
-        <option value="$PROJECT_DIR$/app/~imobiliare/apartamente/CreateOfertaPdf.php" />
         <option value="$PROJECT_DIR$/app/views/apartamente/cautare/index.blade.php" />
         <option value="$PROJECT_DIR$/app/views/apartamente/cautare/btn-vezi-oferta.blade.php" />
-        <option value="$PROJECT_DIR$/app/~imobiliare/grid/apartamente/ApartamenteRecord.php" />
         <option value="$PROJECT_DIR$/app/controllers/proprietari/ApartamenteProprietarController.php" />
         <option value="$PROJECT_DIR$/app/models/sys/Grids.php" />
         <option value="$PROJECT_DIR$/app/views/agentii/index.blade.php" />
@@ -190,8 +96,6 @@
         <option value="$PROJECT_DIR$/app/controllers/agentii/AgentiiController.php" />
         <option value="$PROJECT_DIR$/app/views/hello.blade.php" />
         <option value="$PROJECT_DIR$/app/models/nomenclatoare/TipEtajCladire.php" />
-        <option value="$PROJECT_DIR$/app/~imobiliare/form/processing/dezvoltatori/ApartamentImobil.php" />
-        <option value="$PROJECT_DIR$/app/views/proprietari/apartamente/form.blade.php" />
         <option value="$PROJECT_DIR$/app/models/nomenclatoare/TipFinisajeInterioare.php" />
         <option value="$PROJECT_DIR$/app/models/nomenclatoare/TipCompartiment.php" />
         <option value="$PROJECT_DIR$/app/models/Cartier.php" />
@@ -200,10 +104,21 @@
         <option value="$PROJECT_DIR$/app/database/seeds/DatabaseSeeder.php" />
         <option value="$PROJECT_DIR$/app/database/seeds/TipFinisajeExterneTableSeeder.php" />
         <option value="$PROJECT_DIR$/app/views/apartamente/detalii/tab-3.blade.php" />
-        <option value="$PROJECT_DIR$/app/models/Apartament.php" />
         <option value="$PROJECT_DIR$/app/views/proprietari/apartamente/photo.blade.php" />
         <option value="$PROJECT_DIR$/app/views/apartamente/cautare/vechime.blade.php" />
         <option value="$PROJECT_DIR$/app/controllers/apartamente/CautareApartamenteController.php" />
+        <option value="$PROJECT_DIR$/app/config/02-server/app.php" />
+        <option value="$PROJECT_DIR$/app/models/sys/GridsRecord.php" />
+        <option value="$PROJECT_DIR$/app/~imobiliare/grid/proprietari/ApartamenteProprietarRecord.php" />
+        <option value="$PROJECT_DIR$/app/~imobiliare/grid/apartamente/ApartamenteRecord.php" />
+        <option value="$PROJECT_DIR$/app/models/nomenclatoare/TipTeren.php" />
+        <option value="$PROJECT_DIR$/app/models/nomenclatoare/TipUtilitatiExistente.php" />
+        <option value="$PROJECT_DIR$/app/models/Apartament.php" />
+        <option value="$PROJECT_DIR$/app/database/migrations/2015_07_14_155228_add_cols_apartamente.php" />
+        <option value="$PROJECT_DIR$/app/~imobiliare/form/processing/dezvoltatori/ApartamentImobil.php" />
+        <option value="$PROJECT_DIR$/app/views/proprietari/apartamente/index.blade.php" />
+        <option value="$PROJECT_DIR$/app/views/proprietari/apartamente/form.blade.php" />
+        <option value="$PROJECT_DIR$/app/~imobiliare/apartamente/CreateOfertaPdf.php" />
       </list>
     </option>
   </component>
@@ -250,6 +165,8 @@
       <sortByType />
     </navigator>
     <panes>
+      <pane id="Scratches" />
+      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -526,77 +443,11 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="views" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="imobile" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="imobile" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="app" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="views" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="proprietari" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="imobile" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="imobile" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="app" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="views" />
+              <option name="myItemId" value="~imobiliare" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="apartamente" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="imobile" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="imobile" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="app" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="views" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="apartamente" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="cautare" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -642,8 +493,6 @@
           </PATH>
         </subPane>
       </pane>
-      <pane id="Scratches" />
-      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -737,7 +586,6 @@
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32946146" sideWeight="0.5" order="8" side_tool="true" content_ui="tabs" />
       <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.14587525" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
@@ -750,6 +598,7 @@
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.14587525" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.40354535" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
     </layout>
@@ -772,121 +621,10 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/app/views/agentii/toolbar.blade.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/~imobiliare/form/records/proprietari/ProprietariRecord.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.5767013">
-          <caret line="20" column="44" selection-start-line="20" selection-start-column="44" selection-end-line="20" selection-end-column="44" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/models/sys/Sidebar.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-16.666666">
-          <caret line="18" column="44" selection-start-line="18" selection-start-column="44" selection-end-line="18" selection-end-column="44" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/models/sys/Grids.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="34" column="67" selection-start-line="34" selection-start-column="62" selection-end-line="34" selection-end-column="75" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/~imobiliare/form/processing/proprietari/Proprietari.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="21" column="22" selection-start-line="21" selection-start-column="22" selection-end-line="21" selection-end-column="22" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/views/agentii/form.blade.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.28835064">
-          <caret line="10" column="3" selection-start-line="10" selection-start-column="3" selection-end-line="10" selection-end-column="3" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/models/Agentie.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.3529412">
-          <caret line="14" column="5" selection-start-line="14" selection-start-column="5" selection-end-line="14" selection-end-column="5" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/~imobiliare/form/processing/Agentii/Agentii.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="36" column="0" selection-start-line="36" selection-start-column="0" selection-end-line="36" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/~imobiliare/grid/proprietari/ProprietariRecord.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-0.5121951">
-          <caret line="21" column="53" selection-start-line="21" selection-start-column="53" selection-end-line="21" selection-end-column="53" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/~imobiliare/grid/agenti/AgentiiRecord.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="23" column="66" selection-start-line="23" selection-start-column="57" selection-end-line="23" selection-end-column="66" />
-          <folding>
-            <marker date="1436692983301" expanded="true" signature="-1:-1" placeholder="SELECT * FRO..agentii..." />
-            <marker date="1436692983301" expanded="true" signature="-1:-1" placeholder="SELECT COUNT..agentii..." />
-            <marker date="1436692983301" expanded="true" signature="-1:-1" placeholder="SELECT COUNT..agentii..." />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/public/admin/js/libraries/form/dtform.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="136" column="24" selection-start-line="136" selection-start-column="24" selection-end-line="136" selection-end-column="24" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/~libs/form/processing/Form.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/views/agentii/~actions.blade.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.07317073">
-          <caret line="3" column="113" selection-start-line="3" selection-start-column="113" selection-end-line="3" selection-end-column="113" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/~imobiliare/form/records/agentii/AgentiiRecord.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.9408602">
-          <caret line="35" column="50" selection-start-line="35" selection-start-column="50" selection-end-line="35" selection-end-column="50" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/models/sys/Forms.php">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="26" column="77" selection-start-line="26" selection-start-column="68" selection-end-line="26" selection-end-column="81" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -894,7 +632,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="7" column="0" selection-start-line="7" selection-start-column="0" selection-end-line="7" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -902,19 +639,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="-15.925926">
           <caret line="22" column="60" selection-start-line="22" selection-start-column="60" selection-end-line="22" selection-end-column="60" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/~imobiliare/grid/proprietari/ApartamenteProprietarRecord.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding>
-            <marker date="1436270745450" expanded="true" signature="-1:-1" placeholder="SELECT apart..apartamente..." />
-            <marker date="1436270745450" expanded="true" signature="-1:-1" placeholder="SELECT COUNT..apartamente..." />
-            <marker date="1436270745450" expanded="true" signature="-1:-1" placeholder="SELECT COUNT..apartamente..." />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -930,7 +654,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.798722">
           <caret line="30" column="12" selection-start-line="30" selection-start-column="12" selection-end-line="30" selection-end-column="12" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -970,7 +693,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.15974441">
           <caret line="6" column="0" selection-start-line="6" selection-start-column="0" selection-end-line="6" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -978,7 +700,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -994,7 +715,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.32894737">
           <caret line="12" column="17" selection-start-line="12" selection-start-column="17" selection-end-line="12" selection-end-column="17" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1026,7 +746,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="-12.296296">
           <caret line="80" column="120" selection-start-line="80" selection-start-column="114" selection-end-line="80" selection-end-column="125" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1034,7 +753,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1042,7 +760,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1050,7 +767,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="-21.296297">
           <caret line="23" column="22" selection-start-line="23" selection-start-column="22" selection-end-line="23" selection-end-column="22" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1058,7 +774,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="-7.4074073">
           <caret line="8" column="6" selection-start-line="8" selection-start-column="6" selection-end-line="8" selection-end-column="6" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1074,7 +789,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="85.59259">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1082,15 +796,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/models/Apartament.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.15974441">
-          <caret line="6" column="27" selection-start-line="6" selection-start-column="27" selection-end-line="6" selection-end-column="27" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1098,52 +803,21 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="-12.296296">
           <caret line="14" column="81" selection-start-line="14" selection-start-column="67" selection-end-line="14" selection-end-column="81" />
-          <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/views/proprietari/apartamente/form.blade.php">
+    <entry file="file://$PROJECT_DIR$/app/config/02-server/app.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-6.303571">
-          <caret line="269" column="52" selection-start-line="269" selection-start-column="52" selection-end-line="269" selection-end-column="52" />
+        <state vertical-scroll-proportion="0.18636848">
+          <caret line="7" column="0" selection-start-line="7" selection-start-column="0" selection-end-line="7" selection-end-column="0" />
           <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/~imobiliare/grid/apartamente/ApartamenteRecord.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-19.444445">
-          <caret line="87" column="59" selection-start-line="87" selection-start-column="52" selection-end-line="87" selection-end-column="59" />
-          <folding>
-            <marker date="1436122180598" expanded="true" signature="932:1029" placeholder="SELECT v_apa..v_apartamente..." />
-            <marker date="1436122180598" expanded="true" signature="1104:1153" placeholder="SELECT COUNT..v_apartamente..." />
-            <marker date="1436122180598" expanded="true" signature="1229:1268" placeholder="SELECT COUNT..apartamente..." />
-          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/views/proprietari/apartamente/photo.blade.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-2.7777777">
+        <state vertical-scroll-proportion="0.079872206">
           <caret line="3" column="4" selection-start-line="3" selection-start-column="4" selection-end-line="3" selection-end-column="4" />
-          <folding>
-            <element signature="e#155#173#0#HTML" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/~imobiliare/form/processing/dezvoltatori/ApartamentImobil.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-12.296296">
-          <caret line="655" column="26" selection-start-line="655" selection-start-column="20" selection-end-line="655" selection-end-column="26" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/public/js/angular/cautare/CautaController.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding />
         </state>
       </provider>
@@ -1156,10 +830,26 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/public/js/angular/cautare/CautaController.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/app/views/apartamente/cautare/index.blade.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-10.444445">
+        <state vertical-scroll-proportion="0.0">
           <caret line="97" column="22" selection-start-line="97" selection-start-column="22" selection-end-line="97" selection-end-column="22" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/~imobiliare/form/processing/Imobil.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.36102235">
+          <caret line="18" column="5" selection-start-line="18" selection-start-column="5" selection-end-line="18" selection-end-column="5" />
           <folding />
         </state>
       </provider>
@@ -1172,21 +862,167 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/~imobiliare/form/processing/Imobil.php">
+    <entry file="file://$PROJECT_DIR$/app/~imobiliare/grid/apartamente/ApartamenteRecord.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-7.185185">
-          <caret line="18" column="5" selection-start-line="18" selection-start-column="5" selection-end-line="18" selection-end-column="5" />
+        <state vertical-scroll-proportion="0.31948882">
+          <caret line="12" column="6" selection-start-line="12" selection-start-column="6" selection-end-line="12" selection-end-column="6" />
+          <folding>
+            <marker date="1436877179666" expanded="true" signature="-1:-1" placeholder="SELECT v_apa..v_apartamente..." />
+            <marker date="1436877179666" expanded="true" signature="-1:-1" placeholder="SELECT COUNT..v_apartamente..." />
+            <marker date="1436877179666" expanded="true" signature="-1:-1" placeholder="SELECT COUNT..apartamente..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/models/sys/Grids.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.5324814">
+          <caret line="32" column="73" selection-start-line="32" selection-start-column="62" selection-end-line="32" selection-end-column="89" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/~imobiliare/grid/proprietari/ApartamenteProprietarRecord.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.5058573">
+          <caret line="19" column="0" selection-start-line="19" selection-start-column="0" selection-end-line="19" selection-end-column="0" />
+          <folding>
+            <marker date="1436877136366" expanded="true" signature="-1:-1" placeholder="SELECT apart..apartamente..." />
+            <marker date="1436877136366" expanded="true" signature="-1:-1" placeholder="SELECT COUNT..apartamente..." />
+            <marker date="1436877136366" expanded="true" signature="-1:-1" placeholder="SELECT COUNT..apartamente..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/models/sys/GridsRecord.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.5058573">
+          <caret line="19" column="0" selection-start-line="19" selection-start-column="0" selection-end-line="19" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/models/nomenclatoare/Localitate.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.053248137">
+          <caret line="2" column="32" selection-start-line="2" selection-start-column="10" selection-end-line="2" selection-end-column="32" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/models/nomenclatoare/TipMobilare.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.5058573">
+          <caret line="19" column="1" selection-start-line="1" selection-start-column="0" selection-end-line="19" selection-end-column="1" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/models/nomenclatoare/TipNrBalcoane.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/models/nomenclatoare/TipRegimInaltime.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/models/nomenclatoare/TipStadiuAnsamblu.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/models/nomenclatoare/TipUtilitatiTeren.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.23961662">
+          <caret line="9" column="30" selection-start-line="9" selection-start-column="24" selection-end-line="9" selection-end-column="43" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/database/migrations/2015_07_14_155228_add_cols_apartamente.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.7127193">
+          <caret line="33" column="5" selection-start-line="33" selection-start-column="5" selection-end-line="33" selection-end-column="5" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/views/proprietari/apartamente/index.blade.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.4259851">
+          <caret line="16" column="37" selection-start-line="16" selection-start-column="37" selection-end-line="16" selection-end-column="37" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/views/proprietari/apartamente/form.blade.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.49122807">
+          <caret line="134" column="26" selection-start-line="134" selection-start-column="26" selection-end-line="134" selection-end-column="26" />
+          <folding>
+            <element signature="e#5678#5700#0#HTML" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/~imobiliare/form/processing/dezvoltatori/ApartamentImobil.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.36102235">
+          <caret line="816" column="9" selection-start-line="816" selection-start-column="9" selection-end-line="816" selection-end-column="9" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/models/nomenclatoare/TipUtilitatiExistente.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.18636848">
+          <caret line="12" column="1" selection-start-line="12" selection-start-column="1" selection-end-line="12" selection-end-column="1" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/models/Apartament.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.7795527">
+          <caret line="92" column="11" selection-start-line="92" selection-start-column="11" selection-end-line="92" selection-end-column="11" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/models/nomenclatoare/TipTeren.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.21299255">
+          <caret line="13" column="39" selection-start-line="13" selection-start-column="39" selection-end-line="13" selection-end-column="39" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/controllers/apartamente/CautareApartamenteController.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.51511335">
-          <caret line="336" column="78" selection-start-line="336" selection-start-column="78" selection-end-line="336" selection-end-column="78" />
+        <state vertical-scroll-proportion="-97.81481">
+          <caret line="326" column="38" selection-start-line="326" selection-start-column="38" selection-end-line="326" selection-end-column="38" />
           <folding>
             <marker date="1436705321117" expanded="true" signature="3951:4038" placeholder="SELECT * FRO..v_telefoane..." />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/~imobiliare/apartamente/CreateOfertaPdf.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.3640351">
+          <caret line="48" column="61" selection-start-line="48" selection-start-column="61" selection-end-line="48" selection-end-column="61" />
+          <folding />
         </state>
       </provider>
     </entry>
