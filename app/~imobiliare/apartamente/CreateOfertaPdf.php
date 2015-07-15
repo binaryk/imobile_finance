@@ -239,8 +239,11 @@ class CreateOfertaPdf
 
 		if( $detalii = $this->detalii_private()) // afisarea campului detalii
 		{
-			$this->pdf->Pdf()->ln();
-			$this->pdf->Cell()->text($detalii)->width(190)->border('')->halign('L')->out();
+			if(!$this->redus)
+			{
+				$this->pdf->Pdf()->ln();
+				$this->pdf->Cell()->text($detalii)->width(190)->border('')->halign('L')->out();
+			}
 		}
 	}
 
@@ -428,7 +431,7 @@ class CreateOfertaPdf
 		   '17' => ['caption' => 'Tipul de finisaj interior: ', 'source' => 'finisajeApartament', 'redus' => true],
 		   '18' => ['caption' => 'Compartimentare: ', 'source' => 'compartimentareApartament', 'redus' => true],
 		   '19' => ['caption' => 'Preţ: ', 'source' => 'pretApartament', 'redus' => true],
-		   '20' => ['caption' => 'Actualizat la: ', 'source' => 'ultimaActualizareApartament', 'redus' => false],		
+		   '20' => ['caption' => 'Actualizat la: ', 'source' => 'ultimaActualizareApartament', 'redus' => false]
 		];
 		foreach($rows as $i => $row)
 		{

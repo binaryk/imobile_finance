@@ -95,8 +95,7 @@ class Apartament extends \Eloquent {
 
     // id_tip_finisaje_externe --- sus
 	];
-    protected $guarded = []; 
-    
+    protected $guarded = [];     
 	public static function getRecord( $id )
     {
         return self::find($id);
