@@ -1,0 +1,2 @@
+<strong>Numar camere: </strong>{{ Imobiliare\Nomenclator\NumarCamere::toCombobox()[$record->camere_apartament]  }}<br/>
+<strong>Finisaje interioare: </strong>{{ $record->finisaje_interioare_apartament }}

@@ -6,6 +6,14 @@ class DezvoltatoriController  extends \Datatable\DatatableController{
 
     public function index(){  
         $config = \Imobiliare\Grids::make('dezvoltatori')->toIndexConfig('dezvoltatori');
+        $config['breadcrumbs'] = [
+            [
+                'name' => 'Dezvoltatori',
+                'url'  => "dezvoltatori-index",
+                'ids' => ''
+            ]
+        ];
+        $config['right_menu'] = [ ['caption' => 'Adaug&#259; dezvoltator', 'class' => 'action-insert-record'] ];
         $this->show( $config + ['other-info' => [ 'current_org' => $this->current_org]] );
     }
 

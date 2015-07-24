@@ -1,0 +1,1 @@
+<span data-id="{{$record->id}}" class="label label-sm label-success update-ultima-actualizare">{{ _toDate($record->ultima_actualizare) }}</span>

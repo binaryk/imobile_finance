@@ -11,7 +11,6 @@ class DezvoltatoriAnsambluriController extends \Datatable\DatatableController{
         if( ! ( $dezvoltator = \Imobiliare\Dezvoltator::getRecord( (int) $id_dezvoltator) ) ){
             return \Redirect::route('dezvoltatori-index');
         }
-
         $config = \Imobiliare\Grids::make($id)->toIndexConfig($id);
         $config['row-source'] .= '/'.$id_dezvoltator;
         $config['breadcrumbs'] = [
@@ -26,6 +25,7 @@ class DezvoltatoriAnsambluriController extends \Datatable\DatatableController{
             'ids' => [ 'id' => 'dezvoltator-ansambluri' ]
             ]
         ];
+        $config['right_menu'] = [ ['caption' => 'Adaug&#259; ansamblu', 'class' => 'action-insert-record'] ];
         $this->show( $config + ['other-info' => [ 'dezvoltator' => $dezvoltator]] );
     }
 

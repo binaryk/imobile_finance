@@ -40,8 +40,8 @@ class TipStadiuAnsamblu extends \Eloquent
         return $record->delete();
     }
 
-    public static function toCombobox()
+    public static function toCombobox($noneCaption = '')
     {
-        return ['' => ''] + self::orderBy('id')->lists('nume', 'id');
+        return ['' => $noneCaption] + self::orderBy('id')->lists('nume', 'id');
     }
 }

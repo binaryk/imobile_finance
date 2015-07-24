@@ -2,7 +2,7 @@
 
 namespace Imobiliare\Datatable;
 
-class CladireImobilController extends \Datatable\DatatableController{
+class ApartamentImobilController extends \Datatable\DatatableController{
     protected $layout = 'template.layout';
 
     public function index($id, $id_imobil){
@@ -38,18 +38,19 @@ class CladireImobilController extends \Datatable\DatatableController{
             'ids' => [ 'id' => 'ansamblu_imobile', 'id_ansamblu' => $ansamblu->id ]
             ],
             [
-            'name' => 'Cladiri imobil',
-            'url'  => "cladire_imobil",
-            'ids' => [ 'id' => 'cladire_imobil', 'id_imobil' => $id_imobil ]
+            'name' => 'Apartamente imobil',
+            'url'  => "apartament_imobil",
+            'ids' => [ 'id' => 'apartament_imobil', 'id_imobil' => $id_imobil ]
             ]
         ];
-        $this->show( $config + ['other-info' => [ 'imobil' => $imobil]] );
+        $config['right_menu'] = [ ['caption' => 'Adaug&#259; apartament', 'class' => 'action-insert-record'] ];
+        $this->show( $config + ['other-info' => [ 'imobil' => $imobil,'current_org' => $this->current_org]] );
     }
 
     public function rows($id, $id_imobil){
         $config = \Imobiliare\Grids::make($id)->toRowDatasetConfig($id); 
         $filters = $config['source']->custom_filters();
-        $config['source']->custom_filters( $filters + [ 'imobil' => 'cladiri.id_imobil = '.$id_imobil ]);
+        $config['source']->custom_filters( $filters + [ 'imobil' => 'apartamente.id_imobil = '.$id_imobil ]);
         return $this->dataset( $config );
     }
 }

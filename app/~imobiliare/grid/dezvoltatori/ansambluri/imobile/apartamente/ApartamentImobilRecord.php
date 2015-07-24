@@ -8,7 +8,7 @@ class ApartamentImobilRecord extends \Imobiliare\GridsRecord
     public function __construct($id)
     {
         parent::__construct($id);
-        $this->view           = 'dezvoltatori.ansambluri.imobile.apartament.index'; 
+        $this->view           = 'dezvoltatori.ansambluri.imobile.apartament.index';
         $this->icon           = 'admin/img/icons/dt/settings.png';
         $this->caption        = 'Apartamente';
         $this->toolbar        = 'dezvoltatori.ansambluri.imobile.apartament.toolbar';
@@ -17,16 +17,24 @@ class ApartamentImobilRecord extends \Imobiliare\GridsRecord
         $this->display_length = 10;
         $this->default_order  = "1,'asc'";
         $this->form           = 'Imobiliare\Imobile\Form\ApartamentImobil';
-        $this->css            = 'admin/css/dt/dt.css, 
-                                admin/css/dt/toolbar.css, 
-                                admin/css/dt/dtform.css, 
+        $this->css            = 'admin/css/dt/dt.css,
+                                admin/css/dt/toolbar.css,
+                                admin/css/dt/dtform.css,
                                 assets/global/plugins/icheck/skins/all.css,
-                                assets/global/plugins/bootstrap-datepicker/css/datepicker3.css
+                                assets/global/plugins/bootstrap-datepicker/css/datepicker3.css,
+                                assets/global/plugins/bootstrap-select/bootstrap-select.min.css,
+                                assets/global/plugins/select2/select2.css,
+                                assets/global/css/plugins.css
                                  ';
-        $this->js             = 'admin/js/libraries/form/dtform.js,  
-                                 assets/global/plugins/icheck/icheck.min.js, 
+        $this->js             = 'admin/js/libraries/form/dtform.js,
+                                 assets/global/plugins/icheck/icheck.min.js,
                                  assets/admin/pages/scripts/form-icheck.js,
-                                 assets/global/plugins/bootstrap-datepicker/js/bootstrap-datepicker.js 
+                                 assets/global/plugins/bootstrap-datepicker/js/bootstrap-datepicker.js,
+                                 assets/global/plugins/bootstrap-select/bootstrap-select.min.js,
+                                 assets/global/plugins/select2/select2.min.js,
+                                 assets/global/plugins/bootstrap-datetimepicker/js/bootstrap-datetimepicker.min.js,
+                                 assets/admin/pages/scripts/components-pickers.js,
+                                 assets/admin/pages/scripts/portlet-draggable.js
                                  ';
         $this->row_source     = 'apartament_imobil-row-source';
         $this->rows_source_sql 				= 'SELECT
@@ -53,7 +61,7 @@ class ApartamentImobilRecord extends \Imobiliare\GridsRecord
                 'header'    => ['caption' => '#', 'style'   => 'width:3%',],
                 'type'      => 'row-number',
                 'source'    => 'row-number',
-            ], 
+            ],
             '2' => [
                 'id'        => 'imobil',
                 'orderable' => 'yes',
@@ -62,22 +70,22 @@ class ApartamentImobilRecord extends \Imobiliare\GridsRecord
                 'header'    => ['caption' => 'Imobil', 'style'   => 'width:12.8%',],
                 'type'      => 'field',
                 'source'    => 'imobil',
-            ], 
+            ],
             '3' => [
-                'id'        => 'telefon',
-                'orderable' => 'yes',
+                'id'        => 'nume',
+                'orderable' => 'no',
                 'class'     => 'td-align-left',
                 'visible'   => 'yes',
-                'header'    => ['caption' => 'Apartament telefon', 'style'   => 'width:12.8%',],
+                'header'    => ['caption' => 'Titlu', 'style'   => 'width:19.85%',],
                 'type'      => 'field',
-                'source'    => 'telefon',
-            ], 
+                'source'    => 'nume',
+            ],
             '4' => [
                 'id'        => 'ultima_actualizare',
                 'orderable' => 'yes',
                 'class'     => 'td-align-left',
                 'visible'   => 'yes',
-                'header'    => ['caption' => 'Ultima actualizare', 'style'   => 'width:12.8%',],
+                'header'    => ['caption' => 'Ultima actualizare', 'style'   => 'width:12.85%',],
                 'type'      => 'field-date',
                 'source'    => 'ultima_actualizare',
             ],
@@ -86,7 +94,7 @@ class ApartamentImobilRecord extends \Imobiliare\GridsRecord
                 'orderable' => 'yes',
                 'class'     => 'td-align-left',
                 'visible'   => 'yes',
-                'header'    => ['caption' => 'Cartier apartament', 'style'   => 'width:12.8%',],
+                'header'    => ['caption' => 'Cartier apartament', 'style'   => 'width:12.85%',],
                 'type'      => 'field',
                 'source'    => 'cartier',
             ],
@@ -95,27 +103,27 @@ class ApartamentImobilRecord extends \Imobiliare\GridsRecord
                 'orderable' => 'yes',
                 'class'     => 'td-align-left',
                 'visible'   => 'yes',
-                'header'    => ['caption' => 'Finisaje interioare', 'style'   => 'width:12.8%',],
+                'header'    => ['caption' => 'Finisaje interioare', 'style'   => 'width:12.85%',],
                 'type'      => 'field',
                 'source'    => 'finisaje_interioare',
             ],
             '7' => [
-                'id'        => 'suprafata_min',
-                'orderable' => 'yes',
+                'id'        => 'suprafata',
+                'orderable' => 'no',
                 'class'     => 'td-align-right',
                 'visible'   => 'yes',
-                'header'    => ['caption' => 'Suprafata minima', 'style'   => 'width:12.8%',],
+                'header'    => ['caption' => 'Suprafața', 'style'   => 'width:12.85%',],
                 'type'      => 'field-float',
-                'source'    => 'suprafata_min',
+                'source'    => 'suprafata',
             ],
             '8' => [
-                'id'        => 'suprafata_max',
+                'id'        => 'nr_camere',
                 'orderable' => 'yes',
                 'class'     => 'td-align-right',
                 'visible'   => 'yes',
-                'header'    => ['caption' => 'Suprafata maxima', 'style'   => 'width:12.8%',],
-                'type'      => 'field-float',
-                'source'    => 'suprafata_max',
+                'header'    => ['caption' => 'Număr camere', 'style'   => 'width:5.85%',],
+                'type'      => 'field',
+                'source'    => 'nr_camere',
             ],
             '9' => [
                 'id'        => 'action',

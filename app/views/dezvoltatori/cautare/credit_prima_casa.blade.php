@@ -1,0 +1,1 @@
+{{ Easy\Form\StringHelper::Checked( $record->credit_prima_casa ) }}

@@ -183,11 +183,12 @@ class Actions
 		try
 		{
 			$upload_path = $config['path'];
-			$upload_path = str_replace('{{id_apartament}}', $this->data['id_apartament'], $upload_path); 
-			
+			$id 		 = $config['id_name'];
+			$upload_path = str_replace('{{'.$id.'}}', $this->data[$id], $upload_path);
+
 			$file_name = $config['file-name-pattern'];
 			$file_name = str_replace('{{original}}', basename($file->getClientOriginalName(), '.' . $file->getClientOriginalExtension() ), $file_name);
-			$file_name = str_replace('{{id_apartament}}', $this->data['id_apartament'], $file_name);
+			$file_name = str_replace('{{'.$id.'}}', $this->data[$id], $file_name);
 			$file_name = str_replace('{{date}}', \Carbon\Carbon::now()->format('Y-m-d'), $file_name);
 			$file_name = str_replace('{{extension}}', $file->getClientOriginalExtension(), $file_name);
 			$file_name = strtolower($file_name);

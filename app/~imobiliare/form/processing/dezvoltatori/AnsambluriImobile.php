@@ -27,6 +27,7 @@ class AnsambluriImobile extends \Processing\Form\Form
     {
         // denumire_tip
         $this
+//      0
         ->addControl(
             \Easy\Form\Textbox::make('~layouts.form.controls.textboxes.textbox')
                 ->name('nume')
@@ -36,7 +37,8 @@ class AnsambluriImobile extends \Processing\Form\Form
                 ->controlsource('nume')
                 ->controltype('textbox')
                 ->maxlength(255)
-        ) 
+        )
+//      1
         ->addControl(
             \Easy\Form\Textbox::make('~layouts.form.controls.textboxes.textbox')
                 ->name('suprafata_min')
@@ -61,13 +63,13 @@ class AnsambluriImobile extends \Processing\Form\Form
         ->addControl(
             \Easy\Form\Combobox::make('~layouts.form.controls.comboboxes.combobox')
                 ->name('id_tip_categorie')
-                ->caption('Judetul')
+                ->caption('Tip imobil')
                 ->class('form-control  data-source init-on-update-delete')
                 ->controlsource('id_tip_categorie')
                 ->controltype('combobox') 
                 ->enabled('false')
                 ->options(\Imobiliare\Nomenclator\TipCategorieImobil::toCombobox())
-            )  
+            )
         ;
 
     }

@@ -214,12 +214,15 @@ function CautareApartamente( parameters )
 		 */
 
 		var table = my.dt;
+		console.log('columns1')
+		console.log(table.columns());
+		console.log('columns2')
 		table
 			.columns(1).search( my.oferta_valabila() ) 		 /*  1 -> oferta valabila      */
 			.columns(2).search( my.adresa_exacta() )   		 /*  2 -> adresa exacta        */
 			.columns(3).search( my.numar_camere() )    		 /*  3 -> numarul de camare    */
 			.columns(4).search( my.pret() )            		 /*  4 -> pretul               */
-			
+
 			.columns(6).search( my.ultima_actualizare() )    /*  6 -> ultima_actualizare   */
 			.columns(7).search( my.telefoane() )       		 /*  7 -> telefoane            */
 			.columns(8).search( my.credit_prima_casa() )     /*  8 -> credit prima casa    */

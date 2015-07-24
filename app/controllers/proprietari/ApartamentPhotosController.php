@@ -2,7 +2,7 @@
 
 namespace Imobiliare\Datatable;
 
-class ApartamentPhotosController extends \Datatable\DatatableController 
+class ApartamentPhotosController extends \Datatable\DatatableController
 {
 	protected $layout 		= 'template.layout';
 
@@ -30,11 +30,11 @@ class ApartamentPhotosController extends \Datatable\DatatableController
 		    'name' => 'Poze',
 		    'url'  => "apartament_photo" ,
 		    'ids' => [ 'id' => 'apartament_photo', 'id_apartament' => $id_apartament ]
-		    ] 
+		    ]
 		];
-			
+
 		// $config['caption'] .= ' pentru apartamentul <span class="text-blue">' . $Imobiliare->nume . '</span>';
-		
+
 		// $photos = \Imobiliare\Nomenclatoare\ApartamentPhotos::where('id_apartament',$id_apartament)->select('file_name')->get()->toArray();
 		$photos = \Imobiliare\Nomenclatoare\ApartamentPhotos::where('id_apartament', $apartament->id)->where('file_extension', '<>', 'bmp')->orderby('id')->get();
 		if( count($photos) > 0 )
@@ -77,7 +77,7 @@ class ApartamentPhotosController extends \Datatable\DatatableController
 	public function upload($id_apartament)
 	{
 		$input = \Input::all();
-		return 
+		return
 			\Database\Actions::make()
 			->model('\Imobiliare\Nomenclatoare\ApartamentPhotos')
 			->data(['id_apartament' => $id_apartament, 'id_user' => $this->current_user->id ])
@@ -93,4 +93,4 @@ class ApartamentPhotosController extends \Datatable\DatatableController
 	{
 		return \Imobiliare\Nomenclatoare\ApartamentPhotos::downloadFile($document_id);
 	}
-} 
+}

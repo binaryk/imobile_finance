@@ -25,6 +25,10 @@ class Forms
 		'apartamente_proprietar' => '\Imobiliare\Nomenclatoare\Form\ApartamenteProprietarRecord',
 		'apartament_photo' 	 	 => '\Imobiliare\Nomenclatoare\Form\ApartamentePhotosRecord',
 		'agentii'		 	 	 => '\Imobiliare\Nomenclatoare\Form\AgentiiRecord',
+		'ansamblu_photo'		 => '\Imobiliare\Nomenclatoare\Form\AnsambluriPhotosRecord',
+		'cladire_photo'		  	 => '\Imobiliare\Nomenclatoare\Form\CladiriPhotosRecord',
+		'cladire_apartament'	 => '\Imobiliare\Nomenclatoare\Form\CladiriApartamenteRecord',
+		'apartament_cladire_photo'	 => '\Imobiliare\Nomenclatoare\Form\ApartamentCladiriPhotosRecord',
 
 	];
 

@@ -17,8 +17,25 @@ class DezvoltatoriAnsambluriRecord extends \Imobiliare\GridsRecord
         $this->display_length = 10;
         $this->default_order  = "1,'asc'";
         $this->form           = 'Imobiliare\Imobile\Form\DezvoltatoriAnsambluri';
-        $this->css            = 'admin/css/dt/dt.css, admin/css/dt/toolbar.css, admin/css/dt/dtform.css';
-        $this->js             = 'admin/js/libraries/form/dtform.js, admin/js/libraries/form/combobox.js';
+        $this->css            = 'admin/css/dt/dt.css,
+                                admin/css/dt/toolbar.css,
+                                admin/css/dt/dtform.css,
+                                assets/global/plugins/icheck/skins/all.css,
+                                assets/global/plugins/bootstrap-datepicker/css/datepicker3.css,
+                                assets/global/plugins/bootstrap-select/bootstrap-select.min.css,
+                                assets/global/plugins/select2/select2.css,
+                                assets/global/css/plugins.css
+                                 ';
+        $this->js             = 'admin/js/libraries/form/dtform.js,
+                                 assets/global/plugins/icheck/icheck.min.js,
+                                 assets/admin/pages/scripts/form-icheck.js,
+                                 assets/global/plugins/bootstrap-datepicker/js/bootstrap-datepicker.js,
+                                 assets/global/plugins/bootstrap-select/bootstrap-select.min.js,
+                                 assets/global/plugins/select2/select2.min.js,
+                                 assets/global/plugins/bootstrap-datetimepicker/js/bootstrap-datetimepicker.min.js,
+                                 assets/admin/pages/scripts/components-pickers.js,
+                                 assets/admin/pages/scripts/portlet-draggable.js
+                                 ';
         $this->row_source     = 'dezvoltatori-ansambluri-row-source';
         $this->rows_source_sql 				= 'SELECT
                                                 ansambluri_rezidentiale.*,
@@ -47,7 +64,7 @@ class DezvoltatoriAnsambluriRecord extends \Imobiliare\GridsRecord
                 'orderable' => 'yes',
                 'class'     => 'td-align-left',
                 'visible'   => 'yes',
-                'header'    => ['caption' => 'Dezvoltator', 'style'   => 'width:15%',],
+                'header'    => ['caption' => 'Dezvoltator', 'style'   => 'width:10%',],
                 'type'      => 'field',
                 'source'    => 'dezvoltator',
             ],
@@ -56,7 +73,7 @@ class DezvoltatoriAnsambluriRecord extends \Imobiliare\GridsRecord
                 'orderable' => 'yes',
                 'class'     => 'td-align-left',
                 'visible'   => 'yes',
-                'header'    => ['caption' => 'Ansamblu', 'style'   => 'width:15%',],
+                'header'    => ['caption' => 'Ansamblu', 'style'   => 'width:10%',],
                 'type'      => 'field',
                 'source'    => 'nume',
             ],
@@ -66,7 +83,7 @@ class DezvoltatoriAnsambluriRecord extends \Imobiliare\GridsRecord
                 'orderable' => 'yes',
                 'class'     => 'td-align-left',
                 'visible'   => 'yes',
-                'header'    => ['caption' => 'Telefon ansamblu', 'style'   => 'width:15%',],
+                'header'    => ['caption' => 'Telefon ansamblu', 'style'   => 'width:10%',],
                 'type'      => 'field',
                 'source'    => 'telefon',
             ],
@@ -76,7 +93,7 @@ class DezvoltatoriAnsambluriRecord extends \Imobiliare\GridsRecord
                 'orderable' => 'yes',
                 'class'     => 'td-align-left',
                 'visible'   => 'yes',
-                'header'    => ['caption' => 'An infiintare ansamblu', 'style'   => 'width:15%',],
+                'header'    => ['caption' => 'An infiintare ansamblu', 'style'   => 'width:10%',],
                 'type'      => 'field',
                 'source'    => 'anul_infiintarii',
             ],
@@ -86,7 +103,7 @@ class DezvoltatoriAnsambluriRecord extends \Imobiliare\GridsRecord
                 'orderable' => 'yes',
                 'class'     => 'td-align-left',
                 'visible'   => 'yes',
-                'header'    => ['caption' => 'Strada ansamblu', 'style'   => 'width:15%',],
+                'header'    => ['caption' => 'Strada ansamblu', 'style'   => 'width:10%',],
                 'type'      => 'field',
                 'source'    => 'strada',
             ],
@@ -96,12 +113,22 @@ class DezvoltatoriAnsambluriRecord extends \Imobiliare\GridsRecord
                 'orderable' => 'yes',
                 'class'     => 'td-align-left',
                 'visible'   => 'yes',
-                'header'    => ['caption' => 'Stadiu ansamblu', 'style'   => 'width:15%',],
+                'header'    => ['caption' => 'Stadiu ansamblu', 'style'   => 'width:10%',],
                 'type'      => 'field',
                 'source'    => 'stadiu',
             ],
 
             '8' => [
+                'id'        => 'detalii',
+                'orderable' => 'yes',
+                'class'     => 'td-align-left',
+                'visible'   => 'yes',
+                'header'    => ['caption' => 'Detalii ansamblu', 'style'   => 'width:30%',],
+                'type'      => 'view',
+                'source'    => 'dezvoltatori.ansambluri.~detalii',
+            ],
+
+            '9' => [
                 'id'        => 'action',
                 'orderable' => 'no',
                 'class'     => 'td-align-left td-actions',
@@ -113,7 +140,7 @@ class DezvoltatoriAnsambluriRecord extends \Imobiliare\GridsRecord
         ];
         $this->fields = [
             'fields'      => '',
-            'searchables' => 'id, nume',
+            'searchables' => 'ansambluri_rezidentiale.id, ansambluri_rezidentiale.nume, ansambluri_rezidentiale.telefon',
             'orderables'  => [1 => 'nume'],
         ];
         $this->filters = [

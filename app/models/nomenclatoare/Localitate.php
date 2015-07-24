@@ -40,8 +40,9 @@ class Localitate extends \Eloquent
         return $record->delete();
     }
 
-    public static function toCombobox()
+    public static function toCombobox( $noneCaption = '')
     {
-        return ['' => ''] + self::orderBy('id')->lists('nume', 'id');
+        //        pentru pluginul select2 am nevoie ca primul record sa fie ''=>''
+        return ['' => $noneCaption] + self::orderBy('nume')->lists('nume', 'id');
     }
 }

@@ -102,8 +102,8 @@ class DezvoltatoriRecord extends \Imobiliare\GridsRecord
         ];
         $this->fields = [
             'fields'      => '',
-            'searchables' => 'id, nume',
-            'orderables'  => [1 => 'nume'],
+            'searchables' => 'telefon',
+            'orderables'  => [1 => 'dezvoltatori.id'],
         ];
         $this->filters = [
             'deleted' => 'dezvoltatori.deleted_at is null',
