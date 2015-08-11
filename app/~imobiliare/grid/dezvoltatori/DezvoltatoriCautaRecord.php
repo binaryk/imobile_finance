@@ -8,7 +8,7 @@ class DezvoltatoriCautaRecord extends \Imobiliare\GridsRecord {
 		parent::__construct($id);
 		$this->view = 'dezvoltatori.cautare.index';
 		$this->icon = NULL;
-		$this->caption = 'Dezvoltatori Cauta';
+		$this->caption = 'Dezvoltatori Cautare';
 		$this->toolbar = 'dezvoltatori.cautare.toolbar';
 		$this->name = 'dt';
 		$this->display_start = 0;

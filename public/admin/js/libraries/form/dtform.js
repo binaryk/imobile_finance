@@ -151,6 +151,9 @@ function DTFORM(formid, loadformurl, model, doactionurl, dt)
 
 	this.loadform = function(action, record_id)
 	{
+		console.log(action)
+		console.log(record_id)
+		console.log(self.model)
 		var self = this;
 		console.log('2 -----> Hide Action Message');
 		this.hideActionMessage();

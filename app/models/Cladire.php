@@ -30,6 +30,7 @@ class Cladire extends \Eloquent {
 		'mansarda',
 		'observatii',
 		'data_finalizare',
+		'regim_inaltime',
 
 	];
 	public function getDate($camp) {
@@ -77,5 +78,66 @@ class Cladire extends \Eloquent {
 
 	public static function toCombobox() {
 		return [0 => ' -- Selectaţi cladire --'] + self::orderBy('nume')->lists('nume', 'id');
+	}
+
+	public function Apartamente()
+	{
+		return $this->hasMany('\Imobiliare\Apartament','id_cladire');
+	}
+
+	public function Localitate()
+	{
+		return $this->belongsTo('\Imobiliare\Nomenclator\Localitate', 'id_localitate');
+	}
+
+	public function getNumelocalitateAttribute()
+	{
+		return $this->localitate ? $this->localitate->nume : NULL;
+	}
+
+	public function Cartier()
+	{
+		return $this->belongsTo('\Imobiliare\Cartier', 'id_cartier');
+	}
+
+	public function getNumecartierAttribute()
+	{
+		return $this->cartier ? $this->cartier->nume : NULL;
+	}
+	public function Inaltime()
+	{
+		return $this->belongsTo('\Imobiliare\Nomenclator\TipRegimInaltime', 'id_tip_regim_inaltime');
+	}
+
+	public function getNumeregiminaltimeAttribute()
+	{
+		return $this->inaltime ? $this->inaltime->nume : NULL;
+	}
+	public function Stadiu()
+	{
+		return $this->belongsTo('\Imobiliare\Nomenclator\TipStadiuAnsamblu', 'id_tip_stadiu');
+	}
+
+	public function getNumetipstadiuAttribute()
+	{
+		return $this->stadiu ? $this->stadiu->nume : NULL;
+	}
+	public function Categorie()
+	{
+		return $this->belongsTo('\Imobiliare\Nomenclator\TipCategorieCladire', 'id_tip_categorie');
+	}
+
+	public function getNumetipcategorieAttribute()
+	{
+		return $this->categorie ? $this->categorie->nume : NULL;
+	}
+	public function Destinatie()
+	{
+		return $this->belongsTo('\Imobiliare\Nomenclator\TipDestinatieCladire', 'id_tip_destinatie');
+	}
+
+	public function getNumetipdestinatieAttribute()
+	{
+		return $this->destinatie ? $this->destinatie->nume : NULL;
 	}
 }

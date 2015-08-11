@@ -85,37 +85,10 @@ class DezvoltatoriAnsambluri extends \Processing\Form\Form {
 //      6
 		     ->addControl(
 			     \Easy\Form\Editbox::make('~layouts.form.controls.editboxes.editbox')
-			     	->name('detalii_localizare')
-			     	->caption('Detalii localizare')
-			     	->controlsource('detalii_localizare')
-			     	->controltype('editbox')
-			     	->class('form-control input-sm data-source')
-		     )
-//      7
-		     ->addControl(
-			     \Easy\Form\Editbox::make('~layouts.form.controls.editboxes.editbox')
-			     	->name('detalii_confort')
-			     	->caption('Detalii confort')
-			     	->controlsource('detalii_confort')
-			     	->controltype('editbox')
-			     	->class('form-control input-sm data-source')
-		     )
-
-//      8
-		     ->addControl(
-			     \Easy\Form\Editbox::make('~layouts.form.controls.editboxes.editbox')
-			     	->name('detalii_sistem_constructiv')
-			     	->caption('Detalii sistem constructiv')
-			     	->controlsource('detalii_sistem_constructiv')
-			     	->controltype('editbox')
-			     	->class('form-control input-sm data-source')
-		     )
-//      9
-		     ->addControl(
-			     \Easy\Form\Editbox::make('~layouts.form.controls.editboxes.editbox')
-			     	->name('detalii_financiare')
-			     	->caption('Detalii financiare')
-			     	->controlsource('detalii_financiare')
+			     	->name('detalii_localizare_descriere')
+			     	->caption('Detalii')
+			     	->placeholder('Detalii localizare si descrierea ansamblului')
+			     	->controlsource('detalii_localizare_descriere')
 			     	->controltype('editbox')
 			     	->class('form-control input-sm data-source')
 		     )

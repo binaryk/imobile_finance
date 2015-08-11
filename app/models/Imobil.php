@@ -52,4 +52,19 @@ class Imobil extends \Eloquent
     {
         return [0 => ' -- Selectaţi imobil --'] + self::orderBy('nume')->lists('nume', 'id');
     }
+
+    public function Cladiri(){
+        return $this->hasMany('\Imobiliare\Cladire','id_imobil');
+    }
+
+    public function Apartamente()
+    {
+        return $this->hasMany('\Imobiliare\Apartament','id_imobil');
+    }
+
+    public function Terenuri()
+    {
+        return $this->hasMany('\Imobiliare\Teren','id_imobil');
+    }
+
 }

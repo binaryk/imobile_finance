@@ -1,19 +1,22 @@
 @extends('~layouts.datatable.index')
 
 @section('before-datatable')
-<div class="note note-info" id="note-info-cautare">
-  <div style="float:left;width:5%">
-    <i class="fa fa-info-circle" style="font-size:32px; line-height:32px; vertical-align:middle;"></i> 
-  </div>
-<div class="clearfix"></div>
-</div>
+	<div class="note note-info" id="note-info-cautare">
+		<div style="float:left;width:5%">
+			<i class="fa fa-info-circle" style="font-size:32px; line-height:32px; vertical-align:middle;"></i>
+		</div>
+		<div style="float:left;width:95%">
+			<span style="padding-left:4px; display:block">Pentru a cauta dupa numărul de telefon al dezvoltatorului introduceti numarul direct in campul de deasupra tabelului.</span>
+			</div>
+		<div class="clearfix"></div>
+	</div>
 @stop
 
 @section('custom-styles')
 	@parent
 	{{ HTML::style('packages/daterangepicker/css/daterangepicker-bs3.css') }}
 	{{ HTML::style('packages/select2/4.0.0/css/select2.min.css') }}
-	{{ HTML::style('apartamente/cautare.css') }}
+	{{ HTML::style('apartamente/cautare_dezvoltatori.css') }}
 @stop
 
 @section('custom-scripts')

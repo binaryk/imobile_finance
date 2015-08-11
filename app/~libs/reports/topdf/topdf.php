@@ -9,6 +9,7 @@ class topdf
 
 	public function __construct()
 	{
+//		$orientation='P', $unit='mm', $format='A4', $unicode=true, $encoding='UTF-8', $diskcache=false, $pdfa=false
 		$pdf = new \TCPDF('P', 'mm', 'A4', true, 'UTF-8', false); 
 		$pdf->setPrintHeader(false); 
 		$pdf->setPrintFooter(false);

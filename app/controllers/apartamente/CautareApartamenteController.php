@@ -35,6 +35,7 @@ class CautareApartamenteController extends \Datatable\DatatableController
 		{
 			return \Redirect::route('cautare-apartamente-index');
 		}
+
 		$this->layout->breadcrumbs = [
             [
             'name' => 'Cautare apartamente',

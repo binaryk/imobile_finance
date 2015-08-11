@@ -1,0 +1,134 @@
+#form-cautare-apartamente
+{
+  margin-bottom:0px;
+  .form-group
+  {
+    margin-bottom:1px;
+  }
+  label
+  {
+    margin-bottom:1px;
+    color:#3598dc;
+    font-size:12px;
+  }
+
+  .portlet-footer
+  {
+    background-color:#F7f7f7;
+    padding:4px;
+  }
+}
+
+.dt-container
+{
+  table.dataTable
+  {
+    thead
+    {
+      .sorting
+      {
+        background-image:none !important;
+      }
+    }
+    thead th, tbody td
+    {
+      font-size:11px;
+      font-weight:normal !important;
+    }
+    thead th
+    {
+      background-color:#3598dc;
+      color:#fff;
+    }
+  }
+}
+
+.daterangepicker
+{
+  .calendar
+  {
+    td, th
+    {
+      border:1px solid #ccc;
+      font-size:12px;
+      height:initial;
+      border-radius:1px;
+    }
+    td
+    {
+      text-align:right;
+    }
+    td.old, td.new
+    {
+      background-color:#999;
+      color:#000;
+    }
+  }
+
+  .btn-small
+  {
+    width:74px;
+    padding:3px 6px;
+  }
+
+  .cancelBtn
+  {
+    margin-left:8px;
+  }
+
+  .ranges
+  {
+    .input-mini
+    {
+      width:74px !important;
+    }
+  }
+}
+
+.badge-info
+{
+  color:#fff;
+  background-color:#3598dc;
+}
+
+#tab1, #tab2, #tab3, #tab4, #tab5
+{
+  .list-group
+  {
+    margin-bottom:2px;
+  }
+  .well
+  {
+    background-color:#d9edf7;
+    margin-top:2px;
+    margin-bottom:2px;
+    padding:4px 16px 4px 16px;
+    h4
+    {
+      margin:0px;
+    }
+  }
+}
+
+#go-to-adauga-proprietar
+{
+  margin-top:19px;
+  height:28px;
+  margin-left:-22px;
+  display:none;
+}
+
+#note-info-cautare
+{
+  margin-top:2px;
+  margin-bottom:2px;
+}
+
+.schimba-valabilitatea-apartamentului, .update-ultima-actualizare
+{
+  cursor:pointer;
+  &:hover
+  {
+    opacity:0.5;
+  }
+}

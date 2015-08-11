@@ -53,4 +53,45 @@ class Dezvoltator extends \Eloquent
     {
         return [0 => ' -- Selectaţi dezvoltatorul --'] + self::orderBy('nume')->lists('nume', 'id');
     }
+
+    public function Cartier()
+    {
+        return $this->belongsTo('\Imobiliare\Cartier', 'id_cartier');
+    }
+
+    public function getNumecartierAttribute()
+    {
+        return $this->cartier ? $this->cartier->nume : NULL;
+    }
+
+    public function Judet()
+    {
+        return $this->belongsTo('\Imobiliare\Nomenclator\Judet', 'id_judet');
+    }
+
+    public function getNumejudetAttribute()
+    {
+        return $this->judet ? $this->judet->nume : NULL;
+    }
+
+    public function Ansambluri(){
+        return $this->hasMany('\Imobiliare\AnsambluRezidential','id_dezvoltator');
+    }
+
+    public function getNumeansambluAttribute(){
+        $ansambluri = $this->ansambluri->toArray();
+        $nume = [];
+        foreach($ansambluri as $ansamblu){
+            if($ansamblu['nume']){
+                $nume[] = $ansamblu['nume'];
+            }
+        }
+        return $nume;// $this->ansamblu ? $this->ansamblu->toArray() : NULL;
+    }
+
+
+
+
+
+
 }

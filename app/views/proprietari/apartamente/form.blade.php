@@ -226,7 +226,7 @@
 							{{$controls[12]->out()}}
 						</div>
 						<!-- tip garaj -->
-						<div class="col-md-6">
+						<div class="col-md-6"> 
 							{{$controls[24]->out()}}
 						</div> 
 						<!-- numar balcoane -->

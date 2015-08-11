@@ -77,6 +77,7 @@ class Sidebar {
 			->addOption('imobile', \URL::route('proprietar-index'), 'Imobile', 'fa-circle-o')
 			->addOption('imobile', \URL::route('cautare-apartamente-index'), 'Cautare imobile', 'fa-circle-o')
 			->addOption('agentii', \URL::route('agentii-index'), 'Cautare agentii', 'fa-shopping-cart')
+			->addOption('principal', \URL::route('home'), 'Pagina principală', 'fa-home')
 		;
 	}
 

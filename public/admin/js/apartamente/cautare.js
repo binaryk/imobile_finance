@@ -207,10 +207,10 @@ function CautareApartamente( parameters )
 	}
 
 	$('#cmd-search').click(function(){
-		
+
 		/**
 		 * Calin Verdes. COMPTECH SOFT. 25.06.2015
-		 * am scos cautarea dupa "is_agentie" .columns(5).search( my.is_agentie() )      	
+		 * am scos cautarea dupa "is_agentie" .columns(5).search( my.is_agentie() )
 		 */
 
 		var table = my.dt;
@@ -253,9 +253,9 @@ function CautareApartamente( parameters )
 		$('#credit_prima_casa').val(-1);
 		$('#nr_etaj_min').val('');
 		$('#nr_etaj_max').val('');
-		$('#id_tip_finisaje_interioare').val(0);
-		$('#id_tip_compartiment').val(0);
-		$('#id_cartier').val(0);
+		$('#id_tip_finisaje_interioare').val('');
+		$('#id_tip_compartiment').val('');
+		$('#id_cartier').val('');
 		$('#tip_imobil').val(0);
 		$('#vechime_imobil').val(-1);
 		my.perioada.setStartDate(my.d1);

@@ -17,11 +17,7 @@ class AnsambluRezidential extends \Eloquent {
 		'anul_infiintarii',
 		'data_estimativa_vanzare',
 		'strada',
-		'detalii_localizare',
-		'detalii_confort',
-		'detalii_sistem_constructiv',
-		'detalii_financiare',
-		'data_finalizare',
+		'detalii_localizare_descriere',
 	];
 	public function getDate($camp) {
 		return date("d.m.Y", strtotime($this->attributes[$camp]));
@@ -68,4 +64,28 @@ class AnsambluRezidential extends \Eloquent {
 	public static function toCombobox() {
 		return [0 => ' -- Selectaţi ansamblul --'] + self::orderBy('nume')->lists('nume', 'id');
 	}
+
+	public function Imobile(){
+		return $this->hasMany('\Imobiliare\Imobil', 'id_ansamblu');
+	}
+
+	public function Stadiu()
+	{
+		return $this->belongsTo('\Imobiliare\Nomenclator\TipStadiuAnsamblu','id_tip_stadiu_ansamblu');
+	}
+
+	public function getNumestadiuAttribute()
+	{
+		return $this->id_tip_stadiu_ansamblu ? $this->stadiu->nume : NULL;
+	}
+
+	public function Cladiri()
+	{
+		return $this->hasMany('\Imobiliare\Imobil', 'id_ansamblu')->where('id_tip_categorie','1');
+	}
+	public function Terenuri()
+	{
+		return $this->hasMany('\Imobiliare\Imobil', 'id_ansamblu')->where('id_tip_categorie','3');
+	}
+
 }

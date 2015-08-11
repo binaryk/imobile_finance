@@ -42,6 +42,7 @@ class CladireImobil extends \Processing\Form\Form {
 		mansarda
 		observatii*/
 		$this
+			// 0
 			->addControl(
 				\Easy\Form\Textbox::make('~layouts.form.controls.textboxes.textbox')
 					->name('nume')
@@ -52,19 +53,25 @@ class CladireImobil extends \Processing\Form\Form {
 					->controltype('textbox')
 					->maxlength(255)
 			)
+			
 
+			// 1
 			->addControl( // 11 Judet
 				\Easy\Form\Combobox::make('~layouts.form.controls.comboboxes.combobox')
 					->name('id_localitate')->caption('Localitate')
 					->class('form-control form-select data-source init-on-update-delete')
 					->controlsource('id_localitate')->controltype('combobox')->options(\Imobiliare\Nomenclator\Localitate::toCombobox())
-			)
+
+				)
+			// 2
 			->addControl( // 11 Judet
 				\Easy\Form\Combobox::make('~layouts.form.controls.comboboxes.combobox')
 					->name('id_cartier')->caption('Cartierul')
 					->class('form-control form-select form-select data-source init-on-update-delete')
 					->controlsource('id_cartier')->controltype('combobox')->options(\Imobiliare\Cartier::toCombobox())
-			)
+
+				)
+			// 3
 			->addControl(
 				\Easy\Form\Combobox::make('~layouts.form.controls.comboboxes.combobox')
 					->name('id_tip_regim_inaltime')
@@ -74,7 +81,9 @@ class CladireImobil extends \Processing\Form\Form {
 					->controltype('combobox')
 					->enabled('false')
 					->options(\Imobiliare\Nomenclator\TipRegimInaltime::toCombobox())
-			)
+
+				)
+			// 4
 			->addControl(
 				\Easy\Form\Combobox::make('~layouts.form.controls.comboboxes.combobox')
 					->name('id_tip_stadiu')
@@ -84,7 +93,9 @@ class CladireImobil extends \Processing\Form\Form {
 					->controltype('combobox')
 					->enabled('false')
 					->options(\Imobiliare\Nomenclator\TipStadiuAnsamblu::toCombobox())
-			)
+
+				)
+			// 5
 			->addControl(
 				\Easy\Form\Textbox::make('~layouts.form.controls.textboxes.textbox')
 					->name('nr_spatii_indivize')
@@ -94,7 +105,9 @@ class CladireImobil extends \Processing\Form\Form {
 					->controlsource('nr_spatii_indivize')
 					->controltype('textbox')
 					->maxlength(255)
-			)
+
+				)
+			// 6
 			->addControl(
 				\Easy\Form\Textbox::make('~layouts.form.controls.textboxes.textbox-addon')
 					->caption('Ascensor')->name('txt-ascensor')->placeholder('Textbox')
@@ -106,7 +119,9 @@ class CladireImobil extends \Processing\Form\Form {
 								'data-control-type' => 'checkbox', 'data-on' => 1, 'data-off' => 0]
 						),
 						'after' => NULL])
-			)
+
+				)
+			// 7
 			->addControl(
 				\Easy\Form\Textbox::make('~layouts.form.controls.textboxes.textbox')
 					->name('adresa')
@@ -116,7 +131,9 @@ class CladireImobil extends \Processing\Form\Form {
 					->controlsource('adresa')
 					->controltype('textbox')
 					->maxlength(255)
-			)
+
+				)
+			// 8
 			->addControl(
 				\Easy\Form\Textbox::make('~layouts.form.controls.textboxes.textbox')
 					->name('telefon')
@@ -126,7 +143,9 @@ class CladireImobil extends \Processing\Form\Form {
 					->controlsource('telefon')
 					->controltype('textbox')
 					->maxlength(255)
-			)
+
+				)
+			// 9
 			->addControl(
 				\Easy\Form\Textbox::make('~layouts.form.controls.textboxes.textbox')
 					->name('email')
@@ -136,7 +155,9 @@ class CladireImobil extends \Processing\Form\Form {
 					->controlsource('email')
 					->controltype('textbox')
 					->maxlength(255)
-			)
+
+				)
+			// 10
 			->addControl(
 				\Easy\Form\Textbox::make('~layouts.form.controls.textboxes.textbox')
 					->name('carte_funciara')
@@ -146,7 +167,9 @@ class CladireImobil extends \Processing\Form\Form {
 					->controlsource('carte_funciara')
 					->controltype('textbox')
 					->maxlength(255)
-			)
+
+				)
+			// 11
 			->addControl(
 				\Easy\Form\Combobox::make('~layouts.form.controls.comboboxes.combobox')
 					->name('id_tip_categorie')
@@ -156,7 +179,9 @@ class CladireImobil extends \Processing\Form\Form {
 					->controltype('combobox')
 					->enabled('false')
 					->options(\Imobiliare\Nomenclator\TipCategorieCladire::toCombobox())
-			)
+
+				)
+			// 12
 			->addControl(
 				\Easy\Form\Combobox::make('~layouts.form.controls.comboboxes.combobox')
 					->name('id_tip_destinatie')
@@ -166,7 +191,9 @@ class CladireImobil extends \Processing\Form\Form {
 					->controltype('combobox')
 					->enabled('false')
 					->options(\Imobiliare\Nomenclator\TipDestinatieCladire::toCombobox())
-			)
+
+				)
+			// 13
 			->addControl(
 				\Easy\Form\Textbox::make('~layouts.form.controls.textboxes.textbox')
 					->name('dotari')
@@ -176,7 +203,9 @@ class CladireImobil extends \Processing\Form\Form {
 					->controlsource('dotari')
 					->controltype('textbox')
 					->maxlength(255)
-			)
+
+				)
+			// 14
 			->addControl(
 				\Easy\Form\Textbox::make('~layouts.form.controls.textboxes.textbox')
 					->name('cota_indiviza')
@@ -186,7 +215,9 @@ class CladireImobil extends \Processing\Form\Form {
 					->controlsource('cota_indiviza')
 					->controltype('textbox')
 					->maxlength(255)
-			)
+
+				)
+			// 15
 			->addControl(
 				\Easy\Form\Textbox::make('~layouts.form.controls.textboxes.textbox')
 					->name('perioada_constructie')
@@ -196,7 +227,9 @@ class CladireImobil extends \Processing\Form\Form {
 					->controlsource('perioada_constructie')
 					->controltype('textbox')
 					->maxlength(255)
-			)
+
+				)
+			// 16
 			->addControl(
 				\Easy\Form\Textbox::make('~layouts.form.controls.textboxes.textbox-addon')
 					->caption('Climatizare')->name('txt-ascensor')->placeholder('Textbox')
@@ -208,7 +241,9 @@ class CladireImobil extends \Processing\Form\Form {
 								'data-control-type' => 'checkbox', 'data-on' => 1, 'data-off' => 0]
 						),
 						'after' => NULL])
-			)
+
+				)
+			// 17
 			->addControl(
 				\Easy\Form\Textbox::make('~layouts.form.controls.textboxes.textbox-addon')
 					->caption('Mansarda')->name('txt-mansarda')->placeholder('Textbox')
@@ -221,17 +256,21 @@ class CladireImobil extends \Processing\Form\Form {
 						),
 						'after' => NULL])
 			)
-			->addControl(
-				\Easy\Form\Textbox::make('~layouts.form.controls.textboxes.textbox')
-					->name('observati')
-					->caption('Observati')
-					->placeholder('Introduceti un text observatii')
-					->class('form-control data-source')
-					->controlsource('observati')
-					->controltype('textbox')
-					->maxlength(255)
-			)
+			
 
+			// 18
+			->addControl(
+				\Easy\Form\Editbox::make('~layouts.form.controls.editboxes.editbox')
+					->name('observatii')
+					->caption('Descriere clădire')
+					->placeholder('Detalii care vor aparea în partea de sus a ofertarii')
+					->controlsource('observatii')
+					->controltype('editbox')
+					->class('form-control input-sm data-source')
+			)
+			
+
+			// 19
 			->addControl(
 				\Easy\Form\Textbox::make('~layouts.form.controls.textboxes.textbox-addon')
 					->name('data_finalizare')->caption('Data finalizare')->placeholder('')
@@ -239,6 +278,19 @@ class CladireImobil extends \Processing\Form\Form {
 					->controlsource('data_finalizare')->controltype('textbox')
 					->addon(['before' => '<i class="fa fa-calendar"></i>', 'after' => NULL])
 			)
+			
+
+			// 20
+			->addControl(
+			\Easy\Form\Textbox::make('~layouts.form.controls.textboxes.textbox')
+				->name('regim_inaltime')
+				->caption('Regim de înălțime')
+				->placeholder('Regim de înălțime')
+				->class('form-control data-source')
+				->controlsource('regim_inaltime')
+				->controltype('textbox')
+				->maxlength(255)
+		)
 
 		;
 

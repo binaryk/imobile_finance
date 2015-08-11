@@ -27,7 +27,6 @@ function CautareDezvoltatori( parameters )
         }
         return '(v_dezvoltatori.id_organizatie=' + $('#id_organizatie').val() + ') AND (v_dezvoltatori.oferta_valabila = ' + value + ')';
     }
-
     /* 2 -> adresa exacta */
     this.adresa_exacta = function()
     {
@@ -44,9 +43,9 @@ function CautareDezvoltatori( parameters )
         var value = $('#dezvoltator').val();
         if(value.length == 0)
         {
-            return '';
+            return 'v_dezvoltatori.id_organizatie = ' + $('#id_organizatie').val();
         }
-        return "v_dezvoltatori.dezvoltator LIKE '%" + value + "%'";
+        return 'v_dezvoltatori.id_organizatie = ' + $('#id_organizatie').val() + "AND v_dezvoltatori.dezvoltator LIKE '%" + value + "%'";
     }
 
     this.imobil = function()
@@ -166,13 +165,13 @@ function CautareDezvoltatori( parameters )
     {
         var d1 = my.perioada.startDate.format('YYYY-MM-DD');
         var d2 = my.perioada.endDate.format('YYYY-MM-DD');
-        return "v_dezvoltatori.data_finalizare_cladire BETWEEN '" + d1 + "' AND '" + d2 + "'";
+        return "ISNULL(v_dezvoltatori.data_finalizare_cladire) OR v_dezvoltatori.data_finalizare_cladire BETWEEN '" + d1 + "' AND '" + d2 + "'";
     }
     this.data_finalizare_ansamblu = function()
     {
         var d1 = my.perioada_ansamblu.startDate.format('YYYY-MM-DD');
         var d2 = my.perioada_ansamblu.endDate.format('YYYY-MM-DD');
-        return "v_dezvoltatori.data_finalizare_ansamblu BETWEEN '" + d1 + "' AND '" + d2 + "'";
+        return "ISNULL(v_dezvoltatori.data_finalizare_ansamblu) OR v_dezvoltatori.data_finalizare_ansamblu BETWEEN '" + d1 + "' AND '" + d2 + "'";
     }
 
     /* 7 -> telefoane */
@@ -349,25 +348,29 @@ function CautareDezvoltatori( parameters )
     });
 
     $('#cmd-reset').click(function(){
-        $('#oferta_valabila').val(-1);
-        $('#adresa_exacta').val('');
+        $('#dezvoltator').val('');
+        $('#ansamblu').val('');
+        $('#cladire').val('');
         $('#nr_camere_min').val('');
         $('#nr_camere_max').val('');
+        $('#suprafata_utila_min').val('');
+        $('#suprafata_utila_max').val('');
         $('#pret_m2_min').val('');
         $('#pret_m2_max').val('');
-        $('#is_agentie').val(-1);
-        //$('#telefon').val('');
-        $('#cbo_telefon').select2('val', '');
-        $('#credit_prima_casa').val(-1);
-        $('#nr_etaj_min').val('');
-        $('#nr_etaj_max').val('');
-        $('#id_tip_finisaje_interioare').val(0);
-        $('#id_tip_compartiment').val(0);
-        $('#id_cartier').val(0);
-        $('#tip_imobil').val(0);
-        $('#vechime_imobil').val(-1);
+        $('#imobil').val('');
+        $('#adresa_apartament').val('');
+        $('#id_tip_finisaje_interioare').val('');
+        $('#id_tip_compartiment').val('');
+        $('#id_cartier').val('');
+        $('#id_localitate').val('');
+        $('#tip_imobil').val('');
+        $('#id_tip_stadiu_cladire').val('');
+        $('#id_tip_stadiu_ansamblu').val('');
+        $('#id_tip_stadiu_cladire').val('');
         my.perioada.setStartDate(my.d1);
         my.perioada.setEndDate(my.d2);
+        my.perioada_ansamblu.setStartDate(my.da1);
+        my.perioada_ansamblu.setEndDate(my.da2);
 
         $('#cmd-search').trigger('click');
     });

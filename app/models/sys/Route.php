@@ -108,14 +108,29 @@ Date de baza
 //Dezvoltatori cautare
 			->add('get', 'cautare_dezvoltatori_index', 'cautare_dezvoltatori', 'CautareDezvoltatoriController@index', 'Dezvoltatori')
 			->add('get', 'dezvoltatori-cautare-row-source', 'cautare-dezvoltatori-row-source/{id}', 'CautareDezvoltatoriController@rows', 'Dezvoltatori')
+			->add('get', 'dezvoltatori-detalii-oferta', 'dezvoltatori-detalii-oferta/{id}', 'CautareDezvoltatoriController@showDetails', 'Dezvoltatori')
 
+			->add('get', 'dezvoltator-deschide-pdf', 'apartament-dezvoltator-deschide-pdf/{id}', 'CautareDezvoltatoriController@openPDF', 'Dezvoltatori')
+			->add('get', 'dezvoltator-apartamente-deschide-pdf', 'apartament-dezvoltator-deschide-privat-pdf/{id}', 'CautareDezvoltatoriController@openPDF', 'Dezvoltatori')
 
+			#Apartamente dezvvoltator reports start
+			->add('get', 'dezvoltator-apartamente-deschide-pdf', 'apartament-dezvoltator-deschide-pdf/{id}', 'CautareDezvoltatoriController@openPDF', 'Dezvoltatori')
+			->add('get', 'dezvoltator-apartamente-descarca-pdf', 'apartament-dezvoltator-descarca-pdf/{id}', 'CautareDezvoltatoriController@downloadPDF', 'Dezvoltatori')
+			->add('get', 'dezvoltator-apartamente-deschide-pdf-redus', 'apartament-dezvoltator-deschide-pdf/{id}', 'CautareDezvoltatoriController@openPDFredus', 'Dezvoltatori')
+			->add('get', 'dezvoltator-apartamente-descarca-pdf-redus', 'apartament-dezvoltator-descarca-privat-pdf/{id}', 'CautareDezvoltatoriController@downloadPDFredus', 'Dezvoltatori')
+			#Apartamente dezvvoltator reports end
+
+			#Cladiri reports start
+			->add('get', 'dezvoltator-cladiri-deschide-pdf', 'cladire-deschide-pdf/{id}', 'CladiriReportController@openPDF', 'Dezvoltatori')
+			->add('get', 'dezvoltator-cladiri-descarca-pdf', 'cladire-descarca-pdf/{id}', 'CladiriReportController@downloadPDF', 'Dezvoltatori')
+			->add('get', 'dezvoltator-cladiri-deschide-pdf-redus', 'cladire-deschide-pdf/{id}', 'CladiriReportController@openPDFredus', 'Dezvoltatori')
+			->add('get', 'dezvoltator-cladiri-descarca-pdf-redus', 'cladire-descarca-privat-pdf/{id}', 'CladiriReportController@downloadPDFredus', 'Dezvoltatori')
+			#Cladiri reports end
 			/**
-		AGENTII
-		 **/
+			AGENTII
+			 **/
 			->add('get', 'agentii-index', 'agentii', 'AgentiiController@index', 'Agentii')
 			->add('get', 'agentii-row-source', 'agentii/{id}', 'AgentiiController@rows', 'Agentii')
-			/**/
 		;
 	}
 

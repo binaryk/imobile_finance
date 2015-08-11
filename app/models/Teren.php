@@ -8,7 +8,7 @@ class Teren extends \Eloquent
 {
     use SoftDeletingTrait;
     protected $table = 'terenuri';
-    protected $fillable = ['nume', 'adresa', 'telefon', 'carte_funciara', 'id_tip_destinatie_teren', 'id_imobil'];
+    protected $fillable = ['nume', 'adresa', 'telefon', 'carte_funciara', 'id_tip_destinatie_teren', 'id_imobil', 'detalii'];
 
     public static function getRecord( $id )
     {
@@ -38,6 +38,16 @@ class Teren extends \Eloquent
             return false;
         }
         return $record->delete();
+    }
+
+    public function destinatie()
+    {
+        return $this->belongsTo('\Imobiliare\Nomenclator\TipDestinatieTeren', 'id_tip_destinatie_teren');
+    }
+
+    public function getNumetipdestinatieAttribute()
+    {
+        return $this->destinatie ? $this->destinatie->nume : NULL;
     }
 
     public static function toCombobox()

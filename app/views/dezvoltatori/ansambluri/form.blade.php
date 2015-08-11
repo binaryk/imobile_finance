@@ -23,21 +23,9 @@
 	<div class="col-md-12">
 		{{$controls[5]->out()}}
 	</div>
-	<!--detalii_localizare-->
-	<div class="col-md-6">
+	<!--detalii localizare descriere-->
+	<div class="col-md-12">
 		{{$controls[6]->out()}}
-	</div>
-	<!--detalii_confort-->
-	<div class="col-md-6">
-		{{$controls[7]->out()}}
-	</div>
-	<!--detalii_sistem_constructiv-->
-	<div class="col-md-6">
-		{{$controls[8]->out()}}
-	</div>
-	<!--detalii_financiare-->
-	<div class="col-md-6">
-		{{$controls[9]->out()}}
 	</div>
 </div>
 {{

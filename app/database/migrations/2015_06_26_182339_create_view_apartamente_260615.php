@@ -1,21 +1,18 @@
 <?php
 
-use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
 
-class CreateViewApartamente260615 extends Migration 
-{
+class CreateViewApartamente260615 extends Migration {
 
-	public function up()
-	{
+	public function up() {
 		DB::statement("DROP VIEW IF EXISTS `v_apartamente`");
 		DB::statement("
-			CREATE ALGORITHM=UNDEFINED DEFINER=`root`@`localhost` 
-			VIEW `v_apartamente` 
-			AS 
+			CREATE ALGORITHM=UNDEFINED DEFINER=`root`@`localhost`
+			VIEW `v_apartamente`
+			AS
 			select
 				apartamente.id,
-				apartamente.id_organizatie, 
+				apartamente.id_organizatie,
 				organizatii.denumire as organizatia,
 				apartamente.id_tip_finisaje_interioare,
 				tip_finisaje_interioare.nume as finisaj_interior,
@@ -58,9 +55,7 @@ class CreateViewApartamente260615 extends Migration
 		");
 	}
 
-	
-	public function down()
-	{
+	public function down() {
 		DB::statement("DROP VIEW IF EXISTS `v_apartamente`");
 	}
 

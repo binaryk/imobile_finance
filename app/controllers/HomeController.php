@@ -1,21 +1,8 @@
 <?php
 
 class HomeController extends BaseController {
-
-	/*
-	|--------------------------------------------------------------------------
-	| Default Home Controller
-	|--------------------------------------------------------------------------
-	|
-	| You may wish to use controllers instead of, or in addition to, Closure
-	| based routes. That's great! Here is an example controller method to
-	| get you started. To route to this controller, just add the route:
-	|
-	|	Route::get('/', 'HomeController@showWelcome');
-	|
-	 */
-	protected $caption = 'Bine ati venit pe aplicatia Imobiliare';
-	protected $small = 'aici veti putea gestiona afacerea dvs';
+	protected $caption = 'Bine ați venit pe aplicația <u>Imobiliare</u>';
+	protected $small = 'aici veți putea gestiona afacerea dumnevoastră';
 
 	public function showWelcome() {
 		$links = [
@@ -23,26 +10,71 @@ class HomeController extends BaseController {
 				'bg' => 'blue-madison',
 				'header' => 'Apartamente',
 				'title' => 'Apartamente',
-				'icon' => 'fa-user',
+				'icon' => 'fa-home',
 				'url' => URL::route('apartamente_proprietar'),
 			],
 			'my-imobils' => [
 				'bg' => 'red-intense',
 				'header' => 'Cautare&Ofertare',
 				'title' => 'Cautare&Ofertare',
-				'icon' => 'fa-home',
+				'icon' => 'fa-search',
 				'url' => URL::route('cautare-apartamente-index'),
 			],
 			'my-dezvoltators' => [
 				'bg' => 'green-haze',
 				'header' => 'Dezvoltatori',
 				'title' => 'Dezvoltatori',
-				'icon' => 'fa-home',
+				'icon' => 'fa-users',
 				'url' => URL::route('dezvoltatori-index'),
+			],
+			'search-dezvoltators' => [
+				'bg' => 'purple-plum',
+				'header' => 'Cautare dezvoltatori',
+				'title' => 'Cautare dezvoltatori',
+				'icon' => 'fa-search-plus',
+				'url' => URL::route('cautare_dezvoltatori_index'),
 			],
 		];
 
 		return View::make('hello')->with([
+			'caption' => $this->caption,
+			'small_title' => $this->small,
+			'links' => $links,
+		]);
+	}
+	public function showWelcome2() {
+		$links = [
+			'my-profile' => [
+				'bg' => 'blue-madison',
+				'header' => 'Apartamente',
+				'title' => 'Apartamente',
+				'icon' => 'fa-home',
+				'url' => URL::route('apartamente_proprietar'),
+			],
+			'my-imobils' => [
+				'bg' => 'red-intense',
+				'header' => 'Cautare&Ofertare',
+				'title' => 'Cautare&Ofertare',
+				'icon' => 'fa-search',
+				'url' => URL::route('cautare-apartamente-index'),
+			],
+			'my-dezvoltators' => [
+				'bg' => 'green-haze',
+				'header' => 'Dezvoltatori',
+				'title' => 'Dezvoltatori',
+				'icon' => 'fa-users',
+				'url' => URL::route('dezvoltatori-index'),
+			],
+			'search-dezvoltators' => [
+				'bg' => 'purple-plum',
+				'header' => 'Cautare dezvoltatori',
+				'title' => 'Cautare dezvoltatori',
+				'icon' => 'fa-search-plus',
+				'url' => URL::route('cautare_dezvoltatori_index'),
+			],
+		];
+
+		return View::make('old_hello')->with([
 			'caption' => $this->caption,
 			'small_title' => $this->small,
 			'links' => $links,

@@ -47,5 +47,5 @@ Route::group(['before' => 'auth|admin'], function()
 });
 
 include 'macros.php'; // ??? Calin> Ce cauta asta aici la rute
-
+Route::get('test', 'HomeController@showWelcome2');
 include app_path() . '/~imobiliare/routes/user.route.php';
