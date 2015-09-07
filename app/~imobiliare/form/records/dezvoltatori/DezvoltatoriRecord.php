@@ -20,25 +20,11 @@ class DezvoltatoriRecord extends \Imobiliare\FormsRecord
 		->setFeedback('delete', 'success', 'Ştergerea dezvoltatorului a fost realizată cu succes.')
 		->setFeedback('delete', 'error', 'Ştergerea dezvoltatorului <span class="badge">nu</span> a fost realizată.')
 
-		->addRule('insert', 'nume', 'required')
-		->addRule('insert', 'adresa', 'required')
 		->addRule('insert', 'telefon', 'required')
-		->addRule('insert', 'email', 'required|email')
-		->addRule('update', 'nume', 'required')
-		->addRule('update', 'adresa', 'required')
 		->addRule('update', 'telefon', 'required')
-		->addRule('update', 'email', 'required|email') 
 		
-		->addMessage('insert', 'nume.required', 'Denumirea dezvoltatorului trebuie completată.')
-		->addMessage('update', 'nume.required', 'Denumirea dezvoltatorului trebuie completată.')
-		->addMessage('insert', 'adresa.required', 'Adresa dezvoltatorului trebuie completată.')
-		->addMessage('update', 'adresa.required', 'Adresa dezvoltatorului trebuie completată.')
 		->addMessage('insert', 'telefon.required', 'Telefonul dezvoltatorului trebuie completată.')
 		->addMessage('update', 'telefon.required', 'Telefonul dezvoltatorului trebuie completată.')
-		->addMessage('insert', 'email.required', 'E-mailul dezvoltatorului trebuie completată.')
-		->addMessage('update', 'email.required', 'E-mailul dezvoltatorului trebuie completată.')	
-		->addMessage('insert', 'email.email', 'E-mailul dezvoltatorului trebuie să fie valid.')
-		->addMessage('update', 'email.email', 'E-mailul dezvoltatorului trebuie să fie valid.')
 		;
 	}
 

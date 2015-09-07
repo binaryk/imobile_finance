@@ -150,10 +150,7 @@ function DTFORM(formid, loadformurl, model, doactionurl, dt)
 	};
 
 	this.loadform = function(action, record_id)
-	{
-		console.log(action)
-		console.log(record_id)
-		console.log(self.model)
+	{ 
 		var self = this;
 		console.log('2 -----> Hide Action Message');
 		this.hideActionMessage();
@@ -309,9 +306,16 @@ function DTFORM(formid, loadformurl, model, doactionurl, dt)
 
 	this.doaction = function(action)
 	{
+
 		this.hideActionMessage();
-		this.hideFieldsErrors()
+		this.hideFieldsErrors();
 		var self = this;
+		console.log(self.datasource());
+		console.log('action+' + action);
+		console.log('action+' + action);
+		console.log('model+' + self.model);
+		console.log('model+' + self.model);
+		console.log(this.doactionurl);
 		$.ajax({
 			url      : this.doactionurl,
         	type     : 'post',

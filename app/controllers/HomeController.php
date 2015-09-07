@@ -4,7 +4,7 @@ class HomeController extends BaseController {
 	protected $caption = 'Bine ați venit pe aplicația <u>Imobiliare</u>';
 	protected $small = 'aici veți putea gestiona afacerea dumnevoastră';
 
-	public function showWelcome() {
+	public function showWelcome2() {
 		$links = [
 			'my-profile' => [
 				'bg' => 'blue-madison',
@@ -42,7 +42,7 @@ class HomeController extends BaseController {
 			'links' => $links,
 		]);
 	}
-	public function showWelcome2() {
+	public function showWelcome() {
 		$links = [
 			'my-profile' => [
 				'bg' => 'blue-madison',

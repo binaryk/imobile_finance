@@ -29,6 +29,7 @@ class SessionsController extends \BaseController {
 	 */
 	public function store()
 	{
+
 		try {
 			$this->loginForm->validate($input = Input::only('email', 'password'));
 		} catch (Exception $e)
@@ -39,7 +40,8 @@ class SessionsController extends \BaseController {
 
 		try
 		{
-			Sentry::authenticate($input, Input::has('remember'));
+			$rez = Sentry::authenticate($input, Input::has('remember'));
+
 		}
 
 		catch (\Cartalyst\Sentry\Users\UserNotFoundException $e)

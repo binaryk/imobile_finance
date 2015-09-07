@@ -35,6 +35,7 @@ class AnsambluriImobileController extends \Datatable\DatatableController{
             'ids' => [ 'id' => 'ansamblu_imobile', 'id_ansamblu' => $id_ansamblu ]
             ]
         ];
+        $config['right_menu'] = [ ['caption' => 'Adaug&#259; imobil', 'class' => 'action-insert-record'] ];
         $this->show( $config + ['other-info' => [ 'ansamblu' => $ansamblu]] );
     }
 

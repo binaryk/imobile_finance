@@ -56,6 +56,8 @@ class RegistrationController extends \BaseController {
 
 	public function postLogin()
 	{
+		dd(4);
+		
 
 		$credentials = array(
 	        'email' => Input::get('email'),
@@ -65,7 +67,6 @@ class RegistrationController extends \BaseController {
 	    try 
 	    {
 	        $user = Sentry::authenticate($credentials, false);
-		dd($user);
 
 	        if ($user)
 	        {

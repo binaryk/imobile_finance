@@ -35,6 +35,7 @@ App::after(function($request, $response)
 
 Route::filter('auth', function()
 {
+	//dd(Sentry::check());
 	if (!Sentry::check()) return Redirect::guest('login');
 });
 
