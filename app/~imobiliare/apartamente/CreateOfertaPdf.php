@@ -73,6 +73,7 @@ class CreateOfertaPdf
 		$photos = \Imobiliare\Nomenclatoare\ApartamentPhotos::where('id_apartament', $this->id())->where('file_extension', '<>', 'bmp')->orderby('id', 'desc')->skip(0)->take(4)->get();
 		$this->pdf->Pdf()->ln();
 		$this->pdf->Pdf()->SetXY(10, 40);
+
 		if($number_of_photos = $photos->count())
 		{
 			$width = 180/$number_of_photos;
@@ -84,10 +85,12 @@ class CreateOfertaPdf
 			{
 
 				$new_file = str_replace('\\', '/', storage_path() . '/app/apartamente/photos/resized/' . $photo->id  . '.png');
+				// dd($new_file);
+				// $new_file = str_replace('\\', '/', storage_path() . '/app/apartamente/images/logo1.png');
 				// var_dump($photo->file_name . ' ======> ' . $new_file . ' ::: ' . (int) file_exists($photo->file_name) );
 				$image = \Image::make($photo->file_name)
 					->resize(360, 360, function ($constraint){$constraint->aspectRatio(); $constraint->upsize();})->save($new_file, 100);
-				
+				// dd($new_file);
 				// var_dump( (int) file_exists($new_file ) );
 				try
 				{
