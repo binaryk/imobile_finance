@@ -900,6 +900,16 @@ class CladireApartament extends ApartamentImobil {
 				->controltype('textbox')
 				->maxlength(255)
 		)
+		// 70
+		->addControl(
+			\Easy\Form\Textbox::make('~layouts.form.controls.textboxes.textbox')
+				->name('nr_entitati')
+				->caption('Număr entități')
+				->class('form-control data-source')
+				->controlsource('nr_entitati')
+				->controltype('textbox')
+				->maxlength(255)
+		)
 
 		;
 

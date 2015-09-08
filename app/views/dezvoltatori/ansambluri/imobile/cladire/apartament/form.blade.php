@@ -55,9 +55,9 @@
 						<div class="col-md-6">
 							{{$controls[6]->out()}}
 						</div>
-						<!-- suprafata -->
+						<!-- nr_entitati -->
 						<div class="col-md-6">
-							{{$controls[8]->out()}}
+							{{$controls[70]->out()}}
 						</div>
 					</div>
 
@@ -108,9 +108,9 @@
 						<div class="col-md-6">
 							{{$controls[51]->out()}}
 						</div>
-						<!-- credit -->
+						<!-- suprafata -->
 						<div class="col-md-6">
-							{{$controls[17]->out()}}
+							{{$controls[8]->out()}}
 						</div>
 					</div>
 					<div class="row">
@@ -123,6 +123,7 @@
 							{{$controls[22]->out()}}
 						</div>
 					</div>
+
 
 					<div class="teren">
 						<div>
