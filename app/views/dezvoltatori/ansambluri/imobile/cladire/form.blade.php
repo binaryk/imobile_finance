@@ -11,9 +11,6 @@
 </div>
 <div class="row">
 	<div class="col-md-4">
-		{{$controls[3]->out()}}
-	</div>
-	<div class="col-md-4">
 		{{$controls[4]->out()}}
 	</div>
 	<div class="col-md-4">
@@ -26,15 +23,9 @@
 	</div>
 	<div class="col-md-4">
 		{{$controls[7]->out()}}
-	</div>
-	<div class="col-md-4">
-		{{$controls[8]->out()}}
-	</div>	 
+	</div> 
 </div>
 <div class="row">
-	<div class="col-md-4">
-		{{$controls[9]->out()}}
-	</div>
 	<div class="col-md-4">
 		{{$controls[10]->out()}}
 	</div>
@@ -45,9 +36,6 @@
 <div class="row">
 	<div class="col-md-4">
 		{{$controls[12]->out()}}
-	</div>
-	<div class="col-md-4">
-		{{$controls[15]->out()}}
 	</div>
 	<div class="col-md-4">
 		{{$controls[17]->out()}}

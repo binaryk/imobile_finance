@@ -29,52 +29,50 @@
 			<div id="context" data-toggle="context" data-target="#context-menu">
 				<div class="row">
 				<div class="apartamente" style="display: none;">
-					<!-- Titlu apartament -->
-					<div class="col-md-6">
-						{{$controls[44]->out()}}
+					<div class="row">
+						<!-- Titlu apartament -->
+						<div class="col-md-6">
+							{{$controls[44]->out()}}
+						</div>
+						<!-- localitate-->
+						<div class="col-md-6">
+							{{$controls[60]->out()}}
+						</div>
+					</div>
+					<div class="row">
+						<!-- cartier -->
+						<div class="col-md-6">
+							{{$controls[5]->out()}}
+						</div>
+						<!-- orientare geografica -->
+						<div class="col-md-6">
+							{{$controls[69]->out()}}
+						</div>
 					</div>
 
-					<!-- localitate-->
-					<div class="col-md-6">
-						{{$controls[60]->out()}}
-					</div>
-
-					<!-- cartier -->
-					<div class="col-md-6">
-						{{$controls[5]->out()}}
-					</div>
-
-					<!-- orientare geografica -->
-					<div class="col-md-6">
-						{{$controls[69]->out()}}
-					</div>
-
-
-					<div class="no_teren">
+					<div class="row">
 						<!-- nr_camere -->
 						<div class="col-md-6">
 							{{$controls[6]->out()}}
 						</div>
-					</div>
-					<!-- suprafata -->
-					<div class="col-md-6">
-						{{$controls[8]->out()}}
-					</div>
-					<div class="casa" style="display: none;">
-						<!-- suprafata teren -->
+						<!-- suprafata -->
 						<div class="col-md-6">
-							{{$controls[50]->out()}}
+							{{$controls[8]->out()}}
 						</div>
 					</div>
-					<!-- zona aproximativa -->
-					<div class="col-md-6">
-						{{$controls[18]->out()}}
+
+					<div class="row">
+						<!-- zona aproximativa -->
+						<div class="col-md-6">
+							{{$controls[18]->out()}}
+						</div>
+						<!-- strada -->
+						<div class="col-md-6">
+							{{$controls[19]->out()}}
+						</div>
+						
 					</div>
-					<!-- strada -->
-					<div class="col-md-6">
-						{{$controls[19]->out()}}
-					</div>
-					<div class="no_teren">
+					<div class="row">
 						<!-- scara -->
 						<div class="col-md-6">
 							{{$controls[46]->out()}}
@@ -83,6 +81,8 @@
 						<div class="col-md-6">
 							{{$controls[47]->out()}}
 						</div>
+					</div>
+					<div class="row">
 						<!-- etaj -->
 						<div class="col-md-6">
 							{{$controls[10]->out()}}
@@ -91,46 +91,41 @@
 						<div class="col-md-6">
 							{{$controls[7]->out()}}
 						</div>
-						<!-- finisaje interne -->
+					</div>
+					<div class="row">
+						<!-- pret -->
 						<div class="col-md-6">
-							{{$controls[11]->out()}}
+							{{$controls[20]->out()}}
+						</div>
+
+						<!-- ultima actualizare -->
+						<div class="col-md-6">
+							{{$controls[23]->out()}}
 						</div>
 					</div>
-
-					<!-- pret -->
-					<div class="col-md-6">
-						{{$controls[20]->out()}}
-					</div>
-
-					<!-- ultima actualizare -->
-					<div class="col-md-6">
-						{{$controls[23]->out()}}
-					</div>
-					<div class="no_teren">
-					</div>
-					<!-- valabiliatate oferta -->
-					<div class="col-md-6">
-						{{$controls[51]->out()}}
-					</div>
-					<div class="no_teren">
+					<div class="row">
+						<!-- valabiliatate oferta -->
+						<div class="col-md-6">
+							{{$controls[51]->out()}}
+						</div>
 						<!-- credit -->
 						<div class="col-md-6">
 							{{$controls[17]->out()}}
 						</div>
 					</div>
-					<!-- detalii -->
-					<div class="col-md-6">
-						{{$controls[21]->out()}}
-					</div>
-					<!-- detalii private -->
-					<div class="col-md-6">
-						{{$controls[22]->out()}}
+					<div class="row">
+						<!-- detalii -->
+						<div class="col-md-6">
+							{{$controls[21]->out()}}
+						</div>
+						<!-- detalii private -->
+						<div class="col-md-6">
+							{{$controls[22]->out()}}
+						</div>
 					</div>
 
 					<div class="teren">
-
-						<!-- Tip utilități existente-->
-						<div class="col-md-6">
+						<div>
 							{{$controls[61]->out()}}
 						</div>
 						<!-- Tip teren-->
@@ -162,8 +157,6 @@
 							{{$controls[68]->out()}}
 						</div>
 					</div>
-
-
 				</div>
 
 			</div>
