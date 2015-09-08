@@ -34,7 +34,7 @@
 	$('#perioada, #perioada_ansamblu').daterangepicker({
 		'format' : 'DD.MM.YYYY',
 		startDate: '01.01.1965',
-		endDate: "{{ Carbon\Carbon::now()->format('d.m.Y') }}",
+		endDate: "{{ Carbon\Carbon::now()->addYears(6)->format('d.m.Y') }}",
 		locale: {
             applyLabel       : 'Aplică',
             cancelLabel      : 'Renunţă',

@@ -18,6 +18,7 @@ class AnsambluRezidential extends \Eloquent {
 		'data_estimativa_vanzare',
 		'strada',
 		'detalii_localizare_descriere',
+		'data_finalizare'
 	];
 	public function getDate($camp) {
 		return date("d.m.Y", strtotime($this->attributes[$camp]));

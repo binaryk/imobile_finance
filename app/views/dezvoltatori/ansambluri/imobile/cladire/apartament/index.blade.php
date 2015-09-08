@@ -5,12 +5,6 @@
 $('[name=tip_imobil]').on('change', function(e){
 	var caz = parseInt($(this).val()); 
 	switch(caz) {
-		// Apartament
-		// Garsoniera
-		// Casa
-		// Duplex
-		// Teren
-		// Vila
 		case 1://apartament
 		case 2://garsoniera
 		case 6://vila
@@ -46,6 +40,12 @@ form.aftershow = function(record, action){
 	if( action == 'insert' ){
 		$('select').select2("val", "");
 		$('.apartamente').hide();
+		$('[name=tip_imobil]').select2('val',1);
+		$('.apartamente').show();
+		$('.casa').hide();
+		$('.optional').show();
+		$('.teren').hide();
+		$('.no_teren').show();
 	}
 	if( action == 'update' ){
 		$('[name=tip_imobil]').attr('disabled','disabled');

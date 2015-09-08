@@ -45,7 +45,7 @@ function CautareDezvoltatori( parameters )
         {
             return 'v_dezvoltatori.id_organizatie = ' + $('#id_organizatie').val();
         }
-        return 'v_dezvoltatori.id_organizatie = ' + $('#id_organizatie').val() + "AND v_dezvoltatori.dezvoltator LIKE '%" + value + "%'";
+        return 'v_dezvoltatori.id_organizatie = ' + $('#id_organizatie').val() + " AND v_dezvoltatori.dezvoltator LIKE '%" + value + "%'";
     }
 
     this.imobil = function()
