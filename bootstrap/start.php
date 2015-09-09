@@ -2,8 +2,9 @@
 
 $app = new Illuminate\Foundation\Application; 
 $env = $app->detectEnvironment(array(
-	'binaryk_server'  =>['binaryk'],
-	'02-calin'  	  =>['Dell', 'PC1'],
+	'leed_server'     => ['cpanel.leed.ro'],
+	'binaryk_server'  => ['binaryk'],
+	'02-calin'  	  => ['Dell', 'PC1'],
 	'local'     	  => ['WIN-KE1FRDKJTPK'],
 	'02-server' 	  => ['server1'],
 	'03-andi'   	  => ['Andi-PC']
