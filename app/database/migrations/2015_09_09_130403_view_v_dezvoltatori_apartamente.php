@@ -13,7 +13,7 @@ class ViewVDezvoltatoriApartamente extends Migration {
 	public function up() {
 		DB::statement("DROP VIEW IF EXISTS `v_dezvoltatori`");
 		DB::statement("
-			CREATE ALGORITHM=UNDEFINED DEFINER=`root`@`localhost`
+			CREATE ALGORITHM=UNDEFINED DEFINER=`root_leed`@`localhost`
 			VIEW `v_dezvoltatori`
 			AS
 select
