@@ -14,9 +14,9 @@ return array(
 		'mysql' => array(
 			'driver'    => 'mysql',
 			'host'      => 'localhost',
-			'database'  => 'imobile',
-			'username'  => 'root',
-			'password'  => 'Traiesc.1993',
+			'database'  => 'leed_imobile',
+			'username'  => 'leed_root',
+			'password'  => 'root_leed_2015',
 			'charset'   => 'utf8',
 			'collation' => 'utf8_unicode_ci',
 			'prefix'    => '',
