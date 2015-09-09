@@ -23,20 +23,15 @@ class CladireImobilRecord extends \Imobiliare\FormsRecord
             ->addRule('insert', 'nume', 'required') 
             ->addRule('update', 'nume', 'required') 
             
-            ->addRule('insert', 'id_localitate', 'required|integer|not_in:0') 
-            ->addRule('update', 'id_localitate', 'required|integer|not_in:0') 
             
-            ->addRule('insert', 'id_tip_destinatie', 'required|integer|not_in:0') 
-            ->addRule('update', 'id_tip_destinatie', 'required|integer|not_in:0') 
+            // ->addRule('insert', 'id_tip_destinatie', 'required|integer|not_in:0') 
+            // ->addRule('update', 'id_tip_destinatie', 'required|integer|not_in:0') 
             
-            ->addRule('insert', 'id_tip_regim_inaltime', 'required|integer|not_in:0') 
-            ->addRule('update', 'id_tip_regim_inaltime', 'required|integer|not_in:0') 
+            // ->addRule('insert', 'id_tip_stadiu', 'required|integer|not_in:0') 
+            // ->addRule('update', 'id_tip_stadiu', 'required|integer|not_in:0') 
             
-            ->addRule('insert', 'id_tip_stadiu', 'required|integer|not_in:0') 
-            ->addRule('update', 'id_tip_stadiu', 'required|integer|not_in:0') 
-            
-            ->addRule('insert', 'id_tip_categorie', 'required|integer|not_in:0') 
-            ->addRule('update', 'id_tip_categorie', 'required|integer|not_in:0') 
+            // ->addRule('insert', 'id_tip_categorie', 'required|integer|not_in:0') 
+            // ->addRule('update', 'id_tip_categorie', 'required|integer|not_in:0') 
             
             ->addRule('insert', 'id_cartier', 'required|integer|not_in:0') 
             ->addRule('update', 'id_cartier', 'required|integer|not_in:0') 
@@ -49,30 +44,21 @@ class CladireImobilRecord extends \Imobiliare\FormsRecord
             ->addMessage('update', 'id_cartier.not_in', 'Cartierul clădirei trebuie completat.') 
             ->addMessage('update', 'id_cartier.required', 'Cartierul clădirei trebuie completat.') 
 
-            ->addMessage('insert', 'id_localitate.not_in', 'Localitatea clădirei trebuie completată.')
-            ->addMessage('insert', 'id_localitate.required', 'Localitatea clădirei trebuie completată.')
-            ->addMessage('update', 'id_localitate.not_in', 'Localitatea clădirei trebuie completată.') 
-            ->addMessage('update', 'id_localitate.required', 'Localitatea clădirei trebuie completată.') 
 
-            ->addMessage('insert', 'id_tip_destinatie.not_in', 'Destinația clădirei trebuie completată.')
-            ->addMessage('insert', 'id_tip_destinatie.required', 'Destinația clădirei trebuie completată.')
-            ->addMessage('update', 'id_tip_destinatie.not_in', 'Destinația clădirei trebuie completată.') 
-            ->addMessage('update', 'id_tip_destinatie.required', 'Destinația clădirei trebuie completată.') 
+            // ->addMessage('insert', 'id_tip_destinatie.not_in', 'Destinația clădirei trebuie completată.')
+            // ->addMessage('insert', 'id_tip_destinatie.required', 'Destinația clădirei trebuie completată.')
+            // ->addMessage('update', 'id_tip_destinatie.not_in', 'Destinația clădirei trebuie completată.') 
+            // ->addMessage('update', 'id_tip_destinatie.required', 'Destinația clădirei trebuie completată.') 
 
-            ->addMessage('insert', 'id_tip_regim_inaltime.not_in', 'Regimul de inaltime al clădirei trebuie completat.')
-            ->addMessage('insert', 'id_tip_regim_inaltime.required', 'Regimul de inaltime al clădirei trebuie completat.')
-            ->addMessage('update', 'id_tip_regim_inaltime.not_in', 'Regimul de inaltime al clădirei trebuie completat.') 
-            ->addMessage('update', 'id_tip_regim_inaltime.required', 'Regimul de inaltime al clădirei trebuie completat.') 
+            // ->addMessage('insert', 'id_tip_stadiu.not_in', 'Stadiul clădirei trebuie completat.')
+            // ->addMessage('insert', 'id_tip_stadiu.required', 'Stadiul clădirei trebuie completat.')
+            // ->addMessage('update', 'id_tip_stadiu.not_in', 'Stadiul clădirei trebuie completat.') 
+            // ->addMessage('update', 'id_tip_stadiu.required', 'Stadiul clădirei trebuie completat.') 
 
-            ->addMessage('insert', 'id_tip_stadiu.not_in', 'Stadiul clădirei trebuie completat.')
-            ->addMessage('insert', 'id_tip_stadiu.required', 'Stadiul clădirei trebuie completat.')
-            ->addMessage('update', 'id_tip_stadiu.not_in', 'Stadiul clădirei trebuie completat.') 
-            ->addMessage('update', 'id_tip_stadiu.required', 'Stadiul clădirei trebuie completat.') 
-
-            ->addMessage('insert', 'id_tip_categorie.not_in', 'Categoria clădirei trebuie completată.')
-            ->addMessage('insert', 'id_tip_categorie.required', 'Categoria clădirei trebuie completată.')
-            ->addMessage('update', 'id_tip_categorie.not_in', 'Categoria clădirei trebuie completată.') 
-            ->addMessage('update', 'id_tip_categorie.required', 'Categoria clădirei trebuie completată.') 
+            // ->addMessage('insert', 'id_tip_categorie.not_in', 'Categoria clădirei trebuie completată.')
+            // ->addMessage('insert', 'id_tip_categorie.required', 'Categoria clădirei trebuie completată.')
+            // ->addMessage('update', 'id_tip_categorie.not_in', 'Categoria clădirei trebuie completată.') 
+            // ->addMessage('update', 'id_tip_categorie.required', 'Categoria clădirei trebuie completată.') 
             
             ->addMessage('insert', 'nume.required', 'Denumirea clădirei trebuie completată.')
             ->addMessage('update', 'nume.required', 'Denumirea clădirei trebuie completată.') 

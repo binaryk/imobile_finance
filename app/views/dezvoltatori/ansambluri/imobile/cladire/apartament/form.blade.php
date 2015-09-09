@@ -111,6 +111,12 @@
 						<!-- suprafata -->
 						<div class="col-md-6">
 							{{$controls[8]->out()}}
+						</div> 
+					</div>
+					<div class="row">
+						<!-- suprafata -->
+						<div class="col-md-6">
+							{{$controls[11]->out()}}
 						</div>
 					</div>
 					<div class="row">

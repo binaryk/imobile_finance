@@ -39,12 +39,12 @@ class CladireApartamenteRecord extends \Imobiliare\GridsRecord
         $this->row_source     = 'cladire_apartament-row-source';
         $this->rows_source_sql 				= 'SELECT
                                                     apartamente.*,
-                                                    imobile.nume AS imobil,
+                                                    cladiri.nume AS cladire,
                                                     cartiere.nume AS cartier,
                                                     tip_finisaje_interioare.nume AS finisaje_interioare
                                                 FROM apartamente
-                                                LEFT JOIN imobile
-                                                ON imobile.id = apartamente.id_imobil 
+                                                LEFT JOIN cladiri
+                                                ON cladiri.id = apartamente.id_cladire 
                                                 LEFT JOIN cartiere
                                                 ON cartiere.id = apartamente.id_cartier 
                                                 LEFT JOIN tip_finisaje_interioare
@@ -63,13 +63,13 @@ class CladireApartamenteRecord extends \Imobiliare\GridsRecord
                 'source'    => 'row-number',
             ],
             '2' => [
-                'id'        => 'imobil',
+                'id'        => 'cladire',
                 'orderable' => 'yes',
                 'class'     => 'td-align-left',
                 'visible'   => 'yes',
-                'header'    => ['caption' => 'Imobil', 'style'   => 'width:12.8%',],
+                'header'    => ['caption' => 'Clădire', 'style'   => 'width:12.8%',],
                 'type'      => 'field',
-                'source'    => 'imobil',
+                'source'    => 'cladire',
             ],
             '3' => [
                 'id'        => 'nume',
