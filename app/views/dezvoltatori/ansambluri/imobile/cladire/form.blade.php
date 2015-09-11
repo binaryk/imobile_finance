@@ -15,6 +15,9 @@
 	</div>
 	<div class="col-md-4">
 		{{$controls[5]->out()}}
+	</div>
+	<div class="col-md-4">
+		{{$controls[21]->out()}}
 	</div>	 
 </div>
 <div class="row">

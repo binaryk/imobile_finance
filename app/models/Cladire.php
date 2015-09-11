@@ -31,6 +31,7 @@ class Cladire extends \Eloquent {
 		'observatii',
 		'data_finalizare',
 		'regim_inaltime',
+		'structura'
 
 	];
 	public function getDate($camp) {
@@ -104,6 +105,10 @@ class Cladire extends \Eloquent {
 	{
 		return $this->cartier ? $this->cartier->nume : NULL;
 	}
+	public function getNumestructuraAttribute()
+	{
+		return $this->structura ? $this->structura : NULL;
+	}
 	public function Inaltime()
 	{
 		return $this->belongsTo('\Imobiliare\Nomenclator\TipRegimInaltime', 'id_tip_regim_inaltime');
@@ -111,7 +116,7 @@ class Cladire extends \Eloquent {
 
 	public function getNumeregiminaltimeAttribute()
 	{
-		return $this->inaltime ? $this->inaltime->nume : NULL;
+		return $this->regim_inaltime ? $this->regim_inaltime : NULL;
 	}
 	public function Stadiu()
 	{

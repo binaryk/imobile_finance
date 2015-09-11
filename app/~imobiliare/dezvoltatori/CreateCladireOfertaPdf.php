@@ -141,17 +141,11 @@ class CreateCladireOfertaPdf
             '1' => ['caption' => 'Localitate : ', 'source' => 'numelocalitate', 'redus' => true],
             '2' => ['caption' => 'Cartier : ', 'source' => 'numecartier', 'redus' => true],
             '3' => ['caption' => 'Adresa : ', 'source' => 'adresa', 'redus' => false],
-            '4' => ['caption' => 'Telefon : ', 'source' => 'telefon', 'redus' => true],
-            '5' => ['caption' => 'Email : ', 'source' => 'email', 'redus' => true],
-            '6' => ['caption' => 'Carte funciară : ', 'source' => 'carte_funciara', 'redus' => true],
             '7' => ['caption' => 'Regim înalțime : ', 'source' => 'numeregiminaltime', 'redus' => true],
             '8' => ['caption' => 'Stadiu : ', 'source' => 'numetipstadiu', 'redus' => true],
             '9' => ['caption' => 'Număr spații indivize : ', 'source' => 'nr_spatii_indivize', 'redus' => true],
             '10' => ['caption' => 'Categorie : ', 'source' => 'numetipcategorie', 'redus' => true],
             '11' => ['caption' => 'Tip destinație : ', 'source' => 'numetipdestinatie', 'redus' => true],
-            '12' => ['caption' => 'Dotări : ', 'source' => 'dotari', 'redus' => true],
-            '13' => ['caption' => 'Cota indiviza : ', 'source' => 'cota_indiviza', 'redus' => true],
-            '14' => ['caption' => 'Perioada construcție : ', 'source' => 'perioada_constructie', 'redus' => true],
             '15' => ['caption' => 'Data finalizare : ', 'source' => 'data_finalizare', 'redus' => true],
         ];
         $this->pdf->Pdf()->ln();

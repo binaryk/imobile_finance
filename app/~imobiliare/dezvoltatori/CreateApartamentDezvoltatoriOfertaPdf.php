@@ -257,9 +257,11 @@ class CreateApartamentDezvoltatoriOfertaPdf
             '1' => ['caption' => 'Număr spații indivize: ', 'source' => 'spatii_indivize', 'redus' => false],
             '2' => ['caption' => 'Stadiu: ', 'source' => 'stadiu_cladire', 'redus' => true],
             '3' => ['caption' => 'Destinație: ', 'source' => 'destinatie_cladire', 'redus' => true],
-            '4' => ['caption' => 'Dotări: ', 'source' => 'dotari_cladire', 'redus' => true],
-            '5' => ['caption' => 'Regim înălțime: ', 'source' => 'regim_inaltime', 'redus' => true],
-            '6' => ['caption' => 'Data finalizare clădire: ', 'source' => 'finalizare_cladire', 'redus' => true],
+            '4' => ['caption' => 'Cartier: ', 'source' => 'cartier_cladire', 'redus' => true],
+            '5' => ['caption' => 'Categorie cladire: ', 'source' => 'categorie_cladire', 'redus' => true],
+            '7' => ['caption' => 'Regim înălțime: ', 'source' => 'regim_inaltime', 'redus' => true],
+            '8' => ['caption' => 'Data finalizare clădire: ', 'source' => 'finalizare_cladire', 'redus' => true],
+            '9' => ['caption' => 'Structura de rezistență: ', 'source' => 'structura_cladire', 'redus' => true],
         ];
 
         $this->pdf->Pdf()->ln();
@@ -430,13 +432,25 @@ class CreateApartamentDezvoltatoriOfertaPdf
     {
         return $this->cladire->numetipdestinatie ? $this->cladire->numetipdestinatie : '-';
     }
+    public function cartier_cladire()
+    {
+        return $this->cladire->numecartier ? $this->cladire->numecartier : '';
+    }
     public function dotari_cladire()
     {
         return $this->cladire->numetipdestinatie ? $this->cladire->numetipdestinatie : '-';
     }
+    public function categorie_cladire()
+    {
+        return $this->cladire->numetipcategorie ? $this->cladire->numetipcategorie : '-';
+    }
     public function regim_inaltime()
     {
         return $this->cladire->numeregiminaltime ? $this->cladire->numeregiminaltime : '-';
+    }
+    public function structura_cladire()
+    {
+        return $this->cladire->numestructura ? $this->cladire->numestructura : '-';
     }
     public function finalizare_cladire()
     {
@@ -459,18 +473,18 @@ class CreateApartamentDezvoltatoriOfertaPdf
 //            '5' => ['caption' => 'Oferta valabilă: ', 'source' => 'ofertaValabila', 'redus' => false],
 //            '6' => ['caption' => 'Anul construcţiei: ', 'source' => 'anConstructieApartament', 'redus' => false],
             '7' => ['caption' => 'Număr de camere: ', 'source' => 'numarCamereApartament', 'redus' => true],
-            '8' => ['caption' => 'Suprafaţă: ', 'source' => 'suprafataminmaxApartament', 'redus' => true],
-            '9' => ['caption' => 'Compartimentare: ', 'source' => 'compartimentareApartament', 'redus' => true],
-            '10' => ['caption' => 'Preţ: ', 'source' => 'pretApartament', 'redus' => true],
+            '8' => ['caption' => 'Număr de băi: ', 'source' => 'numarBaiApartament', 'redus' => true],
+            '9' => ['caption' => 'Balcon: ', 'source' => 'balcoane', 'redus' => true],
+            '10' => ['caption' => 'Suprafaţă utilă: ', 'source' => 'suprafataminmaxApartament', 'redus' => true],
             '11' => ['caption' => 'Compartimentare: ', 'source' => 'compartimentareApartament', 'redus' => true],
+            '12' => ['caption' => 'Preţ: ', 'source' => 'pretApartament', 'redus' => true],
+            '13' => ['caption' => 'Finisaj interior: ', 'source' => 'finisajeApartament', 'redus' => true],
+            '14' => ['caption' => 'Etaj: ', 'source' => 'etajApartament', 'redus' => true],
            /* '9' => ['caption' => 'Număr de băi: ', 'source' => 'numarBaiApartament', 'redus' => true],
-            '10' => ['caption' => 'Număr de balcoane: ', 'source' => 'numarBalcoaneApartament', 'redus' => true],
-            '11' => ['caption' => 'Etaj: ', 'source' => 'etajApartament', 'redus' => true],
             '12' => ['caption' => 'Acoperiş: ', 'source' => 'acoperisApartament', 'redus' => false],
             '14' => ['caption' => 'Sistemul de încălzire: ', 'source' => 'sistemIncalzireApartament', 'redus' => false],
             '15' => ['caption' => 'Garaj: ', 'source' => 'garajApartament', 'redus' => true],
             '16' => ['caption' => 'Tipul de clădire: ', 'source' => 'tipCladireApartament', 'redus' => false],
-            '17' => ['caption' => 'Tipul de finisaj interior: ', 'source' => 'finisajeApartament', 'redus' => true],
             '18' => ['caption' => 'Compartimentare: ', 'source' => 'compartimentareApartament', 'redus' => true],
             '19' => ['caption' => 'Preţ: ', 'source' => 'pretApartament', 'redus' => true],
             '20' => ['caption' => 'Actualizat la: ', 'source' => 'ultimaActualizareApartament', 'redus' => false]*/

@@ -292,6 +292,17 @@ class CladireImobil extends \Processing\Form\Form {
 				->maxlength(255)
 		)
 
+			// 21
+			->addControl(
+			\Easy\Form\Textbox::make('~layouts.form.controls.textboxes.textbox')
+				->name('structura')
+				->caption('Structura de rezistență')
+				->class('form-control data-source')
+				->controlsource('structura')
+				->controltype('textbox')
+				->maxlength(255)
+		)
+
 		;
 
 	}
