@@ -10,8 +10,6 @@ class ApartamenteProprietarController extends \Datatable\DatatableController
         if (!($proprietar = \Imobiliare\Proprietar::getRecord((int)$id_proprietar))) {
             return \Redirect::route('proprietar-index');
         }
-
-
         $config = \Imobiliare\Grids::make($id)->toIndexConfig($id);
         $config['row-source'] .= '/' . $id_proprietar;
         $config['breadcrumbs'] = [

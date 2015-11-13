@@ -25,7 +25,9 @@ class ApartamenteRecord extends \Imobiliare\GridsRecord
             SELECT
                 v_apartamente.*
             FROM v_apartamente
-            :where: :order:
+            :where:
+
+            :order:
             ';
         $this->count_filtered_records_sql 	= '
             SELECT COUNT(*) as cnt FROM v_apartamente :where:

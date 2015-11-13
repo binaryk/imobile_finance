@@ -66,7 +66,8 @@
 
 	<script>
 	$(document).ready(function(){
-		{{ $dt->init() }} 
+		{{ $dt->init() }}
+ 
 
 		@if($form)
 		var form = new DTFORM("#form-{{$dt->id()}}", "{{URL::route('datatable-load-form', ['id' => $dt->id()])}}", '{{$form->model()}}', "{{URL::route('datatable-do-action', ['id' => $dt->id()])}}", eval('{{$dt->name()}}'));

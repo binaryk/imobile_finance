@@ -139,7 +139,7 @@ class ApartamentImobil extends \Processing\Form\Form {
 			\Easy\Form\Combobox::make('~layouts.form.controls.comboboxes.combobox')
 				->name('nr_camere')
 				->caption('Numar camere')
-				->class('form-control data-source input-group form-select init-on-update-delete')
+				->class('form-control data-source input-group init-on-update-delete')
 				->controlsource('nr_camere')
 				->controltype('combobox')
 				->enabled('false')

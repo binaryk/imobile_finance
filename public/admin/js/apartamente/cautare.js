@@ -276,8 +276,17 @@ function CautareApartamente( parameters )
         	data     : { 'id' : $(this).data('id'), 'status' : $(this).data('status') },
         	success  : function(result)
         	{
-        		var table = my.dt;
+        		var table = my.dt
+				var page = table.page.info().page;
+				table.page(page).draw(false);
+				//table.page(3).draw( false );
+				//table.page( page ).draw( 'page' );
+			/*	oSettings.oFeatures.bFilter = false;
+				oSettings.oFeatures.bSort = false;
 				table.draw();
+				oSettings.oFeatures.bFilter = true;
+				oSettings.oFeatures.bSort = true;*/
+				//table.draw();
         	}
 		});
 	});
@@ -291,7 +300,8 @@ function CautareApartamente( parameters )
         	success  : function(result)
         	{
         		var table = my.dt;
-				table.draw();
+				var page = table.page.info().page;
+				table.page(page).draw(false);
         	}
 		});
 	});
