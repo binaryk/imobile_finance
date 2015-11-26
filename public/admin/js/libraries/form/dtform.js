@@ -42,7 +42,7 @@ function DTFORM(formid, loadformurl, model, doactionurl, dt)
 					case 'editbox'  :
 						if( control.hasClass('to-float') )
 						{
-							record[field] = numeral(record[field]).format();	
+							record[field] = numeral(record[field]).format();
 						}
 						else
 						{
@@ -58,7 +58,7 @@ function DTFORM(formid, loadformurl, model, doactionurl, dt)
 					case 'combobox' :
 						if(record[field] === null)
 						{
-							record[field] = 0;	
+							record[field] = 0;
 						}
 						if(control.hasClass('init-on-update-delete'))
 						{
@@ -83,7 +83,7 @@ function DTFORM(formid, loadformurl, model, doactionurl, dt)
 	this.showform = function(result)
 	{
 		this.hideFieldsErrors();
-		
+
 		$(this.formid + ' ' + this.classDoButton).removeClass('btn-do-insert');
 		$(this.formid + ' ' + this.classDoButton).removeClass('btn-do-update');
 		$(this.formid + ' ' + this.classDoButton).removeClass('btn-do-delete');
@@ -98,7 +98,7 @@ function DTFORM(formid, loadformurl, model, doactionurl, dt)
 		{
 			this.fillfields(result.record, result.action);
 		}
-		
+
 		$(this.formid).show();
 		this.aftershow(result.record, result.action);
 	};
@@ -112,7 +112,7 @@ function DTFORM(formid, loadformurl, model, doactionurl, dt)
 				var formgroup = $(this).closest('.form-group')
 				switch($(this).data('control-type'))
 				{
-					case 'textbox'  :  
+					case 'textbox'  :
 					case 'editbox'  :
 						$(this).val('');
 						break;
@@ -150,7 +150,7 @@ function DTFORM(formid, loadformurl, model, doactionurl, dt)
 	};
 
 	this.loadform = function(action, record_id)
-	{ 
+	{
 		var self = this;
 		console.log('2 -----> Hide Action Message');
 		this.hideActionMessage();
@@ -187,7 +187,7 @@ function DTFORM(formid, loadformurl, model, doactionurl, dt)
 			case 'combobox'   :
 			case 'select2'    :
 			case 'editbox'    :
-				result = control.val(); 
+				result = control.val();
 				if( control.hasClass('to-float') )
 				{
 					result = this.tofloat(result);
@@ -202,7 +202,7 @@ function DTFORM(formid, loadformurl, model, doactionurl, dt)
 				}
 				break;
 			case 'checkbox'   :
-				result = control.prop('checked') ? control.data('on') : control.data('off');  
+				result = control.prop('checked') ? control.data('on') : control.data('off');
 				break;
 		}
 		return result;
@@ -323,6 +323,7 @@ function DTFORM(formid, loadformurl, model, doactionurl, dt)
         	data     : {'action' : action, 'model' : self.model, 'data' : self.datasource(), 'record_id' : self.record_id, 'code' :  self.formid.replace('#form-', '')},
         	success  : function(result)
         	{
+						console.log(result);
         		self.showActionMessage(result);
         		if( ! result.success)
         		{
@@ -348,14 +349,14 @@ function DTFORM(formid, loadformurl, model, doactionurl, dt)
 
 
 	this.bindActions = function()
-	{ 
+	{
 		var self = this;
 
 		$(this.classActionInsert).on('click', function(){
 			console.log('1 -----> Click on [Add] => load form');
 			self.loadform('insert', null);
 		});
-		
+
 		$(document).on( 'click', this.classActionUpdate, function(){
 			self.loadform('update', $(this).data('id'));
 		});
@@ -365,10 +366,10 @@ function DTFORM(formid, loadformurl, model, doactionurl, dt)
 		});
 
 		$(document).on( 'click', this.classActionClose, function(){
-			self.hideform(); 
-		});    
+			self.hideform();
+		});
 
-		$(document).find('.input-group > ' + this.inputTypeCheckbox ).closest('.input-group').on('mouseover mouseout click', this, function(event) { 
+		$(document).find('.input-group > ' + this.inputTypeCheckbox ).closest('.input-group').on('mouseover mouseout click', this, function(event) {
 			var label = $(this).siblings('label');
 			switch(event.type) {
 				case 'click':
@@ -380,7 +381,7 @@ function DTFORM(formid, loadformurl, model, doactionurl, dt)
 				default :
 					label.mouseout();
 					break;
-			} 
+			}
 		});
 
 
@@ -393,7 +394,7 @@ function DTFORM(formid, loadformurl, model, doactionurl, dt)
 		});
 	};
 	/*
-	se asociaza evenimente la: 
+	se asociaza evenimente la:
 		a) add, edit, delete - pentru a aparea formularul
 		b) submit - pentru a declansa actiunea
 	*/

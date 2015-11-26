@@ -2,7 +2,7 @@
 
 namespace Datatable;
 
-class DatatableController extends \BaseController 
+class DatatableController extends \BaseController
 {
 
     /**
@@ -20,7 +20,7 @@ class DatatableController extends \BaseController
 			throw new \Exception(__METHOD__ . '. Javascript datatable variable name not defined.');
 		}
 		$other_info = array_key_exists('other-info', $config) ? $config['other-info'] : [];
-		$this->layout->title = strip_tags($config['caption']); 
+		$this->layout->title = strip_tags($config['caption']);
 		$this->layout->caption = $config['caption'];
 		$this->layout->breadcrumbs = $config['breadcrumbs'];
 		$this->layout->right_menu = $config['right_menu'];;
@@ -35,7 +35,7 @@ class DatatableController extends \BaseController
 		$this->layout->content = \View::make($config['view'])->with([
 			'dt'   		=> Table::create($config),
 			'toolbar' 	=> \View::make($config['toolbar'])->with($other_info)->render(),
-			'form'      => $form, 
+			'form'      => $form,
 		] + $other_info);
 
 
@@ -58,7 +58,7 @@ class DatatableController extends \BaseController
 
 	/**
 	Returneaza proprietatile pentru afisarea formularului insert/update/delete in functie de actiunea solicitata.
-	Proprietatile sunt: 
+	Proprietatile sunt:
 		1) actiunea (insert/update/delete)
 		2) caption
 		3) text button submit
@@ -80,7 +80,14 @@ class DatatableController extends \BaseController
 	**/
 	public function do_action( $form, $input )
 	{
-		return 
+    // dd(\Database\Actions::make()
+    // ->model( $this->model($input['model']) )
+    // ->data($input['data'])
+    // ->action($input['action'])
+    // ->record_id($input['record_id'])
+    // ->form($form)
+    // ->execute());
+		return
 			\Database\Actions::make()
 			->model( $this->model($input['model']) )
 			->data($input['data'])
@@ -90,4 +97,4 @@ class DatatableController extends \BaseController
 			->execute();
 	}
 
-} 
+}
