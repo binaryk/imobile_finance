@@ -1,0 +1,1 @@
+[10-Sep-2015 22:19:07 UTC] PHP Fatal error:  Class 'Datatable\DatatableController' not found in /home/leed/public_html/imobile/app/controllers/apartamente/CautareApartamenteController.php on line 6

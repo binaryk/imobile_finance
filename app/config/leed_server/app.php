@@ -1,7 +1,7 @@
 <?php
 
 return [
-	'debug'           => false,
+	'debug'           => true,
 	'url'             => 'http://localhost/galonline/',
 	'timezone'        => 'Europe/Bucharest',
 	'locale'          => 'ro',
