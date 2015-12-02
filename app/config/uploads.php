@@ -4,7 +4,7 @@ return [
 	'apartament-photos' => [
 		'file-name-pattern' => '{{original}}-{{id_apartament}}-{{date}}.{{extension}}',
 		'max-size' => 5 * 1024,
-		'allowed-extensions' => 'bmp,gif,jpeg,jpg,png,pdf',
+		'allowed-extensions' => 'bmp,gif,jpeg,jpg',
 		'path' => str_replace('\\', '/', storage_path()) . '/uploads/{{id_apartament}}/',
 		'id_name' => 'id_apartament',
 	],

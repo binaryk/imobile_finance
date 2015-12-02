@@ -41,7 +41,7 @@ class DatatableController extends \Datatable\DatatableController
      */
     public function doAction()
 	{
-        // dd(\Input::all());
+        // dd($this->do_action(\Imobiliare\Forms::make($id = \Input::get('code') )->toActionConfig($id), \Input::all() ) );
 		return $this->do_action(\Imobiliare\Forms::make($id = \Input::get('code') )->toActionConfig($id), \Input::all() );
 	}
 }
