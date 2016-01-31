@@ -11,7 +11,7 @@ class ProprietariController  extends \Datatable\DatatableController{
             'name' => 'Proprietari',
             'url'  => "proprietar-index",
             'ids' => ''
-            ]  
+            ]
         ];
         $config['right_menu'] = [ ['caption' => 'Adaugă proprietar', 'class' => 'action-insert-record'] ];
         $this->show( $config + ['other-info' => [ 'current_org' => $this->current_org]] );

@@ -44,6 +44,13 @@ class HomeController extends BaseController {
 	}
 	public function showWelcome() {
 		$links = [
+			'my-credite' => [
+				'bg' => 'purple-plum',
+				'header' => 'Credite',
+				'title' => 'Platforma de credite',
+				'icon' => 'fa-home',
+				'url' => "http://www.credite.leed.ro",
+			],
 			'my-profile' => [
 				'bg' => 'blue-madison',
 				'header' => 'Apartamente',
@@ -65,13 +72,13 @@ class HomeController extends BaseController {
 				'icon' => 'fa-users',
 				'url' => URL::route('dezvoltatori-index'),
 			],
-			'search-dezvoltators' => [
+		/*	'search-dezvoltators' => [
 				'bg' => 'purple-plum',
 				'header' => 'Cautare dezvoltatori',
 				'title' => 'Cautare dezvoltatori',
 				'icon' => 'fa-search-plus',
 				'url' => URL::route('cautare_dezvoltatori_index'),
-			],
+			],*/
 		];
 
 		return View::make('old_hello')->with([
