@@ -28,6 +28,6 @@
 {{HTML::style("assets/admin/layout/css/themes/darkblue.css") }}
 
 @yield('custom-styles')
-<link rel="shortcut icon" href="favicon.ico"/>
+<link rel="shortcut icon" href="{{ asset('public/favicon.ico')  }}"/>
 
 </head>
