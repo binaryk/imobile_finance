@@ -60,7 +60,8 @@ class CladirePhotosController extends \Datatable\DatatableController {
 		// $config['caption'] .= ' pentru apartamentul <span class="text-blue">' . $Imobiliare->nume . '</span>';
 
 		// $photos = \Imobiliare\Nomenclatoare\ApartamentPhotos::where('id_apartament',$id_cladire)->select('file_name')->get()->toArray();
-		$photos = \Imobiliare\Nomenclatoare\CladirePhotos::where('id_cladire', $cladire->id)->where('file_extension', '<>', 'bmp')->orderby('id')->get();
+		$photos = \Imobiliare\Nomenclatoare\CladirePhotos::where('id_cladire', $cladire->id)->where('file_extension', '<>', 'pdf')->orderby('id')->get();
+		// dd($photos->first()->file_extension);
 		if (count($photos) > 0) {
 			$config['right_menu'] = [
 				['caption' => 'Adaug&#259; poze', 'class' => 'action-insert-record'],

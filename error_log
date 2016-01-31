@@ -1,0 +1,5 @@
+[13-Nov-2015 11:52:12 UTC] PHP Warning:  PHP Startup: soap: Unable to initialize module
+Module compiled with module API=20100525
+PHP    compiled with module API=20121212
+These options need to match
+ in Unknown on line 0
