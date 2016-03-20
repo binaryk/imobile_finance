@@ -94,7 +94,7 @@ Route::filter('guest', function()
 	    $admin = Sentry::findGroupByName('Admins');
 	    $users = Sentry::findGroupByName('Users');
 
-	    if ($user->inGroup($admin)) return Redirect::intended('admin');
+	    if ($user->inGroup($admin)) return Redirect::intended('utilizatori');
 	    elseif ($user->inGroup($users)) return Redirect::intended('/');
 	}
 });
