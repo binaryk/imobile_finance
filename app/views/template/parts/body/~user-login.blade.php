@@ -5,7 +5,6 @@
 	<ul class="dropdown-menu dropdown-menu-default"> 
 		<li><a href="{{ URL::route('user-profile') }}"><i class="icon-user"></i> Profil utilizator </a></li>
 		<li class="divider"></li>
-		<li><a href="{{ URL::route('lock') }}"><i class="icon-lock"></i> Lock Screen </a></li>
 		<li><a href="{{ URL::to('logout') }}"><i class="icon-key"></i> Log Out </a></li>
 	</ul>
 </li>

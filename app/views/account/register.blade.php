@@ -4,7 +4,7 @@
 <!-- BEGIN HEAD -->
 <head>
 <meta charset="utf-8"/>
-<title>Login/Register</title>
+<title>Finance flow imobiliare / Login/Register</title>
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
 <meta http-equiv="Content-type" content="text/html; charset=utf-8">
@@ -27,9 +27,7 @@
 <div class="menu-toggler sidebar-toggler">
 </div>
 <div class="logo">
-	<a href="index.html">
-	{{ HTML::image("assets/admin/layout/img/logo-big.png") }}
-	</a>
+	{{HTML::image("assets/admin/layout/img/logo_creditfin.png",null, ['width' => '240px', 'height' => '80px', 'style' => 'margin-bottom: -40px; border-radius: 8px !important;']) }}
 </div>
 <!-- END LOGO -->
 <!-- BEGIN LOGIN -->
@@ -87,7 +85,7 @@
 	<!-- END REGISTRATION FORM -->
 </div>
 <div class="copyright">
-	 2015 © Imobiliare.
+	2015 © Finance Flow Imobiliare.
 </div>
 <!-- END LOGIN -->
 <!-- BEGIN JAVASCRIPTS(Load javascripts at bottom, this will reduce page load time) -->

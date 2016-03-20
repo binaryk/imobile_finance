@@ -6,7 +6,7 @@ use Laracasts\Validation\FormValidator;
 class LoginForm extends FormValidator {
 
 	protected $rules = [
-		'email' => 'required|email',
+		'email' => 'required',
 		'password' => 'required',
 	];
 }

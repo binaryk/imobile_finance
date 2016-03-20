@@ -27,9 +27,7 @@
 <div class="menu-toggler sidebar-toggler">
 </div>
 <div class="logo">
-	<a href="index.html">
-	{{ HTML::image("assets/admin/layout/img/logo-big.png") }}
-	</a>
+	{{HTML::image("assets/admin/layout/img/logo_creditfin.png",null, ['width' => '240px', 'height' => '80px', 'style' => 'margin-bottom: -40px; border-radius: 8px !important;']) }}
 </div>
 <!-- END LOGO -->
 <!-- BEGIN LOGIN -->
@@ -58,7 +56,7 @@
 	<!-- END FORGOT PASSWORD FORM -->
 </div>
 <div class="copyright">
-	 2015 © Imobiliare.
+	2015 © Finance Flow Imobiliare.
 </div>
 <!-- END LOGIN -->
 <!-- BEGIN JAVASCRIPTS(Load javascripts at bottom, this will reduce page load time) -->
