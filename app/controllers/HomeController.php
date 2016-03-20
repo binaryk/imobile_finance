@@ -1,8 +1,8 @@
 <?php
 
 class HomeController extends BaseController {
-	protected $caption = 'Bine ați venit pe aplicația <u>Imobiliare</u>';
-	protected $small = 'aici veți putea gestiona afacerea dumnevoastră';
+	protected $caption = 'Bine ați venit pe aplicația <u>Finance Flow Imobiliare</u>';
+	protected $small = '';
 
 	public function showWelcome2() {
 		$links = [
@@ -46,10 +46,10 @@ class HomeController extends BaseController {
 		$links = [
 			'my-credite' => [
 				'bg' => 'purple-plum',
-				'header' => 'Credite',
-				'title' => 'Platforma de credite',
+				'header' => 'Finance flow credite',
+				'title' => 'Finance flow credite',
 				'icon' => 'fa-home',
-				'url' => "http://www.credite.leed.ro",
+				'url' => "http://credite.finance-flow.leed.ro/public/",
 			],
 			'my-profile' => [
 				'bg' => 'blue-madison',

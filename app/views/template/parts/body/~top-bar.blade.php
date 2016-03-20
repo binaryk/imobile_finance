@@ -2,7 +2,7 @@
 	<div class="page-header-inner">
 		<div class="page-logo">
 			<a href="{{URL::route('home')}}">
-			{{HTML::image("assets/admin/layout/img/logo_creditfin.png",null, ['width' => '197px', 'height' => '29px', 'style' => 'margin-top: 8px']) }}
+			{{HTML::image("assets/admin/layout/img/logo_creditfin.png",null, ['width' => '235px', 'height' => '47px', 'style' => 'margin-top: -1px; margin-left: -20px;']) }}
 			</a>
 			<div class="menu-toggler sidebar-toggler hide"></div>
 		</div>
