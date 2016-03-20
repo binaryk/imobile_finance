@@ -1,6 +1,6 @@
 <div class="page-footer">
 	<div class="page-footer-inner">
-		 2015 &copy; Finnace Flow Credite.
+		 2015 &copy; Finace Flow Credite.
 	</div>
 	<div class="scroll-to-top">
 		<i class="icon-arrow-up"></i>

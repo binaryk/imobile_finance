@@ -2,8 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="26c9510f-5f92-4c73-b7fa-d4737bffee45" name="Default" comment=";">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/controllers/HomeController.php" afterPath="$PROJECT_DIR$/app/controllers/HomeController.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/template/parts/body/~top-bar.blade.php" afterPath="$PROJECT_DIR$/app/views/template/parts/body/~top-bar.blade.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/template/parts/body/~footer.blade.php" afterPath="$PROJECT_DIR$/app/views/template/parts/body/~footer.blade.php" />
     </list>
     <ignored path="imobile.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -45,20 +44,20 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="~footer.blade.php" pinned="false" current-in-tab="false">
+      <file leaf-file-name="~footer.blade.php" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/app/views/template/parts/body/~footer.blade.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-12.896552">
-              <caret line="17" column="10" selection-start-line="17" selection-start-column="10" selection-end-line="17" selection-end-column="10" />
+            <state vertical-scroll-proportion="0.048780486">
+              <caret line="2" column="24" selection-start-line="2" selection-start-column="24" selection-end-line="2" selection-end-column="24" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="HomeController.php" pinned="false" current-in-tab="true">
+      <file leaf-file-name="HomeController.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/controllers/HomeController.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.09756097">
+            <state vertical-scroll-proportion="-3.0344827">
               <caret line="4" column="26" selection-start-line="4" selection-start-column="26" selection-end-line="4" selection-end-column="26" />
               <folding />
             </state>
@@ -188,9 +187,9 @@
         <option value="$PROJECT_DIR$/app/views/account/forgot.blade.php" />
         <option value="$PROJECT_DIR$/app/basicAuth/formValidation/LoginForm.php" />
         <option value="$PROJECT_DIR$/app/config/leed_server/database.php" />
-        <option value="$PROJECT_DIR$/app/views/template/parts/body/~footer.blade.php" />
         <option value="$PROJECT_DIR$/app/views/template/parts/body/~top-bar.blade.php" />
         <option value="$PROJECT_DIR$/app/controllers/HomeController.php" />
+        <option value="$PROJECT_DIR$/app/views/template/parts/body/~footer.blade.php" />
       </list>
     </option>
   </component>
@@ -798,14 +797,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/views/template/parts/body/~footer.blade.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-12.896552">
-          <caret line="17" column="10" selection-start-line="17" selection-start-column="10" selection-end-line="17" selection-end-column="10" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/views/hello.blade.php">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="-9.862069">
@@ -848,8 +839,16 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/app/controllers/HomeController.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.09756097">
+        <state vertical-scroll-proportion="-3.0344827">
           <caret line="4" column="26" selection-start-line="4" selection-start-column="26" selection-end-line="4" selection-end-column="26" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/views/template/parts/body/~footer.blade.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.048780486">
+          <caret line="2" column="24" selection-start-line="2" selection-start-column="24" selection-end-line="2" selection-end-column="24" />
           <folding />
         </state>
       </provider>
